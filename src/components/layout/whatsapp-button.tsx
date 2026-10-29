@@ -8,7 +8,7 @@ export function WhatsAppButton() {
   );
 
   return (
-    <div className="fixed bottom-8 sm:bottom-10 lg:bottom-12 right-5 sm:right-7 lg:right-8 z-40 flex items-center">
+    <div className="fixed bottom-8 sm:bottom-10 lg:bottom-12 right-6 sm:right-10 lg:right-12 z-40 flex items-center">
       <Link
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`}
         target="_blank"
@@ -16,15 +16,6 @@ export function WhatsAppButton() {
         aria-label="Konsultasi Langsung via WhatsApp CV. Bahari Tech Solution"
         className="group relative flex items-center justify-center transition-all duration-300 ease-out hover:scale-108 active:scale-95 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#25D366]/30 rounded-full"
       >
-        {/* Subtle Online Pulse Indicator */}
-        <span
-          className="absolute top-0.5 right-0.5 flex h-3.5 w-3.5 z-10 pointer-events-none"
-          aria-hidden="true"
-        >
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white shadow-xs" />
-        </span>
-
         {/* WhatsApp Official Logo with Crisp Ambient Shadow */}
         <Image
           src="/images/Icon/icon whatsapp.png"
