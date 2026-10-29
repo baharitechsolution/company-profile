@@ -9,11 +9,11 @@ import {
   X,
   ArrowRight,
   ChevronDown,
-  Globe,
+  AppWindow,
   Smartphone,
-  Boxes,
-  Server,
-  Sparkles,
+  Database,
+  Cloud,
+  Code2,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { mainNav } from "@/config/navigation";
@@ -24,7 +24,7 @@ interface DropdownServiceItem {
   title: string;
   desc: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 }
 
 const dropdownServices: DropdownServiceItem[] = [
@@ -32,7 +32,7 @@ const dropdownServices: DropdownServiceItem[] = [
     title: "Web App & Portal Enterprise",
     desc: "Platform Next.js SSR cepat, SEO Google, & transaksi tinggi",
     href: "/layanan#web-development",
-    icon: Globe,
+    icon: AppWindow,
   },
   {
     title: "Aplikasi Mobile (Android & iOS)",
@@ -44,13 +44,13 @@ const dropdownServices: DropdownServiceItem[] = [
     title: "Enterprise ERP & Core System",
     desc: "Digitalisasi multi-cabang, inventori, keuangan, & HRIS",
     href: "/layanan#enterprise-system-erp",
-    icon: Boxes,
+    icon: Database,
   },
   {
     title: "Infrastruktur Cloud & DevOps",
     desc: "AWS & Google Cloud bergaransi SLA Uptime 99.98%",
     href: "/layanan#cloud-devops-infrastructure",
-    icon: Server,
+    icon: Cloud,
   },
 ];
 
@@ -58,7 +58,7 @@ const customService = {
   title: "Pesanan Khusus",
   desc: "Custom website & sistem digital bisnis",
   href: "/kontak?layanan=Pesanan+Khusus",
-  icon: Sparkles,
+  icon: Code2,
 };
 
 export function Navbar() {
@@ -183,7 +183,7 @@ export function Navbar() {
                     />
                   </Link>
 
-                  {/* Dropdown Menu Sesuai Referensi Gambar */}
+                  {/* Dropdown Menu Sesuai Referensi Gambar (Bebas Nuansa AI) */}
                   {isServicesOpen && (
                     <div
                       className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 animate-in fade-in-0 zoom-in-95 duration-150"
@@ -199,11 +199,11 @@ export function Navbar() {
                                 key={idx}
                                 href={service.href}
                                 onClick={() => setIsServicesOpen(false)}
-                                className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item"
+                                className="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group/item"
                               >
-                                {/* Wadah Ikon Squircle Modern */}
-                                <div className="h-10 w-10 rounded-xl bg-slate-50 border border-slate-200/90 flex items-center justify-center shrink-0 text-[#1482C2] group-hover/item:bg-[#EAF5FC] group-hover/item:border-[#1482C2]/40 transition-colors shadow-2xs">
-                                  <Icon className="h-5 w-5 transition-transform duration-200 group-hover/item:scale-105" />
+                                {/* Wadah Ikon Editorial Minimalis (Bukan Kotak Biru Tebal AI) */}
+                                <div className="h-9 w-9 rounded-lg bg-slate-50 border border-slate-200/70 flex items-center justify-center shrink-0 text-slate-700 group-hover/item:text-[#1482C2] group-hover/item:bg-[#EAF5FC] group-hover/item:border-[#1482C2]/40 transition-all duration-150 shadow-2xs">
+                                  <Icon className="h-4.5 w-4.5 transition-transform duration-150 group-hover/item:scale-105" strokeWidth={1.6} />
                                 </div>
 
                                 {/* Judul & Deskripsi Substantif */}
@@ -219,24 +219,24 @@ export function Navbar() {
                             );
                           })}
 
-                          {/* Item Highlight Spesial: Pesanan Khusus (Sesuai Referensi Gambar) */}
+                          {/* Item Khusus: Pesanan Khusus (Ikon Code2 Engineering, Bebas Sparkles AI) */}
                           <Link
                             href={customService.href}
                             onClick={() => setIsServicesOpen(false)}
-                            className="flex items-center gap-3 p-2.5 rounded-xl bg-[#EAF5FC]/80 hover:bg-[#EAF5FC] border border-[#1482C2]/35 transition-all group/custom mt-1 shadow-2xs"
+                            className="flex items-center gap-3 p-2 rounded-xl bg-slate-50/80 hover:bg-[#EAF5FC]/70 border border-slate-200 hover:border-[#1482C2]/40 transition-all group/custom mt-1 shadow-2xs"
                           >
-                            <div className="h-10 w-10 rounded-xl bg-[#1482C2] text-white flex items-center justify-center shrink-0 shadow-2xs group-hover/custom:scale-105 transition-transform">
-                              <Sparkles className="h-5 w-5" />
+                            <div className="h-9 w-9 rounded-lg bg-[#112252] group-hover/custom:bg-[#1482C2] text-white flex items-center justify-center shrink-0 shadow-2xs group-hover/custom:scale-105 transition-all duration-150">
+                              <Code2 className="h-4.5 w-4.5" strokeWidth={1.75} />
                             </div>
                             <div className="min-w-0 flex-1">
                               <div className="text-[13px] font-bold text-[#112252] group-hover/custom:text-[#1482C2] transition-colors leading-tight">
                                 {customService.title}
                               </div>
-                              <div className="text-[11px] text-slate-600 leading-snug mt-0.5 truncate">
+                              <div className="text-[11px] text-slate-500 leading-snug mt-0.5 truncate">
                                 {customService.desc}
                               </div>
                             </div>
-                            <ArrowRight className="h-4 w-4 text-[#1482C2] group-hover/custom:translate-x-0.5 transition-transform shrink-0" />
+                            <ArrowRight className="h-4 w-4 text-slate-400 group-hover/custom:text-[#1482C2] group-hover/custom:translate-x-0.5 transition-all shrink-0" />
                           </Link>
                         </div>
 
@@ -357,8 +357,8 @@ export function Navbar() {
                               }}
                               className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors"
                             >
-                              <div className="h-7 w-7 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0 text-[#1482C2]">
-                                <Icon className="h-3.5 w-3.5" />
+                              <div className="h-7 w-7 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0 text-slate-700">
+                                <Icon className="h-3.5 w-3.5" strokeWidth={1.6} />
                               </div>
                               <div className="min-w-0 flex-1">
                                 <div className="text-xs font-bold text-[#112252] truncate">
@@ -372,27 +372,27 @@ export function Navbar() {
                           );
                         })}
 
-                        {/* Pesanan Khusus di Mobile */}
+                        {/* Pesanan Khusus di Mobile (Code2 Icon) */}
                         <Link
                           href={customService.href}
                           onClick={() => {
                             setIsOpen(false);
                             setIsMobileServicesOpen(false);
                           }}
-                          className="flex items-center gap-2.5 p-2 rounded-lg bg-[#EAF5FC] border border-[#1482C2]/30 transition-colors mt-1"
+                          className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-200 transition-colors mt-1"
                         >
-                          <div className="h-7 w-7 rounded-lg bg-[#1482C2] text-white flex items-center justify-center shrink-0">
-                            <Sparkles className="h-3.5 w-3.5" />
+                          <div className="h-7 w-7 rounded-lg bg-[#112252] text-white flex items-center justify-center shrink-0">
+                            <Code2 className="h-3.5 w-3.5" strokeWidth={1.75} />
                           </div>
                           <div className="min-w-0 flex-1">
                             <div className="text-xs font-bold text-[#112252] truncate">
                               {customService.title}
                             </div>
-                            <div className="text-[10px] text-slate-600 truncate">
+                            <div className="text-[10px] text-slate-500 truncate">
                               {customService.desc}
                             </div>
                           </div>
-                          <ArrowRight className="h-3.5 w-3.5 text-[#1482C2] shrink-0" />
+                          <ArrowRight className="h-3.5 w-3.5 text-slate-400 shrink-0" />
                         </Link>
                       </div>
                     )}
