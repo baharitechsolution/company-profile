@@ -7,14 +7,14 @@ import { ChevronDown, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-export interface FaqItem {
+interface FaqItem {
   id: string;
   category: "workflow" | "security" | "warranty" | "tech";
   question: string;
   answer: string;
 }
 
-export const faqData: FaqItem[] = [
+const faqData: FaqItem[] = [
   // --- KATEGORI 1: ALUR KERJA & BIAYA ---
   {
     id: "faq-1",

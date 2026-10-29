@@ -89,7 +89,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs">
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#web-development"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Custom Web Application
@@ -97,7 +97,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#mobile-app-development"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Mobile App Development
@@ -105,34 +105,34 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#enterprise-system-erp"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  Enterprise ERP & CRM
+                  Enterprise ERP &amp; CRM
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#cloud-devops-infrastructure"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  Cloud & DevOps Architecture
+                  Cloud &amp; DevOps Architecture
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#ai-data-automation"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  AI & Smart Automation
+                  AI &amp; Smart Automation
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/layanan"
+                  href="/layanan#it-consulting-audit"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  IT Strategic Consulting & Audit
+                  IT Strategic Consulting &amp; Audit
                 </Link>
               </li>
             </ul>
@@ -141,7 +141,7 @@ export function Footer() {
           {/* Col 3: Standar & Jaminan (2 Cols on LG) */}
           <div className="lg:col-span-2">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 pb-1 border-b border-slate-700/60 inline-block">
-              Standar & Jaminan
+              Standar &amp; Jaminan
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
@@ -181,15 +181,15 @@ export function Footer() {
                   href="/#mengapa-kami"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  Arsitektur Bersih & Teruji
+                  Arsitektur Bersih &amp; Teruji
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/kontak"
+                  href="/#mengapa-kami"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
-                  Perjanjian Kerahasiaan (NDA)
+                  Metodologi Agile &amp; Scrum
                 </Link>
               </li>
             </ul>

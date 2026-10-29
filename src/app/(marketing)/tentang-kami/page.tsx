@@ -177,28 +177,31 @@ export default function AboutPage() {
 
             </ScrollReveal>
 
-            {/* Kolom Kanan: Visual Bersih Tim Rekayasa Perangkat Lunak */}
+            {/* Kolom Kanan: Model Representatif Rekayasa Perangkat Lunak Bahari Tech Solution */}
             <ScrollReveal direction="up" delay={0.15} className="lg:col-span-6">
               <div className="relative mx-auto max-w-[500px] lg:max-w-none">
                 
-                {/* Bingkai Foto Tim Rekayasa Bersih & Autentik (Proporsi Kompak) */}
+                {/* Bingkai Foto Lead Consultant & Engineering Bersih & Autentik */}
                 <div className="relative rounded-2xl overflow-hidden shadow-[0_8px_24px_-6px_rgba(17,34,82,0.12)] border border-slate-200/90 bg-slate-900 group">
                   <Image
-                    src="/images/about/engineering-team.jpg"
-                    alt="Tim Rekayasa Perangkat Lunak Bahari Tech Solution Berkolaborasi Merancang Arsitektur Sistem"
-                    width={1280}
-                    height={720}
+                    src="/images/about/model-consultant.jpg"
+                    alt="Konsultan Rekayasa Perangkat Lunak CV. Bahari Tech Solution di Workspace Modern"
+                    width={1920}
+                    height={1080}
                     priority
-                    className="w-full h-[220px] sm:h-[245px] lg:h-[265px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                    className="w-full h-[230px] sm:h-[260px] lg:h-[285px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent pointer-events-none" />
                   
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <p className="text-xs font-bold leading-tight">
-                      Tim Rekayasa Perangkat Lunak {siteConfig.name}
+                  <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#1482C2]/90 backdrop-blur-xs text-[10px] font-bold uppercase tracking-wider text-white mb-1">
+                      Lead Consultant &amp; System Architect
+                    </div>
+                    <p className="text-xs sm:text-sm font-bold leading-tight">
+                      Konsultan Rekayasa Teknologi &amp; Solusi Enterprise
                     </p>
-                    <p className="text-[10px] text-blue-200 mt-0.5">
-                      Kolaborasi Berorientasi Mutu &amp; Kepatuhan Standar Industri
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 mt-0.5">
+                      {siteConfig.name} &bull; Standar Rekayasa Presisi &amp; Kedaulatan Kode 100%
                     </p>
                   </div>
                 </div>
