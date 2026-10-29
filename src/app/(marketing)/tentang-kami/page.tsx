@@ -8,6 +8,12 @@ import {
   FileCheck2,
   CheckCircle2,
   Building,
+  Star,
+  Handshake,
+  Settings2,
+  TrendingUp,
+  MessageSquare,
+  Lightbulb,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
@@ -21,43 +27,55 @@ export const metadata: Metadata = {
   },
 };
 
-// 6 Nilai Inti Korporat: B · A · H · A · R · I (Terinspirasi Filosofi Nilai Unggul)
+// 6 Nilai Inti Resmi: B · A · H · A · R · I (Sesuai Piagam Korporat Bahari Tech Solution)
 const coreValues = [
   {
     letter: "B",
-    title: "Build with Quality",
-    subtitle: "Kualitas Rekayasa Kode",
-    desc: "Menerapkan standar Clean Architecture, modularitas kode yang rapi, dan pengujian berkala agar setiap software bebas bug serta mudah dikembangkan di masa depan.",
+    index: "01",
+    title: "BERKUALITAS",
+    desc: "Memberikan hasil kerja terbaik melalui standar yang tinggi dan berkelanjutan.",
+    pillar: "Standar Tinggi & Berkelanjutan",
+    icon: Star,
   },
   {
     letter: "A",
-    title: "Agile & Adaptive",
-    subtitle: "Fleksibilitas Alur Kerja",
-    desc: "Bekerja secara adaptif terhadap dinamika kebutuhan bisnis Anda melalui sprint rilis bertahap, demo kemajuan berkala, dan penyesuaian fitur yang transparan.",
+    index: "02",
+    title: "AMANAH",
+    desc: "Menjaga kepercayaan melalui integritas, tanggung jawab, dan keamanan data.",
+    pillar: "Integritas & Keamanan Data",
+    icon: Handshake,
   },
   {
     letter: "H",
-    title: "Honest & Transparent",
-    subtitle: "Kejujuran Teknis & Biaya",
-    desc: "Keterbukaan total dalam estimasi waktu, rekomendasi arsitektur terbaik, dan Rencana Anggaran Biaya (RAB) resmi tanpa biaya tersembunyi.",
+    index: "03",
+    title: "HANDAL",
+    desc: "Menghadirkan solusi teknologi yang stabil, tepat guna, dan dapat diandalkan.",
+    pillar: "Stabilitas & Tepat Guna",
+    icon: Settings2,
   },
   {
     letter: "A",
-    title: "Action-Oriented",
-    subtitle: "Solusi Berdampak Riil",
-    desc: "Fokus pada penyelesaian masalah operasional yang nyata. Setiap solusi diarahkan untuk memotong beban kerja manual dan meningkatkan efisiensi bisnis.",
+    index: "04",
+    title: "ADAPTIF",
+    desc: "Terus belajar dan berkembang mengikuti perubahan teknologi serta kebutuhan pengguna.",
+    pillar: "Evolusi & Berkelanjutan",
+    icon: TrendingUp,
   },
   {
     letter: "R",
-    title: "Reliable Systems",
-    subtitle: "Infrastruktur Andal 99.98%",
-    desc: "Arsitektur cloud server elastis berkinerja tinggi dengan pemantauan 24/7, failover otomatis, dan pencadangan data terenkripsi standar industri.",
+    index: "05",
+    title: "RESPONSIF",
+    desc: "Merespons kebutuhan dan kendala secara cepat, komunikatif, dan solutif.",
+    pillar: "Cepat, Komunikatif & Solutif",
+    icon: MessageSquare,
   },
   {
     letter: "I",
-    title: "Integrity & Security",
-    subtitle: "Integritas & Keamanan",
-    desc: "Menjaga kerahasiaan bisnis melalui NDA resmi, kepatuhan UU Pelindungan Data Pribadi (PDP), serta penyerahan 100% hak cipta source code tanpa lock-in.",
+    index: "06",
+    title: "INOVATIF",
+    desc: "Menciptakan ide dan solusi kreatif yang memberikan manfaat nyata bagi pengguna.",
+    pillar: "Ide Kreatif & Manfaat Nyata",
+    icon: Lightbulb,
   },
 ];
 
@@ -294,7 +312,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. NILAI-NILAI INTI KORPORAT: B · A · H · A · R · I (GRID KOMPAK) */}
+      {/* 3. NILAI-NILAI INTI KORPORAT: B · A · H · A · R · I (GRID RESMI KORPORASI) */}
       <section className="py-6 sm:py-8 lg:py-9 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
@@ -308,45 +326,58 @@ export default function AboutPage() {
             </div>
 
             <h2 className="text-xl sm:text-2xl font-extrabold text-[#112252] tracking-tight leading-tight">
-              Filosofi Nilai Inti: B · A · H · A · R · I
+              Budaya Kerja &amp; Nilai Inti: B · A · H · A · R · I
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Enam prinsip integritas kerja yang memandu tim engineering kami dalam memberikan standar layanan prima.
+              Enam prinsip fundamental yang memandu setiap insinyur teknologi Bahari Tech Solution dalam memberikan solusi digital terbaik.
             </p>
           </ScrollReveal>
 
-          {/* 6 Kolom Nilai Inti Kompak */}
-          <ScrollStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
-            {coreValues.map((val, idx) => (
-              <ScrollStaggerItem key={idx}>
-                <div className="p-4 sm:p-4.5 rounded-xl border border-slate-200 bg-white hover:border-[#1482C2] hover:shadow-2xs transition-all duration-150 flex flex-col justify-between h-full group">
-                  <div>
-                    {/* Inisial Huruf Besar Khas Bumitekno dengan Desain Modern */}
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-black text-[#1482C2] tracking-tight group-hover:scale-105 transition-transform">
-                        {val.letter}
-                      </span>
-                      <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded">
-                        0{idx + 1}
-                      </span>
+          {/* 6 Kartu Nilai Inti Presisi (Sesuai Piagam Resmi Perusahaan) */}
+          <ScrollStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4.5">
+            {coreValues.map((val, idx) => {
+              const Icon = val.icon;
+              return (
+                <ScrollStaggerItem key={idx}>
+                  <div className="p-4 sm:p-5 rounded-xl border border-slate-200/90 bg-white hover:border-[#1482C2] hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full group border-t-2 border-t-[#1482C2]/50 hover:border-t-[#1482C2]">
+                    <div>
+                      {/* Baris Atas: Huruf Akronim B.A.H.A.R.I & Ikon Nilai Terkait */}
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="h-8.5 w-8.5 rounded-lg bg-[#EAF5FC] border border-[#1482C2]/30 text-[#1482C2] font-black text-base flex items-center justify-center group-hover:bg-[#1482C2] group-hover:text-white transition-colors shadow-2xs">
+                            {val.letter}
+                          </span>
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-200/70 px-2 py-0.5 rounded">
+                            {val.index}
+                          </span>
+                        </div>
+
+                        <div className="h-8 w-8 rounded-lg bg-slate-50 border border-slate-200/70 text-slate-500 group-hover:text-[#1482C2] group-hover:bg-[#EAF5FC] group-hover:border-[#1482C2]/30 flex items-center justify-center transition-colors">
+                          <Icon className="h-4 w-4" strokeWidth={1.75} />
+                        </div>
+                      </div>
+
+                      {/* Judul Nilai Korporat Resmi */}
+                      <h3 className="text-sm sm:text-base font-extrabold text-[#112252] group-hover:text-[#1482C2] transition-colors tracking-tight leading-snug">
+                        {val.title}
+                      </h3>
+
+                      {/* Deskripsi Resmi */}
+                      <p className="mt-1.5 text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+                        {val.desc}
+                      </p>
                     </div>
 
-                    <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] group-hover:text-[#1482C2] transition-colors leading-snug">
-                      {val.title}
-                    </h3>
-                    
-                    <p className="text-[10.5px] font-semibold text-[#1482C2] mt-0.5 mb-1.5">
-                      {val.subtitle}
-                    </p>
-
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {val.desc}
-                    </p>
+                    {/* Indikator Pilar di Bagian Bawah */}
+                    <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10.5px] font-semibold text-slate-400">
+                      <span className="text-[#1482C2] font-bold">Prinsip #{val.index}</span>
+                      <span className="text-slate-500">{val.pillar}</span>
+                    </div>
                   </div>
-                </div>
-              </ScrollStaggerItem>
-            ))}
+                </ScrollStaggerItem>
+              );
+            })}
           </ScrollStagger>
 
         </div>
