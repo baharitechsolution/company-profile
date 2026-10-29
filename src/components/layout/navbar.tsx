@@ -4,53 +4,107 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  X,
-  ArrowRight,
-  ChevronDown,
-  AppWindow,
-  Smartphone,
-  Database,
-  Cloud,
-  Code2,
-} from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { mainNav } from "@/config/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// 1. Ikon Web & Portal Enterprise (Dua Nada Profesional)
+function WebPortalIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2.5" y="3.5" width="19" height="13.5" rx="2.5" className="fill-current/15 stroke-current" strokeWidth="1.6" />
+      <path d="M2.5 8h19" stroke="currentColor" strokeWidth="1.4" />
+      <circle cx="5.5" cy="5.75" r="0.9" fill="currentColor" />
+      <circle cx="8" cy="5.75" r="0.9" fill="currentColor" />
+      <circle cx="10.5" cy="5.75" r="0.9" fill="currentColor" />
+      <path d="M8.5 20.5h7M12 17v3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 2. Ikon Aplikasi Mobile (Android & iOS Native)
+function MobileAppIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5.5" y="2.5" width="13" height="19" rx="2.8" className="fill-current/15 stroke-current" strokeWidth="1.6" />
+      <path d="M9.5 5.5h5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <circle cx="12" cy="18" r="0.9" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 3. Ikon Enterprise ERP & Core System (Arsitektur Terintegrasi)
+function ErpCoreIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="3.5" width="7.5" height="7.5" rx="1.8" className="fill-current/15 stroke-current" strokeWidth="1.6" />
+      <rect x="13.5" y="3.5" width="7.5" height="7.5" rx="1.8" className="fill-current/15 stroke-current" strokeWidth="1.6" />
+      <rect x="3" y="13" width="7.5" height="7.5" rx="1.8" className="fill-current/15 stroke-current" strokeWidth="1.6" />
+      <rect x="13.5" y="13" width="7.5" height="7.5" rx="1.8" className="fill-current stroke-current" strokeWidth="1.6" />
+      <path d="M6.75 11v2M17.25 11v2M10.5 7.25h3M10.5 16.75h3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 4. Ikon Cloud & Infrastruktur Server
+function CloudServerIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M6.5 18.5a4.5 4.5 0 0 1-.5-8.97A7 7 0 0 1 19.5 12a4.5 4.5 0 0 1-2 6.5h-11Z"
+        className="fill-current/15 stroke-current"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path d="M12 11.5v4.5m0 0-1.75-1.75M12 16l1.75-1.75" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// 5. Ikon Bintang Presisi Pesanan Khusus (Sesuai Referensi)
+function SpecialOrderIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z" />
+      <circle cx="19" cy="5" r="1.3" />
+      <circle cx="5" cy="19" r="1" />
+    </svg>
+  );
+}
+
 interface DropdownServiceItem {
   title: string;
   desc: string;
   href: string;
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const dropdownServices: DropdownServiceItem[] = [
   {
-    title: "Web App & Portal Enterprise",
-    desc: "Platform Next.js SSR cepat, SEO Google, & transaksi tinggi",
+    title: "Website & Web App",
+    desc: "Website profil, web app, & portal modern",
     href: "/layanan#web-development",
-    icon: AppWindow,
+    icon: WebPortalIcon,
   },
   {
-    title: "Aplikasi Mobile (Android & iOS)",
-    desc: "Aplikasi smartphone kinerja tinggi di App & Play Store",
+    title: "Aplikasi Mobile",
+    desc: "Aplikasi Android & iOS performa tinggi",
     href: "/layanan#mobile-app-development",
-    icon: Smartphone,
+    icon: MobileAppIcon,
   },
   {
-    title: "Enterprise ERP & Core System",
-    desc: "Digitalisasi multi-cabang, inventori, keuangan, & HRIS",
+    title: "Sistem ERP & Bisnis",
+    desc: "Digitalisasi stok, cabang, & keuangan",
     href: "/layanan#enterprise-system-erp",
-    icon: Database,
+    icon: ErpCoreIcon,
   },
   {
-    title: "Infrastruktur Cloud & DevOps",
-    desc: "AWS & Google Cloud bergaransi SLA Uptime 99.98%",
+    title: "Cloud & Infrastruktur",
+    desc: "Server andal, aman, & uptime 99.98%",
     href: "/layanan#cloud-devops-infrastructure",
-    icon: Cloud,
+    icon: CloudServerIcon,
   },
 ];
 
@@ -58,7 +112,7 @@ const customService = {
   title: "Pesanan Khusus",
   desc: "Custom website & sistem digital bisnis",
   href: "/kontak?layanan=Pesanan+Khusus",
-  icon: Code2,
+  icon: SpecialOrderIcon,
 };
 
 export function Navbar() {
@@ -183,14 +237,14 @@ export function Navbar() {
                     />
                   </Link>
 
-                  {/* Dropdown Menu Sesuai Referensi Gambar (Bebas Nuansa AI) */}
+                  {/* Dropdown Menu Sesuai Referensi Gambar */}
                   {isServicesOpen && (
                     <div
                       className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 animate-in fade-in-0 zoom-in-95 duration-150"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className="w-[360px] p-2 bg-white rounded-2xl border border-slate-200 shadow-[0_12px_36px_-6px_rgba(17,34,82,0.16)] select-none">
+                      <div className="w-[340px] p-2 bg-white rounded-2xl border border-slate-200/90 shadow-[0_12px_36px_-6px_rgba(17,34,82,0.16)] select-none">
                         <div className="space-y-1">
                           {dropdownServices.map((service, idx) => {
                             const Icon = service.icon;
@@ -201,12 +255,12 @@ export function Navbar() {
                                 onClick={() => setIsServicesOpen(false)}
                                 className="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors group/item"
                               >
-                                {/* Wadah Ikon Editorial Minimalis (Bukan Kotak Biru Tebal AI) */}
-                                <div className="h-9 w-9 rounded-lg bg-slate-50 border border-slate-200/70 flex items-center justify-center shrink-0 text-slate-700 group-hover/item:text-[#1482C2] group-hover/item:bg-[#EAF5FC] group-hover/item:border-[#1482C2]/40 transition-all duration-150 shadow-2xs">
-                                  <Icon className="h-4.5 w-4.5 transition-transform duration-150 group-hover/item:scale-105" strokeWidth={1.6} />
+                                {/* Wadah Ikon Berwarna Bahari Blue */}
+                                <div className="h-10 w-10 rounded-xl bg-[#EAF5FC] border border-[#1482C2]/20 text-[#1482C2] flex items-center justify-center shrink-0 shadow-2xs group-hover/item:bg-[#1482C2] group-hover/item:text-white group-hover/item:border-[#1482C2] transition-colors">
+                                  <Icon className="h-5 w-5 transition-transform duration-150 group-hover/item:scale-105" />
                                 </div>
 
-                                {/* Judul & Deskripsi Substantif */}
+                                {/* Judul Ringkas & Deskripsi Alami */}
                                 <div className="min-w-0 flex-1">
                                   <div className="text-[13px] font-bold text-[#112252] group-hover/item:text-[#1482C2] transition-colors leading-tight">
                                     {service.title}
@@ -219,40 +273,37 @@ export function Navbar() {
                             );
                           })}
 
-                          {/* Item Khusus: Pesanan Khusus (Ikon Code2 Engineering, Bebas Sparkles AI) */}
+                          {/* Kartu Khusus: Pesanan Khusus (Persis Gaya Referensi Bernuansa Hangat) */}
                           <Link
                             href={customService.href}
                             onClick={() => setIsServicesOpen(false)}
-                            className="flex items-center gap-3 p-2 rounded-xl bg-slate-50/80 hover:bg-[#EAF5FC]/70 border border-slate-200 hover:border-[#1482C2]/40 transition-all group/custom mt-1 shadow-2xs"
+                            className="flex items-center gap-3 p-2.5 rounded-xl bg-[#FFF9F2] hover:bg-[#FFF3E5] border border-[#FDE8D3] transition-all group/custom mt-1.5 shadow-2xs"
                           >
-                            <div className="h-9 w-9 rounded-lg bg-[#112252] group-hover/custom:bg-[#1482C2] text-white flex items-center justify-center shrink-0 shadow-2xs group-hover/custom:scale-105 transition-all duration-150">
-                              <Code2 className="h-4.5 w-4.5" strokeWidth={1.75} />
+                            <div className="h-10 w-10 rounded-xl bg-[#F59E0B] text-white flex items-center justify-center shrink-0 shadow-2xs group-hover/custom:scale-105 transition-transform">
+                              <SpecialOrderIcon className="h-5 w-5" />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <div className="text-[13px] font-bold text-[#112252] group-hover/custom:text-[#1482C2] transition-colors leading-tight">
+                              <div className="text-[13px] font-bold text-slate-900 group-hover/custom:text-[#D97706] transition-colors leading-tight">
                                 {customService.title}
                               </div>
-                              <div className="text-[11px] text-slate-500 leading-snug mt-0.5 truncate">
+                              <div className="text-[11px] text-slate-600 leading-snug mt-0.5 truncate">
                                 {customService.desc}
                               </div>
                             </div>
-                            <ArrowRight className="h-4 w-4 text-slate-400 group-hover/custom:text-[#1482C2] group-hover/custom:translate-x-0.5 transition-all shrink-0" />
+                            <ArrowRight className="h-4 w-4 text-[#F59E0B] group-hover/custom:translate-x-0.5 transition-transform ml-auto shrink-0" />
                           </Link>
                         </div>
 
-                        {/* Footer Bawah: Akses Seluruh Katalog */}
-                        <div className="pt-2 mt-1.5 border-t border-slate-100 flex items-center justify-between px-2.5">
+                        {/* Footer Bawah Bersih: Tautan Katalog */}
+                        <div className="pt-2 mt-1.5 border-t border-slate-100 flex items-center justify-center px-2">
                           <Link
                             href="/layanan"
                             onClick={() => setIsServicesOpen(false)}
                             className="text-[11px] font-bold text-[#1482C2] hover:text-[#112252] transition-colors flex items-center gap-1.5 py-0.5"
                           >
-                            <span>Katalog Seluruh Layanan</span>
+                            <span>Lihat Seluruh Katalog Layanan</span>
                             <ArrowRight className="h-3 w-3" />
                           </Link>
-                          <span className="text-[10px] font-semibold text-slate-400">
-                            Enterprise Standard
-                          </span>
                         </div>
                       </div>
                     </div>
@@ -357,8 +408,8 @@ export function Navbar() {
                               }}
                               className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition-colors"
                             >
-                              <div className="h-7 w-7 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0 text-slate-700">
-                                <Icon className="h-3.5 w-3.5" strokeWidth={1.6} />
+                              <div className="h-8 w-8 rounded-lg bg-[#EAF5FC] border border-[#1482C2]/20 flex items-center justify-center shrink-0 text-[#1482C2]">
+                                <Icon className="h-4 w-4" />
                               </div>
                               <div className="min-w-0 flex-1">
                                 <div className="text-xs font-bold text-[#112252] truncate">
@@ -372,27 +423,27 @@ export function Navbar() {
                           );
                         })}
 
-                        {/* Pesanan Khusus di Mobile (Code2 Icon) */}
+                        {/* Pesanan Khusus di Mobile */}
                         <Link
                           href={customService.href}
                           onClick={() => {
                             setIsOpen(false);
                             setIsMobileServicesOpen(false);
                           }}
-                          className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-200 transition-colors mt-1"
+                          className="flex items-center gap-2.5 p-2 rounded-lg bg-[#FFF9F2] border border-[#FDE8D3] transition-colors mt-1"
                         >
-                          <div className="h-7 w-7 rounded-lg bg-[#112252] text-white flex items-center justify-center shrink-0">
-                            <Code2 className="h-3.5 w-3.5" strokeWidth={1.75} />
+                          <div className="h-8 w-8 rounded-lg bg-[#F59E0B] text-white flex items-center justify-center shrink-0">
+                            <SpecialOrderIcon className="h-4 w-4" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <div className="text-xs font-bold text-[#112252] truncate">
+                            <div className="text-xs font-bold text-slate-900 truncate">
                               {customService.title}
                             </div>
-                            <div className="text-[10px] text-slate-500 truncate">
+                            <div className="text-[10px] text-slate-600 truncate">
                               {customService.desc}
                             </div>
                           </div>
-                          <ArrowRight className="h-3.5 w-3.5 text-slate-400 shrink-0" />
+                          <ArrowRight className="h-3.5 w-3.5 text-[#F59E0B] shrink-0" />
                         </Link>
                       </div>
                     )}
