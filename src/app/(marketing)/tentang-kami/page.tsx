@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
   title: `Tentang Kami - Profil Perusahaan, Visi & Nilai Inti | ${siteConfig.name}`,
@@ -116,8 +117,51 @@ const companyStats = [
 export default function AboutPage() {
   const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20pembuatan%20software%20dan%20sistem%20digital.`;
 
+  // Schema.org AboutPage & BreadcrumbList Data Terstruktur untuk Google SEO Rich Snippets
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": `${siteConfig.url}/tentang-kami#webpage`,
+        url: `${siteConfig.url}/tentang-kami`,
+        name: `Tentang Kami - Profil Perusahaan & Nilai Inti | ${siteConfig.name}`,
+        description:
+          "Profil resmi, visi misi, nilai-nilai inti BAHARI, dan standar legalitas CV. Bahari Tech Solution sebagai Software House dan Enterprise Technology Consultant terpercaya di Indonesia.",
+        inLanguage: "id-ID",
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${siteConfig.url}/#website`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/tentang-kami#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Beranda",
+            item: siteConfig.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Tentang Kami",
+            item: `${siteConfig.url}/tentang-kami`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="bg-white select-none">
+      {/* Schema.org Data Terstruktur untuk Google SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       
       {/* 1. EDITORIAL STUDIO OVERVIEW & ARSITEKTUR KEDAULATAN KODE */}
       <section className="py-7 sm:py-9 lg:py-11 bg-white border-b border-slate-200 overflow-hidden relative select-none">
@@ -199,45 +243,19 @@ export default function AboutPage() {
 
             </ScrollReveal>
 
-            {/* Kolom Kanan: Clean Studio Portrait & Floating Technical Passport Card */}
+            {/* Kolom Kanan: Clean Studio Portrait Berstandar Eksekutif (Bebas Overlay AI) */}
             <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5">
-              <div className="relative mx-auto max-w-[460px] lg:max-w-none pb-4 sm:pb-5">
-                
-                {/* Frame Foto Studio Bersih Tanpa Lapisan Gelap Pekat */}
-                <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_32px_-8px_rgba(17,34,82,0.14)] border border-slate-200/90 bg-white group">
+              <div className="relative mx-auto max-w-[460px] lg:max-w-none">
+                <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_32px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
                   <Image
                     src="/images/about/model-consultant.jpg"
-                    alt="Principal Software Architect CV. Bahari Tech Solution"
+                    alt="Principal Software Architect & Lead Consultant CV. Bahari Tech Solution"
                     width={1920}
                     height={1080}
                     priority
-                    className="w-full h-[250px] sm:h-[280px] lg:h-[305px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                    className="w-full h-[260px] sm:h-[300px] lg:h-[340px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   />
-                  
-                  {/* Subtle Corner Badge: Lokasi & Peran */}
-                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-md border border-slate-200/80 text-[10px] font-bold text-[#112252] shadow-2xs">
-                    Jakarta Tech Workspace
-                  </div>
                 </div>
-
-                {/* Floating Technical Passport Card (Kartu Jaminan Melayang Elegan) */}
-                <div className="absolute -bottom-1 sm:-bottom-2 left-3 sm:left-4 right-3 sm:right-auto z-20 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-slate-200/90 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.16)] flex items-center gap-3 sm:min-w-[280px]">
-                  <div className="h-10 w-10 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0 border border-[#1482C2]/20">
-                    <ShieldCheck className="h-5 w-5 text-[#1482C2]" />
-                  </div>
-                  <div className="min-w-0">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 block leading-none">
-                      Jaminan Mutu Terverifikasi
-                    </span>
-                    <span className="text-xs font-black text-[#112252] block leading-tight mt-1 truncate">
-                      Kedaulatan Kode &amp; Audit OWASP
-                    </span>
-                    <span className="text-[10px] text-slate-500 block leading-none mt-0.5">
-                      Hak Cipta 100% Diserahkan ke Klien
-                    </span>
-                  </div>
-                </div>
-
               </div>
             </ScrollReveal>
 
@@ -553,13 +571,7 @@ export default function AboutPage() {
                   className="w-full sm:w-auto"
                 >
                   <span className="w-full sm:w-auto h-11 px-5 rounded-lg bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-2xs cursor-pointer">
-                    <Image
-                      src="/images/Icon/icon whatsapp.png"
-                      alt="WhatsApp"
-                      width={18}
-                      height={18}
-                      className="h-4 w-4 object-contain"
-                    />
+                    <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
                     <span>Chat Tim Engineer</span>
                   </span>
                 </Link>

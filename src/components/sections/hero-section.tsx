@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { HeroBannerVisual } from "@/components/sections/hero-banner-visual";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 const slides = [
   {
@@ -248,12 +249,20 @@ export function HeroSection() {
                         </p>
                       </div>
 
-                      {/* H1 Headline Bersih & Berwibawa */}
-                      <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
-                        {slide.headingPart1}{" "}
-                        <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
-                        {slide.headingPart2}
-                      </h1>
+                      {/* Semantic Single H1 for Primary Slide (SEO), H2 for Secondary Slides */}
+                      {originalIndex === 0 ? (
+                        <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
+                          {slide.headingPart1}{" "}
+                          <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
+                          {slide.headingPart2}
+                        </h1>
+                      ) : (
+                        <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
+                          {slide.headingPart1}{" "}
+                          <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
+                          {slide.headingPart2}
+                        </h2>
+                      )}
 
                       {/* Deskripsi Kalimat Profesional */}
                       <p className="text-sm sm:text-base lg:text-[17px] text-slate-600 leading-relaxed max-w-xl">
@@ -283,13 +292,7 @@ export function HeroSection() {
                             variant="outline"
                             className="w-full sm:w-auto h-12 px-6 gap-2.5 text-xs sm:text-sm font-bold border-slate-300 bg-white text-slate-800 hover:border-[#25D366] hover:text-[#112252] hover:bg-emerald-50/30 transition-all shadow-2xs"
                           >
-                            <Image
-                              src="/images/Icon/icon whatsapp.png"
-                              alt="WhatsApp"
-                              width={18}
-                              height={18}
-                              className="h-4.5 w-4.5 object-contain shrink-0"
-                            />
+                            <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
                             <span>{slide.whatsappCta.text}</span>
                           </Button>
                         </Link>

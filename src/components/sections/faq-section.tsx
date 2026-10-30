@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronDown, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { WhatsAppIcon } from "@/components/shared/icons";
 
 interface FaqItem {
   id: string;
@@ -284,15 +285,9 @@ export function FaqSection() {
             href={whatsappFaqUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-[#1482C2] hover:text-[#0E6496] inline-flex items-center gap-1 hover:underline"
+            className="font-bold text-[#1482C2] hover:text-[#0E6496] inline-flex items-center gap-1.5 hover:underline"
           >
-            <Image
-              src="/images/Icon/icon whatsapp.png"
-              alt="WhatsApp"
-              width={14}
-              height={14}
-              className="h-3.5 w-3.5 object-contain"
-            />
+            <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
             <span>Konsultasikan via WhatsApp Resmi</span>
             <ArrowUpRight className="h-3 w-3" />
           </Link>
