@@ -158,7 +158,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-white py-3 sm:py-5 lg:py-6 border-b border-slate-100"
+      className="relative overflow-hidden bg-white min-h-[calc(100vh-4rem)] min-h-[calc(100dvh-4rem)] flex flex-col justify-between border-b border-slate-100"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -175,10 +175,10 @@ export function HeroSection() {
       />
 
       {/* TRACK SLIDER HORIZONTAL PENUH DENGAN INFINITE FORWARD LOOP */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden flex-1 flex items-center py-4 sm:py-6 lg:py-8">
         <div
           onTransitionEnd={handleTransitionEnd}
-          className={`flex w-full ${
+          className={`flex w-full items-center ${
             enableTransition
               ? "transition-transform duration-700 ease-in-out"
               : "transition-none"
@@ -190,18 +190,18 @@ export function HeroSection() {
             return (
               <div key={`ext-slide-${idx}`} className="w-full shrink-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
                     
                     {/* Kolom Kiri: Teks Headline, Deskripsi Profesional & Tombol CTA */}
-                    <div className="lg:col-span-7 space-y-3 sm:space-y-4">
+                    <div className="lg:col-span-7 space-y-3 sm:space-y-4 lg:space-y-5">
                       
                       {/* Eyebrow Label Korporat Bersih */}
-                      <p className="text-xs font-bold tracking-wider uppercase text-[#1482C2]">
+                      <p className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-[#1482C2]">
                         {slide.tag}
                       </p>
 
                       {/* H1 Headline Bersih & Berwibawa */}
-                      <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#112252] leading-[1.18] tracking-tight">
+                      <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#112252] leading-[1.18] tracking-tight">
                         {slide.headingPart1}{" "}
                         <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                         {slide.headingPart2}
@@ -276,7 +276,7 @@ export function HeroSection() {
       </div>
 
       {/* Kontrol Navigasi Slide Bawah: Panah Kiri/Kanan & Bullet Indikator Kompak */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-2.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3.5 sm:py-4 border-t border-slate-100 flex items-center justify-between z-10 bg-white/80 backdrop-blur-xs">
         
         {/* Bullet Indikator Slide */}
         <div className="flex items-center gap-2">
