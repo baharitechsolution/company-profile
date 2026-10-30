@@ -91,7 +91,7 @@ function CloudServerLogo({ className = "h-4 w-4 shrink-0" }: { className?: strin
 }
 
 /* -------------------------------------------------------------------------- */
-/*        SLIDE 0: WEB APPLICATION & SAAS (KOMPOSISI 3-CARDS SEIMBANG)        */
+/*        SLIDE 0: WEB APPLICATION & SAAS (KOMPOSISI 4-CARDS SEIMBANG)        */
 /* -------------------------------------------------------------------------- */
 
 function Slide0WebVisual() {
@@ -126,7 +126,18 @@ function Slide0WebVisual() {
         </div>
       </div>
 
-      {/* CARD 2: Kanan Tengah - Next.js Arsitektur */}
+      {/* CARD 2: Kiri Bawah - 100% Hak Milik IP */}
+      <div className="absolute bottom-6 left-2 sm:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
+        <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+          <ShieldCheck className="h-3.5 w-3.5" />
+        </div>
+        <div>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">100% Hak Milik IP</span>
+          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Bebas Vendor Lock-In</span>
+        </div>
+      </div>
+
+      {/* CARD 3: Kanan Atas/Tengah - Next.js Arsitektur */}
       <div className="absolute top-18 sm:top-22 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <NextjsLogo className="h-4.5 w-4.5 shrink-0" />
         <div>
@@ -135,14 +146,14 @@ function Slide0WebVisual() {
         </div>
       </div>
 
-      {/* CARD 3: Kanan Bawah - 100% Hak Milik IP */}
+      {/* CARD 4: Kanan Bawah - SEO & Mobile-Ready */}
       <div className="absolute bottom-3 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
-        <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-          <ShieldCheck className="h-3.5 w-3.5" />
+        <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
+          <CheckCircle2 className="h-3.5 w-3.5" />
         </div>
         <div>
-          <span className="block text-[11px] font-bold text-[#233876] leading-none">100% Hak Milik IP</span>
-          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Bebas Vendor Lock-In</span>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">SEO &amp; Mobile-Ready</span>
+          <span className="block text-[9px] font-medium text-emerald-600 mt-0.5">Trafik Google Maksimal</span>
         </div>
       </div>
 
@@ -169,7 +180,7 @@ function Slide0WebVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 1: ENTERPRISE ERP & SOFTWARE (KOMPOSISI 3-CARDS SEIMBANG)       */
+/*      SLIDE 1: ENTERPRISE ERP & SOFTWARE (KOMPOSISI 4-CARDS SEIMBANG)       */
 /* -------------------------------------------------------------------------- */
 
 function Slide1EnterpriseVisual() {
@@ -204,7 +215,18 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* CARD 2: Kanan Tengah - Multi-Cabang Real-Time */}
+      {/* CARD 2: Kiri Bawah - Audit Finansial & Stok (Posisi Spesifik Permintaan User!) */}
+      <div className="absolute bottom-6 left-2 sm:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
+        <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+          <CheckCircle2 className="h-3.5 w-3.5" />
+        </div>
+        <div>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">Audit Finansial &amp; Stok</span>
+          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Akurat Tanpa Selisih</span>
+        </div>
+      </div>
+
+      {/* CARD 3: Kanan Atas/Tengah - Multi-Cabang Real-Time */}
       <div className="absolute top-18 sm:top-22 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
           <Layers className="h-3.5 w-3.5" />
@@ -215,14 +237,14 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* CARD 3: Kanan Bawah - Audit Finansial & Stok */}
+      {/* CARD 4: Kanan Bawah - Efisiensi Kerja +75% */}
       <div className="absolute bottom-3 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-          <CheckCircle2 className="h-3.5 w-3.5" />
+          <Gauge className="h-3.5 w-3.5" />
         </div>
         <div>
-          <span className="block text-[11px] font-bold text-[#233876] leading-none">Audit Finansial &amp; Stok</span>
-          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Akurat Tanpa Selisih</span>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">Efisiensi Kerja +75%</span>
+          <span className="block text-[9px] font-medium text-emerald-600 mt-0.5">Automasi Alur Operasional</span>
         </div>
       </div>
 
@@ -249,7 +271,7 @@ function Slide1EnterpriseVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 2: MOBILE APPLICATION (KOMPOSISI 3-CARDS SEIMBANG)              */
+/*      SLIDE 2: MOBILE APPLICATION (KOMPOSISI 4-CARDS SEIMBANG)              */
 /* -------------------------------------------------------------------------- */
 
 function Slide2MobileVisual() {
@@ -285,7 +307,18 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* CARD 2: Kanan Tengah - 60 FPS Native */}
+      {/* CARD 2: Kiri Bawah - Offline-First Sync */}
+      <div className="absolute bottom-6 left-2 sm:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
+        <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
+          <CheckCircle2 className="h-3.5 w-3.5" />
+        </div>
+        <div>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">Offline-First Sync</span>
+          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Tetap Jalan Tanpa Sinyal</span>
+        </div>
+      </div>
+
+      {/* CARD 3: Kanan Atas/Tengah - 60 FPS Native */}
       <div className="absolute top-18 sm:top-22 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
           <Gauge className="h-3.5 w-3.5" />
@@ -296,14 +329,14 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* CARD 3: Kanan Bawah - Offline-First Sync */}
+      {/* CARD 4: Kanan Bawah - Notifikasi Real-Time */}
       <div className="absolute bottom-3 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
-          <CheckCircle2 className="h-3.5 w-3.5" />
+          <Layers className="h-3.5 w-3.5" />
         </div>
         <div>
-          <span className="block text-[11px] font-bold text-[#233876] leading-none">Offline-First Sync</span>
-          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Tetap Jalan Tanpa Sinyal</span>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">Notifikasi Real-Time</span>
+          <span className="block text-[9px] font-medium text-emerald-600 mt-0.5">Push Notification Kilat</span>
         </div>
       </div>
 
@@ -330,7 +363,7 @@ function Slide2MobileVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 3: CLOUD DEVOPS & SECURITY (KOMPOSISI 3-CARDS SEIMBANG)         */
+/*      SLIDE 3: CLOUD DEVOPS & SECURITY (KOMPOSISI 4-CARDS SEIMBANG)         */
 /* -------------------------------------------------------------------------- */
 
 function Slide3CloudVisual() {
@@ -363,7 +396,18 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* CARD 2: Kanan Tengah - AWS & Google Cloud */}
+      {/* CARD 2: Kiri Bawah - Enkripsi AES-256 */}
+      <div className="absolute bottom-6 left-2 sm:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
+        <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+          <ShieldCheck className="h-3.5 w-3.5" />
+        </div>
+        <div>
+          <span className="block text-[11px] font-bold text-[#233876] leading-none">Enkripsi AES-256</span>
+          <span className="block text-[9px] font-medium text-slate-500 mt-0.5">Proteksi Data Berlapis</span>
+        </div>
+      </div>
+
+      {/* CARD 3: Kanan Atas/Tengah - AWS & Google Cloud */}
       <div className="absolute top-18 sm:top-22 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
           <Layers className="h-3.5 w-3.5" />
@@ -374,7 +418,7 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* CARD 3: Kanan Bawah - Audit OWASP Top 10 */}
+      {/* CARD 4: Kanan Bawah - Audit OWASP Top 10 */}
       <div className="absolute bottom-3 right-2 sm:right-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5">
         <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
           <ShieldCheck className="h-3.5 w-3.5" />
