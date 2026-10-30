@@ -9,12 +9,34 @@ import {
   Layers,
   TrendingUp,
   Globe,
-  Code2,
 } from "lucide-react";
 
 /* -------------------------------------------------------------------------- */
 /*                        OFFICIAL BRAND SVG ICONS                            */
 /* -------------------------------------------------------------------------- */
+
+function GoogleLogoG({ className = "h-3.5 w-3.5 shrink-0" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-label="Google">
+      <path
+        fill="#4285F4"
+        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+      />
+    </svg>
+  );
+}
 
 function GooglePlayLogo({ className = "h-4.5 w-4.5 shrink-0" }: { className?: string }) {
   return (
@@ -69,13 +91,12 @@ function CloudServerLogo({ className = "h-5 w-5 shrink-0" }: { className?: strin
   );
 }
 
-function DatabaseNodeLogo({ className = "h-5 w-5 shrink-0" }: { className?: string }) {
+function PaymentGatewayLogo({ className = "h-6 w-6 shrink-0" }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" aria-label="Database Node">
-      <rect width="24" height="24" rx="5" fill="#1482C2" />
-      <ellipse cx="12" cy="7" rx="5.5" ry="2.2" stroke="white" strokeWidth="1.5" />
-      <path d="M6.5 7v4c0 1.2 2.46 2.2 5.5 2.2s5.5-1 5.5-2.2V7" stroke="white" strokeWidth="1.5" />
-      <path d="M6.5 11v4c0 1.2 2.46 2.2 5.5 2.2s5.5-1 5.5-2.2V11" stroke="white" strokeWidth="1.5" />
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-label="Payment Gateway">
+      <rect width="24" height="24" rx="6" fill="#112252" />
+      <path d="M6 10h12M6 14h5" stroke="#0EB8D8" strokeWidth="2" strokeLinecap="round" />
+      <rect x="4" y="6" width="16" height="12" rx="2" stroke="white" strokeWidth="1.5" />
     </svg>
   );
 }
@@ -87,7 +108,7 @@ function DatabaseNodeLogo({ className = "h-5 w-5 shrink-0" }: { className?: stri
 function SlideWebVisual() {
   return (
     <div className="relative w-full max-w-[450px] sm:max-w-[490px] lg:max-w-[530px] xl:max-w-[560px] mx-auto select-none pt-4 sm:pt-6 pb-0 px-1 sm:px-2">
-      {/* 1. ELEMEN GEOMETRIS LENGKAP TANPA BOKS (SKALA PRESISI DUNIA) */}
+      {/* 1. Geometris Stage Menopang Model */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[540px] h-[340px] sm:h-[390px] lg:h-[440px] pointer-events-none -z-10"
@@ -99,31 +120,37 @@ function SlideWebVisual() {
           preserveAspectRatio="xMidYMax meet"
           className="w-full h-full"
         >
-          {/* Piringan Lingkaran Cyan di Belakang Kepala/Bahu Kanan */}
           <circle cx="350" cy="165" r="150" fill="#0EB8D8" />
-          {/* Kapsul Pil Vertikal Ocean Blue di Kiri */}
           <rect x="80" y="90" width="105" height="260" rx="52" fill="#1482C2" />
-          {/* Busur Geometris Dasar Navy (Solid Lebar Menopang Model) */}
           <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
         </svg>
       </div>
 
-      {/* 2. Kartu Audit Core Web Vitals (Kiri Atas) */}
-      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
-        <div className="h-7 w-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-          <Gauge className="h-4 w-4 text-emerald-600" />
-        </div>
-        <div>
-          <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-            Core Web Vitals
+      {/* 2. KARTU SELLING: Google Search Ranking #1 (Snippet Visual Nyata) */}
+      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[160px] sm:min-w-[175px]">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+          <div className="flex items-center gap-1.5">
+            <GoogleLogoG className="h-3.5 w-3.5" />
+            <span className="text-[9.5px] font-bold text-slate-800">Google Search</span>
+          </div>
+          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70">
+            Rank #1
           </span>
-          <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
-            Skor 98/100 Hijau
+        </div>
+        <div className="text-left space-y-0.5">
+          <span className="block text-[8px] text-emerald-600 font-mono truncate">
+            https://bisnis-anda.com
+          </span>
+          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight truncate">
+            Solusi No. 1 di Google
+          </span>
+          <span className="block text-[8px] text-slate-500">
+            SEO Terindeks Maksimal
           </span>
         </div>
       </div>
 
-      {/* 3. Kartu Load Speed & SEO (Kanan Atas) */}
+      {/* 3. KARTU SELLING: Kecepatan Muat Sub-Detik (< 0.6 Detik) & Skor Hijau */}
       <div className="absolute top-3 sm:top-5 -right-2 sm:right-0 lg:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3.5 py-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[140px]">
         <div className="flex items-center gap-2 mb-1.5">
           <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center">
@@ -131,64 +158,64 @@ function SlideWebVisual() {
           </div>
           <div>
             <span className="block text-[13px] font-black text-[#112252] leading-none">0.6 Detik</span>
-            <span className="block text-[8px] font-bold text-slate-400 uppercase mt-0.5">Waktu Muat</span>
+            <span className="block text-[8px] font-bold text-slate-400 uppercase mt-0.5">Waktu Muat Kilat</span>
           </div>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="font-bold text-[#1482C2]">SEO Maksimal</span>
-          <span className="font-semibold text-slate-600">Next.js SSR</span>
+          <span className="font-bold text-emerald-600">Core Web Vitals</span>
+          <span className="font-semibold text-slate-700">Skor 99 Hijau</span>
         </div>
       </div>
 
-      {/* 4. Lighthouse Performance & Edge Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
-        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
-            Audit · Next.js 16
+      {/* 4. KARTU SELLING: Visual Chart Kenaikan Traffic & Calon Pelanggan */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[160px] sm:min-w-[175px]">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">
+            Trafik Pengunjung
           </span>
-          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Live
+          <span className="text-[8.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+            +240% Naik
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-1.5 text-center">
-          <div className="bg-slate-50 rounded p-1">
-            <span className="block text-[11.5px] font-black text-[#112252]">99</span>
-            <span className="block text-[7px] text-slate-500 font-semibold uppercase">Perf</span>
-          </div>
-          <div className="bg-slate-50 rounded p-1">
-            <span className="block text-[11.5px] font-black text-[#112252]">100</span>
-            <span className="block text-[7px] text-slate-500 font-semibold uppercase">SEO</span>
-          </div>
-          <div className="bg-slate-50 rounded p-1">
-            <span className="block text-[11.5px] font-black text-[#1482C2]">48ms</span>
-            <span className="block text-[7px] text-slate-500 font-semibold uppercase">TTFB</span>
-          </div>
+        {/* Visual Mini Trend Chart Kenaikan */}
+        <div className="py-1">
+          <svg viewBox="0 0 120 22" className="w-full h-5 overflow-visible">
+            <defs>
+              <linearGradient id="webTrafficGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#10B981" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#10B981" stopOpacity="0.0" />
+              </linearGradient>
+            </defs>
+            <path d="M 0,18 Q 30,16 55,10 T 90,5 T 120,2 L 120,22 L 0,22 Z" fill="url(#webTrafficGrad)" />
+            <path d="M 0,18 Q 30,16 55,10 T 90,5 T 120,2" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </div>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1 border-t border-slate-100">
+          <span className="font-semibold text-slate-700">Next.js 16 SSR</span>
+          <span className="text-emerald-600 font-bold">Siap Konversi</span>
         </div>
       </div>
 
-      {/* 5. Kartu Integrasi API & Pembayaran (Kanan Tengah) */}
+      {/* 5. KARTU SELLING: Otomatisasi Pembayaran (Payment Gateway QRIS) */}
       <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
-        <div className="flex items-center gap-2.5 mb-1.5">
-          <div className="h-8 w-8 rounded-xl bg-blue-50 text-[#1482C2] flex items-center justify-center shrink-0">
-            <Code2 className="h-4.5 w-4.5 text-[#1482C2]" />
-          </div>
+        <div className="flex items-center gap-2 mb-1.5">
+          <PaymentGatewayLogo className="h-6 w-6 shrink-0" />
           <div>
-            <span className="block text-[8.5px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-              Integrasi API
+            <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+              Payment Gateway
             </span>
-            <span className="block text-[13px] font-black text-[#112252] leading-tight">
-              Payment &amp; Data
+            <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
+              QRIS &amp; Transfer
             </span>
           </div>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="font-semibold text-[#1482C2]">REST &amp; GraphQL</span>
-          <span className="font-bold text-slate-700">Seamless</span>
+          <span className="font-semibold text-emerald-600">Otomatisasi 24/7</span>
+          <span className="font-bold text-slate-700">Tanpa Admin</span>
         </div>
       </div>
 
-      {/* 6. Model Arsitek Web Wanita (Skala Besar Berwibawa) */}
+      {/* 6. Model Arsitek Web Wanita */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
@@ -217,7 +244,7 @@ function SlideWebVisual() {
 function Slide1EnterpriseVisual() {
   return (
     <div className="relative w-full max-w-[450px] sm:max-w-[490px] lg:max-w-[530px] xl:max-w-[560px] mx-auto select-none pt-4 sm:pt-6 pb-0 px-1 sm:px-2">
-      {/* 1. ELEMEN GEOMETRIS LENGKAP TANPA BOKS (SKALA PRESISI DUNIA) */}
+      {/* 1. Geometris Stage Menopang Model */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[540px] h-[340px] sm:h-[390px] lg:h-[440px] pointer-events-none -z-10"
@@ -229,90 +256,90 @@ function Slide1EnterpriseVisual() {
           preserveAspectRatio="xMidYMax meet"
           className="w-full h-full"
         >
-          {/* Lingkaran Ocean Blue di Kiri */}
           <circle cx="190" cy="165" r="150" fill="#1482C2" />
-          {/* Kapsul Pil Vertikal Navy di Kanan */}
           <rect x="355" y="90" width="105" height="260" rx="52" fill="#112252" />
-          {/* Busur Geometris Dasar Cyan */}
           <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#0EB8D8" />
         </svg>
       </div>
 
-      {/* 2. Kartu Node ERP (Kiri Atas) */}
+      {/* 2. KARTU SELLING: 100% Hak Milik Source Code (Bebas Biaya Lisensi Bulanan) */}
       <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
-        <DatabaseNodeLogo />
+        <div className="h-7 w-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+          <ShieldCheck className="h-4 w-4 text-emerald-600" />
+        </div>
         <div>
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-            Sistem ERP Multi-Cabang
+            Bebas Vendor Lock-In
           </span>
           <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
-            10+ Cabang Terhubung
+            100% Hak Milik Kode
           </span>
         </div>
       </div>
 
-      {/* 3. Kartu Transaksi ERP (Kanan Atas) */}
+      {/* 3. KARTU SELLING: Multi-Cabang Terhubung Real-Time */}
       <div className="absolute top-3 sm:top-5 -right-2 sm:right-0 lg:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3.5 py-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[140px]">
         <div className="flex items-center gap-2 mb-1.5">
           <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center">
             <Layers className="h-3.5 w-3.5" />
           </div>
           <div>
-            <span className="block text-[13px] font-black text-[#112252] leading-none">100k+</span>
-            <span className="block text-[8px] font-bold text-slate-400 uppercase mt-0.5">Trx / Hari</span>
+            <span className="block text-[13px] font-black text-[#112252] leading-none">10+ Cabang</span>
+            <span className="block text-[8px] font-bold text-slate-400 uppercase mt-0.5">Stok &amp; Kas Terpusat</span>
           </div>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="text-emerald-700 font-bold">Sinkron Real-Time</span>
+          <span className="text-emerald-700 font-bold">Sinkron &lt; 0.05s</span>
           <span className="font-semibold text-slate-600">SLA 99.98%</span>
         </div>
       </div>
 
-      {/* 4. Multi-Branch Cluster & Sync Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
-        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
-            Cluster · Multi-Branch
+      {/* 4. KARTU SELLING: Pangkas 4.5 Jam Kerja Manual / Hari */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[160px] sm:min-w-[175px]">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">
+            Efisiensi Operasional
           </span>
-          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Online
+          <span className="text-[8.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+            +78% Cepat
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-1.5 text-left">
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-[#112252]">10+ Nodes</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">Tersinkronisasi</span>
-          </div>
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-[#1482C2]">&lt; 0.05s</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">Replika Data</span>
-          </div>
+        <div className="text-left space-y-0.5 py-0.5">
+          <span className="block text-[11.5px] font-extrabold text-[#112252] leading-tight">
+            Pangkas 4.5 Jam / Hari
+          </span>
+          <span className="block text-[8px] text-slate-500">
+            Laporan Keuangan &amp; Stok Otomatis
+          </span>
+        </div>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1">
+          <span className="font-semibold text-[#1482C2]">Tanpa Human Error</span>
+          <span className="text-emerald-600 font-bold">100% Akurat</span>
         </div>
       </div>
 
-      {/* 5. Kartu Efisiensi Alur Kerja (Kanan Tengah) */}
+      {/* 5. KARTU SELLING: Hemat Biaya Lisensi Ratusan Juta */}
       <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
-        <div className="flex items-center gap-2.5 mb-1.5">
-          <div className="h-8 w-8 rounded-xl bg-blue-50 text-[#1482C2] flex items-center justify-center shrink-0">
-            <TrendingUp className="h-4.5 w-4.5 text-[#1482C2]" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <div className="h-7 w-7 rounded-xl bg-blue-50 text-[#1482C2] flex items-center justify-center shrink-0">
+            <TrendingUp className="h-4 w-4 text-[#1482C2]" />
           </div>
           <div>
-            <span className="block text-[8.5px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-              Alur Otomatis
+            <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+              Efisiensi Anggaran
             </span>
-            <span className="block text-[13px] font-black text-[#112252] leading-tight">
-              Hemat 4.5 Jam
+            <span className="block text-[12.5px] font-black text-[#112252] leading-tight mt-0.5">
+              Hemat Ratusan Juta
             </span>
           </div>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="font-semibold text-[#1482C2]">Efisiensi Alur</span>
-          <span className="font-bold text-slate-700">+78%</span>
+          <span className="font-semibold text-emerald-600">Tanpa Biaya User</span>
+          <span className="font-bold text-slate-700">Milik Anda</span>
         </div>
       </div>
 
-      {/* 6. Model Karakter Utama (Konsultan ERP Skala Besar) */}
+      {/* 6. Model Karakter Utama (Konsultan ERP) */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
@@ -341,7 +368,7 @@ function Slide1EnterpriseVisual() {
 function Slide2MobileVisual() {
   return (
     <div className="relative w-full max-w-[450px] sm:max-w-[490px] lg:max-w-[530px] xl:max-w-[560px] mx-auto select-none pt-4 sm:pt-6 pb-0 px-1 sm:px-2">
-      {/* 1. ELEMEN GEOMETRIS LENGKAP TANPA BOKS (SKALA PRESISI DUNIA) */}
+      {/* 1. Geometris Stage Menopang Model */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[540px] h-[340px] sm:h-[390px] lg:h-[440px] pointer-events-none -z-10"
@@ -353,16 +380,13 @@ function Slide2MobileVisual() {
           preserveAspectRatio="xMidYMax meet"
           className="w-full h-full"
         >
-          {/* Lingkaran Cyan Besar di Kanan */}
           <circle cx="310" cy="165" r="155" fill="#0EB8D8" />
-          {/* Kapsul Pil Vertikal Ocean Blue di Kiri */}
           <rect x="75" y="100" width="105" height="260" rx="52" fill="#1482C2" />
-          {/* Busur Geometris Dasar Navy */}
           <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
         </svg>
       </div>
 
-      {/* 2. DUAL STORE BADGE (Kiri Atas) */}
+      {/* 2. KARTU SELLING: Dual Store Approval (100% Siap Tayang di Store) */}
       <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
         <div className="flex items-center gap-1.5">
           <GooglePlayLogo />
@@ -370,15 +394,15 @@ function Slide2MobileVisual() {
         </div>
         <div className="border-l border-slate-200 pl-2">
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-            Rilis Store Resmi
+            Siap Rilis Resmi
           </span>
           <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
-            Play Store &amp; App Store
+            100% Lolos Kurasi Store
           </span>
         </div>
       </div>
 
-      {/* 3. Rating & Ulasan Resmi (Kanan Atas) */}
+      {/* 3. KARTU SELLING: Rating Tinggi 4.9 Bintang (50k+ Pengguna Ritel) */}
       <div className="absolute top-3 sm:top-5 -right-2 sm:right-0 lg:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3.5 py-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[140px]">
         <div className="flex items-center justify-between gap-1 mb-1">
           <div className="flex items-center gap-0.5 text-amber-500">
@@ -389,56 +413,57 @@ function Slide2MobileVisual() {
           <span className="text-[11px] font-black text-[#112252]">4.9 / 5</span>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1 border-t border-slate-100">
-          <span className="font-bold text-[#1482C2]">50k+ Download</span>
-          <span>2.8k Ulasan</span>
+          <span className="font-bold text-[#1482C2]">50k+ Pengguna</span>
+          <span className="text-emerald-600 font-semibold">Ulasan Positif</span>
         </div>
       </div>
 
-      {/* 4. Mobile Release & CI/CD Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
-        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+      {/* 4. KARTU SELLING: Offline-First Mode (Transaksi Tetap Jalan Walau Tanpa Sinyal) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[160px] sm:min-w-[175px]">
+        <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
-            Release Pipeline
+            Fitur Lapangan
           </span>
-          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Passed
+          <span className="text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            Offline-Ready
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-1.5 text-left">
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-[#112252]">Build 182</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">App Store &amp; Play</span>
-          </div>
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-emerald-600">0.0%</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">Crash Rate</span>
-          </div>
+        <div className="text-left space-y-0.5">
+          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight">
+            Transaksi Tetap Jalan
+          </span>
+          <span className="block text-[8px] text-slate-500">
+            Bisa Order Walau Sinyal Mati
+          </span>
+        </div>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1.5">
+          <span className="font-semibold text-[#1482C2]">Auto-Sync Otomatis</span>
+          <span className="text-emerald-600 font-bold">Anti-Hilang Data</span>
         </div>
       </div>
 
-      {/* 5. PERFORMA 60 FPS (Kanan Tengah) */}
+      {/* 5. KARTU SELLING: 60 FPS Native Ultra-Smooth Bebas Lemot */}
       <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
-        <div className="flex items-center gap-2.5 mb-1.5">
-          <div className="h-8 w-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-            <Gauge className="h-4.5 w-4.5 text-emerald-600" />
+        <div className="flex items-center gap-2 mb-1.5">
+          <div className="h-7 w-7 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+            <Gauge className="h-4 w-4 text-emerald-600" />
           </div>
           <div>
-            <span className="block text-[8.5px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+            <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
               Performa Aplikasi
             </span>
-            <span className="block text-[13px] font-black text-[#112252] leading-tight">
+            <span className="block text-[12.5px] font-black text-[#112252] leading-tight mt-0.5">
               60 FPS Native
             </span>
           </div>
         </div>
         <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="font-semibold text-emerald-600">Ultra-Smooth</span>
-          <span>Zero Lag</span>
+          <span className="font-semibold text-emerald-600">Bebas Lemot</span>
+          <span className="font-bold text-slate-700">Hemat Baterai</span>
         </div>
       </div>
 
-      {/* 6. Model Karakter Wanita Smartphone (Skala Besar Berwibawa) */}
+      {/* 6. Model Karakter Wanita Smartphone */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
@@ -467,7 +492,7 @@ function Slide2MobileVisual() {
 function Slide3CloudVisual() {
   return (
     <div className="relative w-full max-w-[450px] sm:max-w-[490px] lg:max-w-[530px] xl:max-w-[560px] mx-auto select-none pt-4 sm:pt-6 pb-0 px-1 sm:px-2">
-      {/* 1. ELEMEN GEOMETRIS LENGKAP TANPA BOKS (SKALA PRESISI DUNIA) */}
+      {/* 1. Geometris Stage Menopang Model */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[540px] h-[340px] sm:h-[390px] lg:h-[440px] pointer-events-none -z-10"
@@ -479,86 +504,90 @@ function Slide3CloudVisual() {
           preserveAspectRatio="xMidYMax meet"
           className="w-full h-full"
         >
-          {/* Lingkaran Ocean Blue di Kanan */}
           <circle cx="350" cy="165" r="150" fill="#1482C2" />
-          {/* Kapsul Pil Vertikal Cyan di Kiri */}
           <rect x="80" y="90" width="105" height="260" rx="52" fill="#0EB8D8" />
-          {/* Busur Geometris Dasar Navy */}
           <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
         </svg>
       </div>
 
-      {/* 2. Kartu Audit Keamanan OWASP (Kiri Atas) */}
+      {/* 2. KARTU SELLING: 99.99% Uptime (Server Anti-Down) */}
       <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
-        <div className="h-7 w-7 rounded-lg bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
-          <ShieldCheck className="h-4 w-4 text-[#0EB8D8]" />
-        </div>
+        <CloudServerLogo />
         <div>
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-            Audit Keamanan OWASP
+            Jaminan Server Andal
           </span>
           <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
-            Skor 100/100 Lolos
+            99.99% SLA Uptime
           </span>
         </div>
       </div>
 
-      {/* 3. Kartu SLA Cloud Server Uptime (Kanan Atas) */}
+      {/* 3. KARTU SELLING: Pangkas Biaya Server 42% (Cost Down) */}
       <div className="absolute top-3 sm:top-5 -right-2 sm:right-0 lg:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3.5 py-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[140px]">
-        <div className="flex items-center gap-2 mb-1.5">
-          <CloudServerLogo />
-          <div>
-            <span className="block text-[13px] font-black text-[#112252] leading-none">99.99%</span>
-            <span className="block text-[8px] font-bold text-slate-400 uppercase mt-0.5">SLA Uptime Cloud</span>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
-          <span className="font-bold text-[#0EB8D8]">Zero Downtime</span>
-          <span className="font-semibold text-slate-600">AWS &amp; GCP</span>
-        </div>
-      </div>
-
-      {/* 4. Cloud Firewall & Automated Backup Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
-        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
-            WAF &amp; GuardDuty
-          </span>
-          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Active
-          </span>
-        </div>
-        <div className="grid grid-cols-2 gap-1.5 text-left">
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-[#112252]">Anti-DDoS</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">Mitigasi Lapis 7</span>
-          </div>
-          <div className="bg-slate-50 rounded p-1.5">
-            <span className="block text-[11.5px] font-black text-[#1482C2]">Daily Snap</span>
-            <span className="block text-[7.5px] text-slate-500 font-semibold">Auto-Backup AWS</span>
-          </div>
-        </div>
-      </div>
-
-      {/* 5. Kartu Penghematan Biaya Cloud (Kanan Tengah) */}
-      <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">Biaya Server</span>
-          <span className="text-[8.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 font-mono">
+          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
+            Efisiensi Cloud
+          </span>
+          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70 font-mono">
             Hemat 42%
           </span>
         </div>
-        <div className="text-[13px] font-black text-[#112252]">
-          Optimasi Cloud
+        <div className="text-[12.5px] font-black text-[#112252] leading-tight">
+          Pangkas Biaya Server
         </div>
-        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1.5">
-          <span className="font-semibold text-[#0EB8D8]">Resource Ringan</span>
-          <span>Anti-DDoS</span>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1">
+          <span className="font-semibold text-[#1482C2]">Auto-Scaling</span>
+          <span className="font-semibold text-slate-700">AWS &amp; GCP</span>
         </div>
       </div>
 
-      {/* 6. Model Karakter Pria Lead Thumbs Up (Skala Besar Berwibawa) */}
+      {/* 4. KARTU SELLING: Proteksi Anti-DDoS & Lolos Audit OWASP (Data Aman dari Hacker) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[160px] sm:min-w-[175px]">
+        <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+            Keamanan Siber
+          </span>
+          <span className="text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            Lolos OWASP
+          </span>
+        </div>
+        <div className="text-left space-y-0.5 py-0.5">
+          <span className="block text-[11.5px] font-extrabold text-[#112252] leading-tight">
+            Proteksi Anti-DDoS 24/7
+          </span>
+          <span className="block text-[8px] text-slate-500">
+            Enkripsi Data Sensitif Standar Bank
+          </span>
+        </div>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1">
+          <span className="font-semibold text-[#0EB8D8]">Firewall Aktif</span>
+          <span className="text-emerald-600 font-bold">Data Aman</span>
+        </div>
+      </div>
+
+      {/* 5. KARTU SELLING: Auto-Backup Harian (Garansi Zero Data Loss) */}
+      <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
+        <div className="flex items-center gap-2 mb-1.5">
+          <div className="h-7 w-7 rounded-xl bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
+            <ShieldCheck className="h-4 w-4 text-[#0EB8D8]" />
+          </div>
+          <div>
+            <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+              Cadangan Data
+            </span>
+            <span className="block text-[12.5px] font-black text-[#112252] leading-tight mt-0.5">
+              Auto-Backup Harian
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center justify-between text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
+          <span className="font-semibold text-emerald-600">Zero Data Loss</span>
+          <span className="font-bold text-slate-700">Terenkripsi</span>
+        </div>
+      </div>
+
+      {/* 6. Model Karakter Pria Lead Thumbs Up */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
