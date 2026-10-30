@@ -9,9 +9,9 @@ export const siteConfig = {
     email: "kontak@baharitechsolution.my.id",
     phone: "+62 812-3456-7890",
     whatsapp: "6281234567890",
-    address: "Jl. Maritim Digital No. 8, Jakarta Selatan, Indonesia",
+    address: "Jalan Tanjung No. 1, Desa Tanjungharjo, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
     mapsUrl: "https://maps.google.com",
-    hours: "Senin - Jumat: 08:30 - 17:30 WIB",
+    hours: "Senin - Jumat: 07:30 - 16:30 WIB",
   },
   socials: {
     linkedin: "https://linkedin.com/company/bahari-tech-solution",

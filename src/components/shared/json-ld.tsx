@@ -22,15 +22,15 @@ export function JsonLd() {
         address: {
           "@type": "PostalAddress",
           streetAddress: siteConfig.contact.address,
-          addressLocality: "Jakarta Selatan",
-          addressRegion: "DKI Jakarta",
-          postalCode: "12190",
+          addressLocality: "Kabupaten Tegal",
+          addressRegion: "Jawa Tengah",
+          postalCode: "52181",
           addressCountry: "ID",
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: -6.2088,
-          longitude: 106.8456,
+          latitude: -6.8624,
+          longitude: 109.1865,
         },
         areaServed: [
           { "@type": "Country", name: "Indonesia" },
@@ -115,8 +115,8 @@ export function JsonLd() {
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            opens: "08:30",
-            closes: "17:30",
+            opens: "07:30",
+            closes: "16:30",
           },
         ],
         sameAs: [

@@ -156,10 +156,10 @@ export const metadata: Metadata = {
   },
   // GEO Targeting & Regional SEO Tags (Membantu Google Maps, Google AI, dan pencarian lokal Indonesia)
   other: {
-    "geo.region": "ID-JK",
-    "geo.placename": "Jakarta",
-    "geo.position": "-6.2088;106.8456",
-    "ICBM": "-6.2088, 106.8456",
+    "geo.region": "ID-JT",
+    "geo.placename": "Kabupaten Tegal, Jawa Tengah",
+    "geo.position": "-6.8624;109.1865",
+    "ICBM": "-6.8624, 109.1865",
     "content-language": "id",
     "distribution": "global",
     "rating": "general",
