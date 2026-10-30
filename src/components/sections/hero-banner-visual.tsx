@@ -12,9 +12,7 @@ import {
   Bell,
   Lock,
   FileSpreadsheet,
-  Cpu,
   CheckCircle2,
-  Zap,
 } from "lucide-react";
 
 /* -------------------------------------------------------------------------- */
@@ -171,7 +169,7 @@ function CloudServerLogo({ className = "h-4.5 w-4.5 shrink-0" }: { className?: s
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 0 (WEB): WEB APPLICATION & ENTERPRISE PORTAL (NEXT.JS)          */
+/*    SLIDE 0 (WEB): ARSITEK WEB & LAPTOP (KOMPOSISI HARMONIS SEIMBANG 3x3)   */
 /* -------------------------------------------------------------------------- */
 
 function SlideWebVisual() {
@@ -195,8 +193,10 @@ function SlideWebVisual() {
         </svg>
       </div>
 
-      {/* 2. Google Search Snippet Card: Ranking #1 (Kiri Atas - Jauh di Atas Layar Laptop) */}
-      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[160px] sm:max-w-[172px]">
+      {/* --- SISI KIRI (3 ELEMEN SEIMBANG - BEBAS TOTAL DARI LAYAR LAPTOP) --- */}
+
+      {/* KIRI ATAS: Google Search Snippet Card: Ranking #1 (Tinggi di Atas Bahu) */}
+      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[168px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <div className="flex items-center gap-1.5">
             <GoogleLogoG className="h-3.5 w-3.5" />
@@ -219,7 +219,38 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 3. Core Web Vitals Speed Gauge (Kanan Atas) */}
+      {/* KIRI TENGAH: Keamanan SSL Trust Badge (Melayang di Ruang Udara Atas Laptop) */}
+      <div className="absolute top-[26%] sm:top-[28%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[150px] sm:max-w-[162px]">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <Lock className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+          <span className="text-[7.5px] font-black text-emerald-700 uppercase tracking-wider">
+            Keamanan Terjamin
+          </span>
+        </div>
+        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+          HTTPS SSL A+ Grade
+        </span>
+        <span className="block text-[7px] text-slate-500 mt-0.5">
+          Bebas Celah Keamanan
+        </span>
+      </div>
+
+      {/* KIRI BAWAH: Next.js 16 SSR Engine (Grounded di Bawah Bodi Laptop, Samping Jas) */}
+      <div className="absolute bottom-2 sm:bottom-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] flex items-center gap-2 max-w-[160px] sm:max-w-[172px]">
+        <NextjsLogo className="h-4 w-4 shrink-0" />
+        <div>
+          <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+            Arsitektur Skalabel
+          </span>
+          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
+            Next.js 16 SSR Engine
+          </span>
+        </div>
+      </div>
+
+      {/* --- SISI KANAN (3 ELEMEN SEIMBANG DENGAN JARAK NAFAS LEGA) --- */}
+
+      {/* KANAN ATAS: Core Web Vitals Speed Gauge (Simetris Sempurna dengan Kiri Atas) */}
       <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
         <div className="flex items-center gap-2 mb-1">
           <div className="h-5 w-5 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
@@ -236,17 +267,11 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 4. Bank-Grade SSL HTTPS Pill (Kiri Tengah Atas - 45px di Atas Layar Laptop) */}
-      <div className="hidden sm:flex absolute top-[22%] sm:top-[24%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <Lock className="h-3 w-3 text-emerald-600" />
-        <span className="text-[8.5px] font-bold text-slate-700">HTTPS SSL A+ Grade • Bebas Celah</span>
-      </div>
-
-      {/* 5. Payment Gateway QRIS Otomatisasi (Kanan Tengah - Sisi Lengan Kanan) */}
-      <div className="absolute top-[32%] sm:top-[34%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[148px] sm:max-w-[158px]">
+      {/* KANAN TENGAH: Payment Gateway Otomatisasi (Beri Jarak Nafas 50px dari Kartu Atas) */}
+      <div className="absolute top-[34%] sm:top-[36%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-1.5">
           <QrisBadge />
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-wider">
             Auto-Payment
           </span>
         </div>
@@ -263,8 +288,8 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 6. Mini Trend Chart Kenaikan Trafik +240% (Dipindah ke Kanan Bawah - Sisi Kanan 100% Bebas dari Layar Laptop!) */}
-      <div className="absolute top-[56%] sm:top-[58%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* KANAN BAWAH: Mini Trend Chart Kenaikan Trafik (Beri Jarak Nafas 55px dari Kartu Tengah) */}
+      <div className="absolute top-[64%] sm:top-[66%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[155px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Trafik Calon Pembeli
@@ -291,13 +316,7 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 7. Next.js 16 Enterprise Stack Pill (Kiri Bawah - Jauh di Bawah Dasar Laptop, Samping Rok/Jas) */}
-      <div className="hidden sm:flex absolute top-[82%] sm:top-[84%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-2 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-3 py-1.5 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <NextjsLogo className="h-3.5 w-3.5" />
-        <span className="text-[8.5px] font-bold text-slate-700">Next.js 16 SSR Enterprise Engine</span>
-      </div>
-
-      {/* Model Arsitek Web Wanita */}
+      {/* Model Arsitek Web Wanita - Layar Laptop & Kode VS Code 100% Terbuka Penuh */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
@@ -320,7 +339,7 @@ function SlideWebVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*       SLIDE 1: ENTERPRISE ERP & CUSTOM SOFTWARE (ARSITEKTUR KUSTOM)        */
+/*      SLIDE 1: ENTERPRISE ERP & SOFTWARE (KOMPOSISI HARMONIS SEIMBANG 3x3)  */
 /* -------------------------------------------------------------------------- */
 
 function Slide1EnterpriseVisual() {
@@ -344,8 +363,10 @@ function Slide1EnterpriseVisual() {
         </svg>
       </div>
 
-      {/* 2. 100% Hak Milik Source Code (Kiri Atas) */}
-      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[168px] sm:max-w-[180px]">
+      {/* --- SISI KIRI (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KIRI ATAS: 100% Hak Milik Source Code */}
+      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[165px] sm:max-w-[178px]">
         <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
           <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
         </div>
@@ -359,31 +380,8 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 3. Multi-Cabang Terhubung Real-Time (Kanan Atas) */}
-      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
-        <div className="flex items-center gap-2 mb-1">
-          <div className="h-5 w-5 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
-            <Layers className="h-3.5 w-3.5" />
-          </div>
-          <div>
-            <span className="block text-[12px] font-black text-[#112252] leading-none">10+ Cabang</span>
-            <span className="block text-[7.5px] font-bold text-slate-400 uppercase mt-0.5">Stok &amp; Kas Terpusat</span>
-          </div>
-        </div>
-        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
-          <span className="text-emerald-700 font-bold">Sinkron &lt; 0.05s</span>
-          <span className="font-semibold text-slate-600">SLA 99.98%</span>
-        </div>
-      </div>
-
-      {/* 4. Multi-Role Permission Pill (Kanan Tengah Atas) */}
-      <div className="hidden sm:flex absolute top-[30%] sm:top-[32%] right-0 sm:right-1 lg:right-2 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <CheckCircle2 className="h-3 w-3 text-[#1482C2]" />
-        <span className="text-[8.5px] font-bold text-slate-700">Akses Role: Kasir, Gudang, Direksi</span>
-      </div>
-
-      {/* 5. Pangkas 4.5 Jam Kerja Manual / Hari (Kiri Tengah - Siku Tangan) */}
-      <div className="absolute top-[54%] sm:top-[56%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* KIRI TENGAH: Pangkas 4.5 Jam Kerja Manual / Hari */}
+      <div className="absolute top-[48%] sm:top-[50%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[160px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Efisiensi Operasional
@@ -406,8 +404,56 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 6. PostgreSQL Engine & Hemat Lisensi Ratusan Juta (Kanan Bawah) */}
-      <div className="absolute top-[58%] sm:top-[60%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[150px] sm:max-w-[160px]">
+      {/* KIRI BAWAH: Export Excel & WhatsApp Automation Pill */}
+      <div className="absolute bottom-2 sm:bottom-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] flex items-center gap-2 max-w-[160px] sm:max-w-[172px]">
+        <FileSpreadsheet className="h-4 w-4 text-emerald-600 shrink-0" />
+        <div>
+          <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+            Otomatisasi Laporan
+          </span>
+          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
+            1 Klik Excel &amp; Invoice WA
+          </span>
+        </div>
+      </div>
+
+      {/* --- SISI KANAN (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KANAN ATAS: Multi-Cabang Terhubung Real-Time */}
+      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="h-5 w-5 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
+            <Layers className="h-3.5 w-3.5" />
+          </div>
+          <div>
+            <span className="block text-[12px] font-black text-[#112252] leading-none">10+ Cabang</span>
+            <span className="block text-[7.5px] font-bold text-slate-400 uppercase mt-0.5">Stok &amp; Kas Terpusat</span>
+          </div>
+        </div>
+        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
+          <span className="text-emerald-700 font-bold">Sinkron &lt; 0.05s</span>
+          <span className="font-semibold text-slate-600">SLA 99.98%</span>
+        </div>
+      </div>
+
+      {/* KANAN TENGAH: Role-Based Access Control Badge */}
+      <div className="absolute top-[34%] sm:top-[36%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <CheckCircle2 className="h-3.5 w-3.5 text-[#1482C2] shrink-0" />
+          <span className="text-[7.5px] font-black text-[#1482C2] uppercase tracking-wider">
+            Hak Akses Teratur
+          </span>
+        </div>
+        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+          Multi-Role Permission
+        </span>
+        <span className="block text-[7px] text-slate-500 mt-0.5">
+          Kasir, Gudang, Direksi
+        </span>
+      </div>
+
+      {/* KANAN BAWAH: PostgreSQL & Hemat Biaya Lisensi Ratusan Juta */}
+      <div className="absolute top-[62%] sm:top-[64%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[148px] sm:max-w-[158px]">
         <div className="flex items-center gap-1.5 mb-1.5">
           <PostgresLogo className="h-4 w-4" />
           <span className="text-[8px] font-black text-[#336791] uppercase tracking-wider">
@@ -419,19 +465,13 @@ function Slide1EnterpriseVisual() {
             Hemat Ratusan Juta
           </span>
           <span className="block text-[7.5px] text-slate-500">
-            Bebas Biaya User SAP/Odoo
+            Bebas Biaya SAP/Odoo
           </span>
         </div>
         <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1.5 border-t border-slate-100 mt-1">
           <span className="font-semibold text-emerald-600">Unlimited User</span>
           <span className="font-bold text-slate-700">Milik Anda</span>
         </div>
-      </div>
-
-      {/* 7. WhatsApp Invoice Automation Pill (Kiri Bawah) */}
-      <div className="hidden sm:flex absolute top-[80%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <FileSpreadsheet className="h-3 w-3 text-emerald-600" />
-        <span className="text-[8.5px] font-bold text-slate-700">1 Klik Export Excel &amp; PDF</span>
       </div>
 
       {/* Model Karakter Utama (Konsultan ERP) */}
@@ -457,7 +497,7 @@ function Slide1EnterpriseVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 2: APLIKASI MOBILE (ANDROID & IOS) - KAYA BENTUK & BENEFIT      */
+/*      SLIDE 2: APLIKASI MOBILE (KOMPOSISI HARMONIS SEIMBANG 3x3)            */
 /* -------------------------------------------------------------------------- */
 
 function Slide2MobileVisual() {
@@ -481,8 +521,10 @@ function Slide2MobileVisual() {
         </svg>
       </div>
 
-      {/* 2. Dual Store Official Approval Badge (Kiri Atas) */}
-      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[168px] sm:max-w-[180px]">
+      {/* --- SISI KIRI (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KIRI ATAS: Dual Store Approval Badge */}
+      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[165px] sm:max-w-[178px]">
         <div className="flex items-center gap-1.5 shrink-0">
           <GooglePlayLogo />
           <AppStoreLogo />
@@ -497,50 +539,24 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 3. Rating Bintang & Download Terverifikasi (Kanan Atas) */}
-      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
-        <div className="flex items-center justify-between gap-1 mb-1">
-          <div className="flex items-center gap-0.5 text-amber-500">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-3 w-3 fill-amber-400 stroke-amber-400" />
-            ))}
-          </div>
-          <span className="text-[10.5px] font-black text-[#112252]">4.9 / 5</span>
-        </div>
-        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
-          <span className="font-bold text-[#1482C2]">50k+ Pengguna</span>
-          <span className="text-emerald-600 font-semibold">Ulasan Positif</span>
-        </div>
-      </div>
-
-      {/* 4. Live iOS Push Notification Toast (Kanan Tengah Atas - Bentuk Unik Toast Notifikasi Penjualan) */}
-      <div className="absolute top-[26%] sm:top-[28%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.14)] max-w-[160px] sm:max-w-[172px]">
-        <div className="flex items-center justify-between mb-1 pb-1 border-b border-slate-100">
-          <div className="flex items-center gap-1">
-            <Bell className="h-3 w-3 text-[#1482C2]" />
-            <span className="text-[8px] font-extrabold text-[#112252]">Pesanan Masuk</span>
-          </div>
-          <span className="text-[7px] text-slate-400 font-mono">Baru saja</span>
-        </div>
-        <div className="text-left space-y-0.5">
-          <span className="block text-[10.5px] font-black text-emerald-600 leading-tight">
-            + Rp 850.000 (Lunas)
+      {/* KIRI TENGAH: Biometric Face ID & Keamanan Kilat Badge */}
+      <div className="absolute top-[34%] sm:top-[36%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <FaceIdIcon />
+          <span className="text-[7.5px] font-black text-[#1482C2] uppercase tracking-wider">
+            Biometrik
           </span>
-          <div className="flex items-center gap-1 mt-0.5">
-            <QrisBadge className="scale-85 origin-left" />
-            <span className="text-[7px] text-slate-500 font-medium truncate">Auto-Push Notif</span>
-          </div>
         </div>
+        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+          Face ID &amp; Sidik Jari
+        </span>
+        <span className="block text-[7px] text-slate-500 mt-0.5">
+          Login Cepat &lt; 0.2 Detik
+        </span>
       </div>
 
-      {/* 5. Biometric Face ID & Keamanan Kilat Pill (Kiri Tengah) */}
-      <div className="hidden sm:flex absolute top-[38%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <FaceIdIcon />
-        <span className="text-[8.5px] font-bold text-slate-700">Login Face ID &amp; Biometrik</span>
-      </div>
-
-      {/* 6. Fitur Lapangan: Offline-Ready Mode (Kiri Bawah - Bawah Smartphone) */}
-      <div className="absolute top-[64%] sm:top-[66%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* KIRI BAWAH: Fitur Lapangan Offline-Ready Card */}
+      <div className="absolute top-[64%] sm:top-[66%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[160px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider font-mono">
             Fitur Lapangan
@@ -563,8 +579,46 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 7. Performa 60 FPS Native Ultra-Smooth Pill (Kanan Bawah) */}
-      <div className="absolute top-[58%] sm:top-[60%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* --- SISI KANAN (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KANAN ATAS: Rating Bintang & Download Terverifikasi */}
+      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+        <div className="flex items-center justify-between gap-1 mb-1">
+          <div className="flex items-center gap-0.5 text-amber-500">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3 w-3 fill-amber-400 stroke-amber-400" />
+            ))}
+          </div>
+          <span className="text-[10.5px] font-black text-[#112252]">4.9 / 5</span>
+        </div>
+        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
+          <span className="font-bold text-[#1482C2]">50k+ Pengguna</span>
+          <span className="text-emerald-600 font-semibold">Ulasan Positif</span>
+        </div>
+      </div>
+
+      {/* KANAN TENGAH: Live iOS Push Notification Toast (Real Transaction Simulation) */}
+      <div className="absolute top-[32%] sm:top-[34%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.14)] max-w-[155px] sm:max-w-[168px]">
+        <div className="flex items-center justify-between mb-1 pb-1 border-b border-slate-100">
+          <div className="flex items-center gap-1">
+            <Bell className="h-3 w-3 text-[#1482C2]" />
+            <span className="text-[8px] font-extrabold text-[#112252]">Pesanan Masuk</span>
+          </div>
+          <span className="text-[7px] text-slate-400 font-mono">Baru saja</span>
+        </div>
+        <div className="text-left space-y-0.5">
+          <span className="block text-[10.5px] font-black text-emerald-600 leading-tight">
+            + Rp 850.000 (Lunas)
+          </span>
+          <div className="flex items-center gap-1 mt-0.5">
+            <QrisBadge className="scale-85 origin-left" />
+            <span className="text-[7px] text-slate-500 font-medium truncate">Auto-Push Notif</span>
+          </div>
+        </div>
+      </div>
+
+      {/* KANAN BAWAH: Performa 60 FPS Native Ultra-Smooth */}
+      <div className="absolute top-[62%] sm:top-[64%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-1">
           <div className="h-5 w-5 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
             <Gauge className="h-3.5 w-3.5" />
@@ -583,7 +637,7 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* Model Karakter Wanita Smartphone */}
+      {/* Model Karakter Wanita Smartphone - Smartphone di Tangan 100% Bebas Terlihat */}
       <div
         className="relative z-10 mx-auto flex items-end justify-center h-[330px] sm:h-[385px] lg:h-[435px] xl:h-[465px] overflow-hidden"
         style={{
@@ -606,7 +660,7 @@ function Slide2MobileVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*      SLIDE 3: CLOUD DEVOPS & CYBERSECURITY (SERVER ANDAL & AMAN)          */
+/*      SLIDE 3: CLOUD DEVOPS & CYBERSECURITY (KOMPOSISI HARMONIS SEIMBANG 3x3)*/
 /* -------------------------------------------------------------------------- */
 
 function Slide3CloudVisual() {
@@ -630,8 +684,10 @@ function Slide3CloudVisual() {
         </svg>
       </div>
 
-      {/* 2. 99.99% SLA Uptime Server Anti-Down (Kiri Atas) */}
-      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[168px] sm:max-w-[180px]">
+      {/* --- SISI KIRI (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KIRI ATAS: 99.99% SLA Uptime Server Anti-Down */}
+      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 max-w-[165px] sm:max-w-[178px]">
         <CloudServerLogo className="h-4.5 w-4.5 shrink-0" />
         <div className="border-l border-slate-200 pl-1.5 sm:pl-2">
           <div className="flex items-center gap-1">
@@ -646,33 +702,24 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 3. Pangkas Biaya Server 42% (Kanan Atas) */}
-      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-wider">
-            Efisiensi Cloud
-          </span>
-          <span className="text-[7.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70 font-mono">
-            Hemat 42%
+      {/* KIRI TENGAH: Cloudflare Enterprise DDoS Protection Pill */}
+      <div className="absolute top-[34%] sm:top-[36%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <CloudflareLogo className="h-3.5 w-3.5 shrink-0" />
+          <span className="text-[7.5px] font-black text-[#F38020] uppercase tracking-wider">
+            Cloudflare
           </span>
         </div>
-        <div className="text-[11.5px] font-black text-[#112252] leading-tight">
-          Pangkas Biaya Server
-        </div>
-        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100 mt-1">
-          <span className="font-semibold text-[#1482C2]">Auto-Scaling</span>
-          <span className="font-semibold text-slate-700">AWS &amp; GCP</span>
-        </div>
+        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+          Anti-DDoS 24/7 Aktif
+        </span>
+        <span className="block text-[7px] text-slate-500 mt-0.5">
+          Bot Jahat Diblokir Otomatis
+        </span>
       </div>
 
-      {/* 4. Cloudflare DDoS Protection Pill (Kanan Tengah Atas) */}
-      <div className="hidden sm:flex absolute top-[28%] right-0 sm:right-1 lg:right-2 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <CloudflareLogo className="h-3.5 w-3.5" />
-        <span className="text-[8.5px] font-bold text-slate-700">Cloudflare DDoS Active</span>
-      </div>
-
-      {/* 5. Keamanan Siber Lolos Audit OWASP (Kiri Bawah - Kolom Luas) */}
-      <div className="absolute top-[60%] sm:top-[62%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* KIRI BAWAH: Keamanan Siber Lolos Audit OWASP */}
+      <div className="absolute top-[62%] sm:top-[64%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[160px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider font-mono">
             Keamanan Siber
@@ -695,8 +742,29 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 6. Cadangan Data Auto-Backup Harian (Kanan Tengah Bawah) */}
-      <div className="absolute top-[44%] sm:top-[46%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* --- SISI KANAN (3 ELEMEN SEIMBANG) --- */}
+
+      {/* KANAN ATAS: Pangkas Biaya Server 42% */}
+      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-wider">
+            Efisiensi Cloud
+          </span>
+          <span className="text-[7.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70 font-mono">
+            Hemat 42%
+          </span>
+        </div>
+        <div className="text-[11.5px] font-black text-[#112252] leading-tight">
+          Pangkas Biaya Server
+        </div>
+        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100 mt-1">
+          <span className="font-semibold text-[#1482C2]">Auto-Scaling</span>
+          <span className="font-semibold text-slate-700">AWS &amp; GCP</span>
+        </div>
+      </div>
+
+      {/* KANAN TENGAH: Cadangan Data Auto-Backup Harian */}
+      <div className="absolute top-[34%] sm:top-[36%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-1.5">
           <div className="h-5 w-5 rounded-lg bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
             <ShieldCheck className="h-3.5 w-3.5 text-[#0EB8D8]" />
@@ -716,10 +784,20 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 7. Docker & CI/CD Pipeline Pill (Kanan Bawah) */}
-      <div className="hidden sm:flex absolute top-[66%] sm:top-[68%] right-0 sm:right-1 lg:right-2 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
-        <DockerLogo className="h-3.5 w-3.5" />
-        <span className="text-[8.5px] font-bold text-slate-700">Docker CI/CD Zero Downtime</span>
+      {/* KANAN BAWAH: Docker & CI/CD Pipeline Badge */}
+      <div className="absolute top-[62%] sm:top-[64%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <DockerLogo className="h-3.5 w-3.5 shrink-0" />
+          <span className="text-[7.5px] font-black text-[#2496ED] uppercase tracking-wider">
+            Docker CI/CD
+          </span>
+        </div>
+        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+          Zero Downtime Deploy
+        </span>
+        <span className="block text-[7px] text-slate-500 mt-0.5">
+          Rilis Fitur Cepat &amp; Aman
+        </span>
       </div>
 
       {/* Model Karakter Pria Lead Thumbs Up */}
