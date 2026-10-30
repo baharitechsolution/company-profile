@@ -4,11 +4,30 @@ import { Calendar, Building2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Studi Kasus & Portofolio Proyek Klien | ${siteConfig.name}`,
+  title: `Studi Kasus & Portofolio Proyek Sistem Enterprise | ${siteConfig.name}`,
   description:
-    "Rekam jejak implementasi perangkat lunak, sistem informasi logistik, ERP maritim, dan transformasi digital yang telah kami selesaikan dengan sukses.",
+    "Rekam jejak implementasi perangkat lunak produksi: sistem ERP, aplikasi mobile iOS & Android, portal enterprise, dan transformasi digital teruji oleh CV. Bahari Tech Solution.",
+  keywords: [
+    "Portofolio Software House",
+    "Studi Kasus Sistem ERP",
+    "Contoh Aplikasi Mobile Produksi",
+    "Portofolio Web Application Enterprise",
+    "Proyek IT Sukses Indonesia",
+    "Hasil Kerja Software Developer",
+    "Sistem Manajemen Bisnis Terintegrasi",
+    "Bahari Tech Solution Portofolio",
+  ],
   alternates: {
     canonical: "/portofolio",
+  },
+  openGraph: {
+    title: `Portofolio & Rekam Jejak Sistem Digital | ${siteConfig.name}`,
+    description:
+      "Lihat implementasi sistem nyata berskala produksi yang dirancang dan dikembangkan oleh CV. Bahari Tech Solution.",
+    url: `${siteConfig.url}/portofolio`,
+    siteName: siteConfig.name,
+    locale: "id_ID",
+    type: "website",
   },
 };
 

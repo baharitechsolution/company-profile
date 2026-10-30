@@ -4,11 +4,30 @@ import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Hubungi Kami - Konsultasi Solusi Software Gratis | ${siteConfig.name}`,
+  title: `Konsultasi Proyek Software & Estimasi RAB Resmi | ${siteConfig.name}`,
   description:
-    "Hubungi tim konsultan dan software engineer Bahari Tech Solution untuk mendiskusikan kebutuhan digitalisasi bisnis dan penawaran pembuatan aplikasi perusahaan Anda.",
+    "Konsultasikan kebutuhan pembuatan software, aplikasi mobile, web enterprise, atau sistem ERP Anda bersama tim engineer Bahari Tech Solution. Dapatkan konsultasi arsitek gratis dan estimasi RAB transparan.",
+  keywords: [
+    "Konsultasi Pembuatan Software Gratis",
+    "Biaya Pembuatan Aplikasi Mobile",
+    "Estimasi Harga Bikin Web Perusahaan",
+    "Jasa Bikin Software Kantor",
+    "Kontak Software House Jakarta",
+    "Hire Software Developer Indonesia",
+    "Konsultan IT Terpercaya",
+    "Nomor WhatsApp Software House",
+  ],
   alternates: {
     canonical: "/kontak",
+  },
+  openGraph: {
+    title: `Hubungi Kami - Konsultasi Solusi Software Gratis | ${siteConfig.name}`,
+    description:
+      "Hubungi konsultan teknologi kami untuk mendiskusikan roadmap transformasi digital dan pembuatan software kustom Anda.",
+    url: `${siteConfig.url}/kontak`,
+    siteName: siteConfig.name,
+    locale: "id_ID",
+    type: "website",
   },
 };
 

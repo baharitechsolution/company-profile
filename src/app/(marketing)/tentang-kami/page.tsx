@@ -22,11 +22,30 @@ import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/
 import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
-  title: `Tentang Kami - Profil Perusahaan, Visi & Nilai Inti | ${siteConfig.name}`,
+  title: `Profil Perusahaan CV. Bahari Tech Solution - Software House Resmi Indonesia`,
   description:
-    "Mengenal lebih dekat CV. Bahari Tech Solution: Software House dan Enterprise Technology Consultant terpercaya di Indonesia dengan komitmen rekayasa presisi, transparansi teknis, dan kepemilikan source code 100%.",
+    "Mengenal CV. Bahari Tech Solution: Software House dan Enterprise Technology Consultant berbadan hukum resmi di Indonesia. Nilai B.A.H.A.R.I, legalitas SK Kemenkumham, dan 100% hak cipta source code.",
+  keywords: [
+    "Profil CV Bahari Tech Solution",
+    "Software House Resmi Berbadan Hukum",
+    "Vendor IT Terdaftar Kemenkumham RI",
+    "Software House Jakarta Selatan",
+    "Perusahaan IT Terpercaya Indonesia",
+    "Konsultan Teknologi Enterprise",
+    "Rekayasa Perangkat Lunak Indonesia",
+    "Vendor Software Anti Lock-in",
+  ],
   alternates: {
     canonical: "/tentang-kami",
+  },
+  openGraph: {
+    title: `Tentang CV. Bahari Tech Solution - Profil & Legalitas Resmi`,
+    description:
+      "Profil lengkap software house resmi dengan dedikasi rekayasa bersih, transparansi teknis, dan kepemilikan source code 100%.",
+    url: `${siteConfig.url}/tentang-kami`,
+    siteName: siteConfig.name,
+    locale: "id_ID",
+    type: "website",
   },
 };
 

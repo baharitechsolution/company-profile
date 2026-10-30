@@ -1,27 +1,45 @@
 # CV. Bahari Tech Solution
 
 > Software House & Enterprise Technology Consultant Resmi di Indonesia.
-> Melayani rekayasa perangkat lunak kustom, aplikasi mobile Android & iOS, portal web enterprise Next.js, sistem ERP multi-cabang, dan integrasi cloud DevOps dengan 100% kepemilikan source code tanpa vendor lock-in.
+> Melayani rancang bangun perangkat lunak kustom, aplikasi mobile Android & iOS, portal web enterprise Next.js, sistem ERP terintegrasi, dan arsitektur cloud DevOps dengan 100% kepemilikan source code tanpa vendor lock-in.
 
-- Website: https://www.baharitechsolution.my.id
-- Entitas Badan Usaha: CV. Bahari Tech Solution (Terdaftar Kemenkumham RI)
-- Lokasi Kantor: Jakarta Selatan, Indonesia
-- Email: kontak@baharitechsolution.my.id
-- WhatsApp: +62 812-3456-7890
-- Jam Operasional: Senin - Jumat (08:30 - 17:30 WIB)
+- **Website Resmi**: https://www.baharitechsolution.my.id
+- **Legalitas Badan Usaha**: CV. Bahari Tech Solution (SK Kemenkumham RI, NIB Sah, NPWP & Faktur Pajak Resmi)
+- **Kantor Operasional**: Jakarta Selatan, DKI Jakarta, Indonesia
+- **Surel Resmi**: kontak@baharitechsolution.my.id
+- **WhatsApp Helpdesk**: +62 812-3456-7890
+- **Jam Layanan**: Senin – Jumat (08:30 – 17:30 WIB)
 
-## Layanan Utama
-1. **Aplikasi Mobile (iOS & Android)**: Pengembangan aplikasi native & hybrid (Flutter, React Native, Swift, Kotlin), performa 60 FPS, arsitektur offline-first, dan jaminan kurasi rilis ke Google Play Store & Apple App Store.
-2. **Web Application & SaaS Enterprise**: Pengembangan portal web modern berskala tinggi menggunakan Next.js, React, Tailwind CSS, TypeScript, arsitektur modular, dan database PostgreSQL/MongoDB.
-3. **Sistem ERP & Manajemen Bisnis**: Pembuatan sistem ERP kustom terintegrasi (manajemen inventori, POS multi-cabang, akuntansi keuangan, HRIS/payroll, rantai pasok) dengan otomatisasi laporan real-time.
-4. **Cloud Infrastructure & DevOps**: Desain arsitektur cloud berstandar AWS & Google Cloud Platform (GCP), CI/CD automated pipeline, kontainerisasi Docker/Kubernetes, dan audit keamanan siber berstandar OWASP Top 10.
+---
 
-## Keunggulan Kompetitif
-- **100% Hak Milik Source Code (No Vendor Lock-in)**: Seluruh kode sumber, database schema, dan aset digital diserahkan penuh kepada klien setelah pelunasan.
-- **Legalitas & SPK Sah**: Setiap kerja sama dipayungi kontrak kerja sah (SPK), perjanjian kerahasiaan data (NDA), dan faktur pajak resmi.
-- **Garansi Pemeliharaan (SLA)**: Garansi bebas bug 3–6 bulan pasca rilis produksi dan jaminan SLA uptime 99.98%.
-- **Metodologi Agile & Scrum**: Sprint terukur mingguan dengan akses preview interaktif berkala untuk klien.
+## Ringkasan Layanan Utama & Spesifikasi Teknis
 
-## Jangkauan Layanan (GEO Target)
-Melayani klien korporasi, institusi bisnis, UMKM naik kelas, dan startup di seluruh wilayah Indonesia:
-Jakarta, Bogor, Depok, Tangerang, Bekasi (Jabodetabek), Surabaya, Bandung, Medan, Semarang, Yogyakarta, Denpasar Bali, Makassar, dan kota-kota lainnya di Indonesia.
+### 1. Jasa Pembuatan Aplikasi Mobile (iOS & Android)
+- **Istilah Awam/Bisnis**: Bikin aplikasi HP, buat aplikasi Android & iPhone, aplikasi kurir, aplikasi kasir mobile, aplikasi toko online, aplikasi operasional lapangan.
+- **Istilah Teknis/IT**: Cross-platform & Native Mobile Engineering (Flutter, React Native, Swift, Kotlin), Offline-first SQLite/WatermelonDB, Biometric Auth (Face ID & Fingerprint), Push Notification FCM, Kurasi rilis Google Play Store & Apple App Store.
+
+### 2. Jasa Pembuatan Web Application & SaaS Enterprise
+- **Istilah Awam/Bisnis**: Buat website perusahaan modern, bikin portal login karyawan, sistem dashboard data, website toko online custom berskala besar.
+- **Istilah Teknis/IT**: Full-stack Next.js (App Router, Turbopack, SSR, SSG), React, TypeScript, Tailwind CSS, PostgreSQL, Redis Caching, Microservices, RESTful & GraphQL API, Core Web Vitals 95+.
+
+### 3. Jasa Pembuatan Sistem ERP & Custom Software
+- **Istilah Awam/Bisnis**: Program kantor otomatis, sistem stok dan gudang multi-cabang, software keuangan & akuntansi, absensi & penggajian karyawan (HRIS), sistem operasional bisnis terpadu.
+- **Istilah Teknis/IT**: Enterprise Resource Planning (ERP), Supply Chain Management (SCM), Customer Relationship Management (CRM), Role-Based Access Control (RBAC), Audit Trail Compliance, Multi-Tenant Database Architecture.
+
+### 4. Cloud Infrastructure, DevOps & Keamanan Siber
+- **Istilah Awam/Bisnis**: Sewa & kelola server cloud, pencegahan website down, pengamanan data anti bocor, backup otomatis.
+- **Istilah Teknis/IT**: Cloud Engineering AWS & Google Cloud Platform (GCP), CI/CD Automated Pipelines, Docker & Kubernetes, Load Balancing, Failover Cluster Uptime SLA 99.98%, OWASP Top 10 Security Audit & Penetration Testing.
+
+---
+
+## Keunggulan Utama (Value Proposition)
+1. **100% Hak Milik Source Code**: Seluruh source code, diagram arsitektur, dan database schema diserahkan penuh kepada klien tanpa lisensi tahunan tersembunyi (*zero vendor lock-in*).
+2. **Legalitas Hukum Sah**: Setiap transaksi dipayungi Kontrak Kerja Sah (SPK), Perjanjian Kerahasiaan Informasi (Non-Disclosure Agreement / NDA), dan Faktur Pajak resmi.
+3. **Garansi Bebas Bug (Free SLA Maintenance)**: Dukungan pemeliharaan teknis gratis 3 hingga 6 bulan pasca rilis produksi.
+4. **Metodologi Agile & Scrum**: Transparansi progres mingguan, demo berkala, dan penjaminan kualitas kode (*clean code & clean architecture*).
+
+---
+
+## Jangkauan Target Wilayah (National & International GEO)
+- **Nasional**: Melayani seluruh kota di Indonesia meliputi Jabodetabek (Jakarta Selatan, Jakarta Pusat, Jakarta Barat, Jakarta Timur, Jakarta Utara, Bogor, Depok, Tangerang, Bekasi), Surabaya, Bandung, Medan, Semarang, Yogyakarta, Denpasar (Bali), Makassar, Palembang, Balikpapan, dan Batam.
+- **Internasional / Regional**: Melayani klien dari Singapura, Malaysia, Australia, dan seluruh dunia yang membutuhkan tim *offshore software engineering* profesional berstandar internasional.

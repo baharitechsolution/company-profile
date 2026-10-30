@@ -6,11 +6,34 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Layanan Rekayasa Perangkat Lunak & Sistem Enterprise | ${siteConfig.name}`,
+  title: `Jasa Pembuatan Aplikasi Mobile, Web Enterprise & Sistem ERP | ${siteConfig.name}`,
   description:
-    "Katalog lengkap solusi perangkat lunak kustom, web enterprise, mobile application iOS & Android, ERP, dan arsitektur cloud dari Bahari Tech Solution.",
+    "Jasa pembuatan aplikasi Android & iOS, website enterprise Next.js, sistem ERP kustom terintegrasi, dan arsitektur cloud DevOps terpercaya di Indonesia. 100% kepemilikan source code tanpa vendor lock-in.",
+  keywords: [
+    "Jasa Pembuatan Aplikasi Mobile",
+    "Jasa Pembuatan Aplikasi Android iOS",
+    "Jasa Bikin Aplikasi HP",
+    "Jasa Pembuatan Website Enterprise",
+    "Jasa Buat Web Perusahaan Next.js",
+    "Jasa Pembuatan Sistem ERP",
+    "Bikin Program Kasir & Stok Gudang",
+    "Custom Software Development Indonesia",
+    "Fullstack Next.js Development Agency",
+    "Flutter React Native Mobile Developers",
+    "Cloud DevOps AWS GCP Indonesia",
+    "Software House Jakarta Selatan",
+  ],
   alternates: {
     canonical: "/layanan",
+  },
+  openGraph: {
+    title: `Katalog Layanan Rekayasa Perangkat Lunak | ${siteConfig.name}`,
+    description:
+      "Solusi rekayasa perangkat lunak terintegrasi: Mobile App, Enterprise Web, ERP System, & Cloud Infrastructure.",
+    url: `${siteConfig.url}/layanan`,
+    siteName: siteConfig.name,
+    locale: "id_ID",
+    type: "website",
   },
 };
 
