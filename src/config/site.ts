@@ -10,7 +10,7 @@ export const siteConfig = {
     email: "kontak@baharitechsolution.my.id",
     phone: "+62 812-3456-7890",
     whatsapp: "6281234567890",
-    address: "Jalan Tanjung No. 1, Desa Tanjungharjo, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
+    address: "Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
     mapsUrl: "https://maps.google.com",
     hours: "Senin - Jumat: 07:30 - 16:30 WIB",
   },

@@ -173,7 +173,7 @@ export default function ServicesPage() {
           <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-xs text-slate-600 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
-              <span>Kantor Operasional: Jalan Tanjung No. 1, Desa Tanjungharjo, Kec. Kramat, Tegal</span>
+              <span>Kantor Operasional: Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Tegal</span>
             </div>
             <Link href="/kontak">
               <Button variant="primary" className="gap-2 shrink-0">
