@@ -14,6 +14,8 @@ import {
   TrendingUp,
   MessageSquare,
   Lightbulb,
+  Target,
+  Compass,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
@@ -256,73 +258,105 @@ export default function AboutPage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             
             {/* Kartu Visi */}
             <ScrollReveal direction="up" delay={0.1} className="h-full">
-              <div className="h-full p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="h-0.5 w-4 bg-[#1482C2]" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                      VISI PERUSAHAAN
-                    </span>
+              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2]/60 hover:shadow-xs transition-all duration-300">
+                <div className="space-y-3 sm:space-y-4">
+                  {/* Header Label & Icon Target */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="h-0.5 w-4 bg-[#1482C2]" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
+                        VISI PERUSAHAAN
+                      </span>
+                    </div>
+                    <div className="h-8 w-8 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
+                      <Target className="h-4.5 w-4.5" />
+                    </div>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug">
-                    Menjadi Mitra Rekayasa Teknologi Terpercaya &amp; Berdaya Saing Global
+                  {/* Headline Utama Visi Resmi */}
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#112252] leading-snug">
+                    Menjadi Mitra Teknologi Terpercaya di Indonesia
                   </h3>
 
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Mewujudkan ekosistem transformasi digital terdepan di Indonesia yang diakui atas keunggulan arsitektur perangkat lunak, kepatuhan ketat terhadap keamanan data, serta integritas kemitraan jangka panjang yang memberdayakan mitra bisnis.
+                  {/* Penjabaran Visi Sesuai Dokumen Resmi */}
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Memberdayakan pertumbuhan bisnis dan institusi pemerintahan melalui adopsi sistem digital yang tepat sasaran, tangguh, dan bernilai ekonomis.
                   </p>
+
+                  {/* 3 Pilar Nilai Visi */}
+                  <div className="pt-1 flex flex-wrap gap-2 text-xs">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2]" />
+                      Tepat Sasaran
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                      Tangguh
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                      Bernilai Ekonomis
+                    </span>
+                  </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
                   <span className="text-[#1482C2] font-bold">✓</span>
-                  <span>Kedaulatan Data Mandiri · Standar Enterprise · Bebas Lock-in</span>
+                  <span>Mitra Terpercaya Bisnis &amp; Institusi Pemerintahan</span>
                 </div>
               </div>
             </ScrollReveal>
 
             {/* Kartu Misi */}
             <ScrollReveal direction="up" delay={0.15} className="h-full">
-              <div className="h-full p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="h-0.5 w-4 bg-[#1482C2]" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                      MISI OPERASIONAL
-                    </span>
+              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2]/60 hover:shadow-xs transition-all duration-300">
+                <div className="space-y-3 sm:space-y-4">
+                  {/* Header Label & Icon Misi */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="h-0.5 w-4 bg-[#1482C2]" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
+                        MISI PERUSAHAAN
+                      </span>
+                    </div>
+                    <div className="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <Compass className="h-4.5 w-4.5" />
+                    </div>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug">
-                    Empat Pilar Eksekusi Solusi Tepat Guna
+                  {/* Headline Utama Misi */}
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#112252] leading-snug">
+                    4 Pilar Komitmen &amp; Mutu Eksekusi
                   </h3>
 
-                  <ul className="mt-2 space-y-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    <li className="flex items-start gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2] mt-1.5 shrink-0" />
-                      <span><strong>Rekayasa Berkualitas:</strong> Membangun aplikasi web, mobile, dan sistem ERP dengan performa tinggi, bebas lag, dan arsitektur modular.</span>
+                  {/* 4 Poin Misi Resmi dengan Checkmark Hijau */}
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Menghadirkan produk digital berstandar tinggi yang stabil, aman, dan ramah pengguna.</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2] mt-1.5 shrink-0" />
-                      <span><strong>Transparansi Penuh:</strong> Keterbukaan total dalam penetapan Rencana Anggaran Biaya (RAB) resmi tanpa biaya tersembunyi.</span>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Menjamin ketepatan waktu pengerjaan melalui manajemen proyek yang disiplin dan transparan.</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2] mt-1.5 shrink-0" />
-                      <span><strong>Keamanan &amp; Kepatuhan:</strong> Menerapkan standar audit keamanan OWASP dan perlindungan data bisnis sesuai UU PDP.</span>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Mengadopsi arsitektur modern dan inovasi teknologi terkini secara berkelanjutan.</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2] mt-1.5 shrink-0" />
-                      <span><strong>Pemberdayaan Klien:</strong> Menyerahkan 100% hak cipta source code serta memberikan pelatihan dan dokumentasi komprehensif.</span>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Memberikan pendampingan purnajual yang responsif, solutif, dan berorientasi pada kepuasan mitra.</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
-                  <span className="text-[#1482C2] font-bold">✓</span>
-                  <span>Bebas Vendor Lock-in · Garansi Bebas Bug · Dukungan SLA Resmi</span>
+                <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
+                  <span className="text-emerald-600 font-bold">✓</span>
+                  <span>Standar Tinggi · Disiplin Waktu · Layanan Purnajual Responsif</span>
                 </div>
               </div>
             </ScrollReveal>
