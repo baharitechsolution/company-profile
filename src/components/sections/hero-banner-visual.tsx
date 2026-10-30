@@ -235,16 +235,31 @@ function SlideWebVisual() {
         </span>
       </div>
 
-      {/* KIRI BAWAH: Next.js 16 SSR Engine (Grounded di Bawah Bodi Laptop, Samping Jas) */}
-      <div className="absolute bottom-2 sm:bottom-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] flex items-center gap-2 max-w-[160px] sm:max-w-[172px]">
-        <NextjsLogo className="h-4 w-4 shrink-0" />
-        <div>
-          <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
-            Arsitektur Skalabel
+      {/* KIRI BAWAH: Mini Trend Chart Kenaikan Trafik (Ditukar Sesuai Request User, Grounded di Bawah Bodi Laptop) */}
+      <div className="absolute bottom-2 sm:bottom-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[155px]">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
+            Trafik Calon Pembeli
           </span>
-          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
-            Next.js 16 SSR Engine
+          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+            +240% Naik
           </span>
+        </div>
+        <div className="py-0.5">
+          <svg viewBox="0 0 120 20" className="w-full h-4 overflow-visible">
+            <defs>
+              <linearGradient id="webTrafficGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#10B981" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#10B981" stopOpacity="0.0" />
+              </linearGradient>
+            </defs>
+            <path d="M 0,16 Q 30,14 55,9 T 90,4 T 120,2 L 120,20 L 0,20 Z" fill="url(#webTrafficGrad)" />
+            <path d="M 0,16 Q 30,14 55,9 T 90,4 T 120,2" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </div>
+        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
+          <span className="font-semibold text-slate-700">SEO &amp; Kecepatan</span>
+          <span className="text-emerald-600 font-bold">Siap Konversi</span>
         </div>
       </div>
 
@@ -288,31 +303,16 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* KANAN BAWAH: Mini Trend Chart Kenaikan Trafik (Beri Jarak Nafas 55px dari Kartu Tengah) */}
-      <div className="absolute top-[64%] sm:top-[66%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[145px] sm:min-w-[155px]">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
-            Trafik Calon Pembeli
+      {/* KANAN BAWAH: Next.js 16 SSR Engine (Ditukar Sesuai Request User, Sisi Kanan, Jarak Nafas 55px dari Kartu Tengah) */}
+      <div className="absolute top-[64%] sm:top-[66%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] flex items-center gap-2 max-w-[155px] sm:max-w-[165px]">
+        <NextjsLogo className="h-4 w-4 shrink-0" />
+        <div>
+          <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
+            Arsitektur Skalabel
           </span>
-          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
-            +240% Naik
+          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
+            Next.js 16 SSR Engine
           </span>
-        </div>
-        <div className="py-0.5">
-          <svg viewBox="0 0 120 20" className="w-full h-4 overflow-visible">
-            <defs>
-              <linearGradient id="webTrafficGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#10B981" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#10B981" stopOpacity="0.0" />
-              </linearGradient>
-            </defs>
-            <path d="M 0,16 Q 30,14 55,9 T 90,4 T 120,2 L 120,20 L 0,20 Z" fill="url(#webTrafficGrad)" />
-            <path d="M 0,16 Q 30,14 55,9 T 90,4 T 120,2" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </div>
-        <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
-          <span className="font-semibold text-slate-700">Next.js 16 SSR</span>
-          <span className="text-emerald-600 font-bold">Siap Konversi</span>
         </div>
       </div>
 
