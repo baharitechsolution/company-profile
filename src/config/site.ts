@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Software House Indonesia & Enterprise Technology Consultant. Jasa pembuatan Aplikasi Mobile iOS & Android, Web Application Next.js, Sistem Enterprise ERP, Cloud DevOps, serta integrasi digital kustom terpercaya.",
   url: process.env.NEXT_PUBLIC_APP_URL || "https://www.baharitechsolution.my.id",
-  ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_bts_utama.png",
+  ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_thumbnail_square.png",
   contact: {
     email: "baharitechsolution@gmail.com",
     phone: "+62 822-2019-0948",

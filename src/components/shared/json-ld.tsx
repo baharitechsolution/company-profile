@@ -13,7 +13,7 @@ export function JsonLd() {
         alternateName: [siteConfig.shortName, "CV. Bahari Tech Solution", "Bahari Tech"],
         url: siteConfig.url,
         logo: `${siteConfig.url}/images/logo/Logo.png`,
-        image: `${siteConfig.url}/images/kantor/kantor_bts_utama.png`,
+        image: `${siteConfig.url}/images/kantor/kantor_thumbnail_square.png`,
         description: siteConfig.description,
         telephone: siteConfig.contact.phone,
         email: siteConfig.contact.email,
@@ -147,6 +147,13 @@ export function JsonLd() {
         name: siteConfig.name,
         description: siteConfig.description,
         inLanguage: "id-ID",
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${siteConfig.url}/images/kantor/kantor_thumbnail_square.png`,
+          width: 800,
+          height: 800,
+          caption: "Gedung Kantor Pusat Bahari Tech Solution",
+        },
         publisher: {
           "@id": `${siteConfig.url}/#organization`,
         },

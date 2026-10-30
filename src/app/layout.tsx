@@ -130,10 +130,16 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/images/logo/Logo.png",
-        width: 1640,
-        height: 580,
-        alt: siteConfig.name,
+        url: "/images/kantor/kantor_thumbnail_square.png",
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - Kantor Pusat & Software House Resmi`,
+      },
+      {
+        url: "/images/kantor/kantor_bts_utama.png",
+        width: 1536,
+        height: 1024,
+        alt: `${siteConfig.name} - Kantor Pusat & Software House Resmi`,
       },
     ],
   },
@@ -141,7 +147,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} - Enterprise Software Engineering`,
     description: siteConfig.description,
-    images: ["/images/logo/Logo.png"],
+    images: ["/images/kantor/kantor_thumbnail_square.png"],
   },
   robots: {
     index: true,
@@ -163,6 +169,7 @@ export const metadata: Metadata = {
     "content-language": "id",
     "distribution": "global",
     "rating": "general",
+    "thumbnail": `${siteConfig.url}/images/kantor/kantor_thumbnail_square.png`,
   },
 };
 
