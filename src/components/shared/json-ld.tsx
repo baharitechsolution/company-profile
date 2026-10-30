@@ -33,10 +33,17 @@ export function JsonLd() {
           longitude: 106.8456,
         },
         areaServed: [
-          {
-            "@type": "Country",
-            name: "Indonesia",
-          },
+          { "@type": "Country", name: "Indonesia" },
+          { "@type": "AdministrativeArea", name: "Jabodetabek" },
+          { "@type": "City", name: "Jakarta" },
+          { "@type": "City", name: "Jakarta Selatan" },
+          { "@type": "City", name: "Surabaya" },
+          { "@type": "City", name: "Bandung" },
+          { "@type": "City", name: "Medan" },
+          { "@type": "City", name: "Semarang" },
+          { "@type": "City", name: "Yogyakarta" },
+          { "@type": "City", name: "Denpasar" },
+          { "@type": "City", name: "Makassar" },
         ],
         aggregateRating: {
           "@type": "AggregateRating",
@@ -137,6 +144,53 @@ export function JsonLd() {
             description:
               "Hubungi konsultan teknologi untuk konsultasi kebutuhan software dan estimasi RAB resmi.",
             url: `${siteConfig.url}/kontak`,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteConfig.url}/#faq`,
+        name: "FAQ Rekayasa Software & Solusi Enterprise Bahari Tech Solution",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Berapa lama estimasi waktu pengerjaan sebuah software atau aplikasi di Bahari Tech Solution?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Website profil korporasi atau landing page interaktif rata-rata selesai dalam 2–4 minggu. Aplikasi mobile (MVP) atau modul software kustom skala menengah membutuhkan 6–10 minggu. Sedangkan sistem Enterprise ERP multi-cabang terintegrasi rata-rata memerlukan waktu 3–5 bulan dengan metodologi Agile bertahap.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Apakah klien mendapatkan 100% hak milik penuh atas Source Code?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ya, 100% hak cipta intelektual (Intellectual Property) dan seluruh source code menjadi milik penuh klien setelah pelunasan proyek. CV. Bahari Tech Solution menyerahkan repositori kode rapi (Git), dokumentasi arsitektur, dan tanpa sistem keterikatan tertutup (bebas vendor lock-in).",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Berapa estimasi biaya jasa pembuatan aplikasi mobile atau software kustom?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Investasi disesuaikan secara transparan berdasarkan ruang lingkup fitur (Scope of Work), arsitektur teknologi, dan integrasi API. CV. Bahari Tech Solution memberikan sesi konsultasi arsitek gratis dan dokumen Rencana Anggaran Biaya (RAB) resmi bertanda tangan badan usaha sah.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Apakah CV. Bahari Tech Solution berbadan hukum resmi?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ya, CV. Bahari Tech Solution adalah software house dan konsultan teknologi berbadan hukum resmi terdaftar di Kemenkumham RI, memiliki NIB resmi, nomor rekening bank atas nama perusahaan, serta menyediakan dokumen SPK sah, perjanjian kerahasiaan (NDA), dan faktur pajak resmi.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Apakah ada garansi pemeliharaan setelah sistem rilis ke produksi?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ya, setiap proyek dilindungi garansi bebas bug resmi (Free SLA Bugfix & Maintenance) selama 3 hingga 6 bulan pasca rilis produksi, didukung SLA uptime 99.98% dan tim teknis yang siap siaga.",
+            },
           },
         ],
       },

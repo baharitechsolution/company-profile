@@ -1,0 +1,27 @@
+# CV. Bahari Tech Solution
+
+> Software House & Enterprise Technology Consultant Resmi di Indonesia.
+> Melayani rekayasa perangkat lunak kustom, aplikasi mobile Android & iOS, portal web enterprise Next.js, sistem ERP multi-cabang, dan integrasi cloud DevOps dengan 100% kepemilikan source code tanpa vendor lock-in.
+
+- Website: https://www.baharitechsolution.my.id
+- Entitas Badan Usaha: CV. Bahari Tech Solution (Terdaftar Kemenkumham RI)
+- Lokasi Kantor: Jakarta Selatan, Indonesia
+- Email: kontak@baharitechsolution.my.id
+- WhatsApp: +62 812-3456-7890
+- Jam Operasional: Senin - Jumat (08:30 - 17:30 WIB)
+
+## Layanan Utama
+1. **Aplikasi Mobile (iOS & Android)**: Pengembangan aplikasi native & hybrid (Flutter, React Native, Swift, Kotlin), performa 60 FPS, arsitektur offline-first, dan jaminan kurasi rilis ke Google Play Store & Apple App Store.
+2. **Web Application & SaaS Enterprise**: Pengembangan portal web modern berskala tinggi menggunakan Next.js, React, Tailwind CSS, TypeScript, arsitektur modular, dan database PostgreSQL/MongoDB.
+3. **Sistem ERP & Manajemen Bisnis**: Pembuatan sistem ERP kustom terintegrasi (manajemen inventori, POS multi-cabang, akuntansi keuangan, HRIS/payroll, rantai pasok) dengan otomatisasi laporan real-time.
+4. **Cloud Infrastructure & DevOps**: Desain arsitektur cloud berstandar AWS & Google Cloud Platform (GCP), CI/CD automated pipeline, kontainerisasi Docker/Kubernetes, dan audit keamanan siber berstandar OWASP Top 10.
+
+## Keunggulan Kompetitif
+- **100% Hak Milik Source Code (No Vendor Lock-in)**: Seluruh kode sumber, database schema, dan aset digital diserahkan penuh kepada klien setelah pelunasan.
+- **Legalitas & SPK Sah**: Setiap kerja sama dipayungi kontrak kerja sah (SPK), perjanjian kerahasiaan data (NDA), dan faktur pajak resmi.
+- **Garansi Pemeliharaan (SLA)**: Garansi bebas bug 3–6 bulan pasca rilis produksi dan jaminan SLA uptime 99.98%.
+- **Metodologi Agile & Scrum**: Sprint terukur mingguan dengan akses preview interaktif berkala untuk klien.
+
+## Jangkauan Layanan (GEO Target)
+Melayani klien korporasi, institusi bisnis, UMKM naik kelas, dan startup di seluruh wilayah Indonesia:
+Jakarta, Bogor, Depok, Tangerang, Bekasi (Jabodetabek), Surabaya, Bandung, Medan, Semarang, Yogyakarta, Denpasar Bali, Makassar, dan kota-kota lainnya di Indonesia.
