@@ -8,8 +8,8 @@ export const siteConfig = {
   ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_bts_utama.png",
   contact: {
     email: "baharitechsolution@gmail.com",
-    phone: "+62 812-3456-7890",
-    whatsapp: "6281234567890",
+    phone: "+62 822-2019-0948",
+    whatsapp: "6282220190948",
     address: "Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
     mapsUrl: "https://maps.google.com",
     hours: "Senin - Jumat: 07:30 - 16:30 WIB",
