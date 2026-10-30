@@ -12,7 +12,7 @@ export const siteConfig = {
     whatsapp: "6282220190948",
     address: "Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
     mapsUrl: "https://maps.google.com",
-    hours: "Senin - Jumat: 07:30 - 16:30 WIB",
+    hours: "Senin - Jumat: 07:30 - 16:30 WIB (Sabtu & Minggu: Libur)",
   },
   socials: {
     linkedin: "https://linkedin.com/company/bahari-tech-solution",
