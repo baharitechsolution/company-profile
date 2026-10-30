@@ -265,36 +265,19 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* 3 Pilar Jaminan Enterprise (Boks Proporsional Sesuai Beranda) */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1">
-                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-semibold text-[#233876]">Badan Usaha Sah</span>
-                  </div>
-                  <p className="text-[11px] text-slate-500 leading-normal">
-                    Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
-                  </p>
+              {/* 3 Jaminan Kunci Inline Bersih (Bebas Kotak-Kotak AI) */}
+              <div className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-600">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                  <span className="font-medium text-slate-700">Badan Usaha Sah (CV)</span>
                 </div>
-
-                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-semibold text-[#233876]">100% Hak Milik IP</span>
-                  </div>
-                  <p className="text-[11px] text-slate-500 leading-normal">
-                    Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
-                  </p>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                  <span className="font-medium text-slate-700">100% Hak Milik IP</span>
                 </div>
-
-                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-semibold text-[#233876]">Clean Architecture</span>
-                  </div>
-                  <p className="text-[11px] text-slate-500 leading-normal">
-                    Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
-                  </p>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                  <span className="font-medium text-slate-700">Clean Architecture</span>
                 </div>
               </div>
 
@@ -316,22 +299,16 @@ export default function AboutPage() {
 
           </div>
 
-          {/* Baris Bawah: Panel Metrik Korporat Terpadu (Konsisten Satu Warna Brand Beranda) */}
-          <ScrollReveal direction="up" delay={0.25} className="mt-8 pt-6 border-t border-slate-200">
-            <div className="rounded-2xl bg-slate-50/70 border border-slate-200/80 shadow-2xs divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90 grid grid-cols-2 lg:grid-cols-4 p-1.5 sm:p-2.5">
+          {/* Baris Bawah: Metrik Sederhana, Lega & Enak di Mata (Tanpa Box Abu Tebal) */}
+          <ScrollReveal direction="up" delay={0.25} className="mt-10 pt-8 border-t border-slate-100">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {companyStats.map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="p-3 sm:p-4 flex flex-col justify-center hover:bg-white rounded-xl transition-colors group"
-                >
-                  <div className="text-2xl sm:text-3xl font-bold text-[#233876] tracking-tight group-hover:text-[#1482C2] transition-colors">
+                <div key={idx} className="space-y-1">
+                  <div className="text-3xl sm:text-4xl font-bold text-[#233876] tracking-tight">
                     {stat.value}
                   </div>
-                  <div className="text-[11px] font-semibold text-slate-700 leading-tight mt-1 uppercase tracking-wider">
+                  <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
                     {stat.label}
-                  </div>
-                  <div className="text-[11px] text-slate-500 leading-relaxed mt-1">
-                    {stat.description}
                   </div>
                 </div>
               ))}

@@ -1,108 +1,96 @@
 "use client";
 
 import Image from "next/image";
-import { ShieldCheck, Building2, Code2 } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 interface CorporateMetric {
   value: string;
   label: string;
-  description: string;
 }
 
 const corporateMetrics: CorporateMetric[] = [
   {
     value: "50+",
     label: "Solusi Digital Rilis",
-    description: "Web application, portal enterprise, sistem ERP, dan aplikasi mobile teruji produksi.",
   },
   {
     value: "99.98%",
     label: "Rata-Rata SLA Uptime",
-    description: "Infrastruktur cloud berstandar AWS & GCP dengan arsitektur failover otomatis.",
   },
   {
     value: "40+",
     label: "Klien & Institusi Mitra",
-    description: "Kemitraan strategis lintas industri korporat & instansi bisnis di Indonesia.",
   },
   {
     value: "4.9 / 5",
     label: "Skor Kepuasan Klien",
-    description: "Retensi kemitraan tinggi berbasis ketepatan timeline & SLA garansi pasca rilis.",
   },
 ];
 
 export function WelcomeSection() {
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-white border-b border-slate-200 overflow-hidden relative select-none">
+    <section className="py-10 sm:py-12 lg:py-14 bg-white border-b border-slate-100 overflow-hidden relative select-none">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Baris Atas: Narasi Profil Korporat (Kiri) & Foto Gedung Kantor Autentik (Kanan) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Kolom Kiri: Narasi Profil Perusahaan & Jaminan Enterprise */}
-          <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 flex flex-col justify-between space-y-4">
+          {/* Kolom Kiri: Narasi Profil Perusahaan Bersih & Manusiawi */}
+          <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 space-y-4">
             
-            <div className="space-y-3">
-              {/* Eyebrow Label Korporat Bersih */}
-              <div className="flex items-center gap-2.5">
-                <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
-                  Profil Perusahaan · CV. Bahari Tech Solution
-                </span>
-              </div>
-
-              {/* Headline Utama Berwibawa */}
-              <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#233876] leading-tight tracking-tight">
-                Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
-              </h2>
-
-              {/* Deskripsi Naratif: 1 Paragraf Padat, Berwibawa & Langsung Menjawab Kebutuhan Klien */}
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <strong className="font-semibold text-[#233876]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang melayani jasa pembuatan website profesional, aplikasi mobile Android &amp; iOS, dan sistem enterprise ERP terintegrasi. Berpusat di Tegal, Jawa Tengah dan melayani klien di seluruh Indonesia, setiap proyek dikembangkan dengan arsitektur modular yang skalabel, bebas biaya lisensi tersembunyi, serta jaminan kepemilikan source code 100%.
-              </p>
+            {/* Eyebrow Label Korporat Bersih */}
+            <div className="flex items-center gap-2">
+              <span className="h-0.5 w-5 bg-[#1482C2]" aria-hidden="true" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
+                Profil Perusahaan · CV. Bahari Tech Solution
+              </span>
             </div>
 
-            {/* 3 Pilar Jaminan Enterprise (Boks Proporsional, Nyaman Dibaca, & Mudah Diingat) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1">
-              <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-semibold text-[#233876]">Badan Usaha Sah</span>
-                </div>
-                <p className="text-[11px] text-slate-500 leading-normal">
-                  Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
-                </p>
-              </div>
+            {/* Headline Utama Berwibawa */}
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#233876] leading-tight tracking-tight">
+              Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
+            </h2>
 
-              <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-semibold text-[#233876]">100% Hak Milik IP</span>
-                </div>
-                <p className="text-[11px] text-slate-500 leading-normal">
-                  Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
-                </p>
-              </div>
+            {/* Deskripsi Naratif: 1 Paragraf Padat, Ringan & Nyaman Dibaca */}
+            <p className="text-sm text-slate-600 leading-relaxed max-w-2xl">
+              <strong className="font-semibold text-[#233876]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah. Kami mendampingi korporasi, institusi, dan pelaku usaha dalam rekayasa aplikasi web, sistem enterprise ERP, dan aplikasi mobile dengan arsitektur modern serta jaminan kepemilikan source code 100%.
+            </p>
 
-              <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-semibold text-[#233876]">Clean Architecture</span>
-                </div>
-                <p className="text-[11px] text-slate-500 leading-normal">
-                  Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
-                </p>
+            {/* 3 Jaminan Utama Inline Bersih (Tanpa Kotak-Kotak Bertumpuk) */}
+            <div className="pt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-600">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                <span className="font-medium text-slate-700">Badan Usaha Sah (CV)</span>
               </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                <span className="font-medium text-slate-700">100% Hak Milik IP</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                <span className="font-medium text-slate-700">Clean Architecture</span>
+              </div>
+            </div>
+
+            {/* Link Aksi Halus */}
+            <div className="pt-2">
+              <Link
+                href="/tentang-kami"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1482C2] hover:text-[#0E6496] transition-colors group"
+              >
+                <span>Pelajari legalitas dan profil kami selengkapnya</span>
+                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
           </ScrollReveal>
 
-          {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi (Sejajar Presisi & Mewah) */}
-          <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5 flex items-stretch">
-            <div className="relative w-full h-[260px] sm:h-[300px] lg:h-full min-h-[280px] lg:min-h-[340px] rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
+          {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi */}
+          <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 bg-slate-100 group">
               <Image
                 src="/images/kantor/kantor_bts_utama.png"
                 alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
@@ -116,29 +104,19 @@ export function WelcomeSection() {
 
         </div>
 
-        {/* Baris Bawah: Panel Metrik Korporat Terpadu (Konsisten Satu Warna Brand Tanpa Warna-Warni) */}
-        <ScrollReveal direction="up" delay={0.25} className="mt-8 pt-6 border-t border-slate-200">
-          <div className="rounded-2xl border border-slate-200/90 bg-linear-to-b from-slate-50/70 to-slate-100/30 p-4 sm:p-5 lg:p-6 shadow-xs">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-0 lg:divide-x lg:divide-slate-200">
-              {corporateMetrics.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="lg:px-5 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-bold text-[#233876] tracking-tight leading-none">
-                      {metric.value}
-                    </div>
-                    <div className="text-[11px] font-semibold text-slate-700 uppercase tracking-wider mt-2">
-                      {metric.label}
-                    </div>
-                  </div>
-                  <div className="text-[11px] text-slate-500 mt-1 leading-relaxed">
-                    {metric.description}
-                  </div>
+        {/* Baris Bawah: Metrik Sederhana, Lega & Enak di Mata (Tanpa Box Abu Tebal & Tanpa Paragraf Esai) */}
+        <ScrollReveal direction="up" delay={0.25} className="mt-10 pt-8 border-t border-slate-100">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {corporateMetrics.map((metric, idx) => (
+              <div key={idx} className="space-y-1">
+                <div className="text-3xl sm:text-4xl font-bold text-[#233876] tracking-tight">
+                  {metric.value}
                 </div>
-              ))}
-            </div>
+                <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+                  {metric.label}
+                </div>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
 
