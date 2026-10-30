@@ -23,14 +23,14 @@ const corporateMetrics: CorporateMetric[] = [
     description: "Infrastruktur cloud berstandar AWS & GCP dengan arsitektur failover otomatis.",
   },
   {
-    value: "100%",
-    label: "Hak Milik Source Code",
-    description: "Kode sumber & hak kekayaan intelektual (IP) diserahkan penuh tanpa vendor lock-in.",
+    value: "40+",
+    label: "Klien & Institusi Mitra",
+    description: "Kemitraan strategis lintas industri korporat & instansi bisnis di Indonesia.",
   },
   {
-    value: "Resmi CV",
-    label: "Badan Usaha & SPK Sah",
-    description: "Terdaftar Kemenkumham RI, kepatuhan NDA, izin usaha resmi, & faktur pajak.",
+    value: "4.9 / 5",
+    label: "Skor Kepuasan Klien",
+    description: "Retensi kemitraan tinggi berbasis ketepatan timeline & SLA garansi pasca rilis.",
   },
 ];
 
@@ -40,82 +40,77 @@ export function WelcomeSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Baris Atas: Narasi Profil Korporat (Kiri) & Foto Gedung Kantor Autentik (Kanan) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Kolom Kiri: Narasi Profil Perusahaan & Jaminan Enterprise */}
-          <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 space-y-4">
+          <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 flex flex-col justify-between space-y-4">
             
-            {/* Eyebrow Label Korporat Bersih */}
-            <div className="flex items-center gap-2.5">
-              <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#1482C2]">
-                Profil Perusahaan · CV. Bahari Tech Solution
-              </span>
-            </div>
+            <div className="space-y-3">
+              {/* Eyebrow Label Korporat Bersih */}
+              <div className="flex items-center gap-2.5">
+                <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
+                <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#1482C2]">
+                  Profil Perusahaan · CV. Bahari Tech Solution
+                </span>
+              </div>
 
-            {/* Headline Utama Berwibawa */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#112252] leading-tight tracking-tight">
-              Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
-            </h2>
+              {/* Headline Utama Berwibawa */}
+              <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#112252] leading-tight tracking-tight">
+                Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
+              </h2>
 
-            {/* Deskripsi Naratif Nyata & Padat (Bebas Klise AI) */}
-            <div className="space-y-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
-              <p>
-                <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berfokus pada rancang bangun perangkat lunak kustom—mulai dari sistem enterprise ERP, portal web berskala tinggi, hingga aplikasi mobile iOS &amp; Android.
-              </p>
-              <p>
-                Kami memadukan ketelitian rekayasa <em>clean code</em> dengan kepatuhan tata kelola bisnis. Setiap proyek didukung kontrak kerja sah (SPK), perjanjian kerahasiaan data (NDA), faktur pajak resmi, serta penyerahan hak cipta dan <em>source code</em> penuh tanpa biaya royalti tersembunyi.
+              {/* Deskripsi Naratif: 1 Paragraf Padat, Berwibawa & Langsung Menjawab Kebutuhan Klien */}
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berfokus pada rancang bangun perangkat lunak kustom—mulai dari sistem enterprise ERP, portal web berskala tinggi, hingga aplikasi mobile iOS &amp; Android. Setiap proyek dikembangkan dengan arsitektur modular yang skalabel serta tata kelola legalitas bisnis yang transparan.
               </p>
             </div>
 
-            {/* 3 Pilar Jaminan Enterprise (Matriks Terstruktur, Konsisten & Profesional) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+            {/* 3 Pilar Jaminan Enterprise (Boks Proporsional, Nyaman Dibaca, & Mudah Diingat) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1">
               <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                  <span className="text-xs font-bold text-[#112252]">Badan Usaha Sah</span>
+                </div>
+                <p className="text-[11px] text-slate-500 leading-normal">
+                  Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
+                <div className="flex items-center gap-2 mb-1.5">
                   <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
                   <span className="text-xs font-bold text-[#112252]">100% Hak Milik IP</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-normal">
-                  Source code &amp; aset sistem diserahkan utuh, bebas vendor lock-in.
+                  Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
                 </p>
               </div>
 
               <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1">
-                  <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-bold text-[#112252]">Badan Usaha Resmi</span>
-                </div>
-                <p className="text-[11px] text-slate-500 leading-normal">
-                  Berbadan hukum CV resmi, dokumen SPK sah, &amp; faktur pajak.
-                </p>
-              </div>
-
-              <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-2 mb-1.5">
                   <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
                   <span className="text-xs font-bold text-[#112252]">Clean Architecture</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-normal">
-                  Arsitektur modular, kode terstandarisasi, &amp; garansi pasca rilis.
+                  Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
                 </p>
               </div>
             </div>
 
           </ScrollReveal>
 
-          {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi (Murni Bersih Tanpa Overlay Badge AI) */}
-          <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5">
-            <div className="relative mx-auto max-w-[500px] lg:max-w-none">
-              <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
-                <Image
-                  src="/images/kantor/kantor_bts_utama.png"
-                  alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
-                  width={1536}
-                  height={1024}
-                  priority
-                  className="w-full h-[250px] sm:h-[300px] lg:h-[345px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-                />
-              </div>
+          {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi (Sejajar Presisi & Mewah) */}
+          <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5 flex items-stretch">
+            <div className="relative w-full h-[260px] sm:h-[300px] lg:h-full min-h-[280px] lg:min-h-[340px] rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
+              <Image
+                src="/images/kantor/kantor_bts_utama.png"
+                alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                priority
+                className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              />
             </div>
           </ScrollReveal>
 
