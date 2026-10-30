@@ -84,11 +84,11 @@ export function ServicesSection() {
             <div className="space-y-1.5 max-w-2xl">
               <div className="flex items-center gap-2">
                 <span className="h-0.5 w-5 bg-[#1482C2]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                   Kapasitas Rekayasa &amp; Solusi Bisnis
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] leading-tight tracking-tight">
                 Solusi Perangkat Lunak untuk Segala Skala Bisnis
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -99,7 +99,7 @@ export function ServicesSection() {
             <div className="shrink-0 self-start lg:self-auto">
               <Link
                 href="/layanan"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-[#112252] hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-all group shadow-2xs"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-[#233876] hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-all group shadow-2xs"
               >
                 <span>Lihat Seluruh Katalog Layanan</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
@@ -120,7 +120,7 @@ export function ServicesSection() {
                   {/* Header Kartu: Index Nomor & Kategori Editorial Ringkas */}
                   <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-slate-100">
                     <div className="flex items-center gap-1.5">
-                      <span className="font-mono text-xs font-black text-[#1482C2] tracking-wider">
+                      <span className="font-mono text-xs font-bold text-[#1482C2] tracking-wider">
                         {service.number}
                       </span>
                       <span className="text-slate-300 text-[10px] font-mono">/</span>
@@ -149,11 +149,11 @@ export function ServicesSection() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#112252]/25 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#233876]/25 via-transparent to-transparent pointer-events-none" />
                   </Link>
 
                   {/* Konten Judul & Ringkasan Solusi (Terkontrol Rapi) */}
-                  <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] group-hover:text-[#1482C2] transition-colors leading-snug">
+                  <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug">
                     <Link href={`/layanan#${service.slug}`}>
                       {service.title}
                     </Link>
@@ -177,7 +177,7 @@ export function ServicesSection() {
 
                 {/* Footer Kartu: Metrik Kunci & Tautan Solusi */}
                 <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-bold text-[#112252] tracking-tight">
+                  <span className="text-[11px] font-bold text-[#233876] tracking-tight">
                     {service.metric}
                   </span>
 
@@ -203,7 +203,7 @@ export function ServicesSection() {
                 <Layers className="h-4.5 w-4.5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-[#112252]">
+                <h4 className="text-sm font-bold text-[#233876]">
                   Membutuhkan Solusi Kustom atau Arsitektur Sistem Khusus?
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed max-w-2xl">
@@ -213,7 +213,7 @@ export function ServicesSection() {
             </div>
             <Link
               href="/kontak"
-              className="shrink-0 w-full sm:w-auto text-center px-4 py-2 rounded-lg bg-[#112252] hover:bg-[#1482C2] text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer"
+              className="shrink-0 w-full sm:w-auto text-center px-4 py-2 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer"
             >
               <span>Konsultasi Kebutuhan</span>
               <ArrowRight className="h-3.5 w-3.5" />

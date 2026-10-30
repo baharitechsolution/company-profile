@@ -15,11 +15,11 @@ export function PortfolioSection() {
           <div className="max-w-xl space-y-1">
             <div className="flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                 REKAM JEJAK &amp; STUDI KASUS
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
               Portofolio Proyek Terkini
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -86,7 +86,7 @@ export function PortfolioSection() {
                     <span>{item.category}</span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#112252] group-hover:text-[#1482C2] transition-colors leading-snug">
+                  <h3 className="text-base font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug">
                     {item.title}
                   </h3>
 

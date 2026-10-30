@@ -49,19 +49,19 @@ export function WelcomeSection() {
               {/* Eyebrow Label Korporat Bersih */}
               <div className="flex items-center gap-2.5">
                 <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
-                <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#1482C2]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                   Profil Perusahaan · CV. Bahari Tech Solution
                 </span>
               </div>
 
               {/* Headline Utama Berwibawa */}
-              <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#112252] leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#233876] leading-tight tracking-tight">
                 Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
               </h2>
 
               {/* Deskripsi Naratif: 1 Paragraf Padat, Berwibawa & Langsung Menjawab Kebutuhan Klien */}
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang melayani jasa pembuatan website profesional, aplikasi mobile Android &amp; iOS, dan sistem enterprise ERP terintegrasi. Berpusat di Tegal, Jawa Tengah dan melayani klien di seluruh Indonesia, setiap proyek dikembangkan dengan arsitektur modular yang skalabel, bebas biaya lisensi tersembunyi, serta jaminan kepemilikan source code 100%.
+                <strong className="font-semibold text-[#233876]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang melayani jasa pembuatan website profesional, aplikasi mobile Android &amp; iOS, dan sistem enterprise ERP terintegrasi. Berpusat di Tegal, Jawa Tengah dan melayani klien di seluruh Indonesia, setiap proyek dikembangkan dengan arsitektur modular yang skalabel, bebas biaya lisensi tersembunyi, serta jaminan kepemilikan source code 100%.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export function WelcomeSection() {
               <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                 <div className="flex items-center gap-2 mb-1.5">
                   <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-bold text-[#112252]">Badan Usaha Sah</span>
+                  <span className="text-xs font-semibold text-[#233876]">Badan Usaha Sah</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-normal">
                   Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
@@ -80,7 +80,7 @@ export function WelcomeSection() {
               <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                 <div className="flex items-center gap-2 mb-1.5">
                   <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-bold text-[#112252]">100% Hak Milik IP</span>
+                  <span className="text-xs font-semibold text-[#233876]">100% Hak Milik IP</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-normal">
                   Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
@@ -90,7 +90,7 @@ export function WelcomeSection() {
               <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                 <div className="flex items-center gap-2 mb-1.5">
                   <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                  <span className="text-xs font-bold text-[#112252]">Clean Architecture</span>
+                  <span className="text-xs font-semibold text-[#233876]">Clean Architecture</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-normal">
                   Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
@@ -126,10 +126,10 @@ export function WelcomeSection() {
                   className="lg:px-5 first:lg:pl-2 last:lg:pr-2 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="text-2xl sm:text-3xl font-black text-[#112252] tracking-tight leading-none">
+                    <div className="text-2xl sm:text-3xl font-bold text-[#233876] tracking-tight leading-none">
                       {metric.value}
                     </div>
-                    <div className="text-xs font-bold text-slate-800 uppercase tracking-wider mt-2">
+                    <div className="text-[11px] font-semibold text-slate-700 uppercase tracking-wider mt-2">
                       {metric.label}
                     </div>
                   </div>

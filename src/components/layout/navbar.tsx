@@ -208,7 +208,7 @@ export function Navbar() {
 
                                 {/* Judul Ringkas & Deskripsi Alami */}
                                 <div className="min-w-0 flex-1">
-                                  <div className="text-[13px] font-bold text-[#112252] group-hover/item:text-[#1482C2] transition-colors leading-tight">
+                                  <div className="text-[13px] font-bold text-[#233876] group-hover/item:text-[#1482C2] transition-colors leading-tight">
                                     {service.title}
                                   </div>
                                   <div className="text-[11px] text-slate-500 leading-snug mt-0.5 truncate">
@@ -225,11 +225,11 @@ export function Navbar() {
                             onClick={() => setIsServicesOpen(false)}
                             className="flex items-center gap-3 p-2.5 rounded-xl bg-slate-50 hover:bg-[#EAF5FC] border border-slate-200/90 hover:border-[#1482C2]/40 transition-all group/custom mt-1.5"
                           >
-                            <div className="h-9 w-9 rounded-lg bg-[#112252] group-hover/custom:bg-[#1482C2] text-white flex items-center justify-center shrink-0 shadow-2xs transition-colors duration-150">
+                            <div className="h-9 w-9 rounded-lg bg-[#233876] group-hover/custom:bg-[#1482C2] text-white flex items-center justify-center shrink-0 shadow-2xs transition-colors duration-150">
                               <Code2 className="h-4.5 w-4.5" strokeWidth={2} />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <div className="text-[13px] font-bold text-[#112252] group-hover/custom:text-[#1482C2] transition-colors leading-tight">
+                              <div className="text-[13px] font-bold text-[#233876] group-hover/custom:text-[#1482C2] transition-colors leading-tight">
                                 {customService.title}
                               </div>
                               <div className="text-[11px] text-slate-500 leading-snug mt-0.5 truncate">
@@ -245,7 +245,7 @@ export function Navbar() {
                           <Link
                             href="/layanan"
                             onClick={() => setIsServicesOpen(false)}
-                            className="text-[11px] font-bold text-[#1482C2] hover:text-[#112252] transition-colors flex items-center gap-1.5 py-0.5"
+                            className="text-[11px] font-bold text-[#1482C2] hover:text-[#233876] transition-colors flex items-center gap-1.5 py-0.5"
                           >
                             <span>Lihat Seluruh Katalog Layanan</span>
                             <ArrowRight className="h-3 w-3" />
@@ -358,7 +358,7 @@ export function Navbar() {
                                 <Icon className="h-4 w-4" strokeWidth={1.75} />
                               </div>
                               <div className="min-w-0 flex-1">
-                                <div className="text-xs font-bold text-[#112252] truncate">
+                                <div className="text-xs font-bold text-[#233876] truncate">
                                   {service.title}
                                 </div>
                                 <div className="text-[10px] text-slate-500 truncate">
@@ -378,11 +378,11 @@ export function Navbar() {
                           }}
                           className="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-200 transition-colors mt-1"
                         >
-                          <div className="h-8 w-8 rounded-lg bg-[#112252] text-white flex items-center justify-center shrink-0">
+                          <div className="h-8 w-8 rounded-lg bg-[#233876] text-white flex items-center justify-center shrink-0">
                             <Code2 className="h-4 w-4" strokeWidth={2} />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <div className="text-xs font-bold text-[#112252] truncate">
+                            <div className="text-xs font-bold text-[#233876] truncate">
                               {customService.title}
                             </div>
                             <div className="text-[10px] text-slate-600 truncate">

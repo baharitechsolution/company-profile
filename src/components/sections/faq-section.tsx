@@ -202,13 +202,13 @@ export function FaqSection() {
         <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-4 sm:mb-5">
           <div className="inline-flex items-center justify-center gap-2">
             <span className="h-0.5 w-5 bg-[#1482C2]" />
-            <span className="text-xs font-bold tracking-wider uppercase text-[#1482C2]">
+            <span className="text-[11px] font-semibold tracking-wider uppercase text-[#1482C2]">
               Tanya Jawab &amp; Panduan Kerjasama
             </span>
             <span className="h-0.5 w-5 bg-[#1482C2]" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
             Pertanyaan yang Sering Diajukan
           </h2>
 
@@ -228,7 +228,7 @@ export function FaqSection() {
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   isActive
                     ? "bg-[#1482C2] text-white shadow-2xs font-bold"
-                    : "bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-[#112252] border border-slate-200"
+                    : "bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-[#233876] border border-slate-200"
                 }`}
               >
                 {cat.label}
@@ -252,7 +252,7 @@ export function FaqSection() {
                 >
                   <span
                     className={`text-sm sm:text-[15px] font-bold leading-snug transition-colors ${
-                      isOpen ? "text-[#1482C2]" : "text-[#112252] group-hover:text-[#1482C2]"
+                      isOpen ? "text-[#1482C2]" : "text-[#233876] group-hover:text-[#1482C2]"
                     }`}
                   >
                     {faq.question}

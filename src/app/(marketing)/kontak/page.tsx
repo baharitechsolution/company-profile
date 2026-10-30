@@ -43,7 +43,7 @@ export default function ContactPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
             KONSULTASI & DISKUSI
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#112252]">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#233876]">
             Wujudkan Transformasi Sistem Digital Anda
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600">
@@ -54,7 +54,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Form Column */}
           <div className="lg:col-span-7 rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xs">
-            <h2 className="text-xl font-bold text-[#112252] mb-1">
+            <h2 className="text-xl font-bold text-[#233876] mb-1">
               Formulir Permintaan Konsultasi
             </h2>
             <p className="text-xs text-slate-500 mb-6">
@@ -66,7 +66,7 @@ export default function ContactPage() {
           {/* Contact Details Column */}
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-8">
-              <h3 className="text-base font-bold text-[#112252] mb-6 uppercase tracking-wider">
+              <h3 className="text-base font-bold text-[#233876] mb-6 uppercase tracking-wider">
                 Kontak Resmi Kantor
               </h3>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
             <div className="rounded-2xl border border-slate-200 bg-[#EAF5FC] p-6">
               <div className="flex items-center gap-3 mb-2">
                 <MessageSquare className="h-5 w-5 text-[#1482C2]" />
-                <h4 className="text-sm font-bold text-[#112252]">
+                <h4 className="text-sm font-bold text-[#233876]">
                   Diskusi Cepat via WhatsApp
                 </h4>
               </div>

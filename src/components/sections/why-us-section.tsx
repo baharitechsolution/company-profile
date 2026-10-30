@@ -63,13 +63,13 @@ export function WhyUsSection() {
         <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto mb-5 sm:mb-6 space-y-1.5">
           <div className="inline-flex items-center gap-2">
             <span className="h-0.5 w-5 bg-[#1482C2]" />
-            <span className="text-xs font-bold tracking-widest uppercase text-[#1482C2]">
+            <span className="text-[11px] font-semibold tracking-widest uppercase text-[#1482C2]">
               Standar Mutu Rekayasa Perangkat Lunak
             </span>
             <span className="h-0.5 w-5 bg-[#1482C2]" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
             Fondasi Rekayasa untuk Hasil Skala Enterprise
           </h2>
 
@@ -88,7 +88,7 @@ export function WhyUsSection() {
                   <div>
                     {/* Header Kartu Minimalis Editorial: Nomor & Ikon Halus (Tanpa Kotak Warna AI) */}
                     <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
-                      <span className="text-xs font-mono font-black tracking-widest text-[#1482C2]">
+                      <span className="text-xs font-mono font-bold tracking-widest text-[#1482C2]">
                         {item.number}
                       </span>
 
@@ -96,7 +96,7 @@ export function WhyUsSection() {
                     </div>
 
                     {/* Judul & Deskripsi Substantif Kompak */}
-                    <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] mb-1 group-hover:text-[#1482C2] transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] mb-1 group-hover:text-[#1482C2] transition-colors leading-snug">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed line-clamp-3">

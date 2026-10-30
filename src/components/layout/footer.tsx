@@ -12,7 +12,7 @@ export function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer className="bg-[#112252] text-slate-300 border-t border-slate-800 relative z-10">
+    <footer className="bg-[#233876] text-slate-300 border-t border-slate-800 relative z-10">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:pb-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">

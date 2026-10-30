@@ -39,12 +39,12 @@ export default function PortfolioPage() {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="h-0.5 w-6 bg-[#1482C2]" />
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#1482C2]">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
               REKAM JEJAK &amp; HASIL KERJA
             </span>
             <span className="h-0.5 w-6 bg-[#1482C2]" />
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#112252]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#233876]">
             Studi Kasus &amp; Implementasi Sistem Enterprise
           </h1>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -106,7 +106,7 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-[#112252] group-hover:text-[#1482C2] transition-colors leading-snug">
+                <h2 className="text-lg font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug">
                   {project.title}
                 </h2>
 

@@ -82,7 +82,7 @@ function AppStoreLogo({ className = "h-4 w-4 shrink-0" }: { className?: string }
 function QrisBadge({ className = "h-4.5 w-auto shrink-0" }: { className?: string }) {
   return (
     <div
-      className={`inline-flex items-center gap-1 bg-[#EE2737] text-white px-1.5 py-0.5 rounded font-black text-[8px] tracking-wider leading-none select-none ${className}`}
+      className={`inline-flex items-center gap-1 bg-[#EE2737] text-white px-1.5 py-0.5 rounded font-bold text-[8px] tracking-wider leading-none select-none ${className}`}
     >
       <svg className="h-2.5 w-2.5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M3 3h7v7H3V3zm2 2v3h3V5H5zm9-2h7v7h-7V3zm2 2v3h3V5h-3zM3 14h7v7H3v-7zm2 2v3h3v-3H5zm9-2h3v3h-3v-3zm4 0h3v3h-3v-3zm-4 4h3v3h-3v-3zm4 0h3v3h-3v-3z" />
@@ -155,7 +155,7 @@ function FaceIdIcon({ className = "h-3.5 w-3.5 shrink-0" }: { className?: string
 function CloudServerLogo({ className = "h-4.5 w-4.5 shrink-0" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" aria-label="Cloud Server">
-      <rect width="24" height="24" rx="5" fill="#112252" />
+      <rect width="24" height="24" rx="5" fill="#233876" />
       <path
         d="M7 16a3.5 3.5 0 0 1-.8-6.9A4.5 4.5 0 0 1 15 7.5 4 4 0 0 1 17 16H7z"
         stroke="#0EB8D8"
@@ -188,7 +188,7 @@ function SlideWebVisual() {
         >
           <circle cx="350" cy="165" r="150" fill="#0EB8D8" />
           <rect x="80" y="90" width="105" height="260" rx="52" fill="#1482C2" />
-          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
+          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#233876" />
         </svg>
       </div>
 
@@ -201,7 +201,7 @@ function SlideWebVisual() {
             <GoogleLogoG className="h-3.5 w-3.5" />
             <span className="text-[9px] font-bold text-slate-800">Google Search</span>
           </div>
-          <span className="text-[7.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70">
+          <span className="text-[7.5px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70">
             Rank #1
           </span>
         </div>
@@ -209,7 +209,7 @@ function SlideWebVisual() {
           <span className="block text-[7.5px] text-emerald-600 font-mono truncate">
             https://bisnis-anda.com
           </span>
-          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight truncate">
+          <span className="block text-[11px] font-extrabold text-[#233876] leading-tight truncate">
             Solusi No. 1 di Google
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -222,11 +222,11 @@ function SlideWebVisual() {
       <div className="absolute top-[26%] sm:top-[28%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[150px] sm:max-w-[162px]">
         <div className="flex items-center gap-1.5 mb-0.5">
           <Lock className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-          <span className="text-[7.5px] font-black text-emerald-700 uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-emerald-700 uppercase tracking-wider">
             Keamanan Terjamin
           </span>
         </div>
-        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+        <span className="block text-[10.5px] font-bold text-[#233876] leading-tight">
           HTTPS SSL A+ Grade
         </span>
         <span className="block text-[7px] text-slate-500 mt-0.5">
@@ -240,7 +240,7 @@ function SlideWebVisual() {
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Trafik Calon Pembeli
           </span>
-          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+          <span className="text-[8px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
             +240% Naik
           </span>
         </div>
@@ -271,7 +271,7 @@ function SlideWebVisual() {
             <Globe className="h-3.5 w-3.5" />
           </div>
           <div>
-            <span className="block text-[12px] font-black text-[#112252] leading-none">0.6 Detik</span>
+            <span className="block text-[12px] font-bold text-[#233876] leading-none">0.6 Detik</span>
             <span className="block text-[7.5px] font-bold text-slate-400 uppercase mt-0.5">Waktu Muat Kilat</span>
           </div>
         </div>
@@ -290,7 +290,7 @@ function SlideWebVisual() {
           </span>
         </div>
         <div className="text-left space-y-0.5">
-          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight">
+          <span className="block text-[11px] font-extrabold text-[#233876] leading-tight">
             Order Masuk 24/7
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -309,7 +309,7 @@ function SlideWebVisual() {
           <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Arsitektur Skalabel
           </span>
-          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[10.5px] font-bold text-[#233876] leading-tight mt-0.5">
             Next.js 16 SSR Engine
           </span>
         </div>
@@ -357,7 +357,7 @@ function Slide1EnterpriseVisual() {
           className="w-full h-full"
         >
           <circle cx="190" cy="165" r="150" fill="#1482C2" />
-          <rect x="355" y="90" width="105" height="260" rx="52" fill="#112252" />
+          <rect x="355" y="90" width="105" height="260" rx="52" fill="#233876" />
           <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#0EB8D8" />
         </svg>
       </div>
@@ -373,7 +373,7 @@ function Slide1EnterpriseVisual() {
           <span className="block text-[7.5px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Bebas Vendor Lock-In
           </span>
-          <span className="block text-[11px] sm:text-[12px] font-black text-[#112252] leading-tight mt-0.5 whitespace-nowrap">
+          <span className="block text-[11px] sm:text-[12px] font-bold text-[#233876] leading-tight mt-0.5 whitespace-nowrap">
             100% Hak Milik Kode
           </span>
         </div>
@@ -385,12 +385,12 @@ function Slide1EnterpriseVisual() {
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Efisiensi Operasional
           </span>
-          <span className="text-[8px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
+          <span className="text-[8px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
             +78% Cepat
           </span>
         </div>
         <div className="text-left space-y-0.5 py-0.5">
-          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight">
+          <span className="block text-[11px] font-extrabold text-[#233876] leading-tight">
             Pangkas 4.5 Jam / Hari
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -410,7 +410,7 @@ function Slide1EnterpriseVisual() {
           <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Otomatisasi Laporan
           </span>
-          <span className="block text-[10.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[10.5px] font-bold text-[#233876] leading-tight mt-0.5">
             1 Klik Excel &amp; Invoice WA
           </span>
         </div>
@@ -425,7 +425,7 @@ function Slide1EnterpriseVisual() {
             <Layers className="h-3.5 w-3.5" />
           </div>
           <div>
-            <span className="block text-[12px] font-black text-[#112252] leading-none">10+ Cabang</span>
+            <span className="block text-[12px] font-bold text-[#233876] leading-none">10+ Cabang</span>
             <span className="block text-[7.5px] font-bold text-slate-400 uppercase mt-0.5">Stok &amp; Kas Terpusat</span>
           </div>
         </div>
@@ -439,11 +439,11 @@ function Slide1EnterpriseVisual() {
       <div className="absolute top-[34%] sm:top-[36%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-0.5">
           <CheckCircle2 className="h-3.5 w-3.5 text-[#1482C2] shrink-0" />
-          <span className="text-[7.5px] font-black text-[#1482C2] uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-[#1482C2] uppercase tracking-wider">
             Hak Akses Teratur
           </span>
         </div>
-        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+        <span className="block text-[10.5px] font-bold text-[#233876] leading-tight">
           Multi-Role Permission
         </span>
         <span className="block text-[7px] text-slate-500 mt-0.5">
@@ -455,12 +455,12 @@ function Slide1EnterpriseVisual() {
       <div className="absolute top-[62%] sm:top-[64%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[148px] sm:max-w-[158px]">
         <div className="flex items-center gap-1.5 mb-1.5">
           <PostgresLogo className="h-4 w-4" />
-          <span className="text-[8px] font-black text-[#336791] uppercase tracking-wider">
+          <span className="text-[8px] font-bold text-[#336791] uppercase tracking-wider">
             PostgreSQL DB
           </span>
         </div>
         <div className="text-left space-y-0.5">
-          <span className="block text-[11.5px] font-black text-[#112252] leading-tight">
+          <span className="block text-[11.5px] font-bold text-[#233876] leading-tight">
             Hemat Ratusan Juta
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -516,7 +516,7 @@ function Slide2MobileVisual() {
         >
           <circle cx="310" cy="165" r="155" fill="#0EB8D8" />
           <rect x="75" y="100" width="105" height="260" rx="52" fill="#1482C2" />
-          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
+          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#233876" />
         </svg>
       </div>
 
@@ -532,7 +532,7 @@ function Slide2MobileVisual() {
           <span className="block text-[7.5px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Siap Rilis Resmi
           </span>
-          <span className="block text-[11px] sm:text-[12px] font-black text-[#112252] leading-tight mt-0.5 whitespace-nowrap">
+          <span className="block text-[11px] sm:text-[12px] font-bold text-[#233876] leading-tight mt-0.5 whitespace-nowrap">
             100% Lolos Kurasi
           </span>
         </div>
@@ -542,11 +542,11 @@ function Slide2MobileVisual() {
       <div className="absolute top-[34%] sm:top-[36%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-0.5">
           <FaceIdIcon />
-          <span className="text-[7.5px] font-black text-[#1482C2] uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-[#1482C2] uppercase tracking-wider">
             Biometrik
           </span>
         </div>
-        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+        <span className="block text-[10.5px] font-bold text-[#233876] leading-tight">
           Face ID &amp; Sidik Jari
         </span>
         <span className="block text-[7px] text-slate-500 mt-0.5">
@@ -565,7 +565,7 @@ function Slide2MobileVisual() {
           </span>
         </div>
         <div className="text-left space-y-0.5">
-          <span className="block text-[10.5px] font-extrabold text-[#112252] leading-tight">
+          <span className="block text-[10.5px] font-extrabold text-[#233876] leading-tight">
             Transaksi Tetap Jalan
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -588,7 +588,7 @@ function Slide2MobileVisual() {
               <Star key={i} className="h-3 w-3 fill-amber-400 stroke-amber-400" />
             ))}
           </div>
-          <span className="text-[10.5px] font-black text-[#112252]">4.9 / 5</span>
+          <span className="text-[10.5px] font-bold text-[#233876]">4.9 / 5</span>
         </div>
         <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100">
           <span className="font-bold text-[#1482C2]">50k+ Pengguna</span>
@@ -601,12 +601,12 @@ function Slide2MobileVisual() {
         <div className="flex items-center justify-between mb-1 pb-1 border-b border-slate-100">
           <div className="flex items-center gap-1">
             <Bell className="h-3 w-3 text-[#1482C2]" />
-            <span className="text-[8px] font-extrabold text-[#112252]">Pesanan Masuk</span>
+            <span className="text-[8px] font-extrabold text-[#233876]">Pesanan Masuk</span>
           </div>
           <span className="text-[7px] text-slate-400 font-mono">Baru saja</span>
         </div>
         <div className="text-left space-y-0.5">
-          <span className="block text-[10.5px] font-black text-emerald-600 leading-tight">
+          <span className="block text-[10.5px] font-bold text-emerald-600 leading-tight">
             + Rp 850.000 (Lunas)
           </span>
           <div className="flex items-center gap-1 mt-0.5">
@@ -623,7 +623,7 @@ function Slide2MobileVisual() {
             <Gauge className="h-3.5 w-3.5" />
           </div>
           <div>
-            <span className="block text-[11.5px] font-black text-[#112252] leading-tight">
+            <span className="block text-[11.5px] font-bold text-[#233876] leading-tight">
               60 FPS Native
             </span>
             <span className="block text-[7px] font-bold text-slate-400 uppercase">
@@ -679,7 +679,7 @@ function Slide3CloudVisual() {
         >
           <circle cx="350" cy="165" r="150" fill="#1482C2" />
           <rect x="80" y="90" width="105" height="260" rx="52" fill="#0EB8D8" />
-          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#112252" />
+          <path d="M 125 440 A 145 145 0 0 1 415 440 Z" fill="#233876" />
         </svg>
       </div>
 
@@ -695,7 +695,7 @@ function Slide3CloudVisual() {
               Ping 22ms Normal
             </span>
           </div>
-          <span className="block text-[11px] sm:text-[12px] font-black text-[#112252] leading-tight mt-0.5 whitespace-nowrap">
+          <span className="block text-[11px] sm:text-[12px] font-bold text-[#233876] leading-tight mt-0.5 whitespace-nowrap">
             99.99% SLA Uptime
           </span>
         </div>
@@ -705,11 +705,11 @@ function Slide3CloudVisual() {
       <div className="absolute top-[34%] sm:top-[36%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-0.5">
           <CloudflareLogo className="h-3.5 w-3.5 shrink-0" />
-          <span className="text-[7.5px] font-black text-[#F38020] uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-[#F38020] uppercase tracking-wider">
             Cloudflare
           </span>
         </div>
-        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+        <span className="block text-[10.5px] font-bold text-[#233876] leading-tight">
           Anti-DDoS 24/7 Aktif
         </span>
         <span className="block text-[7px] text-slate-500 mt-0.5">
@@ -728,7 +728,7 @@ function Slide3CloudVisual() {
           </span>
         </div>
         <div className="text-left space-y-0.5 py-0.5">
-          <span className="block text-[11px] font-extrabold text-[#112252] leading-tight">
+          <span className="block text-[11px] font-extrabold text-[#233876] leading-tight">
             Proteksi Anti-DDoS 24/7
           </span>
           <span className="block text-[7.5px] text-slate-500">
@@ -749,11 +749,11 @@ function Slide3CloudVisual() {
           <span className="text-[7.5px] font-bold text-slate-400 uppercase tracking-wider">
             Efisiensi Cloud
           </span>
-          <span className="text-[7.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70 font-mono">
+          <span className="text-[7.5px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/70 font-mono">
             Hemat 42%
           </span>
         </div>
-        <div className="text-[11.5px] font-black text-[#112252] leading-tight">
+        <div className="text-[11.5px] font-bold text-[#233876] leading-tight">
           Pangkas Biaya Server
         </div>
         <div className="flex items-center justify-between text-[7.5px] text-slate-500 pt-1 border-t border-slate-100 mt-1">
@@ -772,7 +772,7 @@ function Slide3CloudVisual() {
             <span className="block text-[7px] font-bold text-slate-400 uppercase tracking-wider leading-none">
               Cadangan Data
             </span>
-            <span className="block text-[11px] font-black text-[#112252] leading-tight mt-0.5">
+            <span className="block text-[11px] font-bold text-[#233876] leading-tight mt-0.5">
               Auto-Backup Harian
             </span>
           </div>
@@ -787,11 +787,11 @@ function Slide3CloudVisual() {
       <div className="absolute top-[62%] sm:top-[64%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-1.5 mb-0.5">
           <DockerLogo className="h-3.5 w-3.5 shrink-0" />
-          <span className="text-[7.5px] font-black text-[#2496ED] uppercase tracking-wider">
+          <span className="text-[7.5px] font-bold text-[#2496ED] uppercase tracking-wider">
             Docker CI/CD
           </span>
         </div>
-        <span className="block text-[10.5px] font-black text-[#112252] leading-tight">
+        <span className="block text-[10.5px] font-bold text-[#233876] leading-tight">
           Zero Downtime Deploy
         </span>
         <span className="block text-[7px] text-slate-500 mt-0.5">

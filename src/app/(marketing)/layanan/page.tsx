@@ -53,7 +53,7 @@ export default function ServicesPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
             KATALOG LAYANAN TEKNOLOGI
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#112252]">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#233876]">
             Solusi Rekayasa Perangkat Lunak Terintegrasi
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600">
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                     <span className="text-xs font-bold text-[#1482C2] tracking-widest uppercase">
                       Layanan #{index + 1}
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#112252]">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#233876]">
                       {service.title}
                     </h2>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -133,7 +133,7 @@ export default function ServicesPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
               LAYANAN LOKAL &amp; KONSULTASI TATAP MUKA
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#112252] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#233876] tracking-tight">
               Jasa Pembuatan Website, Aplikasi Mobile &amp; Sistem ERP di Tegal
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -143,7 +143,7 @@ export default function ServicesPage() {
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
-              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+              <h3 className="text-sm font-bold text-[#233876] mb-1.5">
                 Jasa Pembuatan Website Tegal
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed">
@@ -152,7 +152,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
-              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+              <h3 className="text-sm font-bold text-[#233876] mb-1.5">
                 Aplikasi Mobile Android &amp; iOS
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed">
@@ -161,7 +161,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
-              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+              <h3 className="text-sm font-bold text-[#233876] mb-1.5">
                 Sistem ERP &amp; Program Kasir Gudang
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed">

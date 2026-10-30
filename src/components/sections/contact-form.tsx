@@ -68,7 +68,7 @@ export function ContactForm() {
       />
 
       {status.type === "success" && (
-        <div className="flex items-start gap-3 rounded-lg bg-[#EAF5FC] p-4 text-[#112252] border border-[#1482C2]">
+        <div className="flex items-start gap-3 rounded-lg bg-[#EAF5FC] p-4 text-[#233876] border border-[#1482C2]">
           <CheckCircle2 className="h-5 w-5 text-[#1482C2] shrink-0 mt-0.5" />
           <p className="text-xs sm:text-sm font-semibold">{status.message}</p>
         </div>

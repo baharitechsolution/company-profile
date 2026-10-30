@@ -4,7 +4,7 @@
   --font-sans: var(--font-sans);
   --color-primary: #1482C2;
   --color-primary-dark: #0E6496;
-  --color-navy: #112252;
+  --color-navy: #233876;
 }
 
 @layer base {
@@ -12,10 +12,10 @@
     --primary: #1482C2;
     --primary-dark: #0E6496;
     --primary-light: #EAF5FC;
-    --navy: #112252;
-    --navy-dark: #040e24;
+    --navy: #233876;
+    --navy-dark: #16244f;
     --surface-light: #f8fafc;
-    --text-main: #0f172a;
+    --text-main: #233876;
     --text-muted: #475569;
     --border-color: #e2e8f0;
   }
@@ -28,7 +28,7 @@
 
   body {
     background-color: #ffffff;
-    color: #0f172a;
+    color: #334155;
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     letter-spacing: -0.01em;
     line-height: 1.6;

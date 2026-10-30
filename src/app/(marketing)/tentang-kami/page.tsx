@@ -242,26 +242,26 @@ export default function AboutPage() {
                 {/* Eyebrow Label Korporat Bersih */}
                 <div className="flex items-center gap-2.5">
                   <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
-                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#1482C2]">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                     Profil Perusahaan · CV. Bahari Tech Solution
                   </span>
                 </div>
 
                 {/* Headline Utama Berwibawa */}
-                <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#112252] leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#233876] leading-tight tracking-tight">
                   Membangun Fondasi Sistem Digital Presisi Tanpa Keterikatan Vendor
                 </h1>
 
                 {/* Manifesto Pull-Quote Beraksen Garis Kiri */}
                 <div className="border-l-2 border-[#1482C2] pl-3.5 sm:pl-4 py-0.5">
-                  <p className="text-xs sm:text-sm font-semibold text-[#112252] italic leading-relaxed">
+                  <p className="text-xs sm:text-sm font-medium text-[#233876] italic leading-relaxed">
                     &ldquo;Kami meyakini bahwa teknologi enterprise semestinya mempercepat akselerasi bisnis Anda, bukan menambah kerumitan operasional baru atau menyandera kedaulatan hak cipta kode Anda.&rdquo;
                   </p>
                 </div>
 
                 {/* Deskripsi Naratif: 1 Paragraf Padat & Substantif */}
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah, melayani transformasi digital untuk korporasi, institusi pemerintahan, dan pelaku usaha di seluruh Indonesia. Setiap solusi dikembangkan dengan metodologi Clean Architecture, sprint berkala yang transparan, dan jaminan penyerahan 100% hak milik source code.
+                  <strong className="font-bold text-[#233876]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah, melayani transformasi digital untuk korporasi, institusi pemerintahan, dan pelaku usaha di seluruh Indonesia. Setiap solusi dikembangkan dengan metodologi Clean Architecture, sprint berkala yang transparan, dan jaminan penyerahan 100% hak milik source code.
                 </p>
               </div>
 
@@ -270,7 +270,7 @@ export default function AboutPage() {
                 <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                   <div className="flex items-center gap-2 mb-1.5">
                     <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-bold text-[#112252]">Badan Usaha Sah</span>
+                    <span className="text-xs font-semibold text-[#233876]">Badan Usaha Sah</span>
                   </div>
                   <p className="text-[11px] text-slate-500 leading-normal">
                     Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
@@ -280,7 +280,7 @@ export default function AboutPage() {
                 <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                   <div className="flex items-center gap-2 mb-1.5">
                     <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-bold text-[#112252]">100% Hak Milik IP</span>
+                    <span className="text-xs font-semibold text-[#233876]">100% Hak Milik IP</span>
                   </div>
                   <p className="text-[11px] text-slate-500 leading-normal">
                     Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
                   <div className="flex items-center gap-2 mb-1.5">
                     <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
-                    <span className="text-xs font-bold text-[#112252]">Clean Architecture</span>
+                    <span className="text-xs font-semibold text-[#233876]">Clean Architecture</span>
                   </div>
                   <p className="text-[11px] text-slate-500 leading-normal">
                     Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
@@ -324,10 +324,10 @@ export default function AboutPage() {
                   key={idx}
                   className="p-3 sm:p-4 flex flex-col justify-center hover:bg-white rounded-xl transition-colors group"
                 >
-                  <div className="text-2xl sm:text-3xl font-black text-[#112252] tracking-tight group-hover:text-[#1482C2] transition-colors">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#233876] tracking-tight group-hover:text-[#1482C2] transition-colors">
                     {stat.value}
                   </div>
-                  <div className="text-xs font-bold text-slate-800 leading-tight mt-1 uppercase tracking-wider">
+                  <div className="text-[11px] font-semibold text-slate-700 leading-tight mt-1 uppercase tracking-wider">
                     {stat.label}
                   </div>
                   <div className="text-[11px] text-slate-500 leading-relaxed mt-1">
@@ -348,13 +348,13 @@ export default function AboutPage() {
           <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                 Arah Strategis Korporasi
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
               Visi &amp; Misi Bahari Tech Solution
             </h2>
 
@@ -371,14 +371,14 @@ export default function AboutPage() {
                 <div className="space-y-3 sm:space-y-4">
                   {/* Header Label & Icon Target */}
                   <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span className="text-xs font-mono font-black tracking-widest text-[#1482C2]">
+                    <span className="text-xs font-mono font-bold tracking-widest text-[#1482C2]">
                       VISI PERUSAHAAN
                     </span>
                     <Target className="h-4.5 w-4.5 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                   </div>
 
                   {/* Headline Utama Visi Resmi */}
-                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug group-hover:text-[#1482C2] transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-[#233876] leading-snug group-hover:text-[#1482C2] transition-colors">
                     Menjadi Mitra Rekayasa Teknologi Terpercaya di Indonesia
                   </h3>
 
@@ -398,7 +398,7 @@ export default function AboutPage() {
                       Tangguh &amp; Skalabel
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#112252]" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#233876]" />
                       Bernilai Ekonomis
                     </span>
                   </div>
@@ -417,14 +417,14 @@ export default function AboutPage() {
                 <div className="space-y-3 sm:space-y-4">
                   {/* Header Label & Icon Misi */}
                   <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span className="text-xs font-mono font-black tracking-widest text-[#1482C2]">
+                    <span className="text-xs font-mono font-bold tracking-widest text-[#1482C2]">
                       MISI PERUSAHAAN
                     </span>
                     <Compass className="h-4.5 w-4.5 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                   </div>
 
                   {/* Headline Utama Misi */}
-                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug group-hover:text-[#1482C2] transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-[#233876] leading-snug group-hover:text-[#1482C2] transition-colors">
                     4 Komitmen Mutu &amp; Presisi Eksekusi
                   </h3>
 
@@ -467,13 +467,13 @@ export default function AboutPage() {
           <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                 Filosofi &amp; Core Values Korporat
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
               Budaya Kerja &amp; Nilai Inti: B &bull; A &bull; H &bull; A &bull; R &bull; I
             </h2>
 
@@ -493,7 +493,7 @@ export default function AboutPage() {
                       {/* Baris Atas: Huruf Akronim B.A.H.A.R.I & Ikon */}
                       <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-slate-100">
                         <div className="flex items-center gap-2">
-                          <span className="h-7 w-7 rounded-lg bg-[#EAF5FC] text-[#1482C2] font-black text-sm flex items-center justify-center font-mono">
+                          <span className="h-7 w-7 rounded-lg bg-[#EAF5FC] text-[#1482C2] font-bold text-sm flex items-center justify-center font-mono">
                             {val.letter}
                           </span>
                           <span className="text-[11px] font-mono font-bold text-slate-400 tracking-wider">
@@ -505,7 +505,7 @@ export default function AboutPage() {
                       </div>
 
                       {/* Judul Nilai Korporat */}
-                      <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
+                      <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
                         {val.title}
                       </h3>
 
@@ -536,13 +536,13 @@ export default function AboutPage() {
           <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                 Kepastian Hukum &amp; Tata Kelola
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
               Standar Legalitas &amp; Perlindungan Klien
             </h2>
 
@@ -567,7 +567,7 @@ export default function AboutPage() {
                       <Icon className="h-4 w-4 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                     </div>
 
-                    <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
                       {item.title}
                     </h3>
 
@@ -592,12 +592,12 @@ export default function AboutPage() {
               <div className="max-w-2xl space-y-1.5">
                 <div className="flex items-center gap-2">
                   <span className="h-0.5 w-5 bg-[#1482C2]" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                     Mulai Diskusi Teknologi
                   </span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl lg:text-[28px] font-extrabold text-[#112252] tracking-tight leading-tight">
+                <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-[#233876] tracking-tight leading-tight">
                   Siap Membangun Sistem Digital Berkualitas Bersama Kami?
                 </h2>
 
@@ -608,7 +608,7 @@ export default function AboutPage() {
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
                 <Link href="/kontak" className="w-full sm:w-auto">
-                  <span className="w-full sm:w-auto h-11 px-6 rounded-lg bg-[#112252] hover:bg-[#1482C2] text-white text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-xs cursor-pointer">
+                  <span className="w-full sm:w-auto h-11 px-6 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-xs cursor-pointer">
                     <span>Ajukan Konsultasi &amp; RAB</span>
                     <ArrowRight className="h-4 w-4" />
                   </span>

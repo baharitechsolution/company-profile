@@ -250,13 +250,13 @@ export function HeroSection() {
 
                       {/* Semantic Single H1 for Primary Slide (SEO), H2 for Secondary Slides */}
                       {originalIndex === 0 ? (
-                        <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-bold text-[#233876] leading-[1.14] tracking-tight">
                           {slide.headingPart1}{" "}
                           <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                           {slide.headingPart2}
                         </h1>
                       ) : (
-                        <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-bold text-[#233876] leading-[1.14] tracking-tight">
                           {slide.headingPart1}{" "}
                           <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                           {slide.headingPart2}
@@ -289,7 +289,7 @@ export function HeroSection() {
                           <Button
                             size="md"
                             variant="outline"
-                            className="w-full sm:w-auto h-12 px-6 gap-2.5 text-xs sm:text-sm font-bold border-slate-300 bg-white text-slate-800 hover:border-[#25D366] hover:text-[#112252] hover:bg-emerald-50/30 transition-all shadow-2xs"
+                            className="w-full sm:w-auto h-12 px-6 gap-2.5 text-xs sm:text-sm font-bold border-slate-300 bg-white text-slate-800 hover:border-[#25D366] hover:text-[#233876] hover:bg-emerald-50/30 transition-all shadow-2xs"
                           >
                             <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
                             <span>{slide.whatsappCta.text}</span>
@@ -307,7 +307,7 @@ export function HeroSection() {
                           </div>
                           <span className="hidden sm:inline-block text-slate-300">|</span>
                           <div className="text-slate-700 font-medium">
-                            <span className="font-extrabold text-[#112252]">{slide.proofStat}</span>{" "}
+                            <span className="font-bold text-[#233876]">{slide.proofStat}</span>{" "}
                             <span className="text-slate-500">{slide.proofLabel}</span>
                           </div>
                           <span className="hidden md:inline-block text-slate-300">|</span>
