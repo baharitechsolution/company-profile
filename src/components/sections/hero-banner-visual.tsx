@@ -102,7 +102,7 @@ function PaymentGatewayLogo({ className = "h-5 w-5 shrink-0" }: { className?: st
 }
 
 /* -------------------------------------------------------------------------- */
-/*                  SLIDE 0 (WEB): WEB APPLICATION & PORTAL                   */
+/*        SLIDE 0 (WEB): ARSITEK WEB DENGAN LAPTOP (ASIMETRIS DINAMIS)        */
 /* -------------------------------------------------------------------------- */
 
 function SlideWebVisual() {
@@ -126,8 +126,8 @@ function SlideWebVisual() {
         </svg>
       </div>
 
-      {/* 2. KARTU SELLING: Google Search Ranking #1 (Posisi Rapi & Nyaman Dilihat) */}
-      <div className="absolute top-1 sm:top-2 left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[160px] sm:max-w-[172px]">
+      {/* 2. KARTU SELLING: Google Search Ranking #1 (Di kantong kiri atas terbuka) */}
+      <div className="absolute top-2 sm:top-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[160px] sm:max-w-[172px]">
         <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
           <div className="flex items-center gap-1.5">
             <GoogleLogoG className="h-3.5 w-3.5" />
@@ -150,8 +150,8 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 3. KARTU SELLING: Kecepatan Muat Sub-Detik (< 0.6 Detik) & Skor Hijau */}
-      <div className="absolute top-1 sm:top-2 right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+      {/* 3. KARTU SELLING: Kecepatan Muat Sub-Detik (Di kanan atas sejajar bahu) */}
+      <div className="absolute top-3 sm:top-5 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
         <div className="flex items-center gap-2 mb-1">
           <div className="h-5 w-5 sm:h-6 sm:w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center">
             <Globe className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
@@ -167,8 +167,8 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 4. KARTU SELLING: Visual Chart Kenaikan Traffic & Calon Pelanggan */}
-      <div className="absolute top-[63%] sm:top-[65%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* 4. KARTU SELLING: Visual Chart Trafik (Di kiri bawah bawah laptop) */}
+      <div className="absolute top-[65%] sm:top-[67%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8px] sm:text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">
             Trafik Pengunjung
@@ -196,8 +196,8 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 5. KARTU SELLING: Otomatisasi Pembayaran (Payment Gateway QRIS) */}
-      <div className="absolute top-[46%] sm:top-[48%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* 5. KARTU SELLING: Payment Gateway QRIS (Di tengah kanan samping lengan) */}
+      <div className="absolute top-[42%] sm:top-[44%] right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-2 mb-1.5">
           <PaymentGatewayLogo className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
           <div>
@@ -209,7 +209,7 @@ function SlideWebVisual() {
             </span>
           </div>
         </div>
-        <div className="flex items-center justify-between text-[7.5px] sm:text-[8px] text-slate-500 pt-1 border-t border-slate-100">
+        <div className="flex items-center justify-between text-[7.5px] sm:text-[8px] text-slate-500 pt-1.5 border-t border-slate-100">
           <span className="font-semibold text-emerald-600">Otomatisasi 24/7</span>
           <span className="font-bold text-slate-700">Tanpa Admin</span>
         </div>
@@ -238,7 +238,7 @@ function SlideWebVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                   SLIDE 1: ENTERPRISE ERP & SOFTWARE                       */
+/*      SLIDE 1: KONSULTAN ERP DENGAN TANGAN BERLIPAT (ZIGZAG DINAMIS)        */
 /* -------------------------------------------------------------------------- */
 
 function Slide1EnterpriseVisual() {
@@ -262,8 +262,8 @@ function Slide1EnterpriseVisual() {
         </svg>
       </div>
 
-      {/* 2. KARTU SELLING: 100% Hak Milik Source Code */}
-      <div className="absolute top-1 sm:top-2 left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
+      {/* 2. KARTU SELLING: 100% Hak Milik Source Code (Kiri Atas dekat bahu tegap) */}
+      <div className="absolute top-3 sm:top-4 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
         <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
           <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600" />
         </div>
@@ -277,8 +277,8 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 3. KARTU SELLING: Multi-Cabang Terhubung Real-Time */}
-      <div className="absolute top-1 sm:top-2 right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+      {/* 3. KARTU SELLING: Multi-Cabang Terhubung Real-Time (Kanan Atas sudut terbuka) */}
+      <div className="absolute top-2 sm:top-3 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
         <div className="flex items-center gap-2 mb-1">
           <div className="h-5 w-5 sm:h-6 sm:w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center">
             <Layers className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
@@ -294,8 +294,8 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 4. KARTU SELLING: Pangkas 4.5 Jam Kerja Manual / Hari */}
-      <div className="absolute top-[63%] sm:top-[65%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* 4. KARTU SELLING: Pangkas 4.5 Jam Kerja (Kiri Tengah sejajar lipatan siku) */}
+      <div className="absolute top-[56%] sm:top-[58%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8px] sm:text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">
             Efisiensi Operasional
@@ -318,8 +318,8 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 5. KARTU SELLING: Hemat Biaya Lisensi Ratusan Juta */}
-      <div className="absolute top-[46%] sm:top-[48%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* 5. KARTU SELLING: Hemat Biaya Lisensi (Kanan Bawah samping pinggang) */}
+      <div className="absolute top-[68%] sm:top-[70%] right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-2 mb-1.5">
           <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-xl bg-blue-50 text-[#1482C2] flex items-center justify-center shrink-0">
             <TrendingUp className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#1482C2]" />
@@ -362,7 +362,7 @@ function Slide1EnterpriseVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     SLIDE 2: MOBILE APPS (ANDROID & IOS)                   */
+/*       SLIDE 2: SPESIALIS MOBILE MEMEGANG SMARTPHONE (FRAME RAMPING)        */
 /* -------------------------------------------------------------------------- */
 
 function Slide2MobileVisual() {
@@ -386,8 +386,8 @@ function Slide2MobileVisual() {
         </svg>
       </div>
 
-      {/* 2. KARTU SELLING: Dual Store Approval (100% Siap Tayang - Rapi & Berdampingan Cantik) */}
-      <div className="absolute top-1 sm:top-2 left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
+      {/* 2. KARTU SELLING: Dual Store Approval (Kiri Atas dekat kepala tanpa menutupi rambut) */}
+      <div className="absolute top-2 sm:top-3 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
         <div className="flex items-center gap-1.5 shrink-0">
           <GooglePlayLogo />
           <AppStoreLogo />
@@ -402,8 +402,8 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 3. KARTU SELLING: Rating Tinggi 4.9 Bintang (50k+ Pengguna Ritel) */}
-      <div className="absolute top-1 sm:top-2 right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+      {/* 3. KARTU SELLING: Rating Tinggi 4.9 Bintang (Kanan Atas melayang alami) */}
+      <div className="absolute top-1 sm:top-2 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
         <div className="flex items-center justify-between gap-1 mb-1">
           <div className="flex items-center gap-0.5 text-amber-500">
             {[...Array(5)].map((_, i) => (
@@ -418,8 +418,8 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 4. KARTU SELLING: Offline-First Mode (Transaksi Tetap Jalan Walau Tanpa Sinyal) */}
-      <div className="absolute top-[63%] sm:top-[65%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* 4. KARTU SELLING: Offline-First Mode (Kiri Bawah di bawah smartphone yang dipegang) */}
+      <div className="absolute top-[64%] sm:top-[66%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <span className="text-[8px] sm:text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
             Fitur Lapangan
@@ -442,8 +442,8 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 5. KARTU SELLING: 60 FPS Native Ultra-Smooth Bebas Lemot */}
-      <div className="absolute top-[46%] sm:top-[48%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* 5. KARTU SELLING: 60 FPS Native Ultra-Smooth (Kanan Tengah samping siku kiri) */}
+      <div className="absolute top-[46%] sm:top-[48%] right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-2 mb-1.5">
           <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
             <Gauge className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-600" />
@@ -486,7 +486,7 @@ function Slide2MobileVisual() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                 SLIDE 3: CLOUD DEVOPS & CYBERSECURITY                      */
+/*      SLIDE 3: LEAD CLOUD DEVOPS & GESTUR CONFIDENT (KOLOM LUAS KIRI)       */
 /* -------------------------------------------------------------------------- */
 
 function Slide3CloudVisual() {
@@ -510,8 +510,8 @@ function Slide3CloudVisual() {
         </svg>
       </div>
 
-      {/* 2. KARTU SELLING: 99.99% Uptime (Server Anti-Down) */}
-      <div className="absolute top-1 sm:top-2 left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
+      {/* 2. KARTU SELLING: 99.99% Uptime (Kiri Atas melayang tinggi & bersih) */}
+      <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-2.5 py-1.5 sm:px-3 sm:py-2 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] flex items-center gap-2 sm:gap-2.5 max-w-[168px] sm:max-w-[180px]">
         <CloudServerLogo className="h-4.5 w-4.5 sm:h-5 sm:w-5 shrink-0" />
         <div className="border-l border-slate-200 pl-1.5 sm:pl-2">
           <span className="block text-[7.5px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
@@ -523,8 +523,8 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 3. KARTU SELLING: Pangkas Biaya Server 42% (Cost Down) */}
-      <div className="absolute top-1 sm:top-2 right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
+      {/* 3. KARTU SELLING: Pangkas Biaya Server 42% (Kanan Atas di atas gestur tangan) */}
+      <div className="absolute top-2 sm:top-3 right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[125px] sm:min-w-[135px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[7.5px] sm:text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Efisiensi Cloud
@@ -542,8 +542,8 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 4. KARTU SELLING: Proteksi Anti-DDoS & Lolos Audit OWASP (Data Aman dari Hacker) */}
-      <div className="absolute top-[63%] sm:top-[65%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* 4. KARTU SELLING: Proteksi Anti-DDoS & OWASP (Di kantong kiri bawah yang sangat lapang) */}
+      <div className="absolute top-[62%] sm:top-[64%] left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <span className="text-[8px] sm:text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
             Keamanan Siber
@@ -566,8 +566,8 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 5. KARTU SELLING: Auto-Backup Harian (Garansi Zero Data Loss) */}
-      <div className="absolute top-[46%] sm:top-[48%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
+      {/* 5. KARTU SELLING: Auto-Backup Harian (Kanan Tengah di atas siku kanan) */}
+      <div className="absolute top-[38%] sm:top-[40%] right-1 sm:right-2 lg:right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[145px] sm:max-w-[155px]">
         <div className="flex items-center gap-2 mb-1.5">
           <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-xl bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
             <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#0EB8D8]" />
