@@ -101,6 +101,45 @@ export function JsonLd() {
           "@id": `${siteConfig.url}/#organization`,
         },
       },
+      {
+        "@type": "ItemList",
+        "@id": `${siteConfig.url}/#sitelinks`,
+        name: "Navigasi Resmi Bahari Tech Solution",
+        itemListElement: [
+          {
+            "@type": "SiteNavigationElement",
+            position: 1,
+            name: "Tentang Kami",
+            description:
+              "Profil perusahaan, visi misi, nilai-nilai B.A.H.A.R.I, dan legalitas CV resmi.",
+            url: `${siteConfig.url}/tentang-kami`,
+          },
+          {
+            "@type": "SiteNavigationElement",
+            position: 2,
+            name: "Layanan Solusi",
+            description:
+              "Katalog layanan rekayasa software: Web App, Mobile App iOS Android, ERP, & Cloud DevOps.",
+            url: `${siteConfig.url}/layanan`,
+          },
+          {
+            "@type": "SiteNavigationElement",
+            position: 3,
+            name: "Portofolio & Studi Kasus",
+            description:
+              "Rekam jejak dan studi kasus sistem enterprise yang telah sukses dirilis ke produksi.",
+            url: `${siteConfig.url}/portofolio`,
+          },
+          {
+            "@type": "SiteNavigationElement",
+            position: 4,
+            name: "Kontak & Konsultasi",
+            description:
+              "Hubungi konsultan teknologi untuk konsultasi kebutuhan software dan estimasi RAB resmi.",
+            url: `${siteConfig.url}/kontak`,
+          },
+        ],
+      },
     ],
   };
 

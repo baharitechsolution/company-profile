@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "Bahari Tech Solution",
+  name: "CV. Bahari Tech Solution",
   shortName: "Bahari Tech",
   description:
-    "Mitra transformasi digital terpercaya di Indonesia. Kami menghadirkan solusi rekayasa perangkat lunak modern, aplikasi web & mobile enterprise, integrasi cloud, dan automasi cerdas.",
-  url: "https://baharitech.com",
-  ogImage: "https://baharitech.com/og.jpg",
+    "Software House Indonesia & Enterprise Technology Consultant. Jasa pembuatan Aplikasi Mobile iOS & Android, Web Application Next.js, Sistem Enterprise ERP, Cloud DevOps, serta integrasi digital kustom terpercaya.",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://www.baharitechsolution.my.id",
+  ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_bts_utama.png",
   contact: {
-    email: "halo@baharitech.com",
+    email: "kontak@baharitechsolution.my.id",
     phone: "+62 812-3456-7890",
     whatsapp: "6281234567890",
     address: "Jl. Maritim Digital No. 8, Jakarta Selatan, Indonesia",
@@ -20,10 +20,9 @@ export const siteConfig = {
     facebook: "https://facebook.com/baharitech",
   },
   stats: [
-    { value: "50+", label: "Proyek Selesai" },
-    { value: "99.8%", label: "SLA Uptime & Kehandalan" },
-    { value: "35+", label: "Klien Korporasi & UMKM" },
-    { value: "5+ Thn", label: "Pengalaman Industri" },
+    { value: "50+", label: "Solusi Digital Rilis" },
+    { value: "99.98%", label: "SLA Uptime & Keandalan" },
+    { value: "40+", label: "Klien & Institusi Mitra" },
+    { value: "4.9 / 5", label: "Skor Kepuasan Klien" },
   ],
 };
-
