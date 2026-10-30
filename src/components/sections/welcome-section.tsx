@@ -111,9 +111,9 @@ export function WelcomeSection() {
                   src="/images/kantor/kantor_bts.webp"
                   alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
                   width={1920}
-                  height={1200}
+                  height={1479}
                   priority
-                  className="w-full h-[230px] sm:h-[275px] lg:h-[315px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-[345px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
               </div>
             </div>
