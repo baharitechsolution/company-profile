@@ -7,6 +7,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -27,6 +28,16 @@ const slides = [
       text: "Chat Tim Mobile App",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20ingin%20membuat%20aplikasi%20mobile%20Android%20dan%20iOS.`,
     },
+    metricLabel: "Kepuasan Klien",
+    proofStat: "50+",
+    proofLabel: "Aplikasi Sukses Rilis di Store",
+    techStack: [
+      "Flutter & Swift",
+      "Kotlin Android",
+      "App Store Kurasi",
+      "Offline-First Sync",
+      "REST & GraphQL",
+    ],
   },
   {
     id: 2,
@@ -42,6 +53,16 @@ const slides = [
       text: "Chat Konsultan ERP",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20software%20kustom%20dan%20ERP.`,
     },
+    metricLabel: "Kepuasan Klien",
+    proofStat: "100k+",
+    proofLabel: "Transaksi Harian Tanpa Lag",
+    techStack: [
+      "Clean Architecture",
+      "PostgreSQL",
+      "Multi-Branch Sync",
+      "Audit OWASP",
+      "Zero Vendor Lock-in",
+    ],
   },
   {
     id: 3,
@@ -57,6 +78,16 @@ const slides = [
       text: "Chat Arsitek Web",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20Web%20Application%20dan%20Portal%20Enterprise.`,
     },
+    metricLabel: "Kepuasan Klien",
+    proofStat: "0.6 Detik",
+    proofLabel: "Rata-rata Waktu Muat Kilat",
+    techStack: [
+      "Next.js 16 SSR",
+      "TypeScript",
+      "Tailwind CSS",
+      "SEO Google Lolos",
+      "High Concurrency API",
+    ],
   },
   {
     id: 4,
@@ -72,6 +103,16 @@ const slides = [
       text: "Chat Arsitek Cloud",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20ingin%20konsultasi%20infrastruktur%20cloud%20dan%20keamanan%20server.`,
     },
+    metricLabel: "Kepuasan Klien",
+    proofStat: "99.99%",
+    proofLabel: "SLA Uptime Cloud Server",
+    techStack: [
+      "AWS & Google Cloud",
+      "Anti-DDoS 24/7",
+      "Docker / K8s",
+      "Auto-Backup Harian",
+      "Hemat Biaya 42%",
+    ],
   },
 ];
 
@@ -158,24 +199,30 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-white min-h-[calc(100vh-4rem)] min-h-[calc(100dvh-4rem)] flex flex-col justify-between border-b border-slate-100"
+      className="relative overflow-hidden bg-white min-h-[640px] lg:min-h-[calc(100vh-4rem)] lg:max-h-[920px] flex flex-col justify-between border-b border-slate-100"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Dot Grid */}
+      {/* Background Architectural Grid Pattern */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage: "radial-gradient(circle, #1482C2 1.2px, transparent 1.2px)",
-          backgroundSize: "20px 20px",
-        }}
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#0f172a04_1px,transparent_1px),linear-gradient(to_bottom,#0f172a04_1px,transparent_1px)] bg-[size:36px_36px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_50%,#000_60%,transparent_100%)] -z-10"
+      />
+
+      {/* Atmospheric Ambient Radial Lighting Glows */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-24 right-[5%] w-[520px] h-[520px] rounded-full bg-gradient-to-bl from-[#0EB8D8]/12 via-[#1482C2]/6 to-transparent blur-3xl -z-10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-20 -left-20 w-[460px] h-[460px] rounded-full bg-gradient-to-tr from-[#1482C2]/6 via-[#0EB8D8]/4 to-transparent blur-3xl -z-10"
       />
 
       {/* TRACK SLIDER HORIZONTAL PENUH DENGAN INFINITE FORWARD LOOP */}
-      <div className="relative w-full overflow-hidden flex-1 flex items-center py-4 sm:py-6 lg:py-8">
+      <div className="relative w-full overflow-hidden flex-1 flex items-center py-6 sm:py-8 lg:py-10">
         <div
           onTransitionEnd={handleTransitionEnd}
           className={`flex w-full items-center ${
@@ -190,35 +237,36 @@ export function HeroSection() {
             return (
               <div key={`ext-slide-${idx}`} className="w-full shrink-0">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
                     
                     {/* Kolom Kiri: Teks Headline, Deskripsi Profesional & Tombol CTA */}
-                    <div className="lg:col-span-7 space-y-3 sm:space-y-4 lg:space-y-5">
+                    <div className="lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6">
                       
-                      {/* Eyebrow Label Korporat Bersih */}
-                      <p className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-[#1482C2]">
-                        {slide.tag}
-                      </p>
+                      {/* Eyebrow Label Korporat Bersih dengan Live Indicator */}
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF5FC] border border-[#1482C2]/20 text-[#1482C2] text-xs font-bold uppercase tracking-wider shadow-2xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#1482C2] animate-pulse" />
+                        <span>{slide.tag}</span>
+                      </div>
 
                       {/* H1 Headline Bersih & Berwibawa */}
-                      <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#112252] leading-[1.18] tracking-tight">
+                      <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-extrabold text-[#112252] leading-[1.14] tracking-tight">
                         {slide.headingPart1}{" "}
                         <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                         {slide.headingPart2}
                       </h1>
 
                       {/* Deskripsi Kalimat Profesional */}
-                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+                      <p className="text-sm sm:text-base lg:text-[17px] text-slate-600 leading-relaxed max-w-xl">
                         {slide.description}
                       </p>
 
                       {/* Tombol CTA Aksi Utama */}
-                      <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+                      <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                         <Link href={slide.primaryCta.href}>
                           <Button
                             size="md"
                             variant="primary"
-                            className="w-full sm:w-auto h-11 px-6 gap-2 text-xs sm:text-sm font-bold shadow-xs hover:bg-[#0E6496]"
+                            className="w-full sm:w-auto h-12 px-7 gap-2.5 text-xs sm:text-sm font-bold shadow-md shadow-[#1482C2]/15 hover:shadow-lg hover:shadow-[#1482C2]/25 hover:bg-[#0E6496] transition-all"
                           >
                             <span>{slide.primaryCta.text}</span>
                             <ArrowRight className="h-4 w-4" />
@@ -233,37 +281,59 @@ export function HeroSection() {
                           <Button
                             size="md"
                             variant="outline"
-                            className="w-full sm:w-auto h-11 px-5 gap-2 text-xs sm:text-sm font-bold border-slate-300 text-slate-800 hover:border-[#1482C2] hover:text-[#1482C2] hover:bg-slate-50/50"
+                            className="w-full sm:w-auto h-12 px-6 gap-2.5 text-xs sm:text-sm font-bold border-slate-300 bg-white text-slate-800 hover:border-[#25D366] hover:text-[#112252] hover:bg-emerald-50/30 transition-all shadow-2xs"
                           >
                             <Image
                               src="/images/Icon/icon whatsapp.png"
                               alt="WhatsApp"
-                              width={16}
-                              height={16}
-                              className="h-4 w-4 object-contain shrink-0"
+                              width={18}
+                              height={18}
+                              className="h-4.5 w-4.5 object-contain shrink-0"
                             />
                             <span>{slide.whatsappCta.text}</span>
                           </Button>
                         </Link>
                       </div>
 
-                      {/* Bar Kepercayaan & Kredibilitas Autentik */}
-                      <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-500 border-t border-slate-100">
-                        <div className="flex items-center gap-1.5">
-                          <span className="text-amber-500 font-bold">★ 4.9 / 5.0</span>
-                          <span className="text-slate-400">·</span>
-                          <span>Kepuasan Klien</span>
+                      {/* Bar Kepercayaan & Kredibilitas Autentik dengan Tech Stack Strip */}
+                      <div className="pt-3 sm:pt-4 space-y-2.5 border-t border-slate-100">
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-amber-500 font-bold">★ 4.9 / 5.0</span>
+                            <span className="text-slate-400">·</span>
+                            <span>{slide.metricLabel}</span>
+                          </div>
+                          <span className="hidden sm:inline-block text-slate-300">|</span>
+                          <div className="text-slate-700 font-medium">
+                            <span className="font-extrabold text-[#112252]">{slide.proofStat}</span>{" "}
+                            <span className="text-slate-500">{slide.proofLabel}</span>
+                          </div>
+                          <span className="hidden md:inline-block text-slate-300">|</span>
+                          <div className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50/80 border border-emerald-200/60 px-2 py-0.5 rounded-md">
+                            <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
+                            <span>100% Hak Milik IP</span>
+                          </div>
                         </div>
-                        <span className="hidden sm:inline-block text-slate-300">|</span>
-                        <div className="text-slate-600 font-medium">
-                          <span className="font-bold text-[#112252]">50+</span> Proyek Software &amp; Mobile Sukses Rilis
+
+                        <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
+                          <span className="text-slate-400 font-bold text-[10px] uppercase tracking-wider mr-1">
+                            Stack:
+                          </span>
+                          {slide.techStack.map((tech, tIdx) => (
+                            <span
+                              key={tIdx}
+                              className="px-2 py-0.5 rounded bg-slate-50/90 border border-slate-200/70 text-slate-700 font-semibold"
+                            >
+                              {tech}
+                            </span>
+                          ))}
                         </div>
                       </div>
 
                     </div>
 
                     {/* Kolom Kanan: Visual Model Dinamis Khusus Slide Ini */}
-                    <div className="lg:col-span-5 flex items-center justify-center pt-1 pb-3 lg:py-0">
+                    <div className="lg:col-span-5 flex items-center justify-center pt-2 pb-4 lg:py-0">
                       <HeroBannerVisual slideIndex={originalIndex} visualType={slide.visualType} />
                     </div>
 
@@ -276,7 +346,7 @@ export function HeroSection() {
       </div>
 
       {/* Kontrol Navigasi Slide Bawah: Panah Kiri/Kanan & Bullet Indikator Kompak */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3.5 sm:py-4 border-t border-slate-100 flex items-center justify-between z-10 bg-white/80 backdrop-blur-xs">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3.5 sm:py-4 border-t border-slate-100 flex items-center justify-between z-10 bg-white/90 backdrop-blur-xs">
         
         {/* Bullet Indikator Slide */}
         <div className="flex items-center gap-2">
@@ -297,22 +367,40 @@ export function HeroSection() {
           </span>
         </div>
 
+        {/* Corporate Trust Highlights di Tengah (Layar Besar) */}
+        <div className="hidden lg:flex items-center gap-5 text-xs font-semibold text-slate-500">
+          <span className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            100% Hak Milik Source Code
+          </span>
+          <span className="text-slate-300">·</span>
+          <span className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2]" />
+            Garansi SLA Uptime 99.98%
+          </span>
+          <span className="text-slate-300">·</span>
+          <span className="flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#0EB8D8]" />
+            Perjanjian Kerahasiaan (NDA)
+          </span>
+        </div>
+
         {/* Panah Navigasi Kiri / Kanan */}
         <div className="flex items-center gap-1.5">
           <button
             onClick={handlePrev}
-            className="h-7 w-7 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
+            className="h-8 w-8 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
             aria-label="Slide Sebelumnya"
           >
-            <ChevronLeft className="h-3.5 w-3.5" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
 
           <button
             onClick={handleNext}
-            className="h-7 w-7 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
+            className="h-8 w-8 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
             aria-label="Slide Selanjutnya"
           >
-            <ChevronRight className="h-3.5 w-3.5" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
 
