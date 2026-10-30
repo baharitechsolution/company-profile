@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
-function WhatsAppIcon({ className = "h-5 w-5 sm:h-5.5 sm:w-5.5" }: { className?: string }) {
+function WhatsAppIcon({ className = "h-7 w-7" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -20,36 +20,22 @@ export function WhatsAppButton() {
   );
 
   return (
-    <div className="fixed bottom-6 right-6 sm:bottom-7 sm:right-7 lg:bottom-8 lg:right-8 z-40 flex items-center">
+    <div className="fixed bottom-7 right-7 sm:bottom-8 sm:right-8 lg:bottom-9 lg:right-9 z-40 select-none">
       <Link
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Konsultasi Langsung via WhatsApp CV. Bahari Tech Solution"
-        className="group flex items-center gap-3 bg-white/95 backdrop-blur-md pl-4 pr-2 py-2 rounded-full shadow-[0_8px_25px_rgba(17,34,82,0.12),0_2px_8px_rgba(0,0,0,0.06)] border border-slate-200/90 hover:border-[#25D366] hover:shadow-[0_12px_32px_rgba(37,211,102,0.3)] transition-all duration-300 hover:scale-103 active:scale-97 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#25D366]/20"
+        className="group relative flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(37,211,102,0.4)] hover:bg-[#20ba59] hover:shadow-[0_14px_32px_rgba(37,211,102,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
       >
-        {/* Teks Status Online & CTA Terbaca Jelas (Standar Enterprise) */}
-        <div className="flex flex-col text-left">
-          <div className="flex items-center gap-1.5">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 leading-none">
-              Online
-            </span>
-          </div>
-          <span className="text-xs sm:text-[13px] font-bold text-[#112252] leading-tight mt-0.5 whitespace-nowrap">
-            Chat WhatsApp
-          </span>
-        </div>
+        {/* Tooltip Mengambang Bersih Saat Hover */}
+        <span className="pointer-events-none absolute right-full mr-3 hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900/90 text-white text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
+          Chat WhatsApp Konsultan
+        </span>
 
-        {/* Tombol Lingkaran Solid Hijau WhatsApp Resmi */}
-        <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md shadow-emerald-500/25 shrink-0 group-hover:bg-[#20ba59] transition-colors">
-          <WhatsAppIcon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-        </div>
+        {/* Logo WhatsApp Resmi Berwarna Putih Bersih */}
+        <WhatsAppIcon className="h-7 w-7 text-white drop-shadow-xs" />
       </Link>
     </div>
   );
 }
-
