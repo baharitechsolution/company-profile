@@ -22,7 +22,7 @@ import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/
 import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
-  title: `Profil Perusahaan CV. Bahari Tech Solution - Software House Resmi Indonesia`,
+  title: `Profil Perusahaan Bahari Tech Solution - Software House Resmi Indonesia`,
   description:
     "Mengenal CV. Bahari Tech Solution: Software House dan Enterprise Technology Consultant berbadan hukum resmi di Indonesia. Nilai B.A.H.A.R.I, legalitas SK Kemenkumham, dan 100% hak cipta source code.",
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     canonical: "/tentang-kami",
   },
   openGraph: {
-    title: `Tentang CV. Bahari Tech Solution - Profil & Legalitas Resmi`,
+    title: `Tentang Bahari Tech Solution - Profil & Legalitas Resmi`,
     description:
       "Profil lengkap software house resmi dengan dedikasi rekayasa bersih, transparansi teknis, dan kepemilikan source code 100%.",
     url: `${siteConfig.url}/tentang-kami`,

@@ -1,5 +1,6 @@
 export const siteConfig = {
-  name: "CV. Bahari Tech Solution",
+  name: "Bahari Tech Solution",
+  legalName: "CV. Bahari Tech Solution",
   shortName: "Bahari Tech",
   description:
     "Software House Indonesia & Enterprise Technology Consultant. Jasa pembuatan Aplikasi Mobile iOS & Android, Web Application Next.js, Sistem Enterprise ERP, Cloud DevOps, serta integrasi digital kustom terpercaya.",
