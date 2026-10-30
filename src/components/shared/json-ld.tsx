@@ -197,6 +197,14 @@ export function JsonLd() {
         mainEntity: [
           {
             "@type": "Question",
+            name: "Apakah Bahari Tech Solution melayani pembuatan website dan aplikasi di Tegal dan sekitarnya?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ya, kantor operasional kami berada di Kecamatan Kramat, Kabupaten Tegal. Kami melayani jasa pembuatan website, aplikasi mobile Android & iOS, dan sistem ERP untuk bisnis dan UMKM di Kota Tegal, Slawi, Brebes, Pemalang, Pekalongan, hingga seluruh Indonesia.",
+            },
+          },
+          {
+            "@type": "Question",
             name: "Berapa lama estimasi waktu pengerjaan sebuah software atau aplikasi di Bahari Tech Solution?",
             acceptedAnswer: {
               "@type": "Answer",

@@ -61,7 +61,7 @@ export function WelcomeSection() {
 
               {/* Deskripsi Naratif: 1 Paragraf Padat, Berwibawa & Langsung Menjawab Kebutuhan Klien */}
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berfokus pada rancang bangun perangkat lunak kustom—mulai dari sistem enterprise ERP, portal web berskala tinggi, hingga aplikasi mobile iOS &amp; Android. Setiap proyek dikembangkan dengan arsitektur modular yang skalabel serta tata kelola legalitas bisnis yang transparan.
+                <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang melayani jasa pembuatan website profesional, aplikasi mobile Android &amp; iOS, dan sistem enterprise ERP terintegrasi. Berpusat di Tegal, Jawa Tengah dan melayani klien di seluruh Indonesia, setiap proyek dikembangkan dengan arsitektur modular yang skalabel, bebas biaya lisensi tersembunyi, serta jaminan kepemilikan source code 100%.
               </p>
             </div>
 

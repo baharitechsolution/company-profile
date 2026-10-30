@@ -127,6 +127,62 @@ export default function ServicesPage() {
             );
           })}
         </div>
+        {/* Regional Focus Block: Jasa Pembuatan Website & Aplikasi Tegal */}
+        <div className="mt-16 rounded-2xl border border-slate-200 bg-linear-to-b from-slate-50 to-white p-8 md:p-12 shadow-xs">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
+              LAYANAN LOKAL &amp; KONSULTASI TATAP MUKA
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#112252] tracking-tight">
+              Jasa Pembuatan Website, Aplikasi Mobile &amp; Sistem ERP di Tegal
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+              Sebagai software house resmi yang berpusat di Kabupaten Tegal, kami siap mendampingi perusahaan, instansi, dan pelaku usaha di Kota Tegal, Slawi, Brebes, Pemalang, Pekalongan, dan sekitarnya. Dapatkan layanan konsultasi langsung tatap muka di kantor operasional kami di Kramat atau via daring.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
+              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+                Jasa Pembuatan Website Tegal
+              </h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Website profil perusahaan modern, portal e-commerce toko online, dan landing page berkecepatan tinggi dengan Next.js yang ramah SEO Google.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
+              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+                Aplikasi Mobile Android &amp; iOS
+              </h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Pembuatan aplikasi smartphone kustom untuk operasional kurir, kasir lapangan, absensi karyawan, hingga aplikasi pemesanan pelanggan.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-2xs">
+              <h3 className="text-sm font-bold text-[#112252] mb-1.5">
+                Sistem ERP &amp; Program Kasir Gudang
+              </h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Digitalisasi pencatatan stok multi-cabang, laporan keuangan otomatis, dan sistem operasional bisnis terpadu tanpa biaya langganan bulanan.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-xs text-slate-600 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
+              <span>Kantor Operasional: Jalan Tanjung No. 1, Desa Tanjungharjo, Kec. Kramat, Tegal</span>
+            </div>
+            <Link href="/kontak">
+              <Button variant="primary" className="gap-2 shrink-0">
+                <span>Jadwalkan Konsultasi di Tegal</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
