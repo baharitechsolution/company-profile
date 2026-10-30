@@ -372,14 +372,6 @@ export function HeroSection() {
           </span>
         </div>
 
-        {/* Peek Slide Berikutnya (Fungsional, Elegan & Bukan Filler AI) */}
-        <div className="hidden md:flex items-center gap-2 text-xs text-slate-500 font-medium">
-          <span className="text-slate-400 font-mono text-[10.5px]">NEXT:</span>
-          <span className="text-slate-700 font-semibold truncate max-w-[280px]">
-            {slides[(activeSlide + 1) % slides.length].tag}
-          </span>
-        </div>
-
         {/* Panah Navigasi Kiri / Kanan */}
         <div className="flex items-center gap-1.5">
           <button
