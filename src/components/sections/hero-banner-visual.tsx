@@ -6,8 +6,6 @@ import {
   ShieldCheck,
   Star,
   Gauge,
-  CheckCircle2,
-  Lock,
   Layers,
   TrendingUp,
   Globe,
@@ -110,16 +108,16 @@ function SlideWebVisual() {
         </svg>
       </div>
 
-      {/* 2. Kapsul Core Web Vitals (Kiri Atas) */}
-      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 pl-3 pr-4 py-1.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
-        <div className="h-6.5 w-6.5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+      {/* 2. Kartu Audit Core Web Vitals (Kiri Atas) */}
+      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
+        <div className="h-7 w-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
           <Gauge className="h-4 w-4 text-emerald-600" />
         </div>
         <div>
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Core Web Vitals
           </span>
-          <span className="block text-[11.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
             Skor 98/100 Hijau
           </span>
         </div>
@@ -142,17 +140,30 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 4. Balon Notifikasi Web Lead (Kiri Bawah) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[165px] sm:max-w-[180px]">
-        <div className="flex items-center justify-between gap-1 mb-1">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">— Web Architect —</span>
-          <span className="text-[8px] text-slate-400">10:45 WIB</span>
+      {/* 4. Lighthouse Performance & Edge Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+            Audit · Next.js 16
+          </span>
+          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Live
+          </span>
         </div>
-        <div className="bg-[#EAF5FC] rounded-lg px-2.5 py-1.5 text-[9.5px] sm:text-[10px] font-bold text-[#112252] leading-snug">
-          &ldquo;Arsitektur Web App Siap Skala Enterprise!&rdquo;
-        </div>
-        <div className="flex items-center gap-1.5 text-[8px] text-emerald-600 font-semibold mt-1.5">
-          <CheckCircle2 className="h-3 w-3" /> 100% Responsif &amp; Cepat
+        <div className="grid grid-cols-3 gap-1.5 text-center">
+          <div className="bg-slate-50 rounded p-1">
+            <span className="block text-[11.5px] font-black text-[#112252]">99</span>
+            <span className="block text-[7px] text-slate-500 font-semibold uppercase">Perf</span>
+          </div>
+          <div className="bg-slate-50 rounded p-1">
+            <span className="block text-[11.5px] font-black text-[#112252]">100</span>
+            <span className="block text-[7px] text-slate-500 font-semibold uppercase">SEO</span>
+          </div>
+          <div className="bg-slate-50 rounded p-1">
+            <span className="block text-[11.5px] font-black text-[#1482C2]">48ms</span>
+            <span className="block text-[7px] text-slate-500 font-semibold uppercase">TTFB</span>
+          </div>
         </div>
       </div>
 
@@ -227,14 +238,14 @@ function Slide1EnterpriseVisual() {
         </svg>
       </div>
 
-      {/* 2. Kapsul Node ERP (Kiri Atas) */}
-      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 pl-3 pr-4 py-1.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
+      {/* 2. Kartu Node ERP (Kiri Atas) */}
+      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
         <DatabaseNodeLogo />
         <div>
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Sistem ERP Multi-Cabang
           </span>
-          <span className="block text-[11.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
             10+ Cabang Terhubung
           </span>
         </div>
@@ -257,17 +268,26 @@ function Slide1EnterpriseVisual() {
         </div>
       </div>
 
-      {/* 4. Balon Chat Arsitek (Kiri Bawah) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[165px] sm:max-w-[180px]">
-        <div className="flex items-center justify-between gap-1 mb-1">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">— Arsitek Sistem —</span>
-          <span className="text-[8px] text-slate-400">09:15 WIB</span>
+      {/* 4. Multi-Branch Cluster & Sync Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+            Cluster · Multi-Branch
+          </span>
+          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Online
+          </span>
         </div>
-        <div className="bg-[#EAF5FC] rounded-lg px-2.5 py-1.5 text-[9.5px] sm:text-[10px] font-bold text-[#112252] leading-snug">
-          &ldquo;Modul ERP Multi-Cabang Siap Live &amp; Sinkron!&rdquo;
-        </div>
-        <div className="flex items-center gap-1.5 text-[8px] text-[#1482C2] font-semibold mt-1.5">
-          <CheckCircle2 className="h-3 w-3" /> Arsitektur Terverifikasi
+        <div className="grid grid-cols-2 gap-1.5 text-left">
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-[#112252]">10+ Nodes</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">Tersinkronisasi</span>
+          </div>
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-[#1482C2]">&lt; 0.05s</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">Replika Data</span>
+          </div>
         </div>
       </div>
 
@@ -342,8 +362,8 @@ function Slide2MobileVisual() {
         </svg>
       </div>
 
-      {/* 2. DUAL STORE LOGO PILL (Kiri Atas) */}
-      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 pl-3 pr-4 py-1.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
+      {/* 2. DUAL STORE BADGE (Kiri Atas) */}
+      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
         <div className="flex items-center gap-1.5">
           <GooglePlayLogo />
           <AppStoreLogo />
@@ -352,7 +372,7 @@ function Slide2MobileVisual() {
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Rilis Store Resmi
           </span>
-          <span className="block text-[11.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
             Play Store &amp; App Store
           </span>
         </div>
@@ -374,20 +394,26 @@ function Slide2MobileVisual() {
         </div>
       </div>
 
-      {/* 4. Notifikasi Mobile App Store (Kiri Bawah) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[165px] sm:max-w-[180px]">
-        <div className="flex items-center justify-between gap-1 mb-1">
-          <div className="flex items-center gap-1.5">
-            <AppStoreLogo className="h-4 w-4" />
-            <span className="text-[9px] font-bold text-[#112252]">Store Approval</span>
+      {/* 4. Mobile Release & CI/CD Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+            Release Pipeline
+          </span>
+          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Passed
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-1.5 text-left">
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-[#112252]">Build 182</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">App Store &amp; Play</span>
           </div>
-          <span className="text-[8px] text-slate-400">Baru saja</span>
-        </div>
-        <div className="bg-[#EAF5FC] rounded-lg px-2.5 py-1.5 text-[9.5px] sm:text-[10px] font-bold text-[#112252] leading-snug">
-          &ldquo;Aplikasi Sukses Terverifikasi &amp; Live di Store!&rdquo;
-        </div>
-        <div className="flex items-center gap-1.5 text-[8px] text-emerald-600 font-semibold mt-1.5">
-          <CheckCircle2 className="h-3 w-3" /> Siap Digunakan Pengguna
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-emerald-600">0.0%</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">Crash Rate</span>
+          </div>
         </div>
       </div>
 
@@ -462,16 +488,16 @@ function Slide3CloudVisual() {
         </svg>
       </div>
 
-      {/* 2. Kapsul Audit Keamanan OWASP (Kiri Atas) */}
-      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 pl-3 pr-4 py-1.5 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
-        <div className="h-6.5 w-6.5 rounded-full bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
+      {/* 2. Kartu Audit Keamanan OWASP (Kiri Atas) */}
+      <div className="absolute top-4 sm:top-6 -left-2 sm:left-0 lg:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] flex items-center gap-2.5">
+        <div className="h-7 w-7 rounded-lg bg-cyan-50 text-[#0EB8D8] flex items-center justify-center shrink-0">
           <ShieldCheck className="h-4 w-4 text-[#0EB8D8]" />
         </div>
         <div>
           <span className="block text-[8px] font-bold text-slate-400 uppercase tracking-wider leading-none">
             Audit Keamanan OWASP
           </span>
-          <span className="block text-[11.5px] font-black text-[#112252] leading-tight mt-0.5">
+          <span className="block text-[12px] font-black text-[#112252] leading-tight mt-0.5">
             Skor 100/100 Lolos
           </span>
         </div>
@@ -492,17 +518,26 @@ function Slide3CloudVisual() {
         </div>
       </div>
 
-      {/* 4. Balon Notifikasi DevOps (Kiri Bawah) */}
-      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[165px] sm:max-w-[180px]">
-        <div className="flex items-center justify-between gap-1 mb-1">
-          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">— DevOps Lead —</span>
-          <span className="text-[8px] text-slate-400">00:00 WIB</span>
+      {/* 4. Cloud Firewall & Automated Backup Telemetry Card (Kiri Bawah - Telemetri Nyata) */}
+      <div className="absolute top-[63%] -left-3 sm:left-0 lg:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] min-w-[155px] sm:min-w-[170px]">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-100">
+          <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider font-mono">
+            WAF &amp; GuardDuty
+          </span>
+          <span className="flex items-center gap-1 text-[8px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            Active
+          </span>
         </div>
-        <div className="bg-[#EAF5FC] rounded-lg px-2.5 py-1.5 text-[9.5px] sm:text-[10px] font-bold text-[#112252] leading-snug">
-          &ldquo;Auto-Backup Harian &amp; SSL 256-Bit Aktif!&rdquo;
-        </div>
-        <div className="flex items-center gap-1.5 text-[8px] text-emerald-600 font-semibold mt-1.5">
-          <Lock className="h-3 w-3" /> Proteksi Siber 24/7
+        <div className="grid grid-cols-2 gap-1.5 text-left">
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-[#112252]">Anti-DDoS</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">Mitigasi Lapis 7</span>
+          </div>
+          <div className="bg-slate-50 rounded p-1.5">
+            <span className="block text-[11.5px] font-black text-[#1482C2]">Daily Snap</span>
+            <span className="block text-[7.5px] text-slate-500 font-semibold">Auto-Backup AWS</span>
+          </div>
         </div>
       </div>
 
@@ -510,7 +545,7 @@ function Slide3CloudVisual() {
       <div className="absolute top-[46%] -right-2 sm:right-0 lg:-right-3 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-3 shadow-[0_12px_28px_-6px_rgba(17,34,82,0.12)] max-w-[155px] sm:max-w-[165px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">Biaya Server</span>
-          <span className="text-[8.5px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+          <span className="text-[8.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 font-mono">
             Hemat 42%
           </span>
         </div>

@@ -1,6 +1,6 @@
 import { portfolioData } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
-import { FolderGit2, Calendar, Building2 } from "lucide-react";
+import { Calendar, Building2 } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,55 +14,80 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="py-16 md:py-24 bg-white">
+    <div className="py-16 md:py-24 bg-white select-none">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
-            REKAM JEJAK & HASIL KERJA
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#112252]">
-            Studi Kasus & Implementasi Proyek Klien
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="h-0.5 w-6 bg-[#1482C2]" />
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#1482C2]">
+              REKAM JEJAK &amp; HASIL KERJA
+            </span>
+            <span className="h-0.5 w-6 bg-[#1482C2]" />
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#112252]">
+            Studi Kasus &amp; Implementasi Sistem Enterprise
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Berikut adalah beberapa proyek strategis yang telah kami kembangkan dan jalankan untuk berbagai sektor industri di Indonesia.
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Daftar solusi perangkat lunak strategis yang telah kami rancang, bangun, dan deploy ke lingkungan produksi untuk berbagai sektor bisnis di Indonesia.
           </p>
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {portfolioData.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-xs hover:border-[#1482C2] hover:shadow-md transition-all duration-200"
+              className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 sm:p-6 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
               <div>
-                <div className="relative mb-5 flex h-48 w-full items-center justify-center rounded-lg bg-[#F8FAFC] border border-slate-200 p-4">
-                  <div className="flex flex-col items-center justify-center text-center">
-                    <div className="mb-2 rounded-lg bg-[#EAF5FC] p-3 text-[#1482C2]">
-                      <FolderGit2 className="h-7 w-7" />
+                {/* Architectural System Window Preview Bar (Tampilan Produk Rekayasa Nyata) */}
+                <div className="relative mb-5 rounded-xl bg-slate-900 border border-slate-800 p-4 overflow-hidden shadow-2xs group-hover:border-[#1482C2]/50 transition-colors">
+                  {/* Header: OS Window Controls & Route */}
+                  <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-slate-800 text-[11px] font-mono text-slate-400">
+                    <div className="flex items-center gap-1.5">
+                      <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+                      <span className="ml-1.5 text-slate-400 text-[10px] truncate max-w-[150px]">
+                        /{project.slug}
+                      </span>
                     </div>
-                    <span className="text-xs font-bold text-slate-800">
-                      {project.title}
+                    <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-950/70 border border-emerald-800/60 px-2 py-0.5 rounded">
+                      ● Live Production
                     </span>
                   </div>
-                  <span className="absolute top-3 right-3 rounded bg-white border border-slate-200 px-2.5 py-0.5 text-[10px] font-bold text-slate-700">
-                    {project.category}
-                  </span>
+
+                  {/* Body: High-tech System Metric Preview */}
+                  <div className="space-y-1.5 py-1">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-white font-bold truncate max-w-[210px]">
+                        {project.client}
+                      </span>
+                      <span className="text-slate-400 font-mono text-[10.5px]">
+                        {project.year}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 text-[10.5px] text-slate-400 font-mono">
+                      <span className="text-[#0EB8D8] font-bold">{project.category}</span>
+                      <span>·</span>
+                      <span className="text-slate-300">Clean Architecture</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-1 text-xs text-slate-500 mb-2">
                   <div className="flex items-center gap-1.5">
                     <Building2 className="h-3.5 w-3.5 text-[#1482C2]" />
-                    <span className="font-medium">Klien: {project.client}</span>
+                    <span className="font-medium text-slate-700">Klien: {project.client}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Calendar className="h-3.5 w-3.5 text-[#1482C2]" />
-                    <span>Tahun: {project.year}</span>
+                    <Calendar className="h-3.5 w-3.5 text-slate-400" />
+                    <span>Tahun Rilis: {project.year}</span>
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-[#112252] leading-snug">
+                <h2 className="text-lg font-bold text-[#112252] group-hover:text-[#1482C2] transition-colors leading-snug">
                   {project.title}
                 </h2>
 
@@ -75,7 +100,7 @@ export default function PortfolioPage() {
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="rounded bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600"
+                    className="rounded bg-slate-50 border border-slate-200/80 px-2.5 py-1 text-[11px] font-semibold text-slate-700"
                   >
                     {tech}
                   </span>

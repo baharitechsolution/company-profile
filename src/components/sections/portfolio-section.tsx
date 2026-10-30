@@ -46,22 +46,39 @@ export function PortfolioSection() {
             <ScrollStaggerItem key={item.id}>
               <div className="group flex flex-col justify-between h-full rounded-xl border border-slate-200 bg-white p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-xs transition-all duration-200 hover:-translate-y-1">
                 <div>
-                  {/* Mockup Box Ringkas */}
-                  <div className="relative mb-4 flex h-32 w-full items-center justify-center rounded-lg bg-[#F8FAFC] border border-slate-200 p-3">
-                    <div className="flex flex-col items-center justify-center text-center">
-                      <div className="mb-1.5 rounded-lg bg-[#EAF5FC] p-2 text-[#1482C2]">
-                        <FolderGit2 className="h-5 w-5" />
+                  {/* Architectural System Window Preview Bar (Tampilan Produk Rekayasa Nyata) */}
+                  <div className="relative mb-4 rounded-xl bg-slate-900 border border-slate-800 p-3.5 overflow-hidden shadow-2xs group-hover:border-[#1482C2]/50 transition-colors">
+                    {/* Header: OS Window Controls & Route */}
+                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[10px] font-mono text-slate-400">
+                      <div className="flex items-center gap-1.5">
+                        <span className="h-2 w-2 rounded-full bg-rose-500/80" />
+                        <span className="h-2 w-2 rounded-full bg-amber-500/80" />
+                        <span className="h-2 w-2 rounded-full bg-emerald-500/80" />
+                        <span className="ml-1 text-slate-400 text-[9.5px] truncate max-w-[130px]">
+                          /{item.slug}
+                        </span>
                       </div>
-                      <span className="text-xs font-bold text-slate-800 line-clamp-1">
-                        {item.title}
-                      </span>
-                      <span className="text-[10px] text-slate-500 mt-0.5">
-                        {item.client}
+                      <span className="text-[9px] font-semibold text-emerald-400 bg-emerald-950/70 border border-emerald-800/60 px-1.5 py-0.5 rounded">
+                        ● Production
                       </span>
                     </div>
-                    <span className="absolute top-2.5 right-2.5 rounded bg-white border border-slate-200 px-2 py-0.5 text-[9px] font-bold text-slate-700">
-                      {item.year}
-                    </span>
+
+                    {/* Body: High-tech System Metric Preview */}
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-white font-bold truncate max-w-[190px]">
+                          {item.client}
+                        </span>
+                        <span className="text-slate-400 font-mono text-[10px]">
+                          {item.year}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono">
+                        <span className="text-[#0EB8D8] font-bold">{item.category}</span>
+                        <span>·</span>
+                        <span className="text-slate-300">Clean Architecture</span>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-1.5 text-[11px] text-[#1482C2] font-bold uppercase tracking-wider mb-1.5">
@@ -78,11 +95,11 @@ export function PortfolioSection() {
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1">
+                <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
                   {item.techStack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-600"
+                      className="rounded bg-slate-50 border border-slate-200/80 px-2 py-0.5 text-[10px] font-semibold text-slate-700"
                     >
                       {tech}
                     </span>
