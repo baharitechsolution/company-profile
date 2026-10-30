@@ -7,7 +7,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_APP_URL || "https://www.baharitechsolution.my.id",
   ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_bts_utama.png",
   contact: {
-    email: "kontak@baharitechsolution.my.id",
+    email: "baharitechsolution@gmail.com",
     phone: "+62 812-3456-7890",
     whatsapp: "6281234567890",
     address: "Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Kabupaten Tegal, Jawa Tengah 52181",
