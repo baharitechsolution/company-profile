@@ -195,7 +195,7 @@ function SlideWebVisual() {
         </svg>
       </div>
 
-      {/* 2. Google Search Snippet Card: Ranking #1 (Kiri Atas) */}
+      {/* 2. Google Search Snippet Card: Ranking #1 (Kiri Atas - Jauh di Atas Layar Laptop) */}
       <div className="absolute top-1 sm:top-2 left-1 sm:left-2 lg:left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[160px] sm:max-w-[172px]">
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-slate-100">
           <div className="flex items-center gap-1.5">
@@ -236,14 +236,14 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 4. Bank-Grade SSL HTTPS Pill (Kiri Tengah Atas - Menempel Halus di Sisi Laptop) */}
-      <div className="hidden sm:flex absolute top-[34%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
+      {/* 4. Bank-Grade SSL HTTPS Pill (Kiri Tengah Atas - 45px di Atas Layar Laptop) */}
+      <div className="hidden sm:flex absolute top-[22%] sm:top-[24%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-1.5 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-2.5 py-1 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
         <Lock className="h-3 w-3 text-emerald-600" />
-        <span className="text-[8.5px] font-bold text-slate-700">HTTPS SSL A+ Grade</span>
+        <span className="text-[8.5px] font-bold text-slate-700">HTTPS SSL A+ Grade • Bebas Celah</span>
       </div>
 
-      {/* 5. Payment Gateway QRIS Otomatisasi (Kanan Tengah - Samping Lengan) */}
-      <div className="absolute top-[35%] sm:top-[38%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[148px] sm:max-w-[158px]">
+      {/* 5. Payment Gateway QRIS Otomatisasi (Kanan Tengah - Sisi Lengan Kanan) */}
+      <div className="absolute top-[32%] sm:top-[34%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 p-2.5 sm:p-3 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] max-w-[148px] sm:max-w-[158px]">
         <div className="flex items-center gap-1.5 mb-1.5">
           <QrisBadge />
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
@@ -263,8 +263,8 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 6. Mini Trend Chart Kenaikan Trafik (Kiri Bawah) */}
-      <div className="absolute top-[64%] sm:top-[66%] left-0 sm:left-1 lg:left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
+      {/* 6. Mini Trend Chart Kenaikan Trafik +240% (Dipindah ke Kanan Bawah - Sisi Kanan 100% Bebas dari Layar Laptop!) */}
+      <div className="absolute top-[56%] sm:top-[58%] right-0 sm:right-1 lg:right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 p-2 sm:p-2.5 shadow-[0_10px_25px_-5px_rgba(17,34,82,0.12)] min-w-[150px] sm:min-w-[165px]">
         <div className="flex items-center justify-between mb-1">
           <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">
             Trafik Calon Pembeli
@@ -291,10 +291,10 @@ function SlideWebVisual() {
         </div>
       </div>
 
-      {/* 7. Next.js & Tech Engine Pill (Kanan Bawah) */}
-      <div className="hidden sm:flex absolute top-[64%] sm:top-[66%] right-0 sm:right-1 lg:right-2 z-20 items-center gap-2 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-3 py-1.5 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
+      {/* 7. Next.js 16 Enterprise Stack Pill (Kiri Bawah - Jauh di Bawah Dasar Laptop, Samping Rok/Jas) */}
+      <div className="hidden sm:flex absolute top-[82%] sm:top-[84%] left-1 sm:left-2 lg:left-3 z-20 items-center gap-2 bg-white/95 backdrop-blur-md rounded-full border border-slate-200/90 px-3 py-1.5 shadow-[0_8px_20px_-4px_rgba(17,34,82,0.1)]">
         <NextjsLogo className="h-3.5 w-3.5" />
-        <span className="text-[8.5px] font-bold text-slate-700">Skalabilitas Tinggi</span>
+        <span className="text-[8.5px] font-bold text-slate-700">Next.js 16 SSR Enterprise Engine</span>
       </div>
 
       {/* Model Arsitek Web Wanita */}
