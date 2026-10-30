@@ -348,47 +348,52 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Kontrol Navigasi Slide Bawah: Panah Kiri/Kanan & Bullet Indikator Kompak */}
+      {/* Kontrol Navigasi Slide Bawah: Panah Kiri/Kanan & Bullet Indikator Kompak Terpadu */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3 sm:py-3.5 border-t border-slate-100 flex items-center justify-between z-10 bg-white/90 backdrop-blur-xs">
         
-        {/* Bullet Indikator Slide & Index Counter */}
-        <div className="flex items-center gap-2.5">
+        {/* Grup Kontrol Terpadu di Sisi Kiri (Aman dari Floating WhatsApp di Sisi Kanan Layar) */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          {/* Panah Navigasi Kiri / Kanan */}
           <div className="flex items-center gap-1.5">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleSelectBullet(idx)}
-                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeSlide === idx
-                    ? "w-8 bg-[#1482C2]"
-                    : "w-2 bg-slate-200 hover:bg-slate-300"
-                }`}
-                aria-label={`Pilih Slide ${idx + 1}`}
-              />
-            ))}
+            <button
+              onClick={handlePrev}
+              className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1482C2]/30"
+              aria-label="Slide Sebelumnya"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1482C2]/30"
+              aria-label="Slide Selanjutnya"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
           </div>
-          <span className="text-[11px] font-mono font-bold text-slate-400">
-            0{activeSlide + 1} <span className="text-slate-300">/</span> 0{slides.length}
-          </span>
-        </div>
 
-        {/* Panah Navigasi Kiri / Kanan */}
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={handlePrev}
-            className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
-            aria-label="Slide Sebelumnya"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
+          <div className="h-4 w-px bg-slate-200" aria-hidden="true" />
 
-          <button
-            onClick={handleNext}
-            className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
-            aria-label="Slide Selanjutnya"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
+          {/* Bullet Indikator Slide & Index Counter */}
+          <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-1.5">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleSelectBullet(idx)}
+                  className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeSlide === idx
+                      ? "w-8 bg-[#1482C2]"
+                      : "w-2 bg-slate-200 hover:bg-slate-300"
+                  }`}
+                  aria-label={`Pilih Slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <span className="text-[11px] font-mono font-bold text-slate-400">
+              0{activeSlide + 1} <span className="text-slate-300">/</span> 0{slides.length}
+            </span>
+          </div>
         </div>
 
       </div>
