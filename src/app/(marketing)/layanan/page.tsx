@@ -22,6 +22,13 @@ export const metadata: Metadata = {
     "Flutter React Native Mobile Developers",
     "Cloud DevOps AWS GCP Indonesia",
     "Software House Jakarta Selatan",
+    "Software House Tegal",
+    "Software House Kota Tegal",
+    "Software House Kabupaten Tegal",
+    "Jasa Pembuatan Website Tegal Slawi",
+    "Jasa Pembuatan Aplikasi Mobile Tegal Brebes",
+    "Software House Jawa Tengah",
+    "Jasa Pembuatan Software Seluruh Kota Indonesia",
   ],
   alternates: {
     canonical: "/layanan",

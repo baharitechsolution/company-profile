@@ -41,5 +41,33 @@
 ---
 
 ## Jangkauan Target Wilayah (National & International GEO)
-- **Nasional**: Melayani seluruh kota di Indonesia meliputi Jabodetabek (Jakarta Selatan, Jakarta Pusat, Jakarta Barat, Jakarta Timur, Jakarta Utara, Bogor, Depok, Tangerang, Bekasi), Surabaya, Bandung, Medan, Semarang, Yogyakarta, Denpasar (Bali), Makassar, Palembang, Balikpapan, dan Batam.
-- **Internasional / Regional**: Melayani klien dari Singapura, Malaysia, Australia, dan seluruh dunia yang membutuhkan tim *offshore software engineering* profesional berstandar internasional.
+CV. Bahari Tech Solution melayani klien dari kota kecil, kabupaten, hingga kota metropolitan di seluruh pelosok Indonesia dan mancanegara:
+
+1. **Wilayah Basis & Pantura Jawa Tengah (Home Turf)**:
+   - **Kota Tegal** (Tegal Kota Bahari)
+   - **Kabupaten Tegal** (Slawi, Adiwerna, Kramat, Dukuhturi, Tarub, Lebaksiu, Pangkah, Margasari, dll)
+   - **Kabupaten Brebes** (Bumiayu, Jatibarang, Tanjung, Ketanggungan, dll)
+   - **Kabupaten Pemalang** (Comal, Petarukan, Randudongkal, dll)
+   - **Kota & Kabupaten Pekalongan**, **Batang**, dan **Kendal**.
+
+2. **Wilayah Jawa Tengah & DIY**:
+   - Semarang, Purwokerto (Banyumas), Cilacap, Purbalingga, Banjarnegara, Kebumen.
+   - Solo / Surakarta, Boyolali, Klaten, Sukoharjo, Karanganyar, Sragen, Wonogiri.
+   - D.I. Yogyakarta (Sleman, Bantul, Gunungkidul, Kulon Progo).
+   - Kudus, Pati, Jepara, Rembang, Blora, Grobogan, Magelang, Salatiga.
+
+3. **Wilayah Megapolitan & Jawa Barat / Jawa Timur**:
+   - Jabodetabek (Jakarta Selatan, Jakarta Pusat, Jakarta Barat, Jakarta Timur, Jakarta Utara, Bogor, Depok, Tangerang, Tangerang Selatan, Bekasi).
+   - Cirebon, Indramayu, Majalengka, Kuningan (Ciayumajakuning).
+   - Bandung, Cimahi, Sukabumi, Tasikmalaya, Ciamis, Garut, Karawang, Purwakarta, Subang.
+   - Surabaya, Malang, Sidoarjo, Gresik, Mojokerto, Pasuruan, Jember, Kediri, Madiun, Banyuwangi.
+
+4. **Luar Pulau Jawa (Sumatera, Kalimantan, Sulawesi, Bali, Nusa Tenggara, Maluku, Papua)**:
+   - Medan, Palembang, Pekanbaru, Batam, Bandar Lampung, Padang, Jambi, Bengkulu, Pangkalpinang, Banda Aceh.
+   - Denpasar, Badung, Gianyar, Tabanan, Buleleng (Bali), Mataram, Lombok, Kupang (NTT).
+   - Balikpapan, Samarinda, Banjarmasin, Pontianak, Palangkaraya, Tarakan.
+   - Makassar, Manado, Palu, Kendari, Gorontalo, Mamuju.
+   - Ambon, Ternate, Jayapura, Sorong, Merauke.
+
+5. **Internasional / Regional Offshore**:
+   - Melayani klien ekspat dan korporasi dari Singapura, Malaysia, Australia, dan seluruh dunia yang membutuhkan tim *offshore software engineering* profesional dengan biaya kompetitif dan standar rekayasa kelas dunia.
