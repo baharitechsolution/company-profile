@@ -113,36 +113,36 @@ export function WelcomeSection() {
 
           </ScrollReveal>
 
-          {/* Kolom Kanan: Visual Autentik Tim Rekayasa Perangkat Lunak */}
+          {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi Bahari Tech Solution */}
           <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5">
             <div className="relative mx-auto max-w-[500px] lg:max-w-none">
               
-              {/* Bingkai Foto Tim Rekayasa dengan Badge Metadata Korporat */}
+              {/* Bingkai Foto Gedung Kantor Resmi dengan Badge Metadata Korporat */}
               <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.15)] border border-slate-200 bg-slate-900 group">
                 <Image
-                  src="/images/about/engineering-team.jpg"
-                  alt="Tim Rekayasa Perangkat Lunak Bahari Tech Solution Berkolaborasi Merancang Arsitektur Sistem"
-                  width={1280}
-                  height={720}
+                  src="/images/kantor/kantor_bts.webp"
+                  alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
+                  width={1920}
+                  height={1200}
                   priority
-                  className="w-full h-[220px] sm:h-[260px] lg:h-[285px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  className="w-full h-[230px] sm:h-[275px] lg:h-[315px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
 
-                {/* Overlay Badge Korporat di Bagian Bawah Foto */}
+                {/* Overlay Badge Korporat di Bagian Bawah Foto (Tanpa Menutupi Signage Gedung) */}
                 <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 z-10 bg-slate-900/85 backdrop-blur-md rounded-xl border border-white/15 px-3 py-2 text-white shadow-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                       <span className="text-[11px] sm:text-xs font-bold tracking-wide">
-                        Engineering &amp; Architecture Team
+                        Headquarters &amp; Engineering Hub
                       </span>
                     </div>
                     <span className="text-[10px] font-mono text-slate-300 hidden sm:inline-block">
-                      Jakarta &amp; Tegal Hub
+                      Kantor Fisik Resmi
                     </span>
                   </div>
                   <p className="text-[10px] sm:text-[10.5px] text-slate-300 mt-0.5 leading-tight line-clamp-1">
-                    Kolaborasi intensif analis sistem, arsitek cloud, &amp; software engineer.
+                    Gedung operasional resmi CV. Bahari Tech Solution untuk kolaborasi &amp; riset teknologi.
                   </p>
                 </div>
               </div>
