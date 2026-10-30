@@ -7,7 +7,7 @@ import {
   Code2,
   FileCheck2,
   CheckCircle2,
-  Building,
+  Building2,
   Star,
   Handshake,
   Settings2,
@@ -22,14 +22,16 @@ import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/
 import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
-  title: `Profil Perusahaan Bahari Tech Solution - Software House Resmi Indonesia`,
+  title: `Tentang Kami - Profil Perusahaan & Legalitas Resmi | ${siteConfig.name}`,
   description:
     "Mengenal CV. Bahari Tech Solution: Software House dan Enterprise Technology Consultant berbadan hukum resmi di Indonesia. Nilai B.A.H.A.R.I, legalitas SK Kemenkumham, dan 100% hak cipta source code.",
   keywords: [
-    "Profil CV Bahari Tech Solution",
+    "Profil Bahari Tech Solution",
+    "CV Bahari Tech Solution",
     "Software House Resmi Berbadan Hukum",
     "Vendor IT Terdaftar Kemenkumham RI",
-    "Software House Jakarta Selatan",
+    "Software House Tegal",
+    "Software House Jawa Tengah",
     "Perusahaan IT Terpercaya Indonesia",
     "Konsultan Teknologi Enterprise",
     "Rekayasa Perangkat Lunak Indonesia",
@@ -39,13 +41,28 @@ export const metadata: Metadata = {
     canonical: "/tentang-kami",
   },
   openGraph: {
-    title: `Tentang Bahari Tech Solution - Profil & Legalitas Resmi`,
+    title: `Tentang Kami - Profil & Legalitas Resmi | ${siteConfig.name}`,
     description:
       "Profil lengkap software house resmi dengan dedikasi rekayasa bersih, transparansi teknis, dan kepemilikan source code 100%.",
     url: `${siteConfig.url}/tentang-kami`,
     siteName: siteConfig.name,
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/images/kantor/kantor_thumbnail_square.png",
+        width: 800,
+        height: 800,
+        alt: `${siteConfig.name} - Gedung Kantor Pusat Resmi`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Tentang Kami - Profil & Legalitas Resmi | ${siteConfig.name}`,
+    description:
+      "Profil lengkap software house resmi dengan dedikasi rekayasa bersih, transparansi teknis, dan kepemilikan source code 100%.",
+    images: ["/images/kantor/kantor_thumbnail_square.png"],
   },
 };
 
@@ -55,48 +72,48 @@ const coreValues = [
     letter: "B",
     index: "01",
     title: "BERKUALITAS",
-    desc: "Memberikan hasil kerja terbaik melalui standar yang tinggi dan berkelanjutan.",
-    pillar: "Standar Tinggi & Berkelanjutan",
+    desc: "Memberikan hasil kerja terbaik melalui standar rekayasa kode yang tinggi, stabil, dan berkelanjutan.",
+    pillar: "Standar Mutu Tinggi",
     icon: Star,
   },
   {
     letter: "A",
     index: "02",
     title: "AMANAH",
-    desc: "Menjaga kepercayaan melalui integritas, tanggung jawab, dan keamanan data.",
-    pillar: "Integritas & Keamanan Data",
+    desc: "Menjaga kepercayaan klien melalui integritas kerja, transparansi alur biaya, dan keamanan data.",
+    pillar: "Integritas & Privasi",
     icon: Handshake,
   },
   {
     letter: "H",
     index: "03",
     title: "HANDAL",
-    desc: "Menghadirkan solusi teknologi yang stabil, tepat guna, dan dapat diandalkan.",
-    pillar: "Stabilitas & Tepat Guna",
+    desc: "Menghadirkan arsitektur teknologi yang tangguh, tepat guna, minim latensi, dan siap diandalkan.",
+    pillar: "Stabilitas Produksi",
     icon: Settings2,
   },
   {
     letter: "A",
     index: "04",
     title: "ADAPTIF",
-    desc: "Terus belajar dan berkembang mengikuti perubahan teknologi serta kebutuhan pengguna.",
-    pillar: "Evolusi & Berkelanjutan",
+    desc: "Terus berkembang mengikuti dinamika teknologi global dan kebutuhan pengguna masa kini.",
+    pillar: "Evolusi Teknologi",
     icon: TrendingUp,
   },
   {
     letter: "R",
     index: "05",
     title: "RESPONSIF",
-    desc: "Merespons kebutuhan dan kendala secara cepat, komunikatif, dan solutif.",
-    pillar: "Cepat, Komunikatif & Solutif",
+    desc: "Merespons setiap kebutuhan dan kendala teknis secara cepat, komunikatif, dan berorientasi solusi.",
+    pillar: "Komunikasi Solutif",
     icon: MessageSquare,
   },
   {
     letter: "I",
     index: "06",
     title: "INOVATIF",
-    desc: "Menciptakan ide dan solusi kreatif yang memberikan manfaat nyata bagi pengguna.",
-    pillar: "Ide Kreatif & Manfaat Nyata",
+    desc: "Menciptakan gagasan dan solusi kreatif bernilai ekonomis yang memberikan dampak nyata bagi bisnis.",
+    pillar: "Dampak Nyata",
     icon: Lightbulb,
   },
 ];
@@ -104,33 +121,53 @@ const coreValues = [
 // 4 Pilar Kepatuhan Legal & Standar Tata Kelola
 const legalPillars = [
   {
-    icon: Building,
+    icon: Building2,
     title: "Legalitas Usaha Resmi",
-    desc: "Beroperasi secara legal sebagai persekutuan komanditer (CV) terdaftar di Kemenkumham RI dengan NIB dan Izin Usaha Aktivitas Pemrograman Komputer.",
+    desc: "Beroperasi sah sebagai persekutuan komanditer (CV) terdaftar di Kemenkumham RI dengan NIB dan Izin Usaha Pemrograman Komputer.",
+    badge: "Kemenkumham RI",
   },
   {
     icon: ShieldCheck,
     title: "Perjanjian Kerahasiaan (NDA)",
-    desc: "Perlindungan data sensitif dan kerahasiaan alur bisnis mitra dijamin secara hukum formal melalui dokumen Non-Disclosure Agreement sebelum pengerjaan.",
+    desc: "Perlindungan data sensitif dan kerahasiaan alur bisnis mitra dijamin secara hukum formal melalui dokumen Non-Disclosure Agreement.",
+    badge: "Kerahasiaan Terjamin",
   },
   {
     icon: Code2,
     title: "100% Hak Milik Source Code",
-    desc: "Seluruh aset kode sumber, basis data, dan hak kekayaan intelektual (IP) diserahkan penuh kepada klien tanpa biaya lisensi berkala atau keterikatan vendor.",
+    desc: "Seluruh aset kode sumber, basis data, dan IP diserahkan utuh kepada klien tanpa royalti berkala atau keterikatan vendor sepihak.",
+    badge: "Bebas Vendor Lock-in",
   },
   {
     icon: FileCheck2,
     title: "Tata Kelola Keuangan Formal",
-    desc: "Kelengkapan faktur resmi, invoice bertahap berbasis pencapaian milestone, dan rekening bank berbadan usaha untuk kepatuhan audit perusahaan Anda.",
+    desc: "Kelengkapan faktur resmi, invoice bertahap berbasis milestone rilis, serta rekening bank badan usaha untuk kepatuhan audit perusahaan.",
+    badge: "Faktur & Pajak Sah",
   },
 ];
 
-// Metrik Keunggulan Kunci
+// Metrik Keunggulan Kunci (Konsisten dengan Beranda)
 const companyStats = [
-  { value: "50+", label: "Sistem & Aplikasi Rilis", desc: "Enterprise, Web & Mobile" },
-  { value: "99.98%", label: "SLA Uptime Cloud", desc: "Infrastruktur Skalabel" },
-  { value: "100%", label: "Kepemilikan Source Code", desc: "Bebas Vendor Lock-in (NDA)" },
-  { value: "4.9 / 5", label: "Indeks Kepuasan Klien", desc: "Kemitraan Jangka Panjang" },
+  {
+    value: "50+",
+    label: "Solusi Digital Rilis",
+    description: "Web application, portal enterprise, sistem ERP, dan aplikasi mobile teruji produksi.",
+  },
+  {
+    value: "99.98%",
+    label: "Rata-Rata SLA Uptime",
+    description: "Infrastruktur cloud berstandar AWS & GCP dengan arsitektur failover otomatis.",
+  },
+  {
+    value: "40+",
+    label: "Klien & Institusi Mitra",
+    description: "Kemitraan strategis lintas industri korporat & instansi bisnis di Indonesia.",
+  },
+  {
+    value: "4.9 / 5",
+    label: "Skor Kepuasan Klien",
+    description: "Retensi kemitraan tinggi berbasis ketepatan timeline & SLA garansi pasca rilis.",
+  },
 ];
 
 export default function AboutPage() {
@@ -182,120 +219,119 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
       
-      {/* 1. EDITORIAL STUDIO OVERVIEW & ARSITEKTUR KEDAULATAN KODE */}
-      <section className="py-7 sm:py-9 lg:py-11 bg-white border-b border-slate-200 overflow-hidden relative select-none">
-        
-        {/* Subtle Architectural Blueprint Background Grid */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-[0.035]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #1482C2 1.2px, transparent 1.2px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
-
+      {/* 1. OVERVIEW PROFIL PERUSAHAAN (KONSISTEN DENGAN WELCOME-SECTION BERANDA) */}
+      <section className="py-8 sm:py-10 lg:py-12 bg-white border-b border-slate-200 overflow-hidden relative select-none">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Baris Atas: Editorial Narrative (Kiri) & Floating Studio Portrait (Kanan) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-center">
+          {/* Baris Atas: Narasi Profil Korporat (Kiri) & Foto Gedung Kantor Autentik (Kanan) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
             
-            {/* Kolom Kiri: Editorial Header, Manifesto & Strategic Values */}
-            <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 space-y-4 sm:space-y-4.5">
+            {/* Kolom Kiri: Narasi Profil Perusahaan & Jaminan Enterprise */}
+            <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 flex flex-col justify-between space-y-4">
               
-              {/* Breadcrumb Navigasi & Tag Identitas Minimalis */}
-              <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500">
-                <nav aria-label="Breadcrumb" className="flex items-center gap-1.5">
+              <div className="space-y-3">
+                {/* Breadcrumb Navigasi Minimalis */}
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 mb-1">
                   <Link href="/" className="hover:text-[#1482C2] transition-colors">
                     Beranda
                   </Link>
                   <span className="text-slate-300">/</span>
                   <span className="text-[#1482C2]">Tentang Kami</span>
-                </nav>
-                <span className="text-slate-300 hidden sm:inline">&bull;</span>
-                <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 border border-slate-200/80">
-                  CV. Bahari Tech Solution &bull; Est. 2026
-                </span>
-              </div>
+                </div>
 
-              {/* Eyebrow Label Korporat Tajam */}
-              <div className="flex items-center gap-2">
-                <span className="h-0.5 w-6 bg-[#1482C2]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                  REKAYASA PERANGKAT LUNAK &bull; KONSULTAN TEKNOLOGI
-                </span>
-              </div>
+                {/* Eyebrow Label Korporat Bersih */}
+                <div className="flex items-center gap-2.5">
+                  <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
+                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#1482C2]">
+                    Profil Perusahaan · CV. Bahari Tech Solution
+                  </span>
+                </div>
 
-              {/* Headline Editorial Berwibawa */}
-              <h1 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-[#112252] leading-[1.18] tracking-tight">
-                Membangun Fondasi Digital Presisi.{" "}
-                <span className="text-[#1482C2]">Tanpa Keterikatan Vendor.</span>
-              </h1>
+                {/* Headline Utama Berwibawa */}
+                <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#112252] leading-tight tracking-tight">
+                  Membangun Fondasi Sistem Digital Presisi Tanpa Keterikatan Vendor
+                </h1>
 
-              {/* Manifesto Pull-Quote Beraksen Garis Kiri */}
-              <div className="border-l-2 border-[#1482C2] pl-3.5 sm:pl-4 py-0.5">
-                <p className="text-xs sm:text-sm font-semibold text-[#112252] italic leading-relaxed">
-                  &ldquo;Kami meyakini bahwa teknologi enterprise semestinya mempercepat akselerasi bisnis Anda, bukan menambah kerumitan operasional baru atau menyandera kedaulatan hak cipta kode Anda.&rdquo;
+                {/* Manifesto Pull-Quote Beraksen Garis Kiri */}
+                <div className="border-l-2 border-[#1482C2] pl-3.5 sm:pl-4 py-0.5">
+                  <p className="text-xs sm:text-sm font-semibold text-[#112252] italic leading-relaxed">
+                    &ldquo;Kami meyakini bahwa teknologi enterprise semestinya mempercepat akselerasi bisnis Anda, bukan menambah kerumitan operasional baru atau menyandera kedaulatan hak cipta kode Anda.&rdquo;
+                  </p>
+                </div>
+
+                {/* Deskripsi Naratif: 1 Paragraf Padat & Substantif */}
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <strong className="font-bold text-[#112252]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah, melayani transformasi digital untuk korporasi, institusi pemerintahan, dan pelaku usaha di seluruh Indonesia. Setiap solusi dikembangkan dengan metodologi Clean Architecture, sprint berkala yang transparan, dan jaminan penyerahan 100% hak milik source code.
                 </p>
               </div>
 
-              {/* Narasi Substantif */}
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-                Sebagai Software House dan Enterprise Technology Consultant terdaftar, kami mendampingi perusahaan, institusi pemerintahan, dan pelaku usaha melalui metodologi Clean Architecture, sprint Agile terukur, serta audit keamanan standar OWASP.
-              </p>
+              {/* 3 Pilar Jaminan Enterprise (Boks Proporsional Sesuai Beranda) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-1">
+                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <Building2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                    <span className="text-xs font-bold text-[#112252]">Badan Usaha Sah</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 leading-normal">
+                    Entitas CV resmi, kontrak SPK sah, kepatuhan NDA, &amp; faktur pajak.
+                  </p>
+                </div>
 
-              {/* 3 Badge Komitmen Kedaulatan Beraksen Hijau & Biru */}
-              <div className="pt-1 flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-semibold">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-200/80 text-emerald-800">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                  <span>100% Kedaulatan Source Code</span>
+                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" />
+                    <span className="text-xs font-bold text-[#112252]">100% Hak Milik IP</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 leading-normal">
+                    Source code &amp; aset diserahkan utuh tanpa biaya royalti tersembunyi.
+                  </p>
                 </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-200/80 text-emerald-800">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                  <span>Perjanjian NDA Formal</span>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50/80 border border-blue-200/80 text-[#1482C2]">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#1482C2] shrink-0" />
-                  <span>Zero Vendor Lock-in</span>
+
+                <div className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 hover:bg-white hover:border-[#1482C2]/40 transition-colors">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <Code2 className="h-4 w-4 text-[#1482C2] shrink-0" />
+                    <span className="text-xs font-bold text-[#112252]">Clean Architecture</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 leading-normal">
+                    Kode terstandarisasi, arsitektur modular, &amp; garansi pasca rilis.
+                  </p>
                 </div>
               </div>
 
             </ScrollReveal>
 
-            {/* Kolom Kanan: Clean Studio Portrait Berstandar Eksekutif (Bebas Overlay AI) */}
-            <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5">
-              <div className="relative mx-auto max-w-[460px] lg:max-w-none">
-                <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_32px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
-                  <Image
-                    src="/images/about/model-consultant.jpg"
-                    alt="Principal Software Architect & Lead Consultant CV. Bahari Tech Solution"
-                    width={1920}
-                    height={1080}
-                    priority
-                    className="w-full h-[260px] sm:h-[300px] lg:h-[340px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-                  />
-                </div>
+            {/* Kolom Kanan: Visual Autentik Gedung Kantor Resmi (Sejajar Presisi & Mewah) */}
+            <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5 flex items-stretch">
+              <div className="relative w-full h-[260px] sm:h-[300px] lg:h-full min-h-[280px] lg:min-h-[340px] rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
+                <Image
+                  src="/images/kantor/kantor_bts_utama.png"
+                  alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  priority
+                  className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                />
               </div>
             </ScrollReveal>
 
           </div>
 
-          {/* Baris Bawah: The Architectural Data Ribbon (Bukan Kotak-Kotak Abu Terpisah) */}
-          <ScrollReveal direction="up" delay={0.25} className="mt-8 pt-5 border-t border-slate-200/80">
+          {/* Baris Bawah: Panel Metrik Korporat Terpadu (Konsisten Satu Warna Brand Beranda) */}
+          <ScrollReveal direction="up" delay={0.25} className="mt-8 pt-6 border-t border-slate-200">
             <div className="rounded-2xl bg-slate-50/70 border border-slate-200/80 shadow-2xs divide-y sm:divide-y-0 sm:divide-x divide-slate-200/90 grid grid-cols-2 lg:grid-cols-4 p-1.5 sm:p-2.5">
               {companyStats.map((stat, idx) => (
                 <div
                   key={idx}
                   className="p-3 sm:p-4 flex flex-col justify-center hover:bg-white rounded-xl transition-colors group"
                 >
-                  <div className="text-xl sm:text-2xl font-black text-[#112252] tracking-tight group-hover:text-[#1482C2] transition-colors">
+                  <div className="text-2xl sm:text-3xl font-black text-[#112252] tracking-tight group-hover:text-[#1482C2] transition-colors">
                     {stat.value}
                   </div>
-                  <div className="text-xs font-bold text-slate-800 leading-tight mt-1">
+                  <div className="text-xs font-bold text-slate-800 leading-tight mt-1 uppercase tracking-wider">
                     {stat.label}
                   </div>
-                  <div className="text-[10px] text-slate-500 leading-tight mt-0.5">
-                    {stat.desc}
+                  <div className="text-[11px] text-slate-500 leading-relaxed mt-1">
+                    {stat.description}
                   </div>
                 </div>
               ))}
@@ -305,65 +341,64 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. ARAH STRATEGIS: VISI & MISI KORPORASI (DUAL CARD KOMPAK) */}
-      <section className="py-6 sm:py-8 lg:py-9 bg-[#F8FAFC] border-b border-slate-200">
+      {/* 2. ARAH STRATEGIS: VISI & MISI KORPORASI (DUAL CARD KOMPAK BERSTANDAR EKSEKUTIF) */}
+      <section className="py-7 sm:py-9 lg:py-10 bg-[#F8FAFC] border-b border-slate-200/90">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
-          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1 mb-5 sm:mb-6">
-            <div className="inline-flex items-center justify-center gap-2">
+          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                ARAH STRATEGIS KORPORASI
+              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+                Arah Strategis Korporasi
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
               Visi &amp; Misi Bahari Tech Solution
             </h2>
+
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+              Komitmen fundamental kami dalam memberikan dampak teknologi nyata yang memperkuat daya saing mitra bisnis di tingkat nasional.
+            </p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             
             {/* Kartu Visi */}
             <ScrollReveal direction="up" delay={0.1} className="h-full">
-              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2]/60 hover:shadow-xs transition-all duration-300">
+              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2] hover:shadow-md transition-all duration-300 border-t-2 border-t-[#1482C2]/60 hover:border-t-[#1482C2]">
                 <div className="space-y-3 sm:space-y-4">
                   {/* Header Label & Icon Target */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="h-0.5 w-4 bg-[#1482C2]" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                        VISI PERUSAHAAN
-                      </span>
-                    </div>
-                    <div className="h-8 w-8 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
-                      <Target className="h-4.5 w-4.5" />
-                    </div>
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                    <span className="text-xs font-mono font-black tracking-widest text-[#1482C2]">
+                      VISI PERUSAHAAN
+                    </span>
+                    <Target className="h-4.5 w-4.5 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                   </div>
 
                   {/* Headline Utama Visi Resmi */}
-                  <h3 className="text-lg sm:text-xl font-extrabold text-[#112252] leading-snug">
-                    Menjadi Mitra Teknologi Terpercaya di Indonesia
+                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug group-hover:text-[#1482C2] transition-colors">
+                    Menjadi Mitra Rekayasa Teknologi Terpercaya di Indonesia
                   </h3>
 
-                  {/* Penjabaran Visi Sesuai Dokumen Resmi */}
+                  {/* Penjabaran Visi */}
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Memberdayakan pertumbuhan bisnis dan institusi pemerintahan melalui adopsi sistem digital yang tepat sasaran, tangguh, dan bernilai ekonomis.
+                    Memberdayakan pertumbuhan bisnis dan institusi pemerintahan melalui adopsi sistem digital yang tepat sasaran, tangguh, dan bernilai ekonomis tinggi.
                   </p>
 
                   {/* 3 Pilar Nilai Visi */}
-                  <div className="pt-1 flex flex-wrap gap-2 text-xs">
+                  <div className="pt-2 flex flex-wrap gap-2 text-xs">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2]" />
                       Tepat Sasaran
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
-                      Tangguh
+                      Tangguh &amp; Skalabel
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200/80 text-slate-700 font-semibold text-[11px]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#112252]" />
                       Bernilai Ekonomis
                     </span>
                   </div>
@@ -371,57 +406,52 @@ export default function AboutPage() {
 
                 <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
                   <span className="text-[#1482C2] font-bold">✓</span>
-                  <span>Mitra Terpercaya Bisnis &amp; Institusi Pemerintahan</span>
+                  <span>Mitra Terpercaya Korporat &amp; Institusi Pemerintahan</span>
                 </div>
               </div>
             </ScrollReveal>
 
             {/* Kartu Misi */}
             <ScrollReveal direction="up" delay={0.15} className="h-full">
-              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2]/60 hover:shadow-xs transition-all duration-300">
+              <div className="h-full p-5 sm:p-6 lg:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs flex flex-col justify-between relative overflow-hidden group hover:border-[#1482C2] hover:shadow-md transition-all duration-300 border-t-2 border-t-[#1482C2]/60 hover:border-t-[#1482C2]">
                 <div className="space-y-3 sm:space-y-4">
                   {/* Header Label & Icon Misi */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="h-0.5 w-4 bg-[#1482C2]" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                        MISI PERUSAHAAN
-                      </span>
-                    </div>
-                    <div className="h-8 w-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                      <Compass className="h-4.5 w-4.5" />
-                    </div>
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                    <span className="text-xs font-mono font-black tracking-widest text-[#1482C2]">
+                      MISI PERUSAHAAN
+                    </span>
+                    <Compass className="h-4.5 w-4.5 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                   </div>
 
                   {/* Headline Utama Misi */}
-                  <h3 className="text-lg sm:text-xl font-extrabold text-[#112252] leading-snug">
-                    4 Pilar Komitmen &amp; Mutu Eksekusi
+                  <h3 className="text-base sm:text-lg font-bold text-[#112252] leading-snug group-hover:text-[#1482C2] transition-colors">
+                    4 Komitmen Mutu &amp; Presisi Eksekusi
                   </h3>
 
-                  {/* 4 Poin Misi Resmi dengan Checkmark Hijau */}
+                  {/* 4 Poin Misi Resmi */}
                   <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
                     <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>Menghadirkan produk digital berstandar tinggi yang stabil, aman, dan ramah pengguna.</span>
+                      <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0 mt-0.5" />
+                      <span>Menghadirkan produk digital berstandar tinggi yang stabil, aman, dan mudah digunakan.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>Menjamin ketepatan waktu pengerjaan melalui manajemen proyek yang disiplin dan transparan.</span>
+                      <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0 mt-0.5" />
+                      <span>Menjamin ketepatan waktu pengerjaan melalui alur sprint Agile yang transparan.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>Mengadopsi arsitektur modern dan inovasi teknologi terkini secara berkelanjutan.</span>
+                      <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0 mt-0.5" />
+                      <span>Mengadopsi teknologi modern dan Clean Architecture yang siap berevolusi jangka panjang.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>Memberikan pendampingan purnajual yang responsif, solutif, dan berorientasi pada kepuasan mitra.</span>
+                      <CheckCircle2 className="h-4 w-4 text-[#1482C2] shrink-0 mt-0.5" />
+                      <span>Memberikan pendampingan teknis purnajual yang responsif dengan jaminan SLA garansi.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-500">
-                  <span className="text-emerald-600 font-bold">✓</span>
-                  <span>Standar Tinggi · Disiplin Waktu · Layanan Purnajual Responsif</span>
+                  <span className="text-[#1482C2] font-bold">✓</span>
+                  <span>Standar Tinggi · Disiplin Sprint · Garansi Purnajual SLA</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -430,20 +460,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. NILAI-NILAI INTI KORPORAT: B · A · H · A · R · I (GRID RESMI KORPORASI) */}
-      <section className="py-6 sm:py-8 lg:py-9 bg-white border-b border-slate-200">
+      {/* 3. NILAI-NILAI INTI KORPORAT: B · A · H · A · R · I (SLEEK CARDS SESUAI WHY-US-SECTION) */}
+      <section className="py-7 sm:py-9 lg:py-10 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
-          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1 mb-5 sm:mb-6">
-            <div className="inline-flex items-center justify-center gap-2">
+          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                FILOSOFI &amp; CORE VALUES KORPORAT
+              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+                Filosofi &amp; Core Values Korporat
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
               Budaya Kerja &amp; Nilai Inti: B &bull; A &bull; H &bull; A &bull; R &bull; I
             </h2>
 
@@ -452,45 +482,43 @@ export default function AboutPage() {
             </p>
           </ScrollReveal>
 
-          {/* 6 Kartu Nilai Inti Presisi (Sesuai Piagam Resmi Perusahaan) */}
+          {/* 6 Kartu Nilai Inti: Ramping, Elegan, Bebas Clutter AI */}
           <ScrollStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4.5">
             {coreValues.map((val, idx) => {
               const Icon = val.icon;
               return (
                 <ScrollStaggerItem key={idx}>
-                  <div className="p-4 sm:p-5 rounded-xl border border-slate-200/90 bg-white hover:border-[#1482C2] hover:shadow-md transition-all duration-200 flex flex-col justify-between h-full group border-t-2 border-t-[#1482C2]/50 hover:border-t-[#1482C2]">
+                  <div className="group relative flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 border-t-2 border-t-[#1482C2]/60 hover:border-t-[#1482C2]">
                     <div>
-                      {/* Baris Atas: Huruf Akronim B.A.H.A.R.I & Ikon Nilai Terkait */}
-                      <div className="flex items-center justify-between mb-3">
+                      {/* Baris Atas: Huruf Akronim B.A.H.A.R.I & Ikon */}
+                      <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-slate-100">
                         <div className="flex items-center gap-2">
-                          <span className="h-8.5 w-8.5 rounded-lg bg-[#EAF5FC] border border-[#1482C2]/30 text-[#1482C2] font-black text-base flex items-center justify-center group-hover:bg-[#1482C2] group-hover:text-white transition-colors shadow-2xs">
+                          <span className="h-7 w-7 rounded-lg bg-[#EAF5FC] text-[#1482C2] font-black text-sm flex items-center justify-center font-mono">
                             {val.letter}
                           </span>
-                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-200/70 px-2 py-0.5 rounded">
+                          <span className="text-[11px] font-mono font-bold text-slate-400 tracking-wider">
                             {val.index}
                           </span>
                         </div>
 
-                        <div className="h-8 w-8 rounded-lg bg-slate-50 border border-slate-200/70 text-slate-500 group-hover:text-[#1482C2] group-hover:bg-[#EAF5FC] group-hover:border-[#1482C2]/30 flex items-center justify-center transition-colors">
-                          <Icon className="h-4 w-4" strokeWidth={1.75} />
-                        </div>
+                        <Icon className="h-4 w-4 text-slate-400 group-hover:text-[#1482C2] transition-colors duration-200" />
                       </div>
 
-                      {/* Judul Nilai Korporat Resmi */}
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#112252] group-hover:text-[#1482C2] transition-colors tracking-tight leading-snug">
+                      {/* Judul Nilai Korporat */}
+                      <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
                         {val.title}
                       </h3>
 
-                      {/* Deskripsi Resmi */}
-                      <p className="mt-1.5 text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+                      {/* Deskripsi */}
+                      <p className="text-xs text-slate-600 leading-relaxed">
                         {val.desc}
                       </p>
                     </div>
 
-                    {/* Indikator Pilar di Bagian Bawah */}
-                    <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10.5px] font-semibold text-slate-400">
-                      <span className="text-[#1482C2] font-bold">Prinsip #{val.index}</span>
-                      <span className="text-slate-500">{val.pillar}</span>
+                    {/* Pilar Fokus Bawah */}
+                    <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
+                      <span>Prinsip #{val.index}</span>
+                      <span className="text-[#1482C2] font-semibold">{val.pillar}</span>
                     </div>
                   </div>
                 </ScrollStaggerItem>
@@ -502,45 +530,48 @@ export default function AboutPage() {
       </section>
 
       {/* 4. STANDAR MUTU & TATA KELOLA LEGALITAS RESMI */}
-      <section className="py-6 sm:py-8 lg:py-9 bg-[#F8FAFC] border-b border-slate-200">
+      <section className="py-7 sm:py-9 lg:py-10 bg-[#F8FAFC] border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
-          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1 mb-5 sm:mb-6">
-            <div className="inline-flex items-center justify-center gap-2">
+          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2">
               <span className="h-0.5 w-5 bg-[#1482C2]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                KEPASTIAN HUKUM &amp; TATA KELOLA
+              <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+                Kepastian Hukum &amp; Tata Kelola
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-[#112252] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#112252] tracking-tight leading-tight">
               Standar Legalitas &amp; Perlindungan Klien
             </h2>
 
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Jaminan formal bahwa setiap proyek dan investasi teknologi Anda terlindungi secara hukum dan profesional.
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+              Jaminan formal bahwa setiap proyek dan investasi teknologi Anda terlindungi secara hukum, administratif, dan profesional.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4.5">
             {legalPillars.map((item, idx) => {
               const Icon = item.icon;
               return (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs hover:border-[#1482C2] hover:shadow-2xs transition-all flex flex-col justify-between"
+                  className="group relative flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 border-t-2 border-t-[#1482C2]/60 hover:border-t-[#1482C2]"
                 >
                   <div>
-                    <div className="h-8 w-8 rounded-lg bg-blue-50 border border-blue-200 text-[#1482C2] flex items-center justify-center mb-2.5">
-                      <Icon className="h-4 w-4" />
+                    <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-slate-100">
+                      <span className="text-[11px] font-mono font-bold text-[#1482C2] tracking-wider uppercase">
+                        {item.badge}
+                      </span>
+                      <Icon className="h-4 w-4 text-slate-400 group-hover:text-[#1482C2] transition-colors" />
                     </div>
 
-                    <h3 className="text-xs sm:text-sm font-bold text-[#112252] leading-snug">
+                    <h3 className="text-sm sm:text-[15px] font-bold text-[#112252] mb-1.5 group-hover:text-[#1482C2] transition-colors leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -553,16 +584,16 @@ export default function AboutPage() {
       </section>
 
       {/* 5. AJAKAN KONSULTASI LANGSUNG (CLOSING BANNER SEJAJAR & BERSIH) */}
-      <section className="py-6 sm:py-8 lg:py-10 bg-white">
+      <section className="py-7 sm:py-9 lg:py-11 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal direction="up" delay={0.05}>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 lg:gap-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 lg:gap-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 p-6 sm:p-8">
               
               <div className="max-w-2xl space-y-1.5">
                 <div className="flex items-center gap-2">
                   <span className="h-0.5 w-5 bg-[#1482C2]" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#1482C2]">
-                    MULAI DISKUSI TEKNOLOGI
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2]">
+                    Mulai Diskusi Teknologi
                   </span>
                 </div>
 
@@ -571,7 +602,7 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                  Diskusikan rancangan arsitektur software, estimasi waktu pengerjaan, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama tim software engineer Bahari Tech.
+                  Diskusikan rancangan arsitektur software, estimasi waktu pengerjaan, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama software engineer Bahari Tech Solution.
                 </p>
               </div>
 
