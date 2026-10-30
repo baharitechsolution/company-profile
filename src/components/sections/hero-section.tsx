@@ -349,42 +349,34 @@ export function HeroSection() {
       </div>
 
       {/* Kontrol Navigasi Slide Bawah: Panah Kiri/Kanan & Bullet Indikator Kompak */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3.5 sm:py-4 border-t border-slate-100 flex items-center justify-between z-10 bg-white/90 backdrop-blur-xs">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-3 sm:py-3.5 border-t border-slate-100 flex items-center justify-between z-10 bg-white/90 backdrop-blur-xs">
         
-        {/* Bullet Indikator Slide */}
-        <div className="flex items-center gap-2">
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleSelectBullet(idx)}
-              className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                activeSlide === idx
-                  ? "w-7 bg-[#1482C2]"
-                  : "w-2 bg-slate-200 hover:bg-slate-300"
-              }`}
-              aria-label={`Pilih Slide ${idx + 1}`}
-            />
-          ))}
-          <span className="text-[10px] font-bold text-slate-400 ml-1">
-            0{activeSlide + 1} / 0{slides.length}
+        {/* Bullet Indikator Slide & Index Counter */}
+        <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-1.5">
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSelectBullet(idx)}
+                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  activeSlide === idx
+                    ? "w-8 bg-[#1482C2]"
+                    : "w-2 bg-slate-200 hover:bg-slate-300"
+                }`}
+                aria-label={`Pilih Slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+          <span className="text-[11px] font-mono font-bold text-slate-400">
+            0{activeSlide + 1} <span className="text-slate-300">/</span> 0{slides.length}
           </span>
         </div>
 
-        {/* Corporate Trust Highlights di Tengah (Layar Besar) */}
-        <div className="hidden lg:flex items-center gap-5 text-xs font-semibold text-slate-500">
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            100% Hak Milik Source Code
-          </span>
-          <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#1482C2]" />
-            Garansi SLA Uptime 99.98%
-          </span>
-          <span className="text-slate-300">·</span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#0EB8D8]" />
-            Perjanjian Kerahasiaan (NDA)
+        {/* Peek Slide Berikutnya (Fungsional, Elegan & Bukan Filler AI) */}
+        <div className="hidden md:flex items-center gap-2 text-xs text-slate-500 font-medium">
+          <span className="text-slate-400 font-mono text-[10.5px]">NEXT:</span>
+          <span className="text-slate-700 font-semibold truncate max-w-[280px]">
+            {slides[(activeSlide + 1) % slides.length].tag}
           </span>
         </div>
 
@@ -392,7 +384,7 @@ export function HeroSection() {
         <div className="flex items-center gap-1.5">
           <button
             onClick={handlePrev}
-            className="h-8 w-8 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
+            className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
             aria-label="Slide Sebelumnya"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -400,7 +392,7 @@ export function HeroSection() {
 
           <button
             onClick={handleNext}
-            className="h-8 w-8 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
+            className="h-8 w-8 rounded-lg border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs cursor-pointer"
             aria-label="Slide Selanjutnya"
           >
             <ChevronRight className="h-4 w-4" />
