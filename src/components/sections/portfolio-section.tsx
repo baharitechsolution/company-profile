@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, FolderGit2, Building2 } from "lucide-react";
+import { ArrowRight, Building2 } from "lucide-react";
 import { portfolioData } from "@/config/portfolio";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";

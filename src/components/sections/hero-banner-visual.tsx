@@ -7,7 +7,6 @@ import {
   Star,
   Gauge,
   Layers,
-  TrendingUp,
   Globe,
   Bell,
   Lock,
