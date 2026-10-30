@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Building2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2 } from "lucide-react";
 import { portfolioData } from "@/config/portfolio";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
@@ -23,7 +23,7 @@ export function PortfolioSection() {
               Portofolio Proyek Terkini
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Kumpulan solusi digital dan perangkat lunak yang telah kami rancang untuk berbagai mitra korporasi.
+              Kumpulan solusi digital dan sistem perangkat lunak yang telah kami rancang dan implementasikan untuk berbagai mitra korporasi.
             </p>
           </div>
           <div>
@@ -40,70 +40,65 @@ export function PortfolioSection() {
           </div>
         </ScrollReveal>
 
-        {/* Portfolio Cards Grid Efisien dengan Efek Stagger */}
+        {/* Portfolio Cards Grid: Elegan, Bersih & Nyaman di Mata */}
         <ScrollStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {portfolioData.slice(0, 6).map((item) => (
             <ScrollStaggerItem key={item.id}>
-              <div className="group flex flex-col justify-between h-full rounded-xl border border-slate-200 bg-white p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-xs transition-all duration-200 hover:-translate-y-1">
+              <div className="group flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
                 <div>
-                  {/* Architectural System Window Preview Bar (Tampilan Produk Rekayasa Nyata) */}
-                  <div className="relative mb-4 rounded-xl bg-slate-900 border border-slate-800 p-3.5 overflow-hidden shadow-2xs group-hover:border-[#1482C2]/50 transition-colors">
-                    {/* Header: OS Window Controls & Route */}
-                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[10px] font-mono text-slate-400">
-                      <div className="flex items-center gap-1.5">
-                        <span className="h-2 w-2 rounded-full bg-rose-500/80" />
-                        <span className="h-2 w-2 rounded-full bg-amber-500/80" />
-                        <span className="h-2 w-2 rounded-full bg-emerald-500/80" />
-                        <span className="ml-1 text-slate-400 text-[9.5px] truncate max-w-[130px]">
-                          /{item.slug}
-                        </span>
-                      </div>
-                      <span className="text-[9px] font-semibold text-emerald-400 bg-emerald-950/70 border border-emerald-800/60 px-1.5 py-0.5 rounded">
-                        ● Production
-                      </span>
-                    </div>
-
-                    {/* Body: High-tech System Metric Preview */}
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-white font-bold truncate max-w-[190px]">
-                          {item.client}
-                        </span>
-                        <span className="text-slate-400 font-mono text-[10px]">
-                          {item.year}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono">
-                        <span className="text-[#0EB8D8] font-bold">{item.category}</span>
-                        <span>·</span>
-                        <span className="text-slate-300">Clean Architecture</span>
-                      </div>
-                    </div>
+                  {/* Meta Bar: Kategori & Tahun Rilis */}
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#EAF5FC] text-[#1482C2] text-[11px] font-semibold tracking-wide">
+                      {item.category}
+                    </span>
+                    <span className="font-mono text-[11px] font-medium text-slate-400">
+                      Tahun {item.year}
+                    </span>
                   </div>
 
-                  <div className="flex items-center gap-1.5 text-[11px] text-[#1482C2] font-bold uppercase tracking-wider mb-1.5">
-                    <Building2 className="h-3 w-3" />
-                    <span>{item.category}</span>
-                  </div>
-
-                  <h3 className="text-base font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug">
+                  {/* Judul Proyek */}
+                  <h3 className="text-base sm:text-[17px] font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug mt-3 mb-1.5">
                     {item.title}
                   </h3>
 
-                  <p className="mt-1.5 text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                  {/* Mitra Klien */}
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-2.5 font-medium">
+                    <Building2 className="h-3.5 w-3.5 text-slate-400 shrink-0" />
+                    <span>Mitra: <strong className="text-slate-700 font-semibold">{item.client}</strong></span>
+                  </div>
+
+                  {/* Ringkasan Solusi */}
+                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed line-clamp-2">
                     {item.summary}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
-                  {item.techStack.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="rounded bg-slate-50 border border-slate-200/80 px-2 py-0.5 text-[10px] font-semibold text-slate-700"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                {/* Footer Kartu: Tech Stack Chips & Link */}
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                  <div className="flex flex-wrap gap-1">
+                    {item.techStack.slice(0, 3).map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="rounded bg-slate-50 border border-slate-200/80 px-2 py-0.5 text-[10px] font-medium text-slate-600"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {item.techStack.length > 3 && (
+                      <span className="rounded bg-slate-50 border border-slate-200/80 px-1.5 py-0.5 text-[10px] font-medium text-slate-400">
+                        +{item.techStack.length - 3}
+                      </span>
+                    )}
+                  </div>
+
+                  <Link
+                    href="/portofolio"
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#1482C2] hover:text-[#0E6496] group-hover:translate-x-0.5 transition-all shrink-0"
+                    aria-label={`Detail proyek ${item.title}`}
+                  >
+                    <span>Detail</span>
+                    <ArrowUpRight className="h-3 w-3" />
+                  </Link>
                 </div>
               </div>
             </ScrollStaggerItem>

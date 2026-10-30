@@ -6,7 +6,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
-  Layers,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
@@ -195,31 +194,6 @@ export function ServicesSection() {
           </div>
         </ScrollReveal>
 
-        {/* Reassurance Banner Korporat Ramping */}
-        <ScrollReveal direction="up" delay={0.25} className="mt-5 sm:mt-6">
-          <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 shadow-2xs">
-            <div className="flex items-center gap-3 text-left">
-              <div className="h-9 w-9 rounded-lg bg-white border border-slate-200 text-[#1482C2] flex items-center justify-center shrink-0 shadow-2xs">
-                <Layers className="h-4.5 w-4.5" />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-[#233876]">
-                  Membutuhkan Solusi Kustom atau Arsitektur Sistem Khusus?
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed max-w-2xl">
-                  Sistem kami rancang kustom sesuai alur bisnis unik Anda dengan garansi resmi, penyerahan 100% hak cipta, dan tanpa keterikatan (bebas vendor lock-in).
-                </p>
-              </div>
-            </div>
-            <Link
-              href="/kontak"
-              className="shrink-0 w-full sm:w-auto text-center px-4 py-2 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs font-bold transition-colors inline-flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer"
-            >
-              <span>Konsultasi Kebutuhan</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-        </ScrollReveal>
 
       </div>
     </section>
