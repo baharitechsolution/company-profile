@@ -108,10 +108,10 @@ export function WelcomeSection() {
             <div className="relative mx-auto max-w-[500px] lg:max-w-none">
               <div className="relative rounded-2xl overflow-hidden shadow-[0_12px_30px_-8px_rgba(17,34,82,0.12)] border border-slate-200 bg-slate-100 group">
                 <Image
-                  src="/images/kantor/kantor_bts.webp"
+                  src="/images/kantor/kantor_bts_utama.png"
                   alt="Gedung Kantor dan Pusat Operasional Rekayasa CV. Bahari Tech Solution"
-                  width={1920}
-                  height={1479}
+                  width={1536}
+                  height={1024}
                   priority
                   className="w-full h-[250px] sm:h-[300px] lg:h-[345px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 />
