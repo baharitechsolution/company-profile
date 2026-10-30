@@ -242,10 +242,12 @@ export function HeroSection() {
                     {/* Kolom Kiri: Teks Headline, Deskripsi Profesional & Tombol CTA */}
                     <div className="lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6">
                       
-                      {/* Eyebrow Label Korporat Bersih dengan Live Indicator */}
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF5FC] border border-[#1482C2]/20 text-[#1482C2] text-xs font-bold uppercase tracking-wider shadow-2xs">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#1482C2] animate-pulse" />
-                        <span>{slide.tag}</span>
+                      {/* Eyebrow Editorial Kicker Arsitektural Bersih (Tanpa Kapsul AI) */}
+                      <div className="flex items-center gap-2.5">
+                        <span className="h-px w-6 bg-[#1482C2]" aria-hidden="true" />
+                        <p className="text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase text-[#1482C2]">
+                          {slide.tag}
+                        </p>
                       </div>
 
                       {/* H1 Headline Bersih & Berwibawa */}
@@ -296,7 +298,7 @@ export function HeroSection() {
                       </div>
 
                       {/* Bar Kepercayaan & Kredibilitas Autentik dengan Tech Stack Strip */}
-                      <div className="pt-3 sm:pt-4 space-y-2.5 border-t border-slate-100">
+                      <div className="pt-3 sm:pt-4 space-y-2 border-t border-slate-100">
                         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600">
                           <div className="flex items-center gap-1.5">
                             <span className="text-amber-500 font-bold">★ 4.9 / 5.0</span>
@@ -309,23 +311,24 @@ export function HeroSection() {
                             <span className="text-slate-500">{slide.proofLabel}</span>
                           </div>
                           <span className="hidden md:inline-block text-slate-300">|</span>
-                          <div className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50/80 border border-emerald-200/60 px-2 py-0.5 rounded-md">
-                            <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
+                          <div className="flex items-center gap-1.5 text-emerald-700 font-semibold">
+                            <ShieldCheck className="h-4 w-4 text-emerald-600" />
                             <span>100% Hak Milik IP</span>
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
-                          <span className="text-slate-400 font-bold text-[10px] uppercase tracking-wider mr-1">
+                        {/* Tech Stack List - Tipografi Bersih (Tanpa Kotak Tag AI) */}
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500">
+                          <span className="text-slate-400 font-bold uppercase tracking-wider text-[10px]">
                             Stack:
                           </span>
                           {slide.techStack.map((tech, tIdx) => (
-                            <span
-                              key={tIdx}
-                              className="px-2 py-0.5 rounded bg-slate-50/90 border border-slate-200/70 text-slate-700 font-semibold"
-                            >
-                              {tech}
-                            </span>
+                            <React.Fragment key={tIdx}>
+                              <span className="text-slate-700 font-medium">{tech}</span>
+                              {tIdx < slide.techStack.length - 1 && (
+                                <span className="text-slate-300 select-none">·</span>
+                              )}
+                            </React.Fragment>
                           ))}
                         </div>
                       </div>
