@@ -81,41 +81,25 @@ export function ConsultationCtaBanner() {
                 <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-2xs hover:border-[#1482C2] hover:shadow-sm transition-all duration-200 space-y-5">
                   
                   {/* Profil Admin Resmi Tunggal */}
-                  <div className="flex items-start justify-between gap-3 pb-4 border-b border-slate-100">
-                    <div className="flex items-center gap-3.5">
-                      {/* Foto Avatar Admin Resmi dengan Indikator Online Hijau */}
-                      <div className="relative shrink-0">
-                        <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-[#1482C2]/20 shadow-xs bg-slate-100">
-                          <Image
-                            src="/images/cs/consultant-avatar-clean.png"
-                            alt="Admin Konsultan Resmi CV. Bahari Tech Solution"
-                            width={48}
-                            height={48}
-                            className="h-full w-full object-cover object-top"
-                          />
-                        </div>
-                        <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
-                      </div>
-
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
-                            Admin Konsultan Resmi
-                          </h3>
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/70 flex items-center gap-1">
-                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-                            Online
-                          </span>
-                        </div>
-                        <p className="text-xs text-slate-500 mt-0.5">
-                          {siteConfig.legalName}
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-3.5 pb-4 border-b border-slate-100">
+                    {/* Foto Avatar Admin Resmi */}
+                    <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-slate-200/90 shadow-2xs bg-slate-100 shrink-0">
+                      <Image
+                        src="/images/cs/consultant-avatar-clean.png"
+                        alt="Admin Konsultan Resmi CV. Bahari Tech Solution"
+                        width={48}
+                        height={48}
+                        className="h-full w-full object-cover object-top"
+                      />
                     </div>
 
-                    <div className="text-right hidden sm:block">
-                      <span className="text-[11px] text-slate-400 block">WhatsApp Resmi</span>
-                      <span className="text-xs font-mono font-bold text-slate-700">{siteConfig.contact.phone}</span>
+                    <div>
+                      <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
+                        Admin Konsultan Resmi
+                      </h3>
+                      <p className="text-xs text-slate-500 mt-0.5">
+                        {siteConfig.legalName}
+                      </p>
                     </div>
                   </div>
 
