@@ -17,7 +17,7 @@ export const siteConfig = {
   socials: {
     linkedin: "https://linkedin.com/company/bahari-tech-solution",
     instagram: "https://www.instagram.com/baharitechsolution/",
-    github: "https://github.com/baharitech",
+    github: "https://github.com/baharitechsolution",
     facebook: "https://www.facebook.com/profile.php?id=61596202285382",
     tiktok: "https://www.tiktok.com/@baharitechsolution",
     youtube: "https://www.youtube.com/@baharitechsolution",
