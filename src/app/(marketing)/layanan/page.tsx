@@ -6,9 +6,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Jasa Pembuatan Aplikasi Mobile, Web Enterprise & Sistem ERP | ${siteConfig.name}`,
+  title: "Jasa Pembuatan Website dan Aplikasi",
   description:
-    "Jasa pembuatan aplikasi Android & iOS, website enterprise Next.js, sistem ERP kustom terintegrasi, dan arsitektur cloud DevOps terpercaya di Indonesia. 100% kepemilikan source code tanpa vendor lock-in.",
+    "Jasa pembuatan aplikasi Android & iOS, website enterprise Next.js, dan sistem ERP kustom terpercaya di Indonesia. 100% kepemilikan source code resmi.",
   keywords: [
     "Jasa Pembuatan Aplikasi Mobile",
     "Jasa Pembuatan Aplikasi Android iOS",

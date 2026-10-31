@@ -4,9 +4,9 @@ import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Konsultasi Proyek Software & Estimasi RAB Resmi | ${siteConfig.name}`,
+  title: "Hubungi Kami - Konsultasi Gratis",
   description:
-    "Konsultasikan kebutuhan pembuatan software, aplikasi mobile, web enterprise, atau sistem ERP Anda bersama tim engineer Bahari Tech Solution. Dapatkan konsultasi arsitek gratis dan estimasi RAB transparan.",
+    "Konsultasikan kebutuhan software, website, aplikasi mobile, atau ERP Anda bersama tim engineer Bahari Tech Solution. Dapatkan estimasi RAB resmi transparan.",
   keywords: [
     "Konsultasi Pembuatan Software Gratis",
     "Biaya Pembuatan Aplikasi Mobile",

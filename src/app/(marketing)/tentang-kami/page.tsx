@@ -22,9 +22,9 @@ import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/
 import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
-  title: `Tentang Kami - Profil Perusahaan & Legalitas Resmi | ${siteConfig.name}`,
+  title: "Profil Perusahaan dan Legalitas",
   description:
-    "Mengenal CV. Bahari Tech Solution: Software House dan Enterprise Technology Consultant berbadan hukum resmi di Indonesia. Nilai B.A.H.A.R.I, legalitas SK Kemenkumham, dan 100% hak cipta source code.",
+    "Mengenal CV. Bahari Tech Solution: Software House dan IT Consultant resmi di Indonesia. Nilai B.A.H.A.R.I, legalitas Kemenkumham, dan jaminan source code.",
   keywords: [
     "Profil Bahari Tech Solution",
     "CV Bahari Tech Solution",

@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "CV. Bahari Tech Solution",
   shortName: "Bahari Tech",
   description:
-    "Software House Indonesia & Enterprise Technology Consultant. Jasa pembuatan Aplikasi Mobile iOS & Android, Web Application Next.js, Sistem Enterprise ERP, Cloud DevOps, serta integrasi digital kustom terpercaya.",
+    "Software House resmi Indonesia. Jasa pembuatan website profesional, aplikasi Android iOS, sistem ERP, dan cloud DevOps terpercaya bergaransi penuh.",
   url: process.env.NEXT_PUBLIC_APP_URL || "https://www.baharitechsolution.my.id",
   ogImage: "https://www.baharitechsolution.my.id/images/kantor/kantor_thumbnail_square.png",
   contact: {

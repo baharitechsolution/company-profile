@@ -14,7 +14,7 @@ const jakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} - Software House & Jasa Pembuatan Aplikasi Enterprise Indonesia`,
+    default: "Bahari Tech Solution - Software House Indonesia",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,

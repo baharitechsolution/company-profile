@@ -9,9 +9,11 @@ import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} - Software House & Jasa Pembuatan Website, Aplikasi Mobile, dan Sistem Enterprise`,
+  title: {
+    absolute: "Bahari Tech Solution - Jasa Pembuatan Web & Aplikasi",
+  },
   description:
-    "Software House Indonesia resmi berbadan hukum CV. Jasa pembuatan website murah profesional, aplikasi Android & iOS, toko online, sistem kasir, dan ERP terintegrasi untuk UMKM hingga korporasi.",
+    "Software House Indonesia resmi CV. Jasa pembuatan website murah profesional, aplikasi Android iOS, toko online & sistem ERP untuk UMKM hingga korporasi.",
   keywords: [
     // --- BRAND & SINGKATAN ---
     "Bahari Tech Solution",

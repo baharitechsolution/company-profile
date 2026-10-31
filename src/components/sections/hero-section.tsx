@@ -248,19 +248,28 @@ export function HeroSection() {
                         </p>
                       </div>
 
-                      {/* Semantic Single H1 for Primary Slide (SEO), H2 for Secondary Slides */}
-                      {originalIndex === 0 ? (
+                      {/* Semantic Single H1 for Primary Slide (SEO), H2 for Secondary Slides, Div for Infinite Carousel Clones */}
+                      {idx === 1 ? (
                         <h1 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-bold text-[#233876] leading-[1.14] tracking-tight">
                           {slide.headingPart1}{" "}
                           <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                           {slide.headingPart2}
                         </h1>
-                      ) : (
+                      ) : idx > 1 && idx < extendedSlides.length - 1 ? (
                         <h2 className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-bold text-[#233876] leading-[1.14] tracking-tight">
                           {slide.headingPart1}{" "}
                           <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
                           {slide.headingPart2}
                         </h2>
+                      ) : (
+                        <div
+                          className="text-3xl sm:text-4xl lg:text-[46px] xl:text-[48px] font-bold text-[#233876] leading-[1.14] tracking-tight"
+                          aria-hidden="true"
+                        >
+                          {slide.headingPart1}{" "}
+                          <span className="text-[#1482C2]">{slide.headingHighlight}</span>{" "}
+                          {slide.headingPart2}
+                        </div>
                       )}
 
                       {/* Deskripsi Kalimat Profesional */}

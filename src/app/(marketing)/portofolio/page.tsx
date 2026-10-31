@@ -5,9 +5,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Studi Kasus & Portofolio Proyek Sistem Enterprise | ${siteConfig.name}`,
+  title: "Portofolio Proyek dan Studi Kasus",
   description:
-    "Rekam jejak implementasi perangkat lunak produksi: sistem ERP, aplikasi mobile iOS & Android, portal enterprise, dan transformasi digital teruji oleh CV. Bahari Tech Solution.",
+    "Rekam jejak implementasi perangkat lunak produksi: sistem ERP, aplikasi mobile iOS & Android, dan portal web enterprise teruji oleh Bahari Tech Solution.",
   keywords: [
     "Portofolio Software House",
     "Studi Kasus Sistem ERP",
