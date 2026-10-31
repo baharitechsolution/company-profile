@@ -18,7 +18,7 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/company/bahari-tech-solution",
     instagram: "https://instagram.com/baharitech",
     github: "https://github.com/baharitech",
-    facebook: "https://facebook.com/baharitech",
+    facebook: "https://www.facebook.com/profile.php?id=61596202285382",
   },
   stats: [
     { value: "50+", label: "Solusi Digital Rilis" },

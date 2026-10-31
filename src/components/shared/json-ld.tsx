@@ -123,6 +123,7 @@ export function JsonLd() {
         sameAs: [
           siteConfig.socials.linkedin,
           siteConfig.socials.instagram,
+          siteConfig.socials.facebook,
           siteConfig.socials.github,
         ],
         hasOfferCatalog: {
