@@ -14,13 +14,13 @@ export function PricingPackageSection() {
         {/* Editorial Header */}
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-semibold tracking-widest text-[#1482C2] uppercase mb-2">
-            Program Kemitraan Peluncuran Resmi
+            Model Kerja Sama &amp; Estimasi Investasi
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#233876] tracking-tight">
-            Subsidi Digitalisasi UMKM &amp; Penawaran Klien Perdana
+            Transparansi Biaya dengan Standar Rekayasa Industri
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Untuk membangun rekam jejak studi kasus dan kemitraan jangka panjang, kami membuka kuota harga khusus bersubsidi bagi pelaku usaha di Tegal, Jawa Tengah, dan seluruh Indonesia.
+            Metodologi pengembangan terstruktur dengan tahapan analisis, desain UI/UX, audit keamanan, dan jaminan kepemilikan penuh atas seluruh source code.
           </p>
 
           {/* Simple Tab Control */}
@@ -54,69 +54,69 @@ export function PricingPackageSection() {
         {currency === "IDR" && (
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             
-            {/* 1. Paket Kemitraan UMKM Perdana */}
+            {/* 1. Paket UMKM & Profil Bisnis */}
             <div className="rounded-xl border border-slate-200 bg-white p-7 flex flex-col justify-between hover:border-slate-300 transition-colors">
               <div>
                 <span className="text-[11px] font-semibold text-emerald-700 uppercase tracking-wider block mb-1">
-                  Kuota Kemitraan Terbatas
+                  Skala Bisnis &amp; UMKM
                 </span>
                 <h3 className="text-lg font-bold text-[#233876]">
-                  Paket UMKM &amp; Profil Kilat
+                  Website Profil Usaha Profesional
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Solusi cepat bagi toko, UMKM, dan penyedia jasa yang ingin usahanya resmi tampil di Google dan langsung menerima pesanan melalui WhatsApp.
+                  Representasi digital kredibel untuk UMKM, toko, maupun kantor layanan agar resmi terindeks di mesin pencari Google dan terhubung langsung ke WhatsApp.
                 </p>
 
                 <div className="my-6 pt-5 pb-5 border-y border-slate-100">
-                  <span className="text-[11px] text-slate-400 font-medium uppercase tracking-wider block">Harga Subsidi Perdana</span>
+                  <span className="text-[11px] text-slate-400 font-medium uppercase tracking-wider block">Estimasi Investasi</span>
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
-                    Rp 750.000 <span className="text-xs font-normal text-slate-500">– 1.250.000</span>
+                    Rp 750.000 <span className="text-xs font-normal text-slate-500">– 1.500.000</span>
                   </div>
-                  <span className="text-xs text-emerald-600 font-medium mt-1 block">Waktu pengerjaan: 3 – 5 hari kerja</span>
-                  <span className="text-[11px] text-slate-400 italic block mt-0.5">*Khusus 10 klien pertama penukar testimoni</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Waktu pengerjaan: 2 – 3 minggu</span>
+                  <span className="text-[11px] text-emerald-700 font-medium block mt-0.5">Penawaran kemitraan rilis perdana</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
-                  <p className="font-semibold text-slate-700 mb-2">Cakupan pengerjaan:</p>
+                  <p className="font-semibold text-slate-700 mb-2">Tahapan &amp; cakupan pengerjaan:</p>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Domain web resmi (.com / .my.id) dan cloud hosting aktif</span>
+                    <span>Domain web resmi (.com / .my.id) dan cloud hosting aktif 1 tahun</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Tampilan responsif cepat untuk ponsel pintar dan laptop</span>
+                    <span>Desain adaptif berkecepatan tinggi untuk ponsel dan komputer</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Integrasi tombol pesanan WhatsApp dan lokasi Google Maps</span>
+                    <span>Integrasi tombol pesanan WhatsApp dan titik lokasi Google Maps</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Pendaftaran dan optimasi dasar di mesin pencari Google</span>
+                    <span>Konfigurasi indeks Google Search Console dan SEO pencarian lokal</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Garansi perbaikan pasca rilis dan panduan operasional</span>
+                    <span>Garansi pemeliharaan teknis pasca rilis dan panduan operasional mandiri</span>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 pt-4">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20mengklaim%20Kuota%20Program%20Kemitraan%20UMKM%20Perdana%20(Rp%20750rb).`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20Paket%20Website%20Profil%20Usaha%20Profesional.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors shadow-2xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-[#233876] text-slate-800 hover:text-white font-semibold text-xs transition-colors"
                 >
-                  Klaim Kuota Kemitraan UMKM
+                  Konsultasi Paket Ini
                 </a>
               </div>
             </div>
 
-            {/* 2. Paket Toko Online & Aplikasi Kasir (Accent) */}
+            {/* 2. Paket Transaksi & Operasional Toko (Accent) */}
             <div className="rounded-xl border-2 border-[#1482C2] bg-slate-50/50 p-7 flex flex-col justify-between relative shadow-xs">
               <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#1482C2] text-white text-[10px] font-bold tracking-wider uppercase">
-                Paling Diminati (Best Value)
+                Paling Sering Dipilih
               </span>
 
               <div>
@@ -127,56 +127,56 @@ export function PricingPackageSection() {
                   Aplikasi Kasir &amp; Toko Online
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Sistem inventaris produk dinamis, pencatatan transaksi kasir, kalkulasi ongkos kirim otomatis, dan pembayaran digital QRIS.
+                  Arsitektur transaksi terpadu: katalog inventaris produk dinamis, pencatatan kasir (POS), kalkulasi ongkos kirim kurir, dan pembayaran digital otomatis.
                 </p>
 
                 <div className="my-6 pt-5 pb-5 border-y border-slate-200">
-                  <span className="text-[11px] text-slate-400 font-medium uppercase tracking-wider block">Harga Subsidi Perdana</span>
+                  <span className="text-[11px] text-slate-400 font-medium uppercase tracking-wider block">Estimasi Investasi</span>
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
-                    Rp 2.500.000 <span className="text-xs font-normal text-slate-500">– 4.500.000</span>
+                    Rp 2.500.000 <span className="text-xs font-normal text-slate-500">– 5.500.000</span>
                   </div>
-                  <span className="text-xs text-slate-500 mt-1 block">Waktu pengerjaan: 7 – 14 hari kerja</span>
-                  <span className="text-[11px] text-slate-400 italic block mt-0.5">*Hemat hingga 50% dari tarif normal</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Waktu pengerjaan: 4 – 6 minggu</span>
+                  <span className="text-[11px] text-[#1482C2] font-medium block mt-0.5">Termasuk simulasi pengujian transaksi</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
-                  <p className="font-semibold text-slate-700 mb-2">Cakupan pengerjaan:</p>
+                  <p className="font-semibold text-slate-700 mb-2">Tahapan &amp; cakupan pengerjaan:</p>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
                     <span>Seluruh cakupan paket profil usaha disertakan</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Dashboard manajemen katalog produk, harga, dan stok barang</span>
+                    <span>Dashboard manajemen katalog produk, varian harga, dan stok barang</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Integrasi pembayaran otomatis (QRIS, Virtual Account, &amp; Transfer)</span>
+                    <span>Integrasi gerbang pembayaran resmi (QRIS, Virtual Account, Transfer Bank)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Kalkulasi tarif kurir ekspedisi otomatis untuk seluruh Indonesia</span>
+                    <span>Kalkulasi tarif ekspedisi otomatis untuk seluruh kota di Indonesia</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Laporan rekap omzet transaksi dan cadangan data otomatis</span>
+                    <span>Laporan ringkasan omzet berkala dan cadangan data database harian</span>
                   </div>
                 </div>
               </div>
 
               <div className="mt-8 pt-4">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20Paket%20Toko%20Online%20/%20Aplikasi%20Kasir%20Subsidi.`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20sistem%20toko%20online%20/%20aplikasi%20kasir.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center py-2.5 px-4 rounded-lg bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs transition-colors"
                 >
-                  Konsultasi Paket Toko Online
+                  Konsultasi Paket Ini
                 </a>
               </div>
             </div>
 
-            {/* 3. Paket Custom Enterprise & ERP */}
+            {/* 3. Paket Enterprise & Custom */}
             <div className="rounded-xl border border-slate-200 bg-white p-7 flex flex-col justify-between hover:border-slate-300 transition-colors">
               <div>
                 <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">
@@ -186,7 +186,7 @@ export function PricingPackageSection() {
                   Sistem ERP &amp; Aplikasi Mobile
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Arsitektur perangkat lunak kustom, aplikasi mobile Android &amp; iOS terintegrasi, serta sinkronisasi operasional multi-cabang.
+                  Pengembangan perangkat lunak kustom berskala penuh, aplikasi mobile iOS &amp; Android (Flutter / React Native), dan sinkronisasi operasional multi-cabang.
                 </p>
 
                 <div className="my-6 pt-5 pb-5 border-y border-slate-100">
@@ -194,12 +194,12 @@ export function PricingPackageSection() {
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
                     Mulai Rp 8.000.000
                   </div>
-                  <span className="text-xs text-slate-500 mt-1 block">RAB transparan sesuai spesifikasi teknis</span>
-                  <span className="text-[11px] text-slate-400 italic block mt-0.5">*Konsultasi rancangan awal 100% gratis</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Waktu pengerjaan: 2 – 4 bulan (Agile Sprint)</span>
+                  <span className="text-[11px] text-slate-500 block mt-0.5">RAB transparan sesuai spesifikasi teknis</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
-                  <p className="font-semibold text-slate-700 mb-2">Cakupan pengerjaan:</p>
+                  <p className="font-semibold text-slate-700 mb-2">Tahapan &amp; cakupan pengerjaan:</p>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
                     <span>100% hak milik source code diserahkan (tanpa biaya lisensi tahunan)</span>
@@ -210,11 +210,11 @@ export function PricingPackageSection() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Integrasi data antar kantor cabang dan pergudangan terpadu</span>
+                    <span>Integrasi data terpusat antar kantor cabang dan pergudangan</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Standar keamanan kode industri dan audit celah sistem berlapis</span>
+                    <span>Audit celah keamanan sistem dan enkripsi data sesuai standar industri</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
@@ -225,7 +225,7 @@ export function PricingPackageSection() {
 
               <div className="mt-8 pt-4">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20kami%20ingin%20mendiskusikan%20kebutuhan%20Sistem%20Enterprise%20ERP%20/%20Aplikasi%20Mobile%20kustom.`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20kami%20ingin%20mendiskusikan%20kebutuhan%20Sistem%20ERP%20/%20Aplikasi%20Enterprise.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-block text-center py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-[#233876] text-slate-800 hover:text-white font-semibold text-xs transition-colors"
@@ -254,7 +254,7 @@ export function PricingPackageSection() {
                   Dedicated Fullstack Developer
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Embed dedicated senior Indonesian developers into your sprint. Fluent English communication, high velocity, and timezone flexibility.
+                  Embed dedicated senior Indonesian developers directly into your sprint cycle. High velocity, clean code standards, and fluent English sync.
                 </p>
 
                 <div className="my-6 pt-5 pb-5 border-y border-slate-100">
@@ -262,7 +262,7 @@ export function PricingPackageSection() {
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
                     $18 – $25 <span className="text-xs font-normal text-slate-500">/ hour</span>
                   </div>
-                  <span className="text-xs text-slate-500 mt-1 block">Full-time or part-time monthly arrangement</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Monthly engagement model</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
@@ -273,11 +273,11 @@ export function PricingPackageSection() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Daily agile standups, GitHub pull request workflows, and Jira/Slack sync</span>
+                    <span>Daily agile standups, GitHub pull requests, and Slack/Jira coordination</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
-                    <span>Overlapping operational hours with US, European, or Australian timezones</span>
+                    <span>Overlapping working hours with US, European, or Australian timezones</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="text-[#1482C2] font-bold">—</span>
@@ -312,7 +312,7 @@ export function PricingPackageSection() {
                   Fixed-Scope Product MVP
                 </h3>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                  Turn your product concept or wireframe into a production-grade web or mobile application in 2 to 4 weeks with predictable deliverables.
+                  Turn your product concept or wireframe into a production-grade web or mobile application with clearly defined deliverables and milestones.
                 </p>
 
                 <div className="my-6 pt-5 pb-5 border-y border-slate-200">
@@ -320,7 +320,7 @@ export function PricingPackageSection() {
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
                     $799 – $1,999 <span className="text-xs font-normal text-slate-500">USD</span>
                   </div>
-                  <span className="text-xs text-slate-500 mt-1 block">Timeline: 2 – 4 weeks delivery guarantee</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Timeline: 4 – 6 weeks structured delivery</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
@@ -374,7 +374,7 @@ export function PricingPackageSection() {
                   <div className="text-2xl font-bold text-[#233876] mt-0.5">
                     Monthly Retainer
                   </div>
-                  <span className="text-xs text-slate-500 mt-1 block">Customized to your technical roadmap</span>
+                  <span className="text-xs text-slate-600 font-medium mt-1 block">Sprint cycles: 2 – 4 months roadmap</span>
                 </div>
 
                 <div className="space-y-2.5 text-xs text-slate-600">
@@ -416,7 +416,7 @@ export function PricingPackageSection() {
         {/* Minimal Footer Reassurance */}
         <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-slate-600">
           <div>
-            <strong className="text-slate-700">Jaminan Keamanan Kemitraan:</strong> Konsultasi awal 100% gratis, skema pembayaran bertahap (DP ringan dan pelunasan setelah disetujui), serta 100% penyerahan hak milik source code tanpa biaya lisensi tersembunyi.
+            <strong className="text-slate-700">Jaminan Keamanan Kemitraan:</strong> Konsultasi awal 100% gratis, skema pembayaran bertahap (DP aman &amp; pelunasan setelah disetujui), serta 100% penyerahan hak milik source code tanpa biaya lisensi tersembunyi.
           </div>
           <Link
             href="/kontak"
