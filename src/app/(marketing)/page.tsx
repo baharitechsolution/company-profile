@@ -5,6 +5,7 @@ import { PricingPackageSection } from "@/components/sections/pricing-package-sec
 import { WhyUsSection } from "@/components/sections/why-us-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { FaqSection } from "@/components/sections/faq-section";
+import { ConsultationCtaBanner } from "@/components/sections/consultation-cta-banner";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -77,6 +78,9 @@ export default function HomePage() {
 
       {/* 7. Tanya Jawab Umum (FAQ) & Schema.org FAQPage SEO */}
       <FaqSection />
+
+      {/* 8. Banner Konsultasi Gratis (WhatsApp Direct Action) */}
+      <ConsultationCtaBanner />
     </>
   );
 }
