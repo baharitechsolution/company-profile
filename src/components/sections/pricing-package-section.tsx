@@ -120,7 +120,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20Paket%20Website%20Profil%20Usaha%20Profesional.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 font-medium text-xs sm:text-[13px] transition-colors"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
                 >
                   Konsultasi Paket Ini
                 </a>
@@ -129,7 +129,7 @@ export function PricingPackageSection() {
 
             {/* 2. Paket Transaksi & Operasional Toko (Featured) */}
             <div className="rounded-2xl border border-sky-300 bg-gradient-to-b from-sky-50/30 via-white to-white p-7 flex flex-col justify-between relative shadow-sm ring-1 ring-sky-100">
-              <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-slate-900 text-white text-[10px] font-medium tracking-wider uppercase shadow-2xs">
+              <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#1482C2] text-white text-[10px] font-semibold tracking-wider uppercase shadow-xs">
                 Paling Sering Dipilih
               </span>
 
@@ -195,7 +195,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20sistem%20toko%20online%20/%20aplikasi%20kasir.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-[13px] transition-colors shadow-xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-[13px] transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
                 >
                   Konsultasi Paket Ini
                 </a>
@@ -266,7 +266,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20kami%20ingin%20mendiskusikan%20kebutuhan%20Sistem%20ERP%20/%20Aplikasi%20Enterprise.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 font-medium text-xs sm:text-[13px] transition-colors"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
                 >
                   Ajukan Diskusi RAB
                 </a>
@@ -337,7 +337,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20I'm%20interested%20in%20hiring%20a%20dedicated%20offshore%20developer.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 font-medium text-xs sm:text-[13px] transition-colors"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
                 >
                   Discuss Developer Hire
                 </a>
@@ -346,7 +346,7 @@ export function PricingPackageSection() {
 
             {/* 2. Fixed-Scope MVP (Featured) */}
             <div className="rounded-2xl border border-sky-300 bg-gradient-to-b from-sky-50/30 via-white to-white p-7 flex flex-col justify-between relative shadow-sm ring-1 ring-sky-100">
-              <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-slate-900 text-white text-[10px] font-medium tracking-wider uppercase shadow-2xs">
+              <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#1482C2] text-white text-[10px] font-semibold tracking-wider uppercase shadow-xs">
                 Startup Favorite
               </span>
 
@@ -403,7 +403,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20I'd%20like%20to%20discuss%20a%20Fixed-Scope%20MVP%20software%20project.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-[13px] transition-colors shadow-xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-[13px] transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
                 >
                   Schedule Discovery Call
                 </a>
@@ -465,7 +465,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20we%20want%20to%20discuss%20an%20Offshore%20Engineering%20Pod%20retainer.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 font-medium text-xs sm:text-[13px] transition-colors"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
                 >
                   Request Technical Deck
                 </a>
