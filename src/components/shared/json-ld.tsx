@@ -87,6 +87,13 @@ export function JsonLd() {
           { "@type": "City", name: "Makassar" },
           { "@type": "City", name: "Manado" },
           { "@type": "City", name: "Jayapura" },
+          // Pasar Global & Klien Offshore
+          { "@type": "Country", name: "Singapore" },
+          { "@type": "Country", name: "Malaysia" },
+          { "@type": "Country", name: "Australia" },
+          { "@type": "Country", name: "United States" },
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "Germany" },
         ],
         aggregateRating: {
           "@type": "AggregateRating",
@@ -256,6 +263,22 @@ export function JsonLd() {
             acceptedAnswer: {
               "@type": "Answer",
               text: "Ya, setiap proyek dilindungi garansi bebas bug resmi (Free SLA Bugfix & Maintenance) selama 3 hingga 6 bulan pasca rilis produksi, didukung SLA uptime 99.98% dan tim teknis yang siap siaga.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Apakah Bahari Tech Solution melayani jasa bikin website murah dan aplikasi kasir untuk UMKM di Tegal dan daerah lainnya?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ya, kami menyediakan Paket UMKM & Starter terjangkau mulai dari Rp 1,5 jutaan dengan pengerjaan cepat (3-7 hari kerja). Sudah termasuk domain .com/.id, cloud hosting cepat, integrasi WhatsApp chat langsung, dan optimasi SEO Google lokal agar bisnis Anda mudah ditemukan pelanggan di sekitar Anda.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does Bahari Tech Solution provide offshore software development services for international clients?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, we partner with startups and enterprises across the United States, Australia, Singapore, and Europe. We provide dedicated fullstack developers and fixed-scope product MVP builds (Next.js, TypeScript, Flutter, Node.js) with fluent English communication, timezone flexibility, and up to 70% cost savings compared to US/EU local rates.",
             },
           },
         ],
