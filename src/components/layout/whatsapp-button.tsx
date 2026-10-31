@@ -76,27 +76,27 @@ export function WhatsAppButton() {
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
         className="group flex items-center gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
       >
-        {/* Balon Pesan Percakapan Autentik dengan Efek Mengetik Sendiri */}
-        <div className="relative bg-white px-3.5 py-2 sm:px-5 sm:py-3 rounded-2xl rounded-tr-md shadow-[0_8px_25px_rgba(15,23,42,0.08)] border border-slate-100 transition-all duration-300 group-hover:shadow-[0_12px_32px_rgba(15,23,42,0.13)] group-hover:border-sky-200">
-          {/* Ekor Balon Chat (Speech Bubble Pointer menghadap ke avatar) */}
+        {/* Balon Pesan Bersih & Solid Sesuai Brand Bahari Tech (Tanpa Gradasi) */}
+        <div className="relative bg-white px-3.5 py-2 sm:px-5 sm:py-3 rounded-2xl rounded-tr-md shadow-[0_6px_20px_rgba(15,23,42,0.08)] border border-slate-200/90 transition-all duration-300 group-hover:shadow-[0_10px_25px_rgba(15,23,42,0.12)] group-hover:border-[#1482C2]/40">
+          {/* Ekor Balon Chat (Pointer Solid Menghadap ke Avatar) */}
           <span
-            className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-t border-r border-slate-100 transition-colors duration-300 group-hover:border-sky-200"
+            className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-t border-r border-slate-200/90 transition-colors duration-300 group-hover:border-[#1482C2]/40"
             aria-hidden="true"
           />
 
           <div className="relative z-10 flex items-center gap-1.5 sm:gap-2 min-h-[22px]">
-            {/* Teks Pesan Efek Mengetik Sendiri (Typewriter) */}
-            <span className="text-[13px] sm:text-[14.5px] font-semibold text-slate-700 tracking-tight whitespace-nowrap leading-none">
+            {/* Teks Pesan Mengetik Sendiri - Menggunakan Navy Solid Brand Bahari Tech #233876 */}
+            <span className="text-[13px] sm:text-[14.5px] font-bold text-[#233876] tracking-tight whitespace-nowrap leading-none">
               {displayedText}
               {showCursor && (
                 <span
-                  className="inline-block w-[1.5px] h-3.5 sm:h-4 bg-sky-500 ml-0.5 animate-pulse align-middle"
+                  className="inline-block w-[1.5px] h-3.5 sm:h-4 bg-[#1482C2] ml-0.5 animate-pulse align-middle"
                   aria-hidden="true"
                 />
               )}
             </span>
 
-            {/* Emoji Lambaian Ramah yang Muncul Setelah Mengetik */}
+            {/* Emoji Lambaian Ramah yang Muncul Setelah Mengetik Selesai */}
             {showEmoji && (
               <span
                 className="text-base sm:text-lg inline-block transition-transform duration-300 group-hover:rotate-12 group-hover:scale-125 animate-in fade-in zoom-in-75 duration-300"
@@ -110,30 +110,28 @@ export function WhatsAppButton() {
 
         {/* 3D Pop-Out Avatar Interaktif */}
         <div className="relative shrink-0 w-[74px] h-[96px] sm:w-[90px] sm:h-[118px] lg:w-[100px] lg:h-[130px]">
-          {/* Komposit SVG Presisi: Background Bulat Tetap Stay, Model Meluncur dari Bawah ke Atas */}
+          {/* Komposit SVG Presisi: Lingkaran Solid #1482C2 Tanpa Gradasi (TETAP STAY), Model Meluncur dari Bawah ke Atas */}
           <svg
             viewBox="0 0 617 802"
-            className="w-full h-full drop-shadow-[0_10px_20px_rgba(14,116,144,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_14px_28px_rgba(14,116,144,0.42)] overflow-visible"
+            className="w-full h-full drop-shadow-[0_6px_16px_rgba(15,23,42,0.18)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_10px_22px_rgba(15,23,42,0.25)] overflow-visible"
             aria-hidden="true"
           >
             <defs>
-              {/* Clip-Path Pop-out: Bagian atas bebas (kepala & tangan OK), bagian bawah dipotong pas kurva lingkaran */}
+              {/* Clip-Path Pop-out: Area atas bebas keluar (kepala & tangan OK), area bawah terpotong pas kurva lingkaran */}
               <clipPath id="csPopoutClip">
-                {/* Area atas tanpa kliping (y: 0 s.d 493) */}
                 <rect x="0" y="0" width="617" height="493" />
-                {/* Area bawah terpotong pas lingkaran (pusat di x: 308, y: 493, radius 288) */}
                 <circle cx="308" cy="493" r="288" />
               </clipPath>
             </defs>
 
-            {/* 1. Background Bulat Statis (TETAP STAY - Tidak Bergerak) */}
+            {/* 1. Background Bulat Solid Brand Bahari Tech #1482C2 (TETAP STAY - 100% Solid Tanpa Gradasi & Tanpa Halo AI) */}
             <image
               href="/images/cs/cs-circle-base.png"
               width="617"
               height="802"
             />
 
-            {/* 2. Model Muncul Meluncur dari Bawah ke Atas (Pop-Up dari Dalam Lingkaran) */}
+            {/* 2. Model Muncul Meluncur dari Bawah ke Atas (Baju Polo Hitam Bersih Tanpa Logo Palsu AI) */}
             <g
               style={{
                 transform: isModelMounted ? "translateY(0)" : "translateY(65px)",
@@ -150,7 +148,7 @@ export function WhatsAppButton() {
             </g>
           </svg>
 
-          {/* Badge WhatsApp Resmi di Sudut Kanan Bawah Lingkaran (Tetap Statis & Berwibawa) */}
+          {/* Badge WhatsApp Resmi di Sudut Kanan Bawah (Solid Hijau #25D366, Solid Ring Putih) */}
           <span
             className="absolute bottom-1 right-0.5 sm:bottom-1.5 sm:right-1 h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300 z-10"
             aria-hidden="true"
