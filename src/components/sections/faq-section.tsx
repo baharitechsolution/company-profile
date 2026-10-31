@@ -151,7 +151,23 @@ const categories = [
   { id: "tech", label: "Teknologi & Fitur" },
 ] as const;
 
-export function FaqSection() {
+interface FaqSectionProps {
+  limit?: number;
+  showViewAllButton?: boolean;
+  showHeader?: boolean;
+  bgColor?: string;
+  bordered?: boolean;
+  showOuterBorders?: boolean;
+}
+
+export function FaqSection({
+  limit,
+  showViewAllButton = false,
+  showHeader = true,
+  bgColor = "bg-[#F8FAFC]",
+  bordered = true,
+  showOuterBorders = true,
+}: FaqSectionProps = {}) {
   const [activeCategory, setActiveCategory] = React.useState<string>("all");
   const [openItems, setOpenItems] = React.useState<Record<string, boolean>>({
     "faq-1": true,
@@ -165,9 +181,15 @@ export function FaqSection() {
   };
 
   const filteredFaqs = React.useMemo(() => {
-    if (activeCategory === "all") return faqData;
-    return faqData.filter((item) => item.category === activeCategory);
-  }, [activeCategory]);
+    let result = faqData;
+    if (activeCategory !== "all") {
+      result = result.filter((item) => item.category === activeCategory);
+    }
+    if (limit && limit > 0) {
+      result = result.slice(0, limit);
+    }
+    return result;
+  }, [activeCategory, limit]);
 
   // Schema.org FAQPage JSON-LD 16 Pertanyaan Lengkap untuk Google SEO Rich Snippet
   const faqSchema = {
@@ -188,7 +210,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="py-6 sm:py-8 lg:py-10 bg-[#F8FAFC] border-b border-slate-200 select-none"
+      className={`py-8 sm:py-10 lg:py-12 ${bgColor} ${bordered ? "border-b border-slate-200" : ""} select-none`}
     >
       {/* Schema.org FAQPage Data Terstruktur untuk Google SEO */}
       <script
@@ -199,23 +221,25 @@ export function FaqSection() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Tengah Standar Industri & Kompak */}
-        <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-4 sm:mb-5">
-          <div className="inline-flex items-center justify-center gap-2">
-            <span className="h-0.5 w-5 bg-[#1482C2]" />
-            <span className="text-[11px] font-semibold tracking-wider uppercase text-[#1482C2]">
-              Tanya Jawab &amp; Panduan Kerjasama
-            </span>
-            <span className="h-0.5 w-5 bg-[#1482C2]" />
-          </div>
+        {showHeader && (
+          <ScrollReveal direction="up" delay={0.05} className="text-center max-w-2xl mx-auto space-y-1.5 mb-4 sm:mb-5">
+            <div className="inline-flex items-center justify-center gap-2">
+              <span className="h-0.5 w-5 bg-[#1482C2]" />
+              <span className="text-[11px] font-semibold tracking-wider uppercase text-[#1482C2]">
+                Tanya Jawab &amp; Panduan Kerjasama
+              </span>
+              <span className="h-0.5 w-5 bg-[#1482C2]" />
+            </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 tracking-tight leading-tight">
-            Pertanyaan yang Sering Diajukan
-          </h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 tracking-tight leading-tight">
+              Pertanyaan yang Sering Diajukan
+            </h2>
 
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Temukan jawaban transparan seputar estimasi biaya, alur rekayasa, kepemilikan source code 100%, hingga garansi resmi kami.
-          </p>
-        </ScrollReveal>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Temukan jawaban transparan seputar estimasi biaya, alur rekayasa, kepemilikan source code 100%, hingga garansi resmi kami.
+            </p>
+          </ScrollReveal>
+        )}
 
         {/* Tab Kategori Horizontal Simpel & Bersih */}
         <ScrollReveal direction="up" delay={0.1} className="flex flex-wrap items-center justify-center gap-1.5 mb-5 sm:mb-6">
@@ -237,9 +261,9 @@ export function FaqSection() {
           })}
         </ScrollReveal>
 
-        {/* Accordion List Terpadu Bergaris Pembatas (Sesuai Standar FAQ Universal) */}
+        {/* Accordion List Terpadu Bergaris Pembatas */}
         <ScrollReveal direction="up" delay={0.15}>
-          <div className="divide-y divide-slate-200/90 border-y border-slate-200/90">
+          <div className={`divide-y divide-slate-200/90 ${showOuterBorders ? "border-y border-slate-200/90" : ""}`}>
           {filteredFaqs.map((faq) => {
             const isOpen = !!openItems[faq.id];
             return (
@@ -283,6 +307,19 @@ export function FaqSection() {
           })}
         </div>
         </ScrollReveal>
+
+        {/* Tombol Lihat Semua Pertanyaan jika dibatasi di Home */}
+        {showViewAllButton && (
+          <ScrollReveal direction="up" delay={0.18} className="mt-6 text-center">
+            <Link
+              href="/bantuan#faq"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 shadow-2xs"
+            >
+              <span>Lihat Seluruh Pertanyaan &amp; Bantuan</span>
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </ScrollReveal>
+        )}
 
         {/* Footer Prompt Bersih & Ramah */}
         <ScrollReveal direction="up" delay={0.2} className="mt-5 sm:mt-6 text-center text-xs text-slate-600 flex flex-wrap items-center justify-center gap-2">

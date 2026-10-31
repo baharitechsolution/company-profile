@@ -5,7 +5,7 @@ export const mainNav: NavItem[] = [
   { title: "Tentang Kami", href: "/tentang-kami" },
   { title: "Layanan", href: "/layanan" },
   { title: "Portofolio", href: "/portofolio" },
-  { title: "Kontak", href: "/kontak" },
+  { title: "Bantuan", href: "/bantuan" },
 ];
 
 

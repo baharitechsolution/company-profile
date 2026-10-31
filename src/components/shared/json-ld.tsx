@@ -208,7 +208,7 @@ export function JsonLd() {
             name: "Kontak & Konsultasi",
             description:
               "Hubungi konsultan teknologi untuk konsultasi kebutuhan software dan estimasi RAB resmi.",
-            url: `${siteConfig.url}/kontak`,
+            url: `${siteConfig.url}/bantuan`,
           },
         ],
       },

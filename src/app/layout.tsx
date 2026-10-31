@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/shared/json-ld";
@@ -186,6 +187,20 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${jakartaSans.variable} scroll-smooth antialiased`}>
       <head>
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-35HLH81PT3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-35HLH81PT3');
+          `}
+        </Script>
         <JsonLd />
       </head>
       <body className="min-h-screen bg-white font-sans text-slate-900 selection:bg-[#1482C2] selection:text-white">

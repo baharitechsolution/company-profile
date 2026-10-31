@@ -25,22 +25,22 @@ export function WhatsAppButton() {
   const [showCursor, setShowCursor] = React.useState(false);
   const [showEmoji, setShowEmoji] = React.useState(true);
   
-  // State animasi model muncul dari bawah ke atas
-  const [isModelMounted, setIsModelMounted] = React.useState(false);
+  // State animasi muncul serentak dari bawah ke atas
+  const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
-    // Reset state saat hydrate di browser untuk memulai urutan animasi yang hidup
+    // Reset state saat hydrate di browser untuk memulai urutan animasi
     setDisplayedText("");
     setShowEmoji(false);
     setShowCursor(true);
-    setIsModelMounted(false);
+    setIsMounted(false);
 
-    // 1. Animasi model muncul dari bawah ke atas (meluncur naik setelah jeda 200ms)
-    const modelTimer = setTimeout(() => {
-      setIsModelMounted(true);
+    // 1. Animasi avatar (foto, bulat, badge wa) dan balon chat meluncur naik serentak dari bawah ke atas
+    const enterTimer = setTimeout(() => {
+      setIsMounted(true);
     }, 200);
 
-    // 2. Animasi pesan mengetik sendiri (dimulai saat model sedang naik di 500ms)
+    // 2. Animasi pesan mengetik sendiri (dimulai selaras saat elemen sedang meluncur naik di 500ms)
     const typingTimer = setTimeout(() => {
       let index = 0;
       const interval = setInterval(() => {
@@ -58,7 +58,7 @@ export function WhatsAppButton() {
     }, 550);
 
     return () => {
-      clearTimeout(modelTimer);
+      clearTimeout(enterTimer);
       clearTimeout(typingTimer);
     };
   }, []);
@@ -68,7 +68,14 @@ export function WhatsAppButton() {
   );
 
   return (
-    <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-40 select-none">
+    <div
+      className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-40 select-none"
+      style={{
+        transform: isMounted ? "translateY(0)" : "translateY(50px)",
+        opacity: isMounted ? 1 : 0,
+        transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease-out",
+      }}
+    >
       <Link
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`}
         target="_blank"
@@ -76,16 +83,16 @@ export function WhatsAppButton() {
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
         className="group flex items-center gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
       >
-        {/* Balon Pesan Bersih & Solid Sesuai Brand Bahari Tech (Tanpa Gradasi) */}
+        {/* Balon Pesan Bersih & Solid Sesuai Brand Bahari Tech */}
         <div className="relative bg-white px-3.5 py-2 sm:px-5 sm:py-3 rounded-2xl rounded-tr-md shadow-[0_6px_20px_rgba(15,23,42,0.08)] border border-slate-200/90 transition-all duration-300 group-hover:shadow-[0_10px_25px_rgba(15,23,42,0.12)] group-hover:border-[#1482C2]/40">
-          {/* Ekor Balon Chat (Pointer Solid Menghadap ke Avatar) */}
+          {/* Ekor Balon Chat */}
           <span
             className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-t border-r border-slate-200/90 transition-colors duration-300 group-hover:border-[#1482C2]/40"
             aria-hidden="true"
           />
 
           <div className="relative z-10 flex items-center gap-1.5 sm:gap-2 min-h-[22px]">
-            {/* Teks Pesan Mengetik Sendiri - Menggunakan Navy Solid Brand Bahari Tech #233876 */}
+            {/* Teks Pesan Mengetik Sendiri */}
             <span className="text-xs sm:text-sm font-semibold text-[#233876] tracking-tight whitespace-nowrap leading-none">
               {displayedText}
               {showCursor && (
@@ -96,7 +103,7 @@ export function WhatsAppButton() {
               )}
             </span>
 
-            {/* Emoji Lambaian Ramah yang Muncul Setelah Mengetik Selesai */}
+            {/* Emoji Lambaian */}
             {showEmoji && (
               <span
                 className="text-base sm:text-lg inline-block transition-transform duration-300 group-hover:rotate-12 group-hover:scale-125 animate-in fade-in zoom-in-75 duration-300"
@@ -110,45 +117,37 @@ export function WhatsAppButton() {
 
         {/* 3D Pop-Out Avatar Interaktif */}
         <div className="relative shrink-0 w-[74px] h-[96px] sm:w-[90px] sm:h-[118px] lg:w-[100px] lg:h-[130px]">
-          {/* Komposit SVG Presisi: Lingkaran Solid #1482C2 Tanpa Gradasi (TETAP STAY), Model Meluncur dari Bawah ke Atas */}
+          {/* Komposit SVG Presisi: Foto model & background bulat meluncur bersama secara utuh */}
           <svg
             viewBox="0 0 617 802"
             className="w-full h-full drop-shadow-[0_6px_16px_rgba(15,23,42,0.18)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_10px_22px_rgba(15,23,42,0.25)] overflow-visible"
             aria-hidden="true"
           >
             <defs>
-              {/* Clip-Path Pop-out: Area atas bebas keluar (kepala & tangan OK), area bawah terpotong pas kurva lingkaran */}
+              {/* Clip-Path Pop-out */}
               <clipPath id="csPopoutClip">
                 <rect x="0" y="0" width="617" height="493" />
                 <circle cx="308" cy="493" r="288" />
               </clipPath>
             </defs>
 
-            {/* 1. Background Bulat Solid Brand Bahari Tech #1482C2 (TETAP STAY - 100% Solid Tanpa Gradasi & Tanpa Halo AI) */}
+            {/* Background Bulat Solid #1482C2 */}
             <image
               href="/images/cs/cs-circle-base.png"
               width="617"
               height="802"
             />
 
-            {/* 2. Model Muncul Meluncur dari Bawah ke Atas (Baju Polo Hitam Bersih Tanpa Logo Palsu AI) */}
-            <g
-              style={{
-                transform: isModelMounted ? "translateY(0)" : "translateY(65px)",
-                opacity: isModelMounted ? 1 : 0,
-                transition: "transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease-out",
-              }}
-            >
-              <image
-                href="/images/cs/cs-model-cutout.png"
-                width="617"
-                height="802"
-                clipPath="url(#csPopoutClip)"
-              />
-            </g>
+            {/* Foto Model Baju Polo Hitam */}
+            <image
+              href="/images/cs/cs-model-cutout.png"
+              width="617"
+              height="802"
+              clipPath="url(#csPopoutClip)"
+            />
           </svg>
 
-          {/* Badge WhatsApp Resmi di Sudut Kanan Bawah (Solid Hijau #25D366, Solid Ring Putih) */}
+          {/* Badge WhatsApp Resmi di Sudut Kanan Bawah */}
           <span
             className="absolute bottom-1 right-0.5 sm:bottom-1.5 sm:right-1 h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300 z-10"
             aria-hidden="true"

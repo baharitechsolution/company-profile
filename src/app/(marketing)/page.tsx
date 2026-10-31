@@ -81,7 +81,7 @@ export default function HomePage() {
       <PortfolioSection />
 
       {/* 7. Tanya Jawab Umum (FAQ) & Schema.org FAQPage SEO */}
-      <FaqSection />
+      <FaqSection limit={10} showViewAllButton={true} />
 
       {/* 8. Banner Konsultasi Gratis (WhatsApp Direct Action) */}
       <ConsultationCtaBanner />
