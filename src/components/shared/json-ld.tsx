@@ -124,6 +124,8 @@ export function JsonLd() {
           siteConfig.socials.linkedin,
           siteConfig.socials.instagram,
           siteConfig.socials.facebook,
+          siteConfig.socials.tiktok,
+          siteConfig.socials.youtube,
           siteConfig.socials.github,
         ],
         hasOfferCatalog: {
