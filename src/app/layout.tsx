@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     // --- BRAND & IDENTITY ---
     "CV. Bahari Tech Solution",
     "Bahari Tech Solution",
+    "Bahari Tech",
+    "Baharitech",
+    "baharitech",
+    "baharitechsolution",
+    "Bahari Tech Tegal",
     "Software House Indonesia",
     "Perusahaan IT Indonesia",
     "Konsultan IT Terpercaya",
