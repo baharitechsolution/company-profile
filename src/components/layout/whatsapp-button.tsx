@@ -23,40 +23,39 @@ export function WhatsAppButton() {
   );
 
   return (
-    <div className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 lg:bottom-8 lg:right-8 z-40 select-none">
+    <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-40 select-none">
       <Link
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
-        className="group flex items-center gap-3 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+        className="group flex items-center gap-2 sm:gap-2.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
       >
-        {/* Balon Pesan: Bersih, Ramping, Elegan & Sesuai Referensi Pengguna */}
-        <div className="bg-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] border border-slate-100 transition-all duration-300 group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
-          <span className="text-xs sm:text-[14px] font-bold text-slate-700 tracking-tight whitespace-nowrap flex items-center gap-1.5">
+        {/* Balon Pesan: Ramping, Elegan & Bersih Sesuai Referensi Pengguna */}
+        <div className="bg-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] border border-slate-100 transition-all duration-300 group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
+          <span className="text-xs sm:text-[13.5px] font-bold text-slate-700 tracking-tight whitespace-nowrap flex items-center gap-1.5">
             <span>Konsultasi disini Yuk</span>
             <span className="inline-block transition-transform duration-300 group-hover:scale-125">👋</span>
           </span>
         </div>
 
-        {/* Lingkaran Avatar Konsultan Trendy Gen-Z */}
-        <div className="relative shrink-0">
-          <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-full p-1 bg-gradient-to-tr from-sky-400 via-sky-300 to-sky-100 shadow-[0_8px_22px_rgba(56,189,248,0.35)] transition-all duration-300 group-hover:shadow-[0_10px_26px_rgba(56,189,248,0.5)]">
-            <div className="relative h-full w-full rounded-full overflow-hidden bg-sky-50 border-2 border-white">
-              <Image
-                src="/images/cs/consultant-avatar.png"
-                alt="Konsultan Bahari Tech Solution"
-                fill
-                sizes="(max-width: 640px) 56px, 64px"
-                priority
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+        {/* 3D Pop-Out Avatar: Orang Seakan Keluar Menembus Lingkaran */}
+        <div className="relative shrink-0 w-16 h-18 sm:w-20 sm:h-22">
+          {/* Gambar Pop-Out Transparan */}
+          <div className="relative w-full h-full drop-shadow-[0_8px_16px_rgba(14,116,144,0.25)] transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="/images/cs/popout-avatar.png"
+              alt="Konsultan CS Bahari Tech Solution"
+              fill
+              sizes="(max-width: 640px) 70px, 90px"
+              priority
+              className="object-contain object-bottom"
+            />
           </div>
 
-          {/* Badge WhatsApp di Sudut Kanan Bawah Avatar */}
+          {/* Badge WhatsApp di Sudut Kanan Bawah */}
           <span
-            className="absolute -bottom-0.5 -right-0.5 h-5.5 w-5.5 sm:h-6 sm:w-6 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-xs group-hover:scale-110 transition-transform duration-300"
+            className="absolute bottom-1 right-0 h-5 w-5 sm:h-6 sm:w-6 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300"
             aria-hidden="true"
           >
             <WhatsAppIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-white" />
