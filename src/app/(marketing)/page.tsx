@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/sections/hero-section";
-import { TrustValueBar } from "@/components/sections/trust-value-bar";
 import { WelcomeSection } from "@/components/sections/welcome-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { PricingPackageSection } from "@/components/sections/pricing-package-section";
@@ -61,9 +60,6 @@ export default function HomePage() {
     <>
       {/* 1. Top Processing Banner Slider */}
       <HeroSection />
-
-      {/* 1.5 Nilai Keunggulan & Penawaran Spesial (Harga Mulai 2 Jt, Gratis Domain & Hosting 1 Th, Custom) */}
-      <TrustValueBar />
 
       {/* 2. Welcome & Company Overview Section */}
       <WelcomeSection />

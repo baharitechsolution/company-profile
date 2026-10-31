@@ -4,12 +4,17 @@ import * as React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { HeroBannerVisual } from "@/components/sections/hero-banner-visual";
 import { WhatsAppIcon } from "@/components/shared/icons";
+
+interface SlideMetric {
+  label: string;
+  value: string;
+  href: string;
+}
 
 const slides = [
   {
@@ -21,11 +26,23 @@ const slides = [
     headingPart2: "lintas platform.",
     description:
       "Pengembangan aplikasi mobile native iOS & Android berkinerja 60 FPS, arsitektur hemat daya, dan siap lolos kurasi resmi di App Store & Google Play.",
-    primaryCta: { text: "Diskusikan Ide Aplikasi", href: "/kontak" },
+    primaryCta: { text: "Diskusikan Ide Aplikasi", href: "/bantuan#konsultasi" },
     whatsappCta: {
       text: "Chat Tim Mobile App",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20ingin%20membuat%20aplikasi%20mobile%20Android%20dan%20iOS.`,
     },
+    metrics: [
+      {
+        label: "Harga Mulai",
+        value: "Mulai 8 Jt-an",
+        href: "#paket-harga",
+      },
+      {
+        label: "Portofolio Rilis",
+        value: "50+ Aplikasi di Store",
+        href: "/portofolio",
+      },
+    ] as SlideMetric[],
     metricLabel: "Kepuasan Klien",
     proofStat: "50+",
     proofLabel: "Aplikasi Sukses Rilis di Store",
@@ -46,11 +63,33 @@ const slides = [
     headingPart2: "yang andal & siap pakai.",
     description:
       "Rekayasa sistem ERP dan software enterprise kustom multi-cabang terintegrasi. Skalabel, bebas lag, dan bergaransi resmi tanpa biaya lisensi berulang.",
-    primaryCta: { text: "Mulai Blueprint Sistem", href: "/kontak" },
+    primaryCta: { text: "Mulai Blueprint Sistem", href: "/bantuan#konsultasi" },
     whatsappCta: {
       text: "Chat Konsultan ERP",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20software%20kustom%20dan%20ERP.`,
     },
+    metrics: [
+      {
+        label: "Harga Mulai",
+        value: "750 Ribu",
+        href: "#paket-harga",
+      },
+      {
+        label: "Dipercaya Lebih Dari",
+        value: "750+ Klien",
+        href: "/portofolio",
+      },
+      {
+        label: "Gratis Domain & Hosting",
+        value: "1 Tahun",
+        href: "#paket-harga",
+      },
+      {
+        label: "Tersedia Layanan",
+        value: "Sistem Custom",
+        href: "/layanan",
+      },
+    ] as SlideMetric[],
     metricLabel: "Kepuasan Klien",
     proofStat: "100k+",
     proofLabel: "Transaksi Harian Tanpa Lag",
@@ -71,11 +110,33 @@ const slides = [
     headingPart2: "berstandar enterprise.",
     description:
       "Platform web bisnis dan SaaS berperforma tinggi dengan Next.js. Waktu muat kilat, ramah SEO Google, dan siap menampung ribuan transaksi serentak.",
-    primaryCta: { text: "Konsultasi Proyek Web", href: "/kontak" },
+    primaryCta: { text: "Konsultasi Proyek Web", href: "/bantuan#konsultasi" },
     whatsappCta: {
       text: "Chat Arsitek Web",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20Web%20Application%20dan%20Portal%20Enterprise.`,
     },
+    metrics: [
+      {
+        label: "Harga Mulai",
+        value: "750 Ribu",
+        href: "#paket-harga",
+      },
+      {
+        label: "Dipercaya Lebih Dari",
+        value: "750+ Klien",
+        href: "/portofolio",
+      },
+      {
+        label: "Gratis Domain & Hosting",
+        value: "1 Tahun",
+        href: "#paket-harga",
+      },
+      {
+        label: "Tersedia Layanan",
+        value: "Website Custom",
+        href: "/layanan",
+      },
+    ] as SlideMetric[],
     metricLabel: "Kepuasan Klien",
     proofStat: "0.6 Detik",
     proofLabel: "Rata-rata Waktu Muat Kilat",
@@ -96,11 +157,23 @@ const slides = [
     headingPart2: "tanpa celah keamanan.",
     description:
       "Arsitektur cloud server elastis berstandar audit OWASP dengan proteksi anti-DDoS 24/7 dan efisiensi biaya server hingga 42% lebih hemat dan stabil.",
-    primaryCta: { text: "Jadwalkan Audit Server", href: "/kontak" },
+    primaryCta: { text: "Jadwalkan Audit Server", href: "/bantuan#konsultasi" },
     whatsappCta: {
       text: "Chat Arsitek Cloud",
       href: `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech,%20saya%20ingin%20konsultasi%20infrastruktur%20cloud%20dan%20keamanan%20server.`,
     },
+    metrics: [
+      {
+        label: "Audit & Cloud Mulai",
+        value: "Konsultasi RAB",
+        href: "#paket-harga",
+      },
+      {
+        label: "Kredibilitas Server",
+        value: "SLA 99.99% Uptime",
+        href: "/portofolio",
+      },
+    ] as SlideMetric[],
     metricLabel: "Kepuasan Klien",
     proofStat: "99.99%",
     proofLabel: "SLA Uptime Cloud Server",
@@ -306,38 +379,32 @@ export function HeroSection() {
                         </Link>
                       </div>
 
-                      {/* Bar Kepercayaan & Kredibilitas Autentik dengan Tech Stack Strip */}
-                      <div className="pt-3 sm:pt-4 space-y-2 border-t border-slate-100">
-                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600">
-                          <div className="flex items-center gap-1.5">
-                            <span className="text-amber-500 font-bold">★ 4.9 / 5.0</span>
-                            <span className="text-slate-400">·</span>
-                            <span>{slide.metricLabel}</span>
-                          </div>
-                          <span className="hidden sm:inline-block text-slate-300">|</span>
-                          <div className="text-slate-700 font-medium">
-                            <span className="font-bold text-[#233876]">{slide.proofStat}</span>{" "}
-                            <span className="text-slate-500">{slide.proofLabel}</span>
-                          </div>
-                          <span className="hidden md:inline-block text-slate-300">|</span>
-                          <div className="flex items-center gap-1.5 text-emerald-700 font-semibold">
-                            <ShieldCheck className="h-4 w-4 text-emerald-600" />
-                            <span>100% Hak Milik IP</span>
-                          </div>
-                        </div>
-
-                        {/* Tech Stack List - Tipografi Bersih (Tanpa Kotak Tag AI) */}
-                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500">
-                          <span className="text-slate-400 font-bold uppercase tracking-wider text-[10px]">
-                            Stack:
-                          </span>
-                          {slide.techStack.map((tech, tIdx) => (
-                            <React.Fragment key={tIdx}>
-                              <span className="text-slate-700 font-medium">{tech}</span>
-                              {tIdx < slide.techStack.length - 1 && (
-                                <span className="text-slate-300 select-none">·</span>
-                              )}
-                            </React.Fragment>
+                      {/* Nilai Keunggulan Dinamis per Slide: Format Tipografi Bersih (Tanpa Card Kotak) */}
+                      <div className="pt-3 sm:pt-4 border-t border-slate-200/80">
+                        <div
+                          className={`grid ${
+                            slide.metrics.length === 2
+                              ? "grid-cols-2 max-w-sm sm:max-w-md sm:divide-x sm:divide-slate-200/90"
+                              : "grid-cols-2 sm:grid-cols-4 gap-y-3 gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-slate-200/90"
+                          }`}
+                        >
+                          {slide.metrics.map((metric, mIdx) => (
+                            <Link
+                              key={mIdx}
+                              href={metric.href}
+                              className={`group text-left transition-colors ${
+                                mIdx === 0
+                                  ? "px-1 sm:pr-4 sm:pl-0"
+                                  : "px-1 sm:px-4"
+                              }`}
+                            >
+                              <span className="block text-[11px] font-medium text-slate-500 group-hover:text-[#1482C2] transition-colors leading-tight">
+                                {metric.label}
+                              </span>
+                              <span className="block text-sm sm:text-base font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors mt-0.5 leading-tight">
+                                {metric.value}
+                              </span>
+                            </Link>
                           ))}
                         </div>
                       </div>
