@@ -29,10 +29,10 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
-        className="group flex items-center gap-2.5 sm:gap-3.5 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
+        className="group flex items-center gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
       >
-        {/* Balon Pesan 1 Baris: Lebih Lega, Jelas, & Mengundang Interaksi */}
-        <div className="bg-white/95 backdrop-blur-xs px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-[0_10px_28px_rgba(0,0,0,0.1)] border border-slate-150 transition-all duration-300 group-hover:shadow-[0_14px_35px_rgba(0,0,0,0.15)] group-hover:border-sky-300">
+        {/* Balon Pesan 1 Baris: Rapi, Bersih, Sesuai Referensi Pengguna */}
+        <div className="bg-white/95 backdrop-blur-xs px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.1)] border border-slate-150 transition-all duration-300 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] group-hover:border-sky-300">
           <div className="flex items-center gap-2 sm:gap-2.5">
             {/* Live Green Online Dot */}
             <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
@@ -41,7 +41,7 @@ export function WhatsAppButton() {
             </span>
 
             {/* Teks Undangan Utama */}
-            <span className="text-[13px] sm:text-[15px] font-bold text-slate-800 tracking-tight whitespace-nowrap">
+            <span className="text-[13px] sm:text-[14.5px] font-bold text-slate-800 tracking-tight whitespace-nowrap">
               Konsultasi disini Yuk
             </span>
 
@@ -52,21 +52,21 @@ export function WhatsAppButton() {
           </div>
         </div>
 
-        {/* 3D Pop-Out Avatar Berukuran Lebih Besar & Tegas */}
-        <div className="relative shrink-0 w-20 h-23 sm:w-24 sm:h-28 lg:w-26 lg:h-30">
-          {/* Visual Karakter Pop-Out Transparan dengan Bayangan Kedalaman 3D */}
-          <div className="relative w-full h-full drop-shadow-[0_12px_24px_rgba(14,116,144,0.32)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_16px_32px_rgba(14,116,144,0.45)]">
+        {/* 3D Pop-Out Avatar: Lingkaran Bersih & Halus Sempurna */}
+        <div className="relative shrink-0 w-[74px] h-[96px] sm:w-[90px] sm:h-[118px] lg:w-[100px] lg:h-[130px]">
+          {/* Visual Karakter Pop-Out Transparan */}
+          <div className="relative w-full h-full drop-shadow-[0_10px_20px_rgba(14,116,144,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_14px_28px_rgba(14,116,144,0.42)]">
             <Image
               src="/images/cs/popout-avatar.png"
               alt="Konsultan CS Bahari Tech Solution"
               fill
-              sizes="(max-width: 640px) 90px, (max-width: 1024px) 110px, 120px"
+              sizes="(max-width: 640px) 90px, (max-width: 1024px) 115px, 130px"
               priority
               className="object-contain object-bottom"
             />
           </div>
 
-          {/* Badge WhatsApp Resmi Lebih Besar & Proporsional */}
+          {/* Badge WhatsApp Resmi di Sudut Kanan Bawah Lingkaran */}
           <span
             className="absolute bottom-1 right-0.5 sm:bottom-1.5 sm:right-1 h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300"
             aria-hidden="true"
