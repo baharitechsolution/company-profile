@@ -115,12 +115,19 @@ export default function ServicesPage() {
                       ))}
                     </div>
 
-                    <Link href={`/kontak?layanan=${encodeURIComponent(service.title)}`}>
+                    <a
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
+                        `Halo Tim Bahari Tech Solution, saya ingin konsultasi mengenai layanan ${service.title}. Mohon informasi alur pengerjaan, estimasi biaya, dan jadwal diskusinya. Terima kasih.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
+                    >
                       <Button variant="primary" className="w-full gap-2">
                         <span>Konsultasikan Kebutuhan Ini</span>
                         <ArrowRight className="h-4 w-4" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

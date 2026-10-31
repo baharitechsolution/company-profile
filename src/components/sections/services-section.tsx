@@ -8,6 +8,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { siteConfig } from "@/config/site";
 
 interface CorporateService {
   id: string;
@@ -19,6 +20,7 @@ interface CorporateService {
   metric: string;
   image: string;
   slug: string;
+  whatsappMessage: string;
 }
 
 const corporateServices: CorporateService[] = [
@@ -33,6 +35,8 @@ const corporateServices: CorporateService[] = [
     metric: "Efisiensi Kerja +75%",
     image: "/images/services/service-erp.jpg",
     slug: "enterprise-system-erp",
+    whatsappMessage:
+      "Halo Tim Bahari Tech Solution, saya ingin konsultasi mengenai implementasi Enterprise ERP & Custom Core Systems untuk digitalisasi operasional bisnis kami. Boleh dibantu informasi alur pengerjaan dan estimasinya? Terima kasih.",
   },
   {
     id: "mobile",
@@ -45,6 +49,8 @@ const corporateServices: CorporateService[] = [
     metric: "Kurasi Store 100%",
     image: "/images/services/service-mobile.jpg",
     slug: "mobile-app-development",
+    whatsappMessage:
+      "Halo Tim Bahari Tech Solution, saya tertarik untuk konsultasi pengembangan Aplikasi Mobile (iOS & Android) untuk bisnis kami. Boleh dibantu estimasi timeline, arsitektur, dan biayanya? Terima kasih.",
   },
   {
     id: "web",
@@ -57,6 +63,8 @@ const corporateServices: CorporateService[] = [
     metric: "Muat Sub-Detik (< 0.8s)",
     image: "/images/services/service-web.jpg",
     slug: "web-development",
+    whatsappMessage:
+      "Halo Tim Bahari Tech Solution, saya ingin konsultasi pembuatan Aplikasi Web Modern / Portal Enterprise berbasis Next.js. Boleh dijadwalkan sesi diskusi kebutuhan teknisnya? Terima kasih.",
   },
   {
     id: "cloud-security",
@@ -69,6 +77,8 @@ const corporateServices: CorporateService[] = [
     metric: "SLA Uptime 99.98%",
     image: "/images/services/service-cloud.jpg",
     slug: "cloud-devops-infrastructure",
+    whatsappMessage:
+      "Halo Tim Bahari Tech Solution, saya ingin berkonsultasi mengenai solusi Infrastruktur Cloud & Keamanan Siber server perusahaan kami. Mohon informasi rekomendasi arsitektur dan penawarannya. Terima kasih.",
   },
 ];
 
@@ -174,26 +184,30 @@ export function ServicesSection() {
                   </div>
                 </div>
 
-                {/* Footer Kartu: Metrik Kunci & Tautan Solusi */}
+                {/* Footer Kartu: Metrik Kunci & Tautan Konsultasi Langsung ke WhatsApp */}
                 <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[11px] font-medium text-slate-600 tracking-tight">
                     {service.metric}
                   </span>
 
-                  <Link
-                    href={`/layanan#${service.slug}`}
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-sky-600 hover:text-sky-700 group-hover:translate-x-0.5 transition-all"
+                  <a
+                    href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
+                      service.whatsappMessage
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-600 hover:text-sky-700 group-hover:translate-x-0.5 transition-all"
+                    aria-label={`Konsultasi WhatsApp untuk ${service.title}`}
                   >
                     <span>Konsultasi</span>
                     <ArrowRight className="h-3 w-3" />
-                  </Link>
+                  </a>
                 </div>
 
               </div>
             ))}
           </div>
         </ScrollReveal>
-
 
       </div>
     </section>
