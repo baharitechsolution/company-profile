@@ -31,24 +31,35 @@ export function WhatsAppButton() {
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
         className="group flex items-center gap-2 sm:gap-3 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
       >
-        {/* Balon Pesan 1 Baris: Rapi, Bersih, Sesuai Referensi Pengguna */}
-        <div className="bg-white/95 backdrop-blur-xs px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.1)] border border-slate-150 transition-all duration-300 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] group-hover:border-sky-300">
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Live Green Online Dot */}
-            <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
+        {/* Balon Pesan Chat Interaktif (Speech Bubble) */}
+        <div className="relative bg-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl shadow-[0_8px_30px_rgba(15,23,42,0.12)] border border-slate-100 transition-all duration-300 group-hover:shadow-[0_12px_36px_rgba(15,23,42,0.18)] group-hover:border-sky-300">
+          {/* Ekor Balon Chat (Speech Bubble Pointer menghadap ke avatar) */}
+          <span
+            className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rotate-45 border-t border-r border-slate-100 transition-colors duration-300 group-hover:border-sky-300 shadow-[2px_-2px_4px_rgba(15,23,42,0.03)]"
+            aria-hidden="true"
+          />
 
-            {/* Teks Undangan Utama */}
-            <span className="text-[13px] sm:text-[14.5px] font-bold text-slate-800 tracking-tight whitespace-nowrap">
-              Konsultasi disini Yuk
-            </span>
+          <div className="relative z-10 flex flex-col gap-0.5">
+            {/* Baris 1: Status Online Real-Time */}
+            <div className="flex items-center gap-1.5">
+              <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-emerald-600 leading-none">
+                ONLINE
+              </span>
+            </div>
 
-            {/* Emoji Lambaian Interaktif */}
-            <span className="text-base sm:text-lg inline-block transition-transform duration-300 group-hover:rotate-12 group-hover:scale-125">
-              👋
-            </span>
+            {/* Baris 2: Teks Ajakan & Emoji */}
+            <div className="flex items-center gap-1.5">
+              <span className="text-[13px] sm:text-[14.5px] font-bold text-slate-800 tracking-tight whitespace-nowrap leading-snug">
+                Konsultasi disini Yuk
+              </span>
+              <span className="text-base sm:text-lg inline-block transition-transform duration-300 group-hover:rotate-12 group-hover:scale-125">
+                👋
+              </span>
+            </div>
           </div>
         </div>
 
