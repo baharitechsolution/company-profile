@@ -4,7 +4,6 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { PricingPackageSection } from "@/components/sections/pricing-package-section";
 import { WhyUsSection } from "@/components/sections/why-us-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
-import { GeoCoverageSection } from "@/components/sections/geo-coverage-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
@@ -74,10 +73,7 @@ export default function HomePage() {
       {/* 6. Studi Kasus & Portofolio */}
       <PortfolioSection />
 
-      {/* 7. Jangkauan Layanan Nasional & Internasional (Geo-Coverage Hub) */}
-      <GeoCoverageSection />
-
-      {/* 8. Tanya Jawab Umum (FAQ) & Schema.org FAQPage SEO */}
+      {/* 7. Tanya Jawab Umum (FAQ) & Schema.org FAQPage SEO */}
       <FaqSection />
     </>
   );
