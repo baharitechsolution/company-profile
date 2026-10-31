@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
-function WhatsAppIcon({ className = "h-4 w-4" }: { className?: string }) {
+function WhatsAppIcon({ className = "h-4.5 w-4.5" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -29,36 +29,49 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
-        className="group flex items-center gap-2 sm:gap-2.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+        className="group flex items-center gap-2.5 sm:gap-3.5 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 cursor-pointer"
       >
-        {/* Balon Pesan: Ramping, Elegan & Bersih Sesuai Referensi Pengguna */}
-        <div className="bg-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] border border-slate-100 transition-all duration-300 group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
-          <span className="text-xs sm:text-[13.5px] font-bold text-slate-700 tracking-tight whitespace-nowrap flex items-center gap-1.5">
-            <span>Konsultasi disini Yuk</span>
-            <span className="inline-block transition-transform duration-300 group-hover:scale-125">👋</span>
-          </span>
+        {/* Balon Pesan 1 Baris: Lebih Lega, Jelas, & Mengundang Interaksi */}
+        <div className="bg-white/95 backdrop-blur-xs px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-[0_10px_28px_rgba(0,0,0,0.1)] border border-slate-150 transition-all duration-300 group-hover:shadow-[0_14px_35px_rgba(0,0,0,0.15)] group-hover:border-sky-300">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Live Green Online Dot */}
+            <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+
+            {/* Teks Undangan Utama */}
+            <span className="text-[13px] sm:text-[15px] font-bold text-slate-800 tracking-tight whitespace-nowrap">
+              Konsultasi disini Yuk
+            </span>
+
+            {/* Emoji Lambaian Interaktif */}
+            <span className="text-base sm:text-lg inline-block transition-transform duration-300 group-hover:rotate-12 group-hover:scale-125">
+              👋
+            </span>
+          </div>
         </div>
 
-        {/* 3D Pop-Out Avatar: Orang Seakan Keluar Menembus Lingkaran */}
-        <div className="relative shrink-0 w-16 h-18 sm:w-20 sm:h-22">
-          {/* Gambar Pop-Out Transparan */}
-          <div className="relative w-full h-full drop-shadow-[0_8px_16px_rgba(14,116,144,0.25)] transition-transform duration-300 group-hover:scale-105">
+        {/* 3D Pop-Out Avatar Berukuran Lebih Besar & Tegas */}
+        <div className="relative shrink-0 w-20 h-23 sm:w-24 sm:h-28 lg:w-26 lg:h-30">
+          {/* Visual Karakter Pop-Out Transparan dengan Bayangan Kedalaman 3D */}
+          <div className="relative w-full h-full drop-shadow-[0_12px_24px_rgba(14,116,144,0.32)] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_16px_32px_rgba(14,116,144,0.45)]">
             <Image
               src="/images/cs/popout-avatar.png"
               alt="Konsultan CS Bahari Tech Solution"
               fill
-              sizes="(max-width: 640px) 70px, 90px"
+              sizes="(max-width: 640px) 90px, (max-width: 1024px) 110px, 120px"
               priority
               className="object-contain object-bottom"
             />
           </div>
 
-          {/* Badge WhatsApp di Sudut Kanan Bawah */}
+          {/* Badge WhatsApp Resmi Lebih Besar & Proporsional */}
           <span
-            className="absolute bottom-1 right-0 h-5 w-5 sm:h-6 sm:w-6 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300"
+            className="absolute bottom-1 right-0.5 sm:bottom-1.5 sm:right-1 h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-md group-hover:scale-110 transition-transform duration-300"
             aria-hidden="true"
           >
-            <WhatsAppIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-white" />
+            <WhatsAppIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-4.5 lg:w-4.5 text-white" />
           </span>
         </div>
       </Link>
