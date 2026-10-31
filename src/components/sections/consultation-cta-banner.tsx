@@ -1,11 +1,13 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { ShieldCheck, Clock, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
+import { ShieldCheck, Clock, CheckCircle2, ArrowRight } from "lucide-react";
 
-function WhatsAppIcon({ className = "h-4.5 w-4.5" }: { className?: string }) {
+function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -19,12 +21,8 @@ function WhatsAppIcon({ className = "h-4.5 w-4.5" }: { className?: string }) {
 }
 
 export function ConsultationCtaBanner() {
-  const messageGusti = encodeURIComponent(
-    "Halo Mas Gusti (Bahari Tech Solution), saya ingin konsultasi rencana pembuatan arsitektur website / software ERP untuk bisnis saya."
-  );
-
-  const messageAjeng = encodeURIComponent(
-    "Halo Mbak Ajeng (Bahari Tech Solution), saya ingin diskusi estimasi biaya & timeline proyek aplikasi mobile / sistem."
+  const whatsappMessage = encodeURIComponent(
+    "Halo Tim Konsultan Bahari Tech Solution, saya ingin konsultasi mengenai rencana pembuatan website / aplikasi / software untuk bisnis kami."
   );
 
   return (
@@ -53,7 +51,7 @@ export function ConsultationCtaBanner() {
 
                 {/* Deskripsi Manusiawi Tanpa Bahasa Template */}
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl">
-                  Diskusikan rencana pembuatan aplikasi web, sistem enterprise ERP, maupun aplikasi mobile bersama tim konsultan rekayasa kami. Kami siap membantu pemetaan kebutuhan teknis, arsitektur sistem, dan estimasi Rencana Anggaran Biaya (RAB) secara transparan tanpa ikatan kontrak awal.
+                  Diskusikan rencana pembuatan aplikasi web, sistem enterprise ERP, maupun aplikasi mobile bersama konsultan resmi kami. Kami siap mendampingi Anda memetakan kebutuhan teknis, arsitektur sistem, dan estimasi Rencana Anggaran Biaya (RAB) secara transparan tanpa ikatan kontrak awal.
                 </p>
 
                 {/* 3 Jaminan Utama Berstandar Mutu (Ikon Lucide Bersih) */}
@@ -73,98 +71,92 @@ export function ConsultationCtaBanner() {
                 </div>
 
                 <div className="pt-1 text-[11px] text-slate-400">
-                  <span>Operasional Resmi: Senin – Jumat, 07:30 – 16:30 WIB · Melayani Konsultasi Daring &amp; Tatap Muka di Kantor Tegal</span>
+                  <span>Operasional Resmi: {siteConfig.contact.hours} · Melayani Konsultasi Daring &amp; Tatap Muka di Kantor Tegal</span>
                 </div>
 
               </div>
 
-              {/* Kolom Kanan (5 Kolom): Meja Konsultan Interaktif (2 Pilihan Jalur WhatsApp Profesional) */}
-              <div className="lg:col-span-5 space-y-3.5">
-                
-                {/* Kartu Konsultan 1: Mas Gusti (Teknis & ERP) */}
-                <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${messageGusti}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-200 cursor-pointer"
-                  title="Konsultasi Arsitektur Sistem & ERP dengan Mas Gusti"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      {/* Avatar Inisial Korporat dengan Status Dot Hijau */}
+              {/* Kolom Kanan (5 Kolom): 1 Meja Admin Konsultan Resmi Tunggal (Konsisten 100% Sesuai Operasional Riil) */}
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-2xs hover:border-[#1482C2] hover:shadow-sm transition-all duration-200 space-y-5">
+                  
+                  {/* Profil Admin Resmi Tunggal */}
+                  <div className="flex items-start justify-between gap-3 pb-4 border-b border-slate-100">
+                    <div className="flex items-center gap-3.5">
+                      {/* Foto Avatar Admin Resmi dengan Indikator Online Hijau */}
                       <div className="relative shrink-0">
-                        <div className="h-11 w-11 rounded-full bg-[#233876] text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-2xs">
-                          GP
+                        <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-[#1482C2]/20 shadow-xs bg-slate-100">
+                          <Image
+                            src="/images/cs/consultant-avatar-clean.png"
+                            alt="Admin Konsultan Resmi CV. Bahari Tech Solution"
+                            width={48}
+                            height={48}
+                            className="h-full w-full object-cover object-top"
+                          />
                         </div>
-                        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
+                        <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
                       </div>
 
-                      {/* Detail Konsultan */}
                       <div>
                         <div className="flex items-center gap-2">
-                          <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1482C2] transition-colors">
-                            Gusti Pratama
+                          <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
+                            Admin Konsultan Resmi
                           </h3>
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-sky-50 text-[#1482C2] border border-sky-100">
-                            Technical Lead
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/70 flex items-center gap-1">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                            Online
                           </span>
                         </div>
                         <p className="text-xs text-slate-500 mt-0.5">
-                          Konsultasi ERP, Web Portal &amp; Arsitektur Cloud
+                          {siteConfig.legalName}
                         </p>
                       </div>
                     </div>
 
-                    {/* Tombol Aksi WhatsApp Hijau Solid */}
-                    <div className="shrink-0 h-9 px-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center gap-1.5 text-xs font-bold shadow-2xs transition-transform group-hover:scale-105">
-                      <WhatsAppIcon className="h-3.5 w-3.5 text-white" />
-                      <span className="hidden sm:inline">Chat</span>
+                    <div className="text-right hidden sm:block">
+                      <span className="text-[11px] text-slate-400 block">WhatsApp Resmi</span>
+                      <span className="text-xs font-mono font-bold text-slate-700">{siteConfig.contact.phone}</span>
                     </div>
                   </div>
-                </a>
 
-                {/* Kartu Konsultan 2: Mbak Ajeng (Estimasi Biaya & Mobile App) */}
-                <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${messageAjeng}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-200 cursor-pointer"
-                  title="Konsultasi Estimasi Biaya & Mobile App dengan Mbak Ajeng"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      {/* Avatar Inisial Korporat dengan Status Dot Hijau */}
-                      <div className="relative shrink-0">
-                        <div className="h-11 w-11 rounded-full bg-[#1482C2] text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-2xs">
-                          AL
-                        </div>
-                        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
-                      </div>
+                  {/* Keterangan Layanan Konsultasi */}
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Siap melayani konsultasi kebutuhan website, sistem ERP, maupun aplikasi Android &amp; iOS. Diskusi langsung 1-on-1 dengan admin resmi tanpa perantara.
+                  </p>
 
-                      {/* Detail Konsultan */}
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1482C2] transition-colors">
-                            Ajeng Lestari
-                          </h3>
-                          <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-100">
-                            Client Solutions
-                          </span>
-                        </div>
-                        <p className="text-xs text-slate-500 mt-0.5">
-                          Konsultasi Estimasi Biaya, UI/UX &amp; Aplikasi Mobile
-                        </p>
-                      </div>
-                    </div>
+                  {/* Topik Konsultasi Populer */}
+                  <div className="flex flex-wrap gap-1.5 text-[11px]">
+                    <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium">Website Bisnis</span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium">Aplikasi Mobile</span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium">Sistem ERP</span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium">Cloud Server</span>
+                  </div>
 
-                    {/* Tombol Aksi WhatsApp Hijau Solid */}
-                    <div className="shrink-0 h-9 px-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center gap-1.5 text-xs font-bold shadow-2xs transition-transform group-hover:scale-105">
-                      <WhatsAppIcon className="h-3.5 w-3.5 text-white" />
-                      <span className="hidden sm:inline">Chat</span>
+                  {/* Tombol Aksi Utama: Chat WhatsApp Admin Tunggal */}
+                  <div className="pt-1 space-y-2.5">
+                    <a
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${whatsappMessage}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm tracking-tight shadow-2xs transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                      aria-label="Konsultasi langsung via WhatsApp dengan Admin Bahari Tech Solution"
+                    >
+                      <WhatsAppIcon className="h-5 w-5 text-white shrink-0" />
+                      <span>Chat WhatsApp Admin</span>
+                    </a>
+
+                    <div className="text-center">
+                      <Link
+                        href="/kontak"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1482C2] hover:text-[#0E6496] transition-colors"
+                      >
+                        <span>Atau ajukan formulir diskusi proyek resmi</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
                     </div>
                   </div>
-                </a>
 
+                </div>
               </div>
 
             </div>
