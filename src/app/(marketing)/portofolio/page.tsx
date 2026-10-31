@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "Lihat implementasi sistem nyata berskala produksi yang dirancang dan dikembangkan oleh CV. Bahari Tech Solution.",
     url: `${siteConfig.url}/portofolio`,
-    siteName: siteConfig.legalName,
+    siteName: siteConfig.name,
     locale: "id_ID",
     type: "website",
   },

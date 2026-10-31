@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  applicationName: siteConfig.legalName,
+  applicationName: siteConfig.name,
   generator: "Next.js",
   formatDetection: {
     email: false,
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: `${siteConfig.name} - Enterprise Software Engineering & Digital Transformation`,
     description: siteConfig.description,
-    siteName: siteConfig.legalName,
+    siteName: siteConfig.name,
     images: [
       {
         url: "/images/kantor/kantor_thumbnail_square.png",
