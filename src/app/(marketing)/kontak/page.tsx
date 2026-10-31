@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description:
       "Hubungi konsultan teknologi kami untuk mendiskusikan roadmap transformasi digital dan pembuatan software kustom Anda.",
     url: `${siteConfig.url}/kontak`,
-    siteName: siteConfig.name,
+    siteName: siteConfig.legalName,
     locale: "id_ID",
     type: "website",
   },

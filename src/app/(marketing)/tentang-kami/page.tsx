@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Profil lengkap software house resmi dengan dedikasi rekayasa bersih, transparansi teknis, dan kepemilikan source code 100%.",
     url: `${siteConfig.url}/tentang-kami`,
-    siteName: siteConfig.name,
+    siteName: siteConfig.legalName,
     locale: "id_ID",
     type: "website",
     images: [

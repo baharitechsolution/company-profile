@@ -144,7 +144,12 @@ export function JsonLd() {
         "@type": "WebSite",
         "@id": `${siteConfig.url}/#website`,
         url: siteConfig.url,
-        name: siteConfig.name,
+        name: siteConfig.legalName,
+        alternateName: [
+          siteConfig.name,
+          siteConfig.shortName,
+          "CV Bahari Tech Solution",
+        ],
         description: siteConfig.description,
         inLanguage: "id-ID",
         primaryImageOfPage: {

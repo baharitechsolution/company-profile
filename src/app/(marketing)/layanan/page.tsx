@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Solusi rekayasa perangkat lunak terintegrasi: Mobile App, Enterprise Web, ERP System, & Cloud Infrastructure.",
     url: `${siteConfig.url}/layanan`,
-    siteName: siteConfig.name,
+    siteName: siteConfig.legalName,
     locale: "id_ID",
     type: "website",
   },
