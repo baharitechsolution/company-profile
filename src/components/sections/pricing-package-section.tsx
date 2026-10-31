@@ -65,7 +65,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Website Profil Usaha Profesional
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   Representasi digital kredibel untuk UMKM, toko, maupun kantor layanan agar resmi terindeks di mesin pencari Google dan terhubung langsung ke WhatsApp.
                 </p>
 
@@ -120,7 +120,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20Paket%20Website%20Profil%20Usaha%20Profesional.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-sm transition-all shadow-2xs"
                 >
                   Konsultasi Paket Ini
                 </a>
@@ -140,7 +140,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Aplikasi Kasir &amp; Toko Online
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   Arsitektur transaksi terpadu: katalog inventaris produk dinamis, pencatatan kasir (POS), kalkulasi ongkos kirim kurir, dan pembayaran digital otomatis.
                 </p>
 
@@ -195,7 +195,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20sistem%20toko%20online%20/%20aplikasi%20kasir.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-[13px] transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
                 >
                   Konsultasi Paket Ini
                 </a>
@@ -211,7 +211,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Sistem ERP &amp; Aplikasi Mobile
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   Pengembangan perangkat lunak kustom berskala penuh, aplikasi mobile iOS &amp; Android (Flutter / React Native), dan sinkronisasi operasional multi-cabang.
                 </p>
 
@@ -266,7 +266,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20kami%20ingin%20mendiskusikan%20kebutuhan%20Sistem%20ERP%20/%20Aplikasi%20Enterprise.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-sm transition-all shadow-2xs"
                 >
                   Ajukan Diskusi RAB
                 </a>
@@ -291,7 +291,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Dedicated Fullstack Developer
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   Embed dedicated senior Indonesian developers directly into your sprint cycle. High velocity, clean code standards, and fluent English sync.
                 </p>
 
@@ -337,7 +337,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20I'm%20interested%20in%20hiring%20a%20dedicated%20offshore%20developer.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-sm transition-all shadow-2xs"
                 >
                   Discuss Developer Hire
                 </a>
@@ -357,7 +357,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Fixed-Scope Product MVP
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   Turn your product concept or wireframe into a production-grade web or mobile application with clearly defined deliverables and milestones.
                 </p>
 
@@ -403,7 +403,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20I'd%20like%20to%20discuss%20a%20Fixed-Scope%20MVP%20software%20project.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-[13px] transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-[#1482C2]/20 hover:shadow-lg hover:shadow-[#1482C2]/25"
                 >
                   Schedule Discovery Call
                 </a>
@@ -419,7 +419,7 @@ export function PricingPackageSection() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   Autonomous Engineering Pod
                 </h3>
-                <p className="mt-2 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                   A self-directed technical pod comprising senior developers, software architects, and QA engineers acting as your complete remote engineering wing.
                 </p>
 
@@ -465,7 +465,7 @@ export function PricingPackageSection() {
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello%20Bahari%20Tech%20Solution,%20we%20want%20to%20discuss%20an%20Offshore%20Engineering%20Pod%20retainer.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-[13px] transition-all shadow-2xs"
+                  className="w-full inline-block text-center py-2.5 px-4 rounded-xl bg-white hover:bg-sky-50 text-[#1482C2] hover:text-[#0E6496] border border-sky-200 hover:border-sky-300 font-semibold text-xs sm:text-sm transition-all shadow-2xs"
                 >
                   Request Technical Deck
                 </a>

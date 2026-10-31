@@ -44,18 +44,18 @@ export function ConsultationCtaBanner() {
                   </span>
                 </div>
 
-                {/* Headline Utama: Tegas, Elegan, & Humanis */}
-                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#233876] tracking-tight leading-tight">
+                {/* Headline Utama: Selaras 100% dengan H2 Standar Website (font-semibold text-slate-900) */}
+                <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 leading-tight tracking-tight">
                   Mulai Konsultasi &amp; Wujudkan Solusi Digital Bisnis Anda
                 </h2>
 
-                {/* Deskripsi Manusiawi Tanpa Bahasa Template */}
-                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl">
+                {/* Deskripsi: Selaras dengan Standar Paragraf Website (text-sm text-slate-600) */}
+                <p className="text-sm text-slate-600 leading-relaxed max-w-2xl">
                   Diskusikan rencana pembuatan aplikasi web, sistem enterprise ERP, maupun aplikasi mobile bersama konsultan resmi kami. Kami siap mendampingi Anda memetakan kebutuhan teknis, arsitektur sistem, dan estimasi Rencana Anggaran Biaya (RAB) secara transparan tanpa ikatan kontrak awal.
                 </p>
 
-                {/* 3 Jaminan Utama Berstandar Mutu (Ikon Lucide Bersih) */}
-                <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700 font-medium">
+                {/* 3 Jaminan Utama Berstandar Mutu (Ikon Lucide Bersih, Tipografi Konsisten) */}
+                <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
                   <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
                     <Clock className="h-4 w-4 text-[#1482C2] shrink-0" aria-hidden="true" />
                     <span>Respons &lt; 15 Menit</span>
@@ -70,7 +70,7 @@ export function ConsultationCtaBanner() {
                   </div>
                 </div>
 
-                <div className="pt-1 text-[11px] text-slate-400">
+                <div className="pt-1 text-[11px] text-slate-500">
                   <span>Operasional Resmi: {siteConfig.contact.hours} · Melayani Konsultasi Daring &amp; Tatap Muka di Kantor Tegal</span>
                 </div>
 
@@ -94,7 +94,7 @@ export function ConsultationCtaBanner() {
                     </div>
 
                     <div>
-                      <h3 className="text-[15px] font-bold text-slate-900 leading-snug">
+                      <h3 className="text-base font-semibold text-slate-900 leading-snug">
                         Admin Konsultan Resmi
                       </h3>
                       <p className="text-xs text-slate-500 mt-0.5">
@@ -122,17 +122,17 @@ export function ConsultationCtaBanner() {
                       href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm tracking-tight shadow-2xs transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2.5 py-3 px-5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shadow-xs"
                       aria-label="Konsultasi langsung via WhatsApp dengan Admin Bahari Tech Solution"
                     >
-                      <WhatsAppIcon className="h-5 w-5 text-white shrink-0" />
+                      <WhatsAppIcon className="h-4.5 w-4.5 text-white shrink-0" />
                       <span>Chat WhatsApp Admin</span>
                     </a>
 
                     <div className="text-center">
                       <Link
                         href="/kontak"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1482C2] hover:text-[#0E6496] transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-[#1482C2] hover:text-[#0E6496] transition-colors"
                       >
                         <span>Atau ajukan formulir diskusi proyek resmi</span>
                         <ArrowRight className="h-3 w-3" />

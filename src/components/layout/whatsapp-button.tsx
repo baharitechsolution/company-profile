@@ -86,7 +86,7 @@ export function WhatsAppButton() {
 
           <div className="relative z-10 flex items-center gap-1.5 sm:gap-2 min-h-[22px]">
             {/* Teks Pesan Mengetik Sendiri - Menggunakan Navy Solid Brand Bahari Tech #233876 */}
-            <span className="text-[13px] sm:text-[14.5px] font-bold text-[#233876] tracking-tight whitespace-nowrap leading-none">
+            <span className="text-xs sm:text-sm font-semibold text-[#233876] tracking-tight whitespace-nowrap leading-none">
               {displayedText}
               {showCursor && (
                 <span

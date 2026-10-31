@@ -51,12 +51,12 @@ export function TrustValueBar() {
                 title={`${item.label}: ${item.value}`}
               >
                 {/* Label Atas: Tipis, Rapi & Elegan */}
-                <span className="text-xs sm:text-[13px] font-medium text-slate-300 tracking-wide mb-1 group-hover:text-sky-200 transition-colors">
+                <span className="text-xs sm:text-sm font-medium text-slate-300 tracking-wide mb-1 group-hover:text-sky-200 transition-colors">
                   {item.label}
                 </span>
 
                 {/* Nilai Utama: Bold, Mantap & Jelas Sesuai Identitas Asli */}
-                <span className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-white tracking-tight leading-tight group-hover:text-sky-300 transition-colors">
+                <span className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-white tracking-tight leading-tight group-hover:text-sky-300 transition-colors">
                   {item.value}
                 </span>
               </Link>
