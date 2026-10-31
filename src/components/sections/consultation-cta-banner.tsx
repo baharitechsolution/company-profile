@@ -1,12 +1,11 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ShieldCheck, Clock, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
 
-function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
+function WhatsAppIcon({ className = "h-4.5 w-4.5" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -21,96 +20,151 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 
 export function ConsultationCtaBanner() {
   const messageGusti = encodeURIComponent(
-    "Halo Mas Gusti (Bahari Tech Solution), saya ingin konsultasi rencana pembuatan website/software untuk bisnis saya."
+    "Halo Mas Gusti (Bahari Tech Solution), saya ingin konsultasi rencana pembuatan arsitektur website / software ERP untuk bisnis saya."
   );
 
   const messageAjeng = encodeURIComponent(
-    "Halo Mbak Ajeng (Bahari Tech Solution), saya ingin diskusi estimasi biaya & timeline proyek aplikasi/sistem."
+    "Halo Mbak Ajeng (Bahari Tech Solution), saya ingin diskusi estimasi biaya & timeline proyek aplikasi mobile / sistem."
   );
 
   return (
-    <section className="py-10 sm:py-12 lg:py-14 bg-white select-none">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white border-t border-slate-200/80 select-none overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal direction="up" delay={0.1}>
-          {/* Kartu Banner Konsultasi Utama - Warna Solid Navy #233876 (100% Solid, Tanpa Gradasi, Konsisten Identitas Brand) */}
-          <div className="relative rounded-3xl bg-[#233876] text-white pt-6 px-6 sm:pt-8 sm:px-8 lg:pt-8 lg:px-10 lg:pb-0 shadow-md border border-[#162752] overflow-hidden">
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
+        <ScrollReveal direction="up" delay={0.05}>
+          {/* Card Wadah Konsultasi Terstruktur - 100% Solid, Bersih, Sesuai Identitas Website */}
+          <div className="rounded-3xl border border-slate-200/90 bg-[#F8FAFC] p-6 sm:p-10 lg:p-12 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
-              {/* Kolom Kiri: Foto Tim Konsultan Teknologi (Rata Bawah Alami Tanpa Floating Badge AI) */}
-              <div className="lg:col-span-4 flex items-end justify-center lg:justify-start -mb-1 lg:mb-0">
-                <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-none h-[220px] sm:h-[260px] lg:h-[290px] xl:h-[310px] flex items-end">
-                  <Image
-                    src="/images/about/cta-consultant-team.png"
-                    alt="Tim Konsultan Rekayasa CV. Bahari Tech Solution"
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 35vw"
-                    priority
-                    className="object-contain object-bottom drop-shadow-[0_8px_16px_rgba(0,0,0,0.25)]"
-                  />
-                </div>
-              </div>
-
-              {/* Kolom Tengah: Teks Ajakan Konsultasi Resmi Berstandar Bahari Tech */}
-              <div className="lg:col-span-5 text-center lg:text-left space-y-3 pb-6 sm:pb-8 lg:pb-8 lg:pt-2">
-                {/* Eyebrow Resmi Korporat Bahari Tech (Garis Biru + Teks Tracking Rapi) */}
-                <div className="flex items-center justify-center lg:justify-start gap-2">
+              {/* Kolom Kiri (7 Kolom): Narasi Kemitraan & Jaminan Nilai Resmi */}
+              <div className="lg:col-span-7 space-y-4">
+                
+                {/* Eyebrow Resmi Bahari Tech */}
+                <div className="flex items-center gap-2">
                   <span className="h-0.5 w-5 bg-[#1482C2]" aria-hidden="true" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-300">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
                     KONSULTASI RESMI · CV. BAHARI TECH SOLUTION
                   </span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-[32px] xl:text-[34px] font-extrabold text-white tracking-tight leading-tight">
-                  Konsultasi Rencana Proyek Gratis
+                {/* Headline Utama: Tegas, Elegan, & Humanis */}
+                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#233876] tracking-tight leading-tight">
+                  Mulai Konsultasi &amp; Wujudkan Solusi Digital Bisnis Anda
                 </h2>
 
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Tim konsultan rekayasa Bahari Tech Solution siap mendengarkan rencana sistem Anda, memetakan arsitektur teknologi terbaik, dan menyusun estimasi Rencana Anggaran Biaya (RAB) transparan tanpa ikatan kontrak awal.
+                {/* Deskripsi Manusiawi Tanpa Bahasa Template */}
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-2xl">
+                  Diskusikan rencana pembuatan aplikasi web, sistem enterprise ERP, maupun aplikasi mobile bersama tim konsultan rekayasa kami. Kami siap membantu pemetaan kebutuhan teknis, arsitektur sistem, dan estimasi Rencana Anggaran Biaya (RAB) secara transparan tanpa ikatan kontrak awal.
                 </p>
 
-                {/* Indikator Kepercayaan Berstandar Mutu (Ikon Lucide CheckCircle2) */}
-                <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-sky-100 font-medium">
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" aria-hidden="true" />
-                    <span>Respons WhatsApp &lt; 15 Menit</span>
+                {/* 3 Jaminan Utama Berstandar Mutu (Ikon Lucide Bersih) */}
+                <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700 font-medium">
+                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                    <Clock className="h-4 w-4 text-[#1482C2] shrink-0" aria-hidden="true" />
+                    <span>Respons &lt; 15 Menit</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" aria-hidden="true" />
-                    <span>Estimasi RAB &amp; Mockup Awal 100% Gratis</span>
+                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" aria-hidden="true" />
+                    <span>Estimasi RAB 100% Gratis</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                    <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" aria-hidden="true" />
+                    <span>Kerahasiaan Ide (NDA)</span>
                   </div>
                 </div>
+
+                <div className="pt-1 text-[11px] text-slate-400">
+                  <span>Operasional Resmi: Senin – Jumat, 07:30 – 16:30 WIB · Melayani Konsultasi Daring &amp; Tatap Muka di Kantor Tegal</span>
+                </div>
+
               </div>
 
-              {/* Kolom Kanan: 2 Tombol WhatsApp Konsultan Resmi (Solid & Kredibel) */}
-              <div className="lg:col-span-3 flex flex-col gap-3 w-full max-w-xs mx-auto lg:max-w-none pb-6 sm:pb-8 lg:pb-8">
+              {/* Kolom Kanan (5 Kolom): Meja Konsultan Interaktif (2 Pilihan Jalur WhatsApp Profesional) */}
+              <div className="lg:col-span-5 space-y-3.5">
                 
-                {/* Tombol Konsultan 1: Solid Hijau WhatsApp Resmi #25D366 */}
+                {/* Kartu Konsultan 1: Mas Gusti (Teknis & ERP) */}
                 <a
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${messageGusti}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs sm:text-sm tracking-tight shadow-xs transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-                  aria-label="Chat WhatsApp CS Gusti"
+                  className="group block rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-200 cursor-pointer"
+                  title="Konsultasi Arsitektur Sistem & ERP dengan Mas Gusti"
                 >
-                  <WhatsAppIcon className="h-4.5 w-4.5 text-white shrink-0" />
-                  <span>Chat CS Gusti</span>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      {/* Avatar Inisial Korporat dengan Status Dot Hijau */}
+                      <div className="relative shrink-0">
+                        <div className="h-11 w-11 rounded-full bg-[#233876] text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-2xs">
+                          GP
+                        </div>
+                        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
+                      </div>
+
+                      {/* Detail Konsultan */}
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1482C2] transition-colors">
+                            Gusti Pratama
+                          </h3>
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-sky-50 text-[#1482C2] border border-sky-100">
+                            Technical Lead
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-500 mt-0.5">
+                          Konsultasi ERP, Web Portal &amp; Arsitektur Cloud
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tombol Aksi WhatsApp Hijau Solid */}
+                    <div className="shrink-0 h-9 px-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center gap-1.5 text-xs font-bold shadow-2xs transition-transform group-hover:scale-105">
+                      <WhatsAppIcon className="h-3.5 w-3.5 text-white" />
+                      <span className="hidden sm:inline">Chat</span>
+                    </div>
+                  </div>
                 </a>
 
-                {/* Tombol Konsultan 2: Solid Putih Korporat Tegas */}
+                {/* Kartu Konsultan 2: Mbak Ajeng (Estimasi Biaya & Mobile App) */}
                 <a
                   href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${messageAjeng}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-white hover:bg-slate-100 text-[#233876] font-bold text-xs sm:text-sm tracking-tight shadow-xs transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer border border-white"
-                  aria-label="Chat WhatsApp CS Ajeng"
+                  className="group block rounded-2xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-200 cursor-pointer"
+                  title="Konsultasi Estimasi Biaya & Mobile App dengan Mbak Ajeng"
                 >
-                  <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
-                  <span>Chat CS Ajeng</span>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      {/* Avatar Inisial Korporat dengan Status Dot Hijau */}
+                      <div className="relative shrink-0">
+                        <div className="h-11 w-11 rounded-full bg-[#1482C2] text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-2xs">
+                          AL
+                        </div>
+                        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-white" aria-hidden="true" />
+                      </div>
+
+                      {/* Detail Konsultan */}
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1482C2] transition-colors">
+                            Ajeng Lestari
+                          </h3>
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-100">
+                            Client Solutions
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-500 mt-0.5">
+                          Konsultasi Estimasi Biaya, UI/UX &amp; Aplikasi Mobile
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tombol Aksi WhatsApp Hijau Solid */}
+                    <div className="shrink-0 h-9 px-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center gap-1.5 text-xs font-bold shadow-2xs transition-transform group-hover:scale-105">
+                      <WhatsAppIcon className="h-3.5 w-3.5 text-white" />
+                      <span className="hidden sm:inline">Chat</span>
+                    </div>
+                  </div>
                 </a>
 
-                <p className="text-[11px] text-center text-slate-300 tracking-tight pt-0.5">
-                  Senin – Jumat: 07:30 – 16:30 WIB
-                </p>
               </div>
 
             </div>
