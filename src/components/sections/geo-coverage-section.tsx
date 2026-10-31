@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { MapPin, Navigation, Building, Globe, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 interface RegionGroup {
   id: string;
   name: string;
   badge: string;
-  icon: typeof MapPin;
   description: string;
   cities: { name: string; popular?: boolean }[];
   highlight: string;
@@ -21,9 +18,8 @@ const regions: RegionGroup[] = [
     id: "pantura",
     name: "Pantura Barat & Karesidenan Pekalongan",
     badge: "Basis Kantor & Tatap Muka",
-    icon: MapPin,
     description: "Wilayah basis operasional kami. Melayani pertemuan tatap muka langsung, survei kantor/toko, dan pendampingan implementasi di lokasi.",
-    highlight: "Konsultasi tatap muka langsung di kantor kami (Tegal) atau tim kami siap berkunjung ke tempat Anda.",
+    highlight: "Konsultasi tatap muka langsung di kantor kami (Tegal) atau tim teknis kami siap berkunjung ke lokasi usaha Anda.",
     cities: [
       { name: "Kota Tegal", popular: true },
       { name: "Kabupaten Tegal (Slawi)", popular: true },
@@ -46,9 +42,8 @@ const regions: RegionGroup[] = [
     id: "jateng-diy",
     name: "Jawa Tengah & D.I. Yogyakarta",
     badge: "Kemitraan Regional",
-    icon: Navigation,
-    description: "Jaringan mitra strategis untuk transformasi digital UMKM, manufaktur, rumah sakit, dan distributor di koridor Jawa Tengah & DIY.",
-    highlight: "Pendampingan sistem offline maupun online dengan SLA uptime 99.98% dan garansi kontrak legal sah.",
+    description: "Jaringan mitra strategis untuk digitalisasi UMKM, distributor, fasilitas kesehatan, dan perusahaan industri di koridor Jawa Tengah & DIY.",
+    highlight: "Pendampingan sistem secara berkala dengan SLA keandalan tinggi dan garansi kontrak legal sah.",
     cities: [
       { name: "Semarang", popular: true },
       { name: "Solo / Surakarta", popular: true },
@@ -74,9 +69,8 @@ const regions: RegionGroup[] = [
     id: "megapolitan",
     name: "Jabodetabek & Kota Besar Jawa",
     badge: "Enterprise & Startup",
-    icon: Building,
-    description: "Pengembangan sistem web application skalabel, integrasi cloud, dan mobile apps untuk korporasi dan startup di kota-kota megapolitan.",
-    highlight: "Kolaborasi agile online via Google Meet/Zoom, pelaporan sprint mingguan, dan kepatuhan NDA ketat.",
+    description: "Pengembangan web application skalabel, infrastruktur cloud modern, dan aplikasi mobile untuk korporasi dan bisnis berkembang.",
+    highlight: "Kolaborasi agile terstruktur via Google Meet/Zoom, pelaporan sprint berkala, dan kepatuhan NDA penuh.",
     cities: [
       { name: "Jakarta Selatan", popular: true },
       { name: "Jakarta Pusat", popular: true },
@@ -100,9 +94,8 @@ const regions: RegionGroup[] = [
     id: "luar-jawa",
     name: "Luar Jawa & Kawasan Strategis",
     badge: "Distribusi Nasional",
-    icon: MapPin,
-    description: "Membantu perusahaan perkebunan, pertambangan, logistik, dan perdagangan di berbagai pulau di Indonesia melakukan automasi sistem.",
-    highlight: "Sistem cloud berstandar failover otomatis yang tetap stabil diakses dari berbagai penjuru tanah air.",
+    description: "Membantu perusahaan logistik, perkebunan, perdagangan, dan manufaktur lintas pulau melakukan sentralisasi sistem digital.",
+    highlight: "Infrastruktur cloud modern berkinerja tinggi yang stabil diakses dari berbagai penjuru tanah air.",
     cities: [
       { name: "Medan", popular: true },
       { name: "Palembang", popular: true },
@@ -122,19 +115,18 @@ const regions: RegionGroup[] = [
   },
   {
     id: "global",
-    name: "Klien Global & Offshore",
+    name: "Klien Global & Mitra Offshore",
     badge: "International Reach",
-    icon: Globe,
-    description: "Layanan staff augmentation dan fixed-scope software engineering untuk startup dan bisnis di luar negeri dengan keunggulan efisiensi biaya.",
-    highlight: "Hemat hingga 70% biaya rekayasa perangkat lunak dengan standar teknologi Silicon Valley dan bahasa Inggris profesional.",
+    description: "Layanan staff augmentation dan fixed-scope software engineering untuk startup dan korporasi internasional dengan keunggulan efisiensi biaya.",
+    highlight: "Standar kode modern (Next.js, TypeScript, Flutter), komunikasi bahasa Inggris profesional, dan penghematan biaya hingga 70%.",
     cities: [
-      { name: "Singapore", popular: true },
+      { name: "Singapura", popular: true },
       { name: "Malaysia (Kuala Lumpur)", popular: true },
       { name: "Australia (Sydney, Melbourne)", popular: true },
-      { name: "United States (California, NY)", popular: true },
-      { name: "United Kingdom (London)", popular: true },
-      { name: "Germany (Berlin)", popular: true },
-      { name: "United Arab Emirates (Dubai)", popular: true },
+      { name: "Amerika Serikat (California, NY)", popular: true },
+      { name: "Inggris (London)", popular: true },
+      { name: "Jerman (Berlin)", popular: true },
+      { name: "Uni Emirat Arab (Dubai)", popular: true },
     ],
   },
 ];
@@ -145,132 +137,122 @@ export function GeoCoverageSection() {
   const currentRegion = regions.find((r) => r.id === activeTab) || regions[0];
 
   return (
-    <section id="jangkauan-layanan" className="py-12 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200/90 select-none overflow-hidden">
+    <section id="jangkauan-layanan" className="py-16 sm:py-20 lg:py-24 bg-slate-50 border-b border-slate-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <ScrollReveal direction="up">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EAF5FC] text-[#1482C2] text-xs font-bold tracking-wider uppercase mb-3 border border-[#1482C2]/20">
-              <MapPin className="w-3.5 h-3.5" />
-              Jangkauan Layanan Nasional &amp; Internasional
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#233876] tracking-tight leading-tight">
-              Melayani Klien di Seluruh Pelosok Kota hingga Mancanegara
-            </h2>
-            <p className="mt-3.5 text-sm sm:text-base text-slate-600 leading-relaxed">
-              Dari kebutuhan website UMKM murah di kota-kota kecil hingga sistem enterprise berskala nasional dan mitra teknologi offshore global.
-            </p>
-          </ScrollReveal>
+        {/* Editorial Header */}
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-semibold tracking-widest text-[#1482C2] uppercase mb-2">
+            Wilayah Operasional &amp; Jangkauan Layanan
+          </p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#233876] tracking-tight">
+            Melayani Klien dari Tingkat Daerah hingga Internasional
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            Berpusat di Tegal, Jawa Tengah. Kami mendampingi proyek mulai dari kebutuhan UMKM lokal hingga sistem korporasi berskala nasional dan mancanegara.
+          </p>
 
-          {/* Region Tabs */}
-          <div className="mt-6 flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+          {/* Simple Tab Control */}
+          <div className="mt-8 flex flex-wrap justify-center gap-1.5 p-1 rounded-lg bg-white border border-slate-200">
             {regions.map((reg) => {
-              const Icon = reg.icon;
               const isActive = activeTab === reg.id;
               return (
                 <button
                   key={reg.id}
                   onClick={() => setActiveTab(reg.id)}
-                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 ${
+                  className={`px-4 py-2 rounded-md text-xs sm:text-sm font-medium transition-all ${
                     isActive
-                      ? "bg-[#233876] text-white shadow-sm"
-                      : "text-slate-600 hover:text-[#233876] hover:bg-slate-50"
+                      ? "bg-[#233876] text-white shadow-xs font-semibold"
+                      : "text-slate-600 hover:text-[#233876]"
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5 shrink-0" />
-                  <span>{reg.name.split("&")[0].trim()}</span>
+                  {reg.name.split("&")[0].trim()}
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* Region Content Card */}
-        <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-sm">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-100">
+        {/* Region Card */}
+        <div className="mt-12 rounded-xl border border-slate-200 bg-white p-7 sm:p-9 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 pb-6 border-b border-slate-100">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#EAF5FC] text-[#1482C2] text-xs font-bold tracking-wide uppercase mb-2">
-                <span>{currentRegion.badge}</span>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#233876]">
+              <span className="text-xs font-semibold text-[#1482C2] tracking-wider uppercase block mb-1">
+                {currentRegion.badge}
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#233876]">
                 {currentRegion.name}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+              <p className="text-xs sm:text-sm text-slate-600 mt-1.5 max-w-2xl leading-relaxed">
                 {currentRegion.description}
               </p>
             </div>
 
             <div className="shrink-0">
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20website%20/%20aplikasi%20untuk%20wilayah%20${encodeURIComponent(currentRegion.name)}.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20layanan%20software%20untuk%20wilayah%20${encodeURIComponent(currentRegion.name)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1482C2] hover:bg-[#0E6496] text-white text-xs sm:text-sm font-bold transition-all shadow-sm"
+                className="inline-block py-2.5 px-5 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs font-semibold transition-colors"
               >
-                <MessageSquare className="w-4 h-4" />
-                <span>Konsultasi Area Ini</span>
+                Konsultasi Wilayah Ini
               </a>
             </div>
           </div>
 
-          {/* Highlight Callout */}
-          <div className="my-5 p-3.5 sm:p-4 rounded-xl bg-blue-50/70 border border-blue-100/80 flex items-start gap-3">
-            <CheckCircle2 className="w-4 h-4 text-[#1482C2] shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-              <strong>Standar Layanan:</strong> {currentRegion.highlight}
-            </p>
+          {/* Service Highlight */}
+          <div className="my-6 p-4 rounded-lg bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <strong className="text-[#233876]">Standar Kerja Sama:</strong> {currentRegion.highlight}
           </div>
 
-          {/* City Tags Grid */}
+          {/* Clean City Pills */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-              Cakupan Wilayah Populer ({currentRegion.cities.length} Kota/Area Terdaftar):
-            </h4>
+            <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
+              Daftar Area Terlayani ({currentRegion.cities.length} Wilayah):
+            </p>
             <div className="flex flex-wrap gap-2">
               {currentRegion.cities.map((city, idx) => (
                 <span
                   key={idx}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                  className={`px-3 py-1.5 rounded-md text-xs font-medium ${
                     city.popular
-                      ? "bg-[#EAF5FC] text-[#233876] border border-[#1482C2]/30 shadow-2xs"
-                      : "bg-slate-50 text-slate-600 border border-slate-200/80"
+                      ? "bg-slate-100 text-[#233876] font-semibold border border-slate-300"
+                      : "bg-slate-50 text-slate-600 border border-slate-200"
                   }`}
                 >
-                  <MapPin className={`w-3 h-3 ${city.popular ? "text-[#1482C2]" : "text-slate-400"}`} />
-                  <span>{city.name}</span>
+                  {city.name}
                 </span>
               ))}
             </div>
           </div>
         </div>
 
-        {/* 3 Pillars of Nationwide Service */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8">
-          <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-            <h5 className="text-sm font-bold text-[#233876] mb-1">
-              🤝 Konsultasi Ramah &amp; Fleksibel
-            </h5>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Tersedia sesi tatap muka langsung untuk wilayah Pantura (Tegal, Brebes, Slawi, Pemalang) dan sesi online video call (Google Meet/Zoom) terjadwal untuk kota lainnya.
+        {/* 3 Simple Principles */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-xs text-slate-600">
+          <div className="p-6 rounded-xl bg-white border border-slate-200">
+            <h4 className="font-bold text-sm text-[#233876] mb-1.5">
+              Konsultasi Tatap Muka &amp; Daring
+            </h4>
+            <p className="leading-relaxed">
+              Tatap muka langsung untuk kawasan Tegal, Brebes, Slawi, Pemalang, dan sekitarnya. Sesi daring terstruktur via video call untuk seluruh kota lain dan internasional.
             </p>
           </div>
 
-          <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-            <h5 className="text-sm font-bold text-[#233876] mb-1">
-              📑 Kontrak SPK &amp; Faktur Pajak Resmi
-            </h5>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Setiap proyek diikat dengan perjanjian hukum resmi CV. Bahari Tech Solution, NDA kerahasiaan data, termin milestone transparan, serta faktur pajak sah.
+          <div className="p-6 rounded-xl bg-white border border-slate-200">
+            <h4 className="font-bold text-sm text-[#233876] mb-1.5">
+              Perjanjian SPK &amp; Faktur Pajak
+            </h4>
+            <p className="leading-relaxed">
+              Setiap proyek dilindungi dokumen SPK resmi berbadan hukum CV, non-disclosure agreement (NDA), termin pembayaran bertahap, dan faktur pajak sah.
             </p>
           </div>
 
-          <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-            <h5 className="text-sm font-bold text-[#233876] mb-1">
-              📦 100% Hak Milik Source Code
-            </h5>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Source code dan hak cipta diserahkan utuh kepada Anda tanpa biaya sewa lisensi tahunan tersembunyi (zero vendor lock-in).
+          <div className="p-6 rounded-xl bg-white border border-slate-200">
+            <h4 className="font-bold text-sm text-[#233876] mb-1.5">
+              100% Hak Milik Source Code
+            </h4>
+            <p className="leading-relaxed">
+              Seluruh source code dan aset digital diserahkan penuh kepada Anda tanpa biaya sewa lisensi tahunan tersembunyi (zero vendor lock-in).
             </p>
           </div>
         </div>
@@ -279,4 +261,3 @@ export function GeoCoverageSection() {
     </section>
   );
 }
-
