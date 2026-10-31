@@ -87,7 +87,7 @@ export function ServicesSection() {
                   Kapasitas Rekayasa &amp; Solusi Bisnis
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 leading-tight tracking-tight">
                 Solusi Perangkat Lunak untuk Segala Skala Bisnis
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -98,7 +98,7 @@ export function ServicesSection() {
             <div className="shrink-0 self-start lg:self-auto">
               <Link
                 href="/layanan"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-[#233876] hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-all group shadow-2xs"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all group shadow-2xs"
               >
                 <span>Lihat Seluruh Katalog Layanan</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
@@ -152,7 +152,7 @@ export function ServicesSection() {
                   </Link>
 
                   {/* Konten Judul & Ringkasan Solusi (Terkontrol Rapi) */}
-                  <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug">
+                  <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 group-hover:text-sky-600 transition-colors leading-snug">
                     <Link href={`/layanan#${service.slug}`}>
                       {service.title}
                     </Link>
@@ -176,13 +176,13 @@ export function ServicesSection() {
 
                 {/* Footer Kartu: Metrik Kunci & Tautan Solusi */}
                 <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] font-bold text-[#233876] tracking-tight">
+                  <span className="text-[11px] font-medium text-slate-600 tracking-tight">
                     {service.metric}
                   </span>
 
                   <Link
                     href={`/layanan#${service.slug}`}
-                    className="inline-flex items-center gap-1 text-[11px] font-bold text-[#1482C2] hover:text-[#0E6496] group-hover:translate-x-0.5 transition-all"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-sky-600 hover:text-sky-700 group-hover:translate-x-0.5 transition-all"
                   >
                     <span>Konsultasi</span>
                     <ArrowRight className="h-3 w-3" />

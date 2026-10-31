@@ -208,7 +208,7 @@ export function FaqSection() {
             <span className="h-0.5 w-5 bg-[#1482C2]" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 tracking-tight leading-tight">
             Pertanyaan yang Sering Diajukan
           </h2>
 
@@ -225,10 +225,10 @@ export function FaqSection() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
                   isActive
-                    ? "bg-[#1482C2] text-white shadow-2xs font-bold"
-                    : "bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-[#233876] border border-slate-200"
+                    ? "bg-slate-900 text-white shadow-2xs"
+                    : "bg-white text-slate-600 hover:bg-slate-50 hover:text-slate-900 border border-slate-200"
                 }`}
               >
                 {cat.label}
@@ -251,8 +251,8 @@ export function FaqSection() {
                   aria-controls={`faq-answer-${faq.id}`}
                 >
                   <span
-                    className={`text-sm sm:text-[15px] font-bold leading-snug transition-colors ${
-                      isOpen ? "text-[#1482C2]" : "text-[#233876] group-hover:text-[#1482C2]"
+                    className={`text-sm sm:text-[15px] font-medium leading-snug transition-colors ${
+                      isOpen ? "text-sky-600" : "text-slate-900 group-hover:text-sky-600"
                     }`}
                   >
                     {faq.question}
@@ -261,7 +261,7 @@ export function FaqSection() {
                   <span
                     className={`h-6 w-6 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 mt-0.5 sm:mt-0 ${
                       isOpen
-                        ? "bg-[#1482C2] text-white rotate-180"
+                        ? "bg-slate-900 text-white rotate-180"
                         : "bg-slate-100 text-slate-400 group-hover:text-slate-600"
                     }`}
                   >

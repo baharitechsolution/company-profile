@@ -50,13 +50,13 @@ export function WelcomeSection() {
             </div>
 
             {/* Headline Utama Berwibawa */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#233876] leading-tight tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-slate-900 leading-tight tracking-tight">
               Mitra Rekayasa Perangkat Lunak &amp; Transformasi Sistem Digital Enterprise
             </h2>
 
             {/* Deskripsi Naratif: 1 Paragraf Padat, Ringan & Nyaman Dibaca */}
             <p className="text-sm text-slate-600 leading-relaxed max-w-2xl">
-              <strong className="font-semibold text-[#233876]">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah. Kami mendampingi korporasi, institusi, dan pelaku usaha dalam rekayasa aplikasi web, sistem enterprise ERP, dan aplikasi mobile dengan arsitektur modern serta jaminan kepemilikan source code 100%.
+              <strong className="font-semibold text-slate-900">{siteConfig.name}</strong> adalah software house dan konsultan teknologi berbadan hukum resmi yang berpusat di Tegal, Jawa Tengah. Kami mendampingi korporasi, institusi, dan pelaku usaha dalam rekayasa aplikasi web, sistem enterprise ERP, dan aplikasi mobile dengan arsitektur modern serta jaminan kepemilikan source code 100%.
             </p>
 
             {/* 3 Jaminan Utama Inline Bersih (Tanpa Kotak-Kotak Bertumpuk) */}
@@ -79,7 +79,7 @@ export function WelcomeSection() {
             <div className="pt-2">
               <Link
                 href="/tentang-kami"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1482C2] hover:text-[#0E6496] transition-colors group"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-sky-600 hover:text-sky-700 transition-colors group"
               >
                 <span>Pelajari legalitas dan profil kami selengkapnya</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
@@ -109,7 +109,7 @@ export function WelcomeSection() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {corporateMetrics.map((metric, idx) => (
               <div key={idx} className="space-y-1">
-                <div className="text-3xl sm:text-4xl font-bold text-[#233876] tracking-tight">
+                <div className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
                   {metric.value}
                 </div>
                 <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">

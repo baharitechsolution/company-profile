@@ -69,7 +69,7 @@ export function WhyUsSection() {
             <span className="h-0.5 w-5 bg-[#1482C2]" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 tracking-tight leading-tight">
             Fondasi Rekayasa untuk Hasil Skala Enterprise
           </h2>
 
@@ -84,7 +84,7 @@ export function WhyUsSection() {
             const Icon = item.icon;
             return (
               <ScrollStaggerItem key={idx}>
-                <div className="group relative flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-3.5 sm:p-4 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 border-t-2 border-t-[#1482C2]/60 hover:border-t-[#1482C2]">
+                <div className="group relative flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-3.5 sm:p-4 shadow-2xs hover:border-slate-300 hover:shadow-xs transition-all duration-300 hover:-translate-y-0.5">
                   <div>
                     {/* Header Kartu Minimalis Editorial: Nomor & Ikon Halus (Tanpa Kotak Warna AI) */}
                     <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
@@ -96,7 +96,7 @@ export function WhyUsSection() {
                     </div>
 
                     {/* Judul & Deskripsi Substantif Kompak */}
-                    <h3 className="text-sm sm:text-[15px] font-bold text-[#233876] mb-1 group-hover:text-[#1482C2] transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-[15px] font-semibold text-slate-900 mb-1 group-hover:text-sky-600 transition-colors leading-snug">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed line-clamp-3">

@@ -19,7 +19,7 @@ export function PortfolioSection() {
                 REKAM JEJAK &amp; STUDI KASUS
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#233876] tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 tracking-tight leading-tight">
               Portofolio Proyek Terkini
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -31,7 +31,7 @@ export function PortfolioSection() {
               <Button
                 variant="outline"
                 size="sm"
-                className="gap-1.5 text-xs font-bold h-9 px-4 border-slate-300 text-slate-700 bg-white hover:bg-[#1482C2] hover:text-white hover:border-[#1482C2] transition-colors shadow-2xs"
+                className="gap-1.5 text-xs font-medium h-9 px-4 border-slate-300 text-slate-700 bg-white hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors shadow-2xs"
               >
                 <span>Semua Proyek</span>
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -44,11 +44,11 @@ export function PortfolioSection() {
         <ScrollStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {portfolioData.slice(0, 6).map((item) => (
             <ScrollStaggerItem key={item.id}>
-              <div className="group flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-[#1482C2] hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+              <div className="group flex flex-col justify-between h-full rounded-xl border border-slate-200/90 bg-white p-4 sm:p-5 shadow-2xs hover:border-slate-300 hover:shadow-xs transition-all duration-300 hover:-translate-y-0.5">
                 <div>
                   {/* Meta Bar: Kategori & Tahun Rilis */}
                   <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-[#EAF5FC] text-[#1482C2] text-[11px] font-semibold tracking-wide">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-sky-50 text-sky-700 text-[11px] font-medium tracking-wide">
                       {item.category}
                     </span>
                     <span className="font-mono text-[11px] font-medium text-slate-400">
@@ -57,7 +57,7 @@ export function PortfolioSection() {
                   </div>
 
                   {/* Judul Proyek */}
-                  <h3 className="text-base sm:text-[17px] font-bold text-[#233876] group-hover:text-[#1482C2] transition-colors leading-snug mt-3 mb-1.5">
+                  <h3 className="text-base sm:text-[17px] font-semibold text-slate-900 group-hover:text-sky-600 transition-colors leading-snug mt-3 mb-1.5">
                     {item.title}
                   </h3>
 
