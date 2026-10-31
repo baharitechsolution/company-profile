@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
-function WhatsAppIcon({ className = "h-7 w-7" }: { className?: string }) {
+function WhatsAppIcon({ className = "h-3.5 w-3.5" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -16,25 +19,62 @@ function WhatsAppIcon({ className = "h-7 w-7" }: { className?: string }) {
 
 export function WhatsAppButton() {
   const message = encodeURIComponent(
-    "Halo Bahari Tech Solution, saya ingin konsultasi kebutuhan pembuatan software/aplikasi."
+    "Halo Bahari Tech Solution, saya ingin konsultasi kebutuhan pembuatan website/software."
   );
 
   return (
-    <div className="fixed bottom-7 right-7 sm:bottom-8 sm:right-8 lg:bottom-9 lg:right-9 z-40 select-none">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-40 select-none">
       <Link
         href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Konsultasi Langsung via WhatsApp CV. Bahari Tech Solution"
-        className="group relative flex h-13 w-13 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(37,211,102,0.4)] hover:bg-[#20ba59] hover:shadow-[0_14px_32px_rgba(37,211,102,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+        aria-label="Konsultasi langsung via WhatsApp dengan Konsultan Bahari Tech Solution"
+        className="group flex items-center gap-2.5 sm:gap-3 transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
       >
-        {/* Tooltip Mengambang Bersih Saat Hover */}
-        <span className="pointer-events-none absolute right-full mr-3 hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900/90 text-white text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
-          Chat WhatsApp Konsultan
-        </span>
+        {/* Balon Pesan: Bersih, Rapi & Elegan */}
+        <div className="relative bg-white/95 backdrop-blur-xs px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl shadow-[0_6px_20px_rgba(0,0,0,0.08)] border border-slate-200/90 transition-all duration-300 group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] group-hover:border-sky-300">
+          <div className="flex items-center gap-1.5 mb-0.5">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-[10px] font-semibold text-emerald-600 uppercase tracking-wider">
+              Online
+            </span>
+          </div>
 
-        {/* Logo WhatsApp Resmi Berwarna Putih Bersih */}
-        <WhatsAppIcon className="h-7 w-7 text-white drop-shadow-xs" />
+          <div className="text-xs sm:text-[13px] font-semibold text-slate-800 tracking-tight whitespace-nowrap flex items-center gap-1">
+            <span>Konsultasi disini Yuk</span>
+            <span className="inline-block transition-transform duration-300 group-hover:rotate-12">👋</span>
+          </div>
+
+          {/* Ekor Balon Menunjuk ke Arah Avatar */}
+          <div className="hidden sm:block absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white border-t border-r border-slate-200/90 rotate-45 group-hover:border-sky-300 transition-colors" />
+        </div>
+
+        {/* Lingkaran Avatar Konsultan CS Gen-Z */}
+        <div className="relative shrink-0">
+          <div className="relative h-13 w-13 sm:h-15 sm:w-15 rounded-full p-0.5 bg-gradient-to-tr from-[#1482C2] via-sky-400 to-sky-200 shadow-[0_6px_20px_rgba(20,130,194,0.35)] transition-shadow duration-300 group-hover:shadow-[0_8px_24px_rgba(20,130,194,0.5)]">
+            <div className="relative h-full w-full rounded-full overflow-hidden bg-white border-2 border-white">
+              <Image
+                src="/images/cs/consultant-avatar.png"
+                alt="Konsultan CS Bahari Tech Solution"
+                fill
+                sizes="(max-width: 640px) 52px, 60px"
+                priority
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+
+          {/* Badge WhatsApp di Sudut Bawah Kanan Avatar */}
+          <span
+            className="absolute -bottom-0.5 -right-0.5 h-5 w-5 sm:h-6 sm:w-6 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-white shadow-xs group-hover:scale-110 transition-transform duration-300"
+            aria-hidden="true"
+          >
+            <WhatsAppIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-white" />
+          </span>
+        </div>
       </Link>
     </div>
   );
