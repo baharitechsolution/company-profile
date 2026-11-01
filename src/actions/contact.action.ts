@@ -2,6 +2,7 @@
 
 import { contactFormSchema, type ContactFormInput } from "@/lib/validations/contact.schema";
 import { ActionResponse } from "@/types";
+import { createLeadFromPublicAction } from "@/actions/leads.action";
 
 // In-Memory Rate Limiting sederhana untuk mencegah spamming bot (maksimal 5 request per menit per IP/session)
 const submissionTimestamps = new Map<string, number[]>();
@@ -29,6 +30,7 @@ function isRateLimited(identifier: string): boolean {
  * 2. Rate Limiting
  * 3. Sanitasi XSS & Payload Injection
  * 4. Error Masking (Tidak membocorkan detail server)
+ * 5. Penyimpanan otomatis ke Database Leads (Supabase / In-Memory Fallback)
  */
 export async function submitContactAction(
   data: ContactFormInput
@@ -36,7 +38,6 @@ export async function submitContactAction(
   try {
     // 1. Anti-Bot Honeypot check
     if (data._security_honeypot && data._security_honeypot.trim().length > 0) {
-      // Bot otomatis mengisi field tersembunyi ini, tolak diam-diam
       console.warn("[SECURITY] Bot terdeteksi mencoba melakukan spam pada contact form.");
       return {
         success: false,
@@ -65,25 +66,24 @@ export async function submitContactAction(
 
     const { fullName, email, phone, company, serviceInterest, message } = parsed.data;
 
-    // 4. Log Terenkripsi / Sanitasi Aman
-    console.log("[SECURE LEAD RECEIVED]:", {
-      fullName,
+    // 4. Simpan langsung ke database Leads
+    const leadResult = await createLeadFromPublicAction({
+      name: fullName,
       email,
       phone,
-      company: company || "-",
-      serviceInterest,
-      messageLength: message.length,
-      timestamp: new Date().toISOString(),
+      company,
+      service: serviceInterest,
+      message,
     });
 
-    // Simulasi respons aman
+    const leadId = leadResult.data?.id || `LEAD-${Date.now()}`;
+
     return {
       success: true,
       message: `Terima kasih Bapak/Ibu ${fullName}, pesan Anda telah kami terima secara aman. Tim konsultan Bahari Tech akan menghubungi Anda dalam waktu 1x24 jam.`,
-      data: { id: `LEAD-${Date.now()}` },
+      data: { id: leadId },
     };
   } catch (error) {
-    // Mencegah kebocoran stack trace ke publik
     console.error("[INTERNAL CONTACT ERROR]:", error);
     return {
       success: false,

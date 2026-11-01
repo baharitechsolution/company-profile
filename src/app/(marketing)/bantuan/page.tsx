@@ -3,7 +3,7 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { siteConfig } from "@/config/site";
-import { Mail, Phone, MapPin, Clock, MessageSquare, HelpCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

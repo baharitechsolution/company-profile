@@ -21,20 +21,14 @@ export function WhatsAppButton() {
   const fullText = "Konsultasi disini Yuk";
   
   // State animasi teks mengetik sendiri (Typewriter effect)
-  const [displayedText, setDisplayedText] = React.useState("Konsultasi disini Yuk");
-  const [showCursor, setShowCursor] = React.useState(false);
-  const [showEmoji, setShowEmoji] = React.useState(true);
+  const [displayedText, setDisplayedText] = React.useState("");
+  const [showCursor, setShowCursor] = React.useState(true);
+  const [showEmoji, setShowEmoji] = React.useState(false);
   
   // State animasi muncul serentak dari bawah ke atas
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
-    // Reset state saat hydrate di browser untuk memulai urutan animasi
-    setDisplayedText("");
-    setShowEmoji(false);
-    setShowCursor(true);
-    setIsMounted(false);
-
     // 1. Animasi avatar (foto, bulat, badge wa) dan balon chat meluncur naik serentak dari bawah ke atas
     const enterTimer = setTimeout(() => {
       setIsMounted(true);
