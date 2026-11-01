@@ -1,6 +1,7 @@
 import { servicesData } from "@/config/services";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -46,8 +47,12 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="py-16 md:py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="bg-white">
+      {/* Standar Breadcrumb Navigasi Seragam */}
+      <Breadcrumbs items={[{ title: "Layanan" }]} />
+
+      <div className="py-12 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
@@ -115,19 +120,30 @@ export default function ServicesPage() {
                       ))}
                     </div>
 
-                    <a
-                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-                        `Halo Tim Bahari Tech Solution, saya ingin konsultasi mengenai layanan ${service.title}. Mohon informasi alur pengerjaan, estimasi biaya, dan jadwal diskusinya. Terima kasih.`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full"
-                    >
-                      <Button variant="primary" className="w-full gap-2">
-                        <span>Konsultasikan Kebutuhan Ini</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </Button>
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-2.5">
+                      <Link
+                        href={service.slug.startsWith("http") || service.slug.includes("#") ? `/layanan/${service.slug}` : `/layanan/${service.slug}`}
+                        className="flex-1"
+                      >
+                        <Button variant="outline" className="w-full gap-2 text-xs font-bold border-slate-300 hover:border-[#1482C2] hover:text-[#1482C2]">
+                          <span>Detail Layanan &amp; Harga</span>
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Button>
+                      </Link>
+
+                      <a
+                        href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
+                          `Halo Tim Bahari Tech Solution, saya ingin konsultasi mengenai layanan ${service.title}. Mohon informasi alur pengerjaan, estimasi biaya, dan jadwal diskusinya. Terima kasih.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1"
+                      >
+                        <Button variant="primary" className="w-full gap-2 text-xs font-bold">
+                          <span>Konsultasi WhatsApp</span>
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -182,7 +198,7 @@ export default function ServicesPage() {
               <span className="h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
               <span>Kantor Operasional: Jalan Tanjung No. 1, Desa Tanjungharja, Kec. Kramat, Tegal</span>
             </div>
-            <Link href="/kontak">
+            <Link href="/bantuan#konsultasi">
               <Button variant="primary" className="gap-2 shrink-0">
                 <span>Jadwalkan Konsultasi di Tegal</span>
                 <ArrowRight className="h-4 w-4" />
@@ -192,5 +208,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }

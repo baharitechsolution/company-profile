@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/sections/contact-form";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { siteConfig } from "@/config/site";
 import { Mail, Phone, MapPin, Clock, MessageSquare, HelpCircle } from "lucide-react";
 import type { Metadata } from "next";
@@ -42,8 +43,11 @@ export const metadata: Metadata = {
 export default function HelpAndContactPage() {
   return (
     <div className="bg-white">
+      {/* Standar Breadcrumb Navigasi Seragam */}
+      <Breadcrumbs items={[{ title: "Bantuan & FAQ" }]} />
+
       {/* 1. Header Halaman Bantuan */}
-      <div className="pt-14 pb-8 sm:pt-20 sm:pb-12 bg-white">
+      <div className="pt-10 pb-8 sm:pt-14 sm:pb-12 bg-white">
         <ScrollReveal
           direction="up"
           delay={0.05}

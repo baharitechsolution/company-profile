@@ -122,7 +122,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs">
               <li>
                 <Link
-                  href="/layanan#web-development"
+                  href="/layanan/website-web-app"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Custom Web Application
@@ -130,7 +130,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan#mobile-app-development"
+                  href="/layanan/aplikasi-mobile"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Mobile App Development
@@ -138,7 +138,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan#enterprise-system-erp"
+                  href="/layanan/sistem-erp-bisnis"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Enterprise ERP &amp; CRM
@@ -146,7 +146,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan#cloud-devops-infrastructure"
+                  href="/layanan/cloud-infrastruktur"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   Cloud &amp; DevOps Architecture
@@ -154,7 +154,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/layanan#ai-data-automation"
+                  href="/layanan/website-web-app#ai-automation"
                   className="text-slate-300 hover:text-white transition-colors block"
                 >
                   AI &amp; Smart Automation

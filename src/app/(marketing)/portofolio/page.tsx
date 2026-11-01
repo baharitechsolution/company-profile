@@ -1,5 +1,6 @@
 import { portfolioData } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { Building2, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -34,9 +35,13 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <div className="py-12 md:py-18 bg-white select-none">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="bg-white select-none">
+      {/* Standar Breadcrumb Navigasi Seragam */}
+      <Breadcrumbs items={[{ title: "Portofolio" }]} />
+
+      <div className="py-12 md:py-18">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="h-0.5 w-6 bg-[#1482C2]" />
@@ -102,7 +107,7 @@ export default function PortfolioPage() {
                 </div>
 
                 <Link
-                  href="/kontak"
+                  href="/bantuan#konsultasi"
                   className="inline-flex items-center gap-1 text-xs font-bold text-[#1482C2] hover:text-[#0E6496] group-hover:translate-x-0.5 transition-all shrink-0"
                   aria-label={`Konsultasi proyek serupa ${project.title}`}
                 >
@@ -115,5 +120,6 @@ export default function PortfolioPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }

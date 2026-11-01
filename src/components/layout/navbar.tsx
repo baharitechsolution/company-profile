@@ -31,25 +31,25 @@ const dropdownServices: DropdownServiceItem[] = [
   {
     title: "Website & Web App",
     desc: "Website profil, web app, & portal modern",
-    href: "/layanan#web-development",
+    href: "/layanan/website-web-app",
     icon: Monitor,
   },
   {
     title: "Aplikasi Mobile",
     desc: "Aplikasi Android & iOS performa tinggi",
-    href: "/layanan#mobile-app-development",
+    href: "/layanan/aplikasi-mobile",
     icon: Smartphone,
   },
   {
     title: "Sistem ERP & Bisnis",
     desc: "Digitalisasi stok, cabang, & keuangan",
-    href: "/layanan#enterprise-system-erp",
+    href: "/layanan/sistem-erp-bisnis",
     icon: Layers,
   },
   {
     title: "Cloud & Infrastruktur",
     desc: "Server andal, aman, & uptime 99.98%",
-    href: "/layanan#cloud-devops-infrastructure",
+    href: "/layanan/cloud-infrastruktur",
     icon: Server,
   },
 ];
@@ -57,7 +57,7 @@ const dropdownServices: DropdownServiceItem[] = [
 const customService = {
   title: "Pesanan Khusus",
   desc: "Custom website & sistem digital bisnis",
-  href: "/kontak?layanan=Pesanan+Khusus",
+  href: "/bantuan#konsultasi",
   icon: Code2,
 };
 

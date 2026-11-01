@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { WhatsAppIcon } from "@/components/shared/icons";
 
 export const metadata: Metadata = {
@@ -218,6 +219,9 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
+
+      {/* Standar Breadcrumb Navigasi Seragam */}
+      <Breadcrumbs items={[{ title: "Tentang Kami" }]} />
       
       {/* 1. OVERVIEW PROFIL PERUSAHAAN (KONSISTEN DENGAN WELCOME-SECTION BERANDA) */}
       <section className="py-8 sm:py-10 lg:py-12 bg-white border-b border-slate-200 overflow-hidden relative select-none">
@@ -230,15 +234,6 @@ export default function AboutPage() {
             <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 flex flex-col justify-between space-y-4">
               
               <div className="space-y-3">
-                {/* Breadcrumb Navigasi Minimalis */}
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 mb-1">
-                  <Link href="/" className="hover:text-[#1482C2] transition-colors">
-                    Beranda
-                  </Link>
-                  <span className="text-slate-300">/</span>
-                  <span className="text-[#1482C2]">Tentang Kami</span>
-                </div>
-
                 {/* Eyebrow Label Korporat Bersih */}
                 <div className="flex items-center gap-2.5">
                   <span className="h-0.5 w-6 bg-[#1482C2]" aria-hidden="true" />
