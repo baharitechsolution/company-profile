@@ -57,7 +57,7 @@ export default function DashboardLayout({
       </div>
 
       {/* Floating White Main Container (Matching reference image) */}
-      <main className="flex-1 bg-white rounded-[26px] sm:rounded-[32px] shadow-2xl shadow-sky-950/5 border border-sky-100/70 p-4 sm:p-6 lg:p-8 flex flex-col h-[calc(100vh-1rem)] sm:h-[calc(100vh-2rem)] lg:h-[calc(100vh-2.5rem)] overflow-y-auto">
+      <main className="flex-1 bg-white rounded-[26px] sm:rounded-[32px] shadow-2xl shadow-sky-950/5 border border-sky-100/70 p-4 sm:p-6 lg:p-8 flex flex-col h-[calc(100vh-1rem)] sm:h-[calc(100vh-2rem)] lg:h-[calc(100vh-2.5rem)] overflow-y-auto no-scrollbar [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <AdminHeader
           onToggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)}
           currentUser={currentUser}

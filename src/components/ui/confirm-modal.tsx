@@ -19,6 +19,7 @@ export interface ConfirmModalProps {
   onConfirm: () => void | Promise<void>;
   title?: string;
   description?: string;
+  message?: string;
   confirmText?: string;
   cancelText?: string;
   variant?: ConfirmVariant;
@@ -30,12 +31,14 @@ export function ConfirmModal({
   onClose,
   onConfirm,
   title = "Konfirmasi Tindakan",
-  description = "Apakah Anda yakin ingin melanjutkan tindakan ini?",
+  description,
+  message,
   confirmText = "Lanjutkan",
   cancelText = "Batal",
   variant = "warning",
   isLoading = false,
 }: ConfirmModalProps) {
+  const modalDescription = description || message || "Apakah Anda yakin ingin melanjutkan tindakan ini?";
   const [internalLoading, setInternalLoading] = useState(false);
 
   // Tutup dengan tombol Escape
@@ -144,7 +147,7 @@ export function ConfirmModal({
 
           {/* Description */}
           <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6 px-2">
-            {description}
+            {modalDescription}
           </p>
 
           {/* Action Buttons */}

@@ -8,9 +8,10 @@ import {
 } from "@/actions/leads.action";
 import { Lead, LeadStatus } from "@/types/admin";
 import { ConfirmModal } from "@/components/ui/confirm-modal";
+import { AdminSearchBar } from "@/components/admin/admin-search-bar";
+import { AdminDataTable, TableColumn } from "@/components/admin/admin-table";
 import {
-  Search,
-  Filter,
+  ChevronDown,
   MessageSquare,
   Building,
   Phone,
@@ -48,25 +49,11 @@ export default function LeadsManagementPage() {
   const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
   const [leadToDelete, setLeadToDelete] = useState<string | null>(null);
 
-  const loadLeads = async () => {
-    setLoading(true);
-    try {
-      const data = await getLeadsAction({
-        status: selectedStatus,
-        search: search.trim() || undefined,
-      });
-      setLeads(data);
-    } catch (err) {
-      console.error("Gagal mengambil daftar leads:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
     let ignore = false;
     getLeadsAction({
       status: selectedStatus,
+      search: search.trim() || undefined,
     }).then((data) => {
       if (!ignore) {
         setLeads(data);
@@ -76,12 +63,7 @@ export default function LeadsManagementPage() {
     return () => {
       ignore = true;
     };
-  }, [selectedStatus]);
-
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    loadLeads();
-  };
+  }, [selectedStatus, search]);
 
   const openLeadDetail = (lead: Lead) => {
     setActiveLead(lead);
@@ -173,6 +155,114 @@ export default function LeadsManagementPage() {
     }
   };
 
+  const leadColumns: TableColumn<Lead>[] = [
+    {
+      key: "client",
+      header: "Klien & Kontak",
+      className: "min-w-[220px]",
+      render: (lead) => (
+        <div>
+          <div className="font-bold text-[#233876] text-sm group-hover:text-[#1482C2] transition-colors">
+            {lead.name}
+          </div>
+          {lead.company && (
+            <div className="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+              <Building className="w-3 h-3 text-slate-400" />
+              <span>{lead.company}</span>
+            </div>
+          )}
+          <div className="text-[11px] text-slate-400 flex items-center gap-3 mt-1">
+            <span className="flex items-center gap-1">
+              <Mail className="w-3 h-3 text-slate-400" />
+              {lead.email}
+            </span>
+            <span className="flex items-center gap-1">
+              <Phone className="w-3 h-3 text-slate-400" />
+              {lead.phone}
+            </span>
+          </div>
+        </div>
+      ),
+    },
+    {
+      key: "service",
+      header: "Layanan & Budget",
+      className: "min-w-[180px]",
+      render: (lead) => (
+        <div>
+          <div className="font-bold text-slate-700">{lead.service}</div>
+          {lead.budget && (
+            <div className="text-[11px] text-[#1482C2] font-extrabold mt-0.5">
+              {lead.budget}
+            </div>
+          )}
+        </div>
+      ),
+    },
+    {
+      key: "message",
+      header: "Pesan Klien",
+      className: "max-w-xs",
+      render: (lead) => (
+        <div>
+          <p className="text-slate-600 text-xs line-clamp-2 leading-relaxed">
+            {lead.message}
+          </p>
+          {lead.notes && (
+            <div className="mt-1 text-[10px] text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 inline-block truncate max-w-xs font-medium">
+              Catatan: {lead.notes}
+            </div>
+          )}
+        </div>
+      ),
+    },
+    {
+      key: "status",
+      header: "Status",
+      className: "whitespace-nowrap",
+      render: (lead) => getStatusBadge(lead.status),
+    },
+    {
+      key: "created_at",
+      header: "Waktu Masuk",
+      className: "text-slate-400 text-[11px] whitespace-nowrap",
+      render: (lead) =>
+        new Date(lead.created_at).toLocaleDateString("id-ID", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+    },
+    {
+      key: "actions",
+      header: "Aksi",
+      align: "right",
+      className: "whitespace-nowrap",
+      render: (lead) => (
+        <div
+          className="flex items-center justify-end gap-1.5"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={() => openLeadDetail(lead)}
+            className="px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-[#1482C2] text-[#1482C2] hover:text-white font-bold text-xs transition-all shadow-sm cursor-pointer"
+          >
+            Detail
+          </button>
+          <button
+            onClick={() => setLeadToDelete(lead.id)}
+            className="p-1.5 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
+            title="Hapus Lead"
+          >
+            <Trash2 className="w-4 h-4" />
+          </button>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -192,176 +282,63 @@ export default function LeadsManagementPage() {
       </div>
 
       {/* Filter and Search Box */}
-      <div className="bg-white rounded-3xl p-5 border border-slate-100 shadow-sm space-y-4">
-        {/* Search Input */}
-        <form onSubmit={handleSearchSubmit} className="flex gap-2.5">
-          <div className="relative flex-1">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Cari berdasarkan nama, perusahaan, email, atau telepon..."
-              className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#1482C2] focus:bg-white transition-all"
-            />
-          </div>
-          <button
-            type="submit"
-            className="px-5 py-2.5 rounded-2xl bg-[#1482C2] hover:bg-[#0E6496] text-white font-bold text-xs sm:text-sm transition-colors cursor-pointer shadow-md shadow-sky-500/15"
-          >
-            Cari
-          </button>
-        </form>
+      <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        {/* Search Bar Partial */}
+        <div className="flex-1 max-w-xl">
+          <AdminSearchBar
+            placeholder="Cari berdasarkan nama, perusahaan, email, atau telepon..."
+            paramName="q"
+            onSearch={(val) => {
+              setSearch(val);
+              getLeadsAction({
+                status: selectedStatus,
+                search: val.trim() || undefined,
+              }).then(setLeads);
+            }}
+            onReset={() => {
+              setSearch("");
+              getLeadsAction({
+                status: selectedStatus,
+              }).then(setLeads);
+            }}
+          />
+        </div>
 
-        {/* Status Filter Badges */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-          <span className="text-slate-400 text-[11px] font-bold flex items-center gap-1 mr-1.5">
-            <Filter className="w-3.5 h-3.5 text-[#1482C2]" />
-            <span>Status:</span>
-          </span>
-          {STATUS_OPTIONS.map((opt) => (
-            <button
-              key={opt.value}
-              onClick={() => setSelectedStatus(opt.value)}
-              className={`px-3.5 py-1.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
-                selectedStatus === opt.value
-                  ? "bg-[#233876] text-white shadow-md shadow-navy/20"
-                  : "bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/70"
-              }`}
-            >
-              {opt.label}
-            </button>
-          ))}
+        {/* Dropdown Filter Status */}
+        <div className="relative shrink-0">
+          <select
+            id="leadsStatusFilter"
+            aria-label="Filter Berdasarkan Status Prospek"
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value as LeadStatus | "ALL")}
+            className="appearance-none pl-3.5 pr-8 py-2.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 text-xs font-bold text-[#233876] focus:outline-none focus:border-[#1482C2] focus:ring-2 focus:ring-[#1482C2]/15 cursor-pointer shadow-2xs transition-all"
+          >
+            {STATUS_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.value === "ALL" ? "Semua Status Prospek" : `Status: ${opt.label}`}
+              </option>
+            ))}
+          </select>
+          <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
       </div>
 
-      {/* Leads Table */}
-      <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm">
-        {loading ? (
-          <div className="py-20 text-center text-xs text-slate-400 flex flex-col items-center justify-center gap-2">
-            <Loader2 className="w-6 h-6 animate-spin text-[#1482C2]" />
-            <span>Memuat data prospek...</span>
-          </div>
-        ) : leads.length === 0 ? (
-          <div className="py-20 text-center text-xs text-slate-400">
-            Tidak ada prospek yang sesuai dengan kriteria pencarian ini.
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead className="bg-slate-50/70 border-b border-slate-100 text-slate-400 uppercase text-[10px] tracking-wider">
-                <tr>
-                  <th className="py-4 px-5 font-bold">Klien & Kontak</th>
-                  <th className="py-4 px-5 font-bold">Layanan & Budget</th>
-                  <th className="py-4 px-5 font-bold">Pesan Klien</th>
-                  <th className="py-4 px-5 font-bold">Status</th>
-                  <th className="py-4 px-5 font-bold">Waktu Masuk</th>
-                  <th className="py-4 px-5 font-bold text-right">Aksi</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {leads.map((lead) => (
-                  <tr
-                    key={lead.id}
-                    className="hover:bg-slate-50/80 transition-colors cursor-pointer group"
-                    onClick={() => openLeadDetail(lead)}
-                  >
-                    {/* Klien */}
-                    <td className="py-4 px-5 min-w-[220px]">
-                      <div className="font-bold text-[#233876] text-sm group-hover:text-[#1482C2] transition-colors">
-                        {lead.name}
-                      </div>
-                      {lead.company && (
-                        <div className="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
-                          <Building className="w-3 h-3 text-slate-400" />
-                          <span>{lead.company}</span>
-                        </div>
-                      )}
-                      <div className="text-[11px] text-slate-400 flex items-center gap-3 mt-1">
-                        <span className="flex items-center gap-1">
-                          <Mail className="w-3 h-3 text-slate-400" />
-                          {lead.email}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Phone className="w-3 h-3 text-slate-400" />
-                          {lead.phone}
-                        </span>
-                      </div>
-                    </td>
-
-                    {/* Layanan & Budget */}
-                    <td className="py-4 px-5 min-w-[180px]">
-                      <div className="font-bold text-slate-700">
-                        {lead.service}
-                      </div>
-                      {lead.budget && (
-                        <div className="text-[11px] text-[#1482C2] font-extrabold mt-0.5">
-                          {lead.budget}
-                        </div>
-                      )}
-                    </td>
-
-                    {/* Pesan */}
-                    <td className="py-4 px-5 max-w-xs">
-                      <p className="text-slate-600 text-xs line-clamp-2 leading-relaxed">
-                        {lead.message}
-                      </p>
-                      {lead.notes && (
-                        <div className="mt-1 text-[10px] text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 inline-block truncate max-w-xs font-medium">
-                          Catatan: {lead.notes}
-                        </div>
-                      )}
-                    </td>
-
-                    {/* Status */}
-                    <td className="py-4 px-5 whitespace-nowrap">
-                      {getStatusBadge(lead.status)}
-                    </td>
-
-                    {/* Waktu Masuk */}
-                    <td className="py-4 px-5 text-slate-400 text-[11px] whitespace-nowrap">
-                      {new Date(lead.created_at).toLocaleDateString("id-ID", {
-                        day: "numeric",
-                        month: "short",
-                        year: "numeric",
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
-                    </td>
-
-                    {/* Aksi */}
-                    <td
-                      className="py-4 px-5 text-right whitespace-nowrap"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <div className="flex items-center justify-end gap-1.5">
-                        <button
-                          onClick={() => openLeadDetail(lead)}
-                          className="px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-[#1482C2] text-[#1482C2] hover:text-white font-bold text-xs transition-all shadow-sm cursor-pointer"
-                        >
-                          Detail
-                        </button>
-                        <button
-                          onClick={() => setLeadToDelete(lead.id)}
-                          className="p-1.5 rounded-xl text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
-                          title="Hapus Lead"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
+      {/* Standardized Admin Data Table */}
+      <AdminDataTable
+        columns={leadColumns}
+        data={leads}
+        keyExtractor={(lead) => lead.id}
+        isLoading={loading}
+        loadingMessage="Memuat data prospek..."
+        emptyMessage="Tidak ada prospek yang sesuai dengan kriteria pencarian ini."
+        emptySubMessage="Coba ubah status filter atau kata kunci pencarian Anda."
+        onRowClick={openLeadDetail}
+      />
 
       {/* Modal Detail Prospek */}
       {activeLead && (
         <div className="fixed inset-0 z-50 bg-[#233876]/40 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white border border-slate-100 rounded-[32px] w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 relative">
+          <div className="bg-white border border-slate-100 rounded-[32px] w-full max-w-2xl max-h-[90vh] overflow-y-auto no-scrollbar [scrollbar-width:none] [&::-webkit-scrollbar]:hidden shadow-2xl p-6 sm:p-8 relative">
             {/* Close Button */}
             <button
               onClick={() => setActiveLead(null)}

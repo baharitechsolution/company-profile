@@ -7,13 +7,10 @@ import { loginAdminAction } from "@/actions/auth.action";
 import {
   Mail,
   Lock,
-  ArrowRight,
   Loader2,
   AlertCircle,
   Eye,
   EyeOff,
-  Shield,
-  LockKeyhole,
 } from "lucide-react";
 
 export default function AdminLoginPage() {

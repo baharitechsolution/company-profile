@@ -39,23 +39,20 @@ export default function PortfolioPage() {
       {/* Standar Breadcrumb Navigasi Seragam */}
       <Breadcrumbs items={[{ title: "Portofolio" }]} />
 
-      <div className="py-12 md:py-18">
+      <div className="py-8 md:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="h-0.5 w-6 bg-[#1482C2]" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
-              REKAM JEJAK &amp; HASIL KERJA
+              Portofolio Unggulan
             </span>
             <span className="h-0.5 w-6 bg-[#1482C2]" />
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#233876]">
-            Studi Kasus &amp; Implementasi Sistem Enterprise
+          <h1 className="text-3xl font-bold tracking-tight text-[#233876]">
+            Solusi digital yang dibuat untuk dampak nyata pada bisnis
           </h1>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Daftar solusi perangkat lunak strategis yang telah kami rancang, bangun, dan deploy ke lingkungan produksi untuk berbagai sektor bisnis di Indonesia.
-          </p>
         </div>
 
         {/* Portfolio Grid: Bersih, Rapi & Elegan */}

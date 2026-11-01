@@ -47,7 +47,7 @@ export default function HelpAndContactPage() {
       <Breadcrumbs items={[{ title: "Bantuan & FAQ" }]} />
 
       {/* 1. Header Halaman Bantuan */}
-      <div className="pt-10 pb-8 sm:pt-14 sm:pb-12 bg-white">
+      <div className="pt-10 pb-4 bg-white">
         <ScrollReveal
           direction="up"
           delay={0.05}
@@ -60,12 +60,9 @@ export default function HelpAndContactPage() {
             </span>
             <span className="h-0.5 w-5 bg-[#1482C2]" />
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#233876]">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#233876]">
             Ada yang Bisa Kami Bantu?
           </h1>
-          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Temukan jawaban langsung melalui daftar pertanyaan yang sering diajukan di bawah ini, atau lanjutkan ke sesi konsultasi dan diskusi proyek langsung bersama tim konsultan kami.
-          </p>
         </ScrollReveal>
       </div>
 
@@ -80,7 +77,7 @@ export default function HelpAndContactPage() {
       </section>
 
       {/* 3. SECTION 2: KONSULTASI & DISKUSI */}
-      <section id="konsultasi" className="py-14 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80 scroll-mt-20">
+      <section id="konsultasi" className="py-10 bg-white scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <div className="inline-flex items-center justify-center gap-2 mb-2">
@@ -90,12 +87,9 @@ export default function HelpAndContactPage() {
               </span>
               <span className="h-0.5 w-5 bg-[#1482C2]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#233876]">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[#233876]">
               Wujudkan Transformasi Sistem Digital Anda
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600">
-              Kirimkan rincian kebutuhan Anda melalui formulir terenkripsi di bawah atau hubungi tim konsultan kami via WhatsApp resmi.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">

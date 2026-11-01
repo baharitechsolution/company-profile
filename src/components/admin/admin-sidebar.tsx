@@ -7,12 +7,10 @@ import {
   BarChart2,
   Inbox,
   Users,
-  Briefcase,
-  Layers,
-  Globe,
   LogOut,
   ChevronRight,
   Shield,
+  HelpCircle,
 } from "lucide-react";
 import { logoutAdminAction, getAdminSessionAction } from "@/actions/auth.action";
 import { AdminUser } from "@/types/admin";
@@ -57,28 +55,16 @@ export function AdminSidebar({ onCloseMobile, currentUser: initialUser }: AdminS
       active: pathname === "/admin/leads",
     },
     {
+      label: "Manajemen FAQ",
+      href: "/admin/faqs",
+      icon: HelpCircle,
+      active: pathname === "/admin/faqs",
+    },
+    {
       label: "Manajemen User",
       href: "/admin/users",
       icon: Users,
       active: pathname === "/admin/users",
-    },
-  ];
-
-  const externalLinks = [
-    {
-      label: "Katalog Layanan",
-      href: "/layanan",
-      icon: Layers,
-    },
-    {
-      label: "Portofolio Proyek",
-      href: "/portofolio",
-      icon: Briefcase,
-    },
-    {
-      label: "Website Utama",
-      href: "/#beranda",
-      icon: Globe,
     },
   ];
 

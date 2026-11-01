@@ -276,6 +276,70 @@ export async function createAdminUserAction(data: {
   }
 }
 
+export async function updateAdminUserAction(
+  userId: string,
+  data: {
+    full_name: string;
+    role: AdminRole;
+    email?: string;
+  }
+): Promise<ActionResponse<AdminUser>> {
+  try {
+    const supabase = await createClient();
+
+    if (supabase) {
+      const updatePayload: Record<string, unknown> = {
+        full_name: data.full_name,
+        role: data.role,
+        updated_at: new Date().toISOString(),
+      };
+      if (data.email) {
+        updatePayload.email = data.email;
+      }
+
+      const { data: updated, error } = await supabase
+        .from("profiles")
+        .update(updatePayload)
+        .eq("id", userId)
+        .select()
+        .single();
+
+      if (!error && updated) {
+        return {
+          success: true,
+          message: "Data profil admin berhasil diperbarui.",
+          data: updated as AdminUser,
+        };
+      }
+    }
+
+    // Demo store fallback
+    const idx = demoUsersStore.findIndex((u) => u.id === userId);
+    if (idx === -1) {
+      return { success: false, message: "Pengguna tidak ditemukan." };
+    }
+
+    demoUsersStore[idx] = {
+      ...demoUsersStore[idx],
+      full_name: data.full_name,
+      role: data.role,
+      email: data.email || demoUsersStore[idx].email,
+      updated_at: new Date().toISOString(),
+    };
+
+    return {
+      success: true,
+      message: "Data admin berhasil diperbarui.",
+      data: demoUsersStore[idx],
+    };
+  } catch (err: unknown) {
+    return {
+      success: false,
+      message: err instanceof Error ? err.message : "Gagal memperbarui admin.",
+    };
+  }
+}
+
 export async function deleteAdminUserAction(userId: string): Promise<ActionResponse<null>> {
   try {
     const supabase = await createClient();
