@@ -1,8 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import {
-  ArrowRight,
   ShieldCheck,
   Code2,
   FileCheck2,
@@ -20,7 +18,7 @@ import {
 import { siteConfig } from "@/config/site";
 import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
-import { WhatsAppIcon } from "@/components/shared/icons";
+import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
 
 export const metadata: Metadata = {
   title: "Profil Perusahaan dan Legalitas",
@@ -172,8 +170,6 @@ const companyStats = [
 ];
 
 export default function AboutPage() {
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=Halo%20Bahari%20Tech%20Solution,%20saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20pembuatan%20software%20dan%20sistem%20digital.`;
-
   // Schema.org AboutPage & BreadcrumbList Data Terstruktur untuk Google SEO Rich Snippets
   const aboutSchema = {
     "@context": "https://schema.org",
@@ -555,54 +551,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. AJAKAN KONSULTASI LANGSUNG (CLOSING BANNER SEJAJAR & BERSIH) */}
-      <section className="py-7 sm:py-9 lg:py-11 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" delay={0.05}>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 lg:gap-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 p-6 sm:p-8">
-              
-              <div className="max-w-2xl space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="h-0.5 w-5 bg-[#1482C2]" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
-                    Mulai Diskusi Teknologi
-                  </span>
-                </div>
-
-                <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-[#233876] tracking-tight leading-tight">
-                  Siap Membangun Sistem Digital Berkualitas Bersama Kami?
-                </h2>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                  Diskusikan rancangan arsitektur software, estimasi waktu pengerjaan, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama software engineer Bahari Tech Solution.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
-                <Link href="/kontak" className="w-full sm:w-auto">
-                  <span className="w-full sm:w-auto h-11 px-6 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-xs cursor-pointer">
-                    <span>Ajukan Konsultasi &amp; RAB</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </Link>
-
-                <Link
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
-                  <span className="w-full sm:w-auto h-11 px-5 rounded-lg bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-2xs cursor-pointer">
-                    <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
-                    <span>Chat Tim Engineer</span>
-                  </span>
-                </Link>
-              </div>
-
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* 5. AJAKAN KONSULTASI LANGSUNG (CLOSING BANNER UNIFIED CTA) */}
+      <UnifiedCtaBanner
+        eyebrow="Mulai Diskusi Teknologi"
+        title="Siap Membangun Sistem Digital Berkualitas Bersama Kami?"
+        description="Diskusikan rancangan arsitektur software, estimasi waktu pengerjaan, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama software engineer Bahari Tech Solution."
+        whatsappMessage="Halo Bahari Tech Solution, saya ingin konsultasi mengenai kebutuhan pembuatan software dan sistem digital."
+        consultationLink="/kontak"
+        consultationButtonText="Ajukan Konsultasi & RAB"
+        whatsappButtonText="Chat Tim Engineer"
+      />
 
     </div>
   );

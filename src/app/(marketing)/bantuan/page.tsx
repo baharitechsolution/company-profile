@@ -2,6 +2,7 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
+import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
 import { siteConfig } from "@/config/site";
 import { Mail, Phone, MapPin, Clock, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
@@ -202,6 +203,17 @@ export default function HelpAndContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Section CTA Konsultasi Langsung */}
+      <UnifiedCtaBanner
+        eyebrow="KONSULTASI TEKNIS LANGSUNG"
+        title="Masih Punya Pertanyaan atau Butuh Konsultasi Teknis Khusus?"
+        description="Tim engineer dan analis sistem kami siap membantu menjawab pertanyaan Anda, memetakan spesifikasi teknis proyek, serta memberikan kalkulasi Rencana Anggaran Biaya (RAB) resmi secara transparan."
+        whatsappMessage="Halo Tim Engineer Bahari Tech Solution, saya membutuhkan bantuan informasi dan konsultasi mengenai kebutuhan proyek software kami."
+        consultationLink="#konsultasi"
+        consultationButtonText="Ajukan Formulir Konsultasi"
+        whatsappButtonText="Chat Tim Engineer"
+      />
     </div>
   );
 }

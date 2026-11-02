@@ -2,6 +2,7 @@ import { servicesData } from "@/config/services";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
+import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -207,6 +208,17 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
+
+      {/* CTA Section Terpadu */}
+      <UnifiedCtaBanner
+        eyebrow="KONSULTASI LAYANAN TEKNOLOGI"
+        title="Punya Kebutuhan Solusi Digital Spesifik untuk Bisnis Anda?"
+        description="Konsultasikan kebutuhan pembuatan website modern, aplikasi mobile Android & iOS, sistem enterprise ERP, atau arsitektur cloud server bersama software engineer kami. Kami siap menyusun arsitektur sistem dan estimasi RAB transparan."
+        whatsappMessage="Halo Tim Engineer Bahari Tech Solution, saya ingin konsultasi mengenai kebutuhan layanan teknologi untuk bisnis kami."
+        consultationLink="/kontak"
+        consultationButtonText="Ajukan Konsultasi & RAB"
+        whatsappButtonText="Chat Tim Engineer"
+      />
     </div>
   </div>
   );

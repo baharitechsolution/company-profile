@@ -5,40 +5,42 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { ShieldCheck, Clock, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/shared/icons";
 
-interface UnifiedCtaBannerProps {
+export interface UnifiedCtaBannerProps {
   eyebrow?: string;
   title?: string;
   description?: string;
   whatsappMessage?: string;
-  consultantRole?: string;
-  consultantName?: string;
-  topics?: string[];
+  consultationLink?: string;
+  consultationButtonText?: string;
+  whatsappButtonText?: string;
+  imageAlt?: string;
   className?: string;
 }
 
 export function UnifiedCtaBanner({
-  eyebrow = "KONSULTASI RESMI · CV. BAHARI TECH SOLUTION",
-  title = "Mulai Konsultasi & Wujudkan Solusi Digital Bisnis Anda",
-  description = "Diskusikan rencana pembuatan aplikasi web, sistem enterprise ERP, maupun aplikasi mobile bersama konsultan resmi kami. Kami siap mendampingi Anda memetakan kebutuhan teknis, arsitektur sistem, dan estimasi Rencana Anggaran Biaya (RAB) secara transparan tanpa ikatan kontrak awal.",
-  whatsappMessage = "Halo Tim Konsultan Bahari Tech Solution, saya ingin konsultasi mengenai rencana pembuatan website / aplikasi / software untuk bisnis kami.",
-  consultantRole = "Admin Konsultan Resmi",
-  consultantName = siteConfig.legalName,
-  topics = ["Website Bisnis", "Aplikasi Mobile", "Sistem ERP", "Cloud Server"],
+  eyebrow = "Mulai Diskusi Teknologi",
+  title = "Siap Membangun Sistem Digital Berkualitas Bersama Kami?",
+  description = "Diskusikan rancangan arsitektur software, estimasi waktu pengerjaan, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama software engineer Bahari Tech Solution.",
+  whatsappMessage = "Halo Bahari Tech Solution, saya ingin konsultasi mengenai kebutuhan pembuatan software dan sistem digital.",
+  consultationLink = "/kontak",
+  consultationButtonText = "Ajukan Konsultasi & RAB",
+  whatsappButtonText = "Chat Tim Engineer",
+  imageAlt = "Konsultan Rekayasa Perangkat Lunak CV. Bahari Tech Solution",
   className = "",
 }: UnifiedCtaBannerProps) {
-  const encodedWhatsapp = encodeURIComponent(whatsappMessage);
+  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   return (
-    <section className={`py-12 sm:py-16 lg:py-20 bg-white border-t border-slate-200/80 select-none overflow-hidden ${className}`}>
+    <section className={`py-10 sm:py-14 lg:py-16 bg-white border-t border-slate-100 select-none overflow-hidden ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal direction="up" delay={0.05}>
-          {/* Card Wadah Konsultasi Terstruktur */}
-          <div className="relative rounded-3xl border border-slate-200/90 bg-[#F8FAFC] p-6 sm:p-10 lg:p-12 shadow-xs overflow-hidden">
-            
-            {/* Ambient Background Glows */}
+          <div className="relative rounded-3xl bg-slate-50/80 border border-slate-200/90 p-6 sm:p-10 lg:p-12 overflow-hidden shadow-xs">
+            {/* Ambient background glows */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-gradient-to-bl from-[#0EB8D8]/10 via-[#1482C2]/5 to-transparent blur-3xl -z-10"
@@ -49,118 +51,143 @@ export function UnifiedCtaBanner({
             />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              
-              {/* Kolom Kiri (7 Kolom): Narasi Kemitraan & Jaminan Nilai Resmi */}
-              <div className="lg:col-span-7 space-y-4">
-                
-                {/* Eyebrow Resmi Bahari Tech */}
-                <div className="flex items-center gap-2">
-                  <span className="h-0.5 w-5 bg-[#1482C2]" aria-hidden="true" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
-                    {eyebrow}
-                  </span>
+              {/* Kolom Kiri: Teks CTA dan Tombol Aksi di Bawah Deskripsi */}
+              <div className="lg:col-span-7 flex flex-col justify-center space-y-5">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <span className="h-0.5 w-5 bg-[#1482C2]" aria-hidden="true" />
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1482C2]">
+                      {eyebrow}
+                    </span>
+                  </div>
+
+                  <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-[#233876] tracking-tight leading-tight">
+                    {title}
+                  </h2>
+
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
+                    {description}
+                  </p>
                 </div>
 
-                {/* Headline Utama */}
-                <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-slate-900 leading-tight tracking-tight">
-                  {title}
-                </h2>
+                {/* Tombol Aksi di Bawah Deskripsi Sesuai Desain Halaman Tentang Kami */}
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <Link href={consultationLink} className="w-full sm:w-auto">
+                    <span className="w-full sm:w-auto h-11 px-6 rounded-lg bg-[#233876] hover:bg-[#1482C2] text-white text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-xs cursor-pointer">
+                      <span>{consultationButtonText}</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </Link>
 
-                {/* Deskripsi */}
-                <p className="text-sm text-slate-600 leading-relaxed max-w-2xl">
-                  {description}
-                </p>
-
-                {/* 3 Jaminan Utama Berstandar Mutu */}
-                <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600 font-medium">
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-                    <Clock className="h-4 w-4 text-[#1482C2] shrink-0" aria-hidden="true" />
-                    <span>Respons &lt; 15 Menit</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-                    <Sparkles className="h-4 w-4 text-emerald-600 shrink-0" aria-hidden="true" />
-                    <span>Estimasi RAB 100% Gratis</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-                    <ShieldCheck className="h-4 w-4 text-[#1482C2] shrink-0" aria-hidden="true" />
-                    <span>Kerahasiaan Ide (NDA)</span>
-                  </div>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                    aria-label={`${whatsappButtonText} via WhatsApp`}
+                  >
+                    <span className="w-full sm:w-auto h-11 px-5 rounded-lg bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-xs sm:text-sm font-bold transition-colors inline-flex items-center justify-center gap-2 shadow-2xs cursor-pointer">
+                      <WhatsAppIcon className="h-4.5 w-4.5 text-[#25D366] shrink-0" />
+                      <span>{whatsappButtonText}</span>
+                    </span>
+                  </a>
                 </div>
-
-                <div className="pt-1 text-[11px] text-slate-500">
-                  <span>Operasional: {siteConfig.contact.hours} · Konsultasi Daring &amp; Tatap Muka di Kantor Tegal</span>
-                </div>
-
               </div>
 
-              {/* Kolom Kanan (5 Kolom): Card Konsultan dengan Gambar cta.webp Eksklusif */}
-              <div className="lg:col-span-5">
-                <div className="relative rounded-2xl border border-slate-200/90 bg-white p-5 sm:p-6 shadow-2xs hover:border-[#1482C2]/50 hover:shadow-sm transition-all duration-300 overflow-hidden space-y-4">
+              {/* Kolom Kanan: Foto cta.webp dengan background shape geometris modern khas Bahari Tech & kartu informasi statis elegan */}
+              <div className="lg:col-span-5 flex justify-center items-center">
+                <div className="relative w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[420px] h-[340px] sm:h-[380px] lg:h-[400px] flex justify-center items-center">
                   
-                  {/* Visual Header: Foto cta.webp Berbentuk Banner Kartu Premium */}
-                  <div className="relative w-full h-44 sm:h-48 rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-2xs group">
+                  {/* Background Shape Geometris Elegan (Senada dengan Brand & Hero) */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none -z-0"
+                  >
+                    <svg
+                      viewBox="0 0 420 400"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      preserveAspectRatio="xMidYMid meet"
+                      className="w-full h-full opacity-90"
+                    >
+                      <circle cx="210" cy="200" r="145" fill="#EAF5FC" />
+                      <circle cx="160" cy="180" r="115" fill="#1482C2" fillOpacity="0.12" />
+                      <rect x="230" y="80" width="130" height="240" rx="65" fill="#0EB8D8" fillOpacity="0.15" />
+                      <path d="M 80 370 A 130 130 0 0 1 340 370 Z" fill="#233876" fillOpacity="0.08" />
+                    </svg>
+                  </div>
+
+                  {/* Card 1: Kiri Atas - Respons Cepat */}
+                  <div className="absolute top-4 left-0 sm:-left-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5 transition-transform duration-300 hover:scale-105">
+                    <div className="h-6 w-6 rounded-lg bg-[#EAF5FC] text-[#1482C2] flex items-center justify-center shrink-0">
+                      <Clock className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <span className="block text-[11px] font-bold text-[#233876] leading-none">
+                        Respons &lt; 15 Menit
+                      </span>
+                      <span className="block text-[9px] font-medium text-emerald-600 mt-0.5">
+                        Konsultasi Cepat &amp; Tanggap
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card 2: Kanan Atas - Konsultan Siap Diskusi */}
+                  <div className="absolute top-10 right-0 sm:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5 transition-transform duration-300 hover:scale-105">
+                    <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    </div>
+                    <div>
+                      <span className="block text-[11px] font-bold text-[#233876] leading-none">
+                        Konsultan Siap
+                      </span>
+                      <span className="block text-[9px] font-medium text-slate-500 mt-0.5">
+                        Diskusi 1-on-1 Langsung
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card 3: Kiri Bawah - Estimasi RAB Gratis */}
+                  <div className="absolute bottom-6 left-0 sm:-left-3 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5 transition-transform duration-300 hover:scale-105">
+                    <div className="h-6 w-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                      <Sparkles className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <span className="block text-[11px] font-bold text-[#233876] leading-none">
+                        Estimasi RAB 100% Gratis
+                      </span>
+                      <span className="block text-[9px] font-medium text-slate-500 mt-0.5">
+                        Tanpa Komitmen Awal
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card 4: Kanan Bawah - Jaminan NDA */}
+                  <div className="absolute bottom-3 right-0 sm:-right-2 z-20 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/90 px-3 py-2 shadow-md flex items-center gap-2.5 transition-transform duration-300 hover:scale-105">
+                    <div className="h-6 w-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <ShieldCheck className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <span className="block text-[11px] font-bold text-[#233876] leading-none">
+                        Perjanjian NDA Resmi
+                      </span>
+                      <span className="block text-[9px] font-medium text-emerald-600 mt-0.5">
+                        Kerahasiaan Ide Terjamin
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Foto Cutout Model Utama (Statis Elegan di Atas Shape) */}
+                  <div className="relative z-10 w-full h-full flex items-end justify-center">
                     <Image
                       src="/cta.webp"
-                      alt="Konsultan Rekayasa Perangkat Lunak CV. Bahari Tech Solution"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      alt={imageAlt}
+                      width={432}
+                      height={578}
+                      sizes="(max-width: 640px) 240px, (max-width: 1024px) 280px, 320px"
+                      className="block w-auto h-full max-h-[300px] sm:max-h-[340px] lg:max-h-[370px] object-contain select-none pointer-events-none drop-shadow-xl"
                       priority={false}
                     />
-                    {/* Gradient Overlay & Badge Status Online */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                    
-                    <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs border border-white/20 text-white text-[10px] font-semibold">
-                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Konsultan Siap Diskusi</span>
-                    </div>
-
-                    <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <h3 className="text-sm sm:text-base font-bold leading-tight drop-shadow-xs">
-                        {consultantRole}
-                      </h3>
-                      <p className="text-[11px] text-slate-200 mt-0.5 drop-shadow-xs">
-                        {consultantName}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Keterangan Singkat Konsultasi */}
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Siap melayani konsultasi kebutuhan website, sistem ERP, maupun aplikasi Android &amp; iOS secara langsung 1-on-1 tanpa perantara.
-                  </p>
-
-                  {/* Topik Konsultasi */}
-                  <div className="flex flex-wrap gap-1.5 text-[11px]">
-                    {topics.map((topic, idx) => (
-                      <span key={idx} className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-medium">
-                        {topic}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Tombol Aksi Utama: Chat WhatsApp & Formulir */}
-                  <div className="pt-1 space-y-2.5">
-                    <a
-                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedWhatsapp}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2.5 py-3 px-5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer shadow-xs"
-                      aria-label="Konsultasi langsung via WhatsApp dengan Admin Bahari Tech Solution"
-                    >
-                      <WhatsAppIcon className="h-4.5 w-4.5 text-white shrink-0" />
-                      <span>Chat WhatsApp Admin</span>
-                    </a>
-
-                    <div className="text-center">
-                      <Link
-                        href="/bantuan#konsultasi"
-                        className="inline-flex items-center gap-1.5 text-xs font-medium text-[#1482C2] hover:text-[#0E6496] transition-colors"
-                      >
-                        <span>Atau ajukan formulir diskusi proyek resmi</span>
-                        <ArrowRight className="h-3 w-3" />
-                      </Link>
-                    </div>
                   </div>
 
                 </div>

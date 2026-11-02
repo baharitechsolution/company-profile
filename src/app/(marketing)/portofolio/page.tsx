@@ -1,6 +1,7 @@
 import { portfolioData } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
+import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
 import { Building2, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -117,6 +118,17 @@ export default function PortfolioPage() {
         </div>
       </div>
     </div>
+
+    {/* Section CTA Konsultasi Proyek Serupa */}
+    <UnifiedCtaBanner
+      eyebrow="Wujudkan Solusi Serupa"
+      title="Tertarik Membangun Sistem Serupa untuk Bisnis Anda?"
+      description="Diskusikan arsitektur sistem, estimasi timeline rilis, dan Rencana Anggaran Biaya (RAB) transparan langsung bersama software engineer Bahari Tech Solution. Kami siap merealisasikan sistem berkinerja tinggi untuk operasional bisnis Anda."
+      whatsappMessage="Halo Tim Engineer Bahari Tech Solution, saya melihat portofolio Anda dan tertarik untuk konsultasi pembuatan proyek sistem serupa untuk bisnis kami."
+      consultationLink="/bantuan#konsultasi"
+      consultationButtonText="Ajukan Konsultasi & RAB"
+      whatsappButtonText="Chat Tim Engineer"
+    />
   </div>
   );
 }

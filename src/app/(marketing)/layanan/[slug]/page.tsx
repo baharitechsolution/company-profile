@@ -524,13 +524,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         title={`Siap Mewujudkan Proyek ${service.title} Anda?`}
         description={`Diskusikan rancangan arsitektur, fitur yang dibutuhkan, dan jadwal peluncuran bersama tim engineer kami. Dapatkan estimasi Rencana Anggaran Biaya (RAB) resmi secara transparan.`}
         whatsappMessage={whatsappMessage}
-        consultantRole={`Konsultan Spesialis ${service.title.replace("Jasa Pembuatan ", "")}`}
-        topics={[
-          service.title.split(" ")[0] + " " + service.title.split(" ")[1],
-          "Estimasi RAB",
-          "Arsitektur Sistem",
-          "Jadwal Sprint",
-        ]}
+        consultationLink="/kontak"
+        consultationButtonText="Ajukan Konsultasi & RAB"
+        whatsappButtonText="Chat Tim Engineer"
       />
     </div>
   );
