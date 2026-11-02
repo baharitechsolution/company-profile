@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -55,7 +56,7 @@ export default function ServicesPage() {
       <div className="py-12 sm:py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal direction="up" delay={0.05} className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
             KATALOG LAYANAN TEKNOLOGI
           </span>
@@ -65,15 +66,17 @@ export default function ServicesPage() {
           <p className="mt-4 text-base sm:text-lg text-slate-600">
             Kami mengkombinasikan arsitektur sistem modern dengan metodologi agile untuk membangun solusi digital yang tangguh, aman, dan siap scale-up.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Detailed Services List */}
         <div className="space-y-10">
           {servicesData.map((service, index) => {
             return (
-              <div
+              <ScrollReveal
                 key={service.id}
                 id={service.slug}
+                direction="up"
+                delay={0.05 + index * 0.05}
                 className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-8 md:p-10 shadow-xs"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -147,12 +150,12 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
         {/* Regional Focus Block: Jasa Pembuatan Website & Aplikasi Tegal */}
-        <div className="mt-16 rounded-2xl border border-slate-200 bg-linear-to-b from-slate-50 to-white p-8 md:p-12 shadow-xs">
+        <ScrollReveal direction="up" delay={0.05} className="mt-16 rounded-2xl border border-slate-200 bg-linear-to-b from-slate-50 to-white p-8 md:p-12 shadow-xs">
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-widest text-[#1482C2] block mb-2">
               LAYANAN LOKAL &amp; KONSULTASI TATAP MUKA
@@ -206,7 +209,7 @@ export default function ServicesPage() {
               </Button>
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
       {/* CTA Section Terpadu */}

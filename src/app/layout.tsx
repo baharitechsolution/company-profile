@@ -91,6 +91,11 @@ export const metadata: Metadata = {
     "Software House Balikpapan Samarinda",
     "Software House Makassar",
     "Jasa Pembuatan Aplikasi Seluruh Indonesia",
+    "Jasa Website Tegal",
+    "Jasa Pembuatan Website Tegal",
+    "Jasa Website Seluruh Indonesia",
+    "Website Tegal",
+    "Website Kabupaten Tegal",
     
     // --- INTERNATIONAL & OFFSHORE ---
     "Top Software House in Indonesia",

@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { revalidateTag } from "next/cache";
 import { FaqItem, FaqCategory } from "@/types/faq";
 import { initialFaqData } from "@/config/faq";
 import { ActionResponse } from "@/types";
@@ -95,6 +96,7 @@ export async function createFaqAction(data: {
         .single();
 
       if (!error && inserted) {
+        revalidateTag("faqs", "max");
         return {
           success: true,
           message: "FAQ baru berhasil ditambahkan.",
@@ -116,6 +118,8 @@ export async function createFaqAction(data: {
     };
 
     demoFaqsStore = [newFaq, ...demoFaqsStore];
+
+    revalidateTag("faqs", "max");
 
     return {
       success: true,
@@ -151,6 +155,7 @@ export async function updateFaqAction(
         .single();
 
       if (!error && updated) {
+        revalidateTag("faqs", "max");
         return {
           success: true,
           message: "FAQ berhasil diperbarui.",
@@ -170,6 +175,8 @@ export async function updateFaqAction(
       ...data,
       updated_at: new Date().toISOString(),
     };
+
+    revalidateTag("faqs", "max");
 
     return {
       success: true,
@@ -196,6 +203,8 @@ export async function deleteFaqAction(id: string): Promise<ActionResponse<null>>
     }
 
     demoFaqsStore = demoFaqsStore.filter((f) => f.id !== id);
+
+    revalidateTag("faqs", "max");
 
     return {
       success: true,

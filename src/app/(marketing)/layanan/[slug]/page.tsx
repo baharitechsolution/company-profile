@@ -7,7 +7,7 @@ import { HeroBannerVisual } from "@/components/sections/hero-banner-visual";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { UnifiedCtaBanner } from "@/components/sections/unified-cta-banner";
 import { Button } from "@/components/ui/button";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ScrollReveal, ScrollStagger, ScrollStaggerItem } from "@/components/ui/scroll-reveal";
 import { WhatsAppIcon } from "@/components/shared/icons";
 import {
   ArrowRight,
@@ -176,7 +176,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             
             {/* Kolom Kiri: Eyebrow, H1, Deskripsi, Tombol CTA & Metrik Hero */}
-            <div className="lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6">
+            <ScrollReveal direction="up" delay={0.05} className="lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6">
               
               {/* Eyebrow Editorial Kicker Arsitektural Bersih (Persis Hero Home) */}
               <div className="flex items-center gap-2.5">
@@ -263,12 +263,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </div>
               </div>
 
-            </div>
+            </ScrollReveal>
 
             {/* Kolom Kanan: Visual Dinamis Interaktif dari Hero Slider */}
-            <div className="lg:col-span-5 flex items-center justify-center pt-2 pb-4 lg:py-0">
+            <ScrollReveal direction="up" delay={0.15} className="lg:col-span-5 flex items-center justify-center pt-2 pb-4 lg:py-0">
               <HeroBannerVisual slideIndex={slideIndex} visualType={service.visualType} />
-            </div>
+            </ScrollReveal>
 
           </div>
         </div>
@@ -317,7 +317,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           {/* Tech Stack Strip */}
-          <div className="mt-10 p-5 rounded-2xl bg-white border border-slate-200 flex flex-wrap items-center justify-between gap-4">
+          <ScrollReveal direction="up" delay={0.1} className="mt-10 p-5 rounded-2xl bg-white border border-slate-200 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Layers className="h-4 w-4 text-[#1482C2]" />
               <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
@@ -334,7 +334,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </span>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -355,11 +355,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <ScrollStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {service.pricingPackages.map((pkg, idx) => {
               const isPopular = pkg.isPopular;
               return (
-                <div
+                <ScrollStaggerItem
                   key={idx}
                   className={`rounded-2xl p-7 sm:p-8 flex flex-col justify-between relative transition-all ${
                     isPopular
@@ -435,12 +435,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                       </Button>
                     </a>
                   </div>
-                </div>
+                </ScrollStaggerItem>
               );
             })}
-          </div>
+          </ScrollStagger>
 
-          <div className="mt-10 p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 text-center text-xs text-slate-600 flex flex-wrap items-center justify-center gap-2">
+          <ScrollReveal direction="up" delay={0.1} className="mt-10 p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200 text-center text-xs text-slate-600 flex flex-wrap items-center justify-center gap-2">
             <span>Memerlukan ruang lingkup fitur khusus di luar paket di atas?</span>
             <Link
               href="/bantuan#konsultasi"
@@ -449,7 +449,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <span>Ajukan Rencana Anggaran Biaya (RAB) Custom</span>
               <ArrowRight className="h-3 w-3" />
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -499,7 +499,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           {/* Serah Terima Deliverables */}
-          <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+          <ScrollReveal direction="up" delay={0.15} className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
             <h3 className="text-sm font-bold text-[#233876] uppercase tracking-wider mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-[#1482C2]" />
               <span>Standar Hasil Serah Terima Resmi (Deliverables):</span>
@@ -512,7 +512,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 

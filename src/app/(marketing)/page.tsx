@@ -6,6 +6,7 @@ import { WhyUsSection } from "@/components/sections/why-us-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ConsultationCtaBanner } from "@/components/sections/consultation-cta-banner";
+import { getPublishedFaqs } from "@/lib/faqs";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -55,7 +56,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const faqs = await getPublishedFaqs();
+
   return (
     <>
       {/* 1. Top Processing Banner Slider */}
@@ -77,7 +80,7 @@ export default function HomePage() {
       <PortfolioSection />
 
       {/* 7. Tanya Jawab Umum (FAQ) & Schema.org FAQPage SEO */}
-      <FaqSection limit={10} showViewAllButton={true} />
+      <FaqSection initialFaqs={faqs} limit={10} showViewAllButton={true} />
 
       {/* 8. Banner Konsultasi Gratis (WhatsApp Direct Action) */}
       <ConsultationCtaBanner />

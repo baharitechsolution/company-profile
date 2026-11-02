@@ -7,10 +7,10 @@ import { siteConfig } from "@/config/site";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { WhatsAppIcon } from "@/components/shared/icons";
 import { initialFaqData, faqCategoryOptions } from "@/config/faq";
-import { getFaqsAction } from "@/actions/faq.action";
 import { FaqItem } from "@/types/faq";
 
 interface FaqSectionProps {
+  initialFaqs?: FaqItem[];
   limit?: number;
   showViewAllButton?: boolean;
   showHeader?: boolean;
@@ -20,6 +20,7 @@ interface FaqSectionProps {
 }
 
 export function FaqSection({
+  initialFaqs = initialFaqData,
   limit,
   showViewAllButton = false,
   showHeader = true,
@@ -27,23 +28,11 @@ export function FaqSection({
   bordered = true,
   showOuterBorders = true,
 }: FaqSectionProps = {}) {
-  const [faqs, setFaqs] = React.useState<FaqItem[]>(initialFaqData);
+  const faqs = initialFaqs;
   const [activeCategory, setActiveCategory] = React.useState<string>("all");
   const [openItems, setOpenItems] = React.useState<Record<string, boolean>>({
     "faq-1": true,
   });
-
-  React.useEffect(() => {
-    let ignore = false;
-    getFaqsAction({ onlyPublished: true }).then((data) => {
-      if (!ignore && data && data.length > 0) {
-        setFaqs(data);
-      }
-    });
-    return () => {
-      ignore = true;
-    };
-  }, []);
 
   const toggleItem = (id: string) => {
     setOpenItems((prev) => ({

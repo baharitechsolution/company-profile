@@ -311,7 +311,11 @@ export function HeroSection() {
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
                     
                     {/* Kolom Kiri: Teks Headline, Deskripsi Profesional & Tombol CTA */}
-                    <div className="lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6">
+                    <div
+                      className={`lg:col-span-7 space-y-4 sm:space-y-5 lg:space-y-6 ${
+                        idx === 1 ? "hero-enter" : ""
+                      }`}
+                    >
                       
                       {/* Eyebrow Editorial Kicker Arsitektural Bersih (Tanpa Kapsul AI) */}
                       <div className="flex items-center gap-2.5">
@@ -412,7 +416,11 @@ export function HeroSection() {
                     </div>
 
                     {/* Kolom Kanan: Visual Model Dinamis Khusus Slide Ini */}
-                    <div className="lg:col-span-5 flex items-center justify-center pt-2 pb-4 lg:py-0">
+                    <div
+                      className={`lg:col-span-5 flex items-center justify-center pt-2 pb-4 lg:py-0 ${
+                        idx === 1 ? "hero-enter-visual" : ""
+                      }`}
+                    >
                       <HeroBannerVisual slideIndex={originalIndex} visualType={slide.visualType} />
                     </div>
 

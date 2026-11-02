@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, HTMLMotionProps, Variants } from "framer-motion";
+import { motion, useReducedMotion, HTMLMotionProps, Variants } from "framer-motion";
 
 interface ScrollRevealProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
@@ -23,6 +23,8 @@ export function ScrollReveal({
   once = true,
   ...props
 }: ScrollRevealProps) {
+  const reduceMotion = useReducedMotion();
+
   const getInitialPosition = () => {
     switch (direction) {
       case "up":
@@ -53,7 +55,7 @@ export function ScrollReveal({
 
   return (
     <motion.div
-      initial={getInitialPosition()}
+      initial={reduceMotion ? false : getInitialPosition()}
       whileInView={getTargetPosition()}
       viewport={{ once, margin: "-60px" }}
       transition={{
@@ -105,9 +107,11 @@ export function ScrollStagger({
   className?: string;
   once?: boolean;
 }) {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      initial="hidden"
+      initial={reduceMotion ? "visible" : "hidden"}
       whileInView="visible"
       viewport={{ once, margin: "-60px" }}
       variants={containerVariants}

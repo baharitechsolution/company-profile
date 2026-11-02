@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function PricingPackageSection() {
   const [currency, setCurrency] = useState<"IDR" | "USD">("IDR");
@@ -12,7 +13,7 @@ export function PricingPackageSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Header - Ringan, Bersih, dan Humanis */}
-        <div className="max-w-3xl mx-auto text-center">
+        <ScrollReveal direction="up" delay={0.05} className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-medium tracking-wider text-sky-600 uppercase mb-2">
             Model Kerja Sama &amp; Estimasi Investasi
           </p>
@@ -48,13 +49,13 @@ export function PricingPackageSection() {
               Offshore &amp; Global (USD)
             </button>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* ======================================================== */}
         {/* TAB 1: PASAR INDONESIA (IDR)                             */}
         {/* ======================================================== */}
         {currency === "IDR" && (
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <ScrollReveal className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             
             {/* 1. Paket UMKM & Profil Bisnis */}
             <div className="rounded-2xl border border-slate-200 bg-white p-7 flex flex-col justify-between hover:border-slate-300 transition-all hover:shadow-xs">
@@ -273,14 +274,14 @@ export function PricingPackageSection() {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
         )}
 
         {/* ======================================================== */}
         {/* TAB 2: OFFSHORE & GLOBAL (USD)                           */}
         {/* ======================================================== */}
         {currency === "USD" && (
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <ScrollReveal className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             
             {/* 1. Dedicated Developer */}
             <div className="rounded-2xl border border-slate-200 bg-white p-7 flex flex-col justify-between hover:border-slate-300 transition-all hover:shadow-xs">
@@ -472,11 +473,11 @@ export function PricingPackageSection() {
               </div>
             </div>
 
-          </div>
+          </ScrollReveal>
         )}
 
         {/* Minimal Footer Reassurance */}
-        <div className="mt-12 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-slate-500">
+        <ScrollReveal className="mt-12 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-slate-500">
           <div>
             <strong className="text-slate-700 font-medium">Jaminan Keamanan Kemitraan:</strong> Konsultasi awal 100% gratis, skema pembayaran bertahap (DP aman &amp; pelunasan setelah disetujui), serta 100% penyerahan hak milik source code tanpa biaya lisensi tersembunyi.
           </div>
@@ -486,7 +487,7 @@ export function PricingPackageSection() {
           >
             Konsultasi Rencana Anggaran Biaya (RAB) →
           </Link>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>
